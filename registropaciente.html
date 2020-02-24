@@ -82,39 +82,46 @@
             </div>
         </div>
         <div class="form-row">
-          <div class="form-group col-md-6">
-            <!-- <label for="localidadPaciente">Localidad</label> -->
-            <input placeholder="Localidad "type="text" class="form-control" id="localidadPaciente">
-          </div>
           <div class="form-group col-md-4">
             <!-- <label for="inputState">Provincia</label> -->
-            <select placeholder="Provincia" id="seleccionProvincia" class="form-control">
-              <option >Seleccione</option>
-              <option value="Buenos Aries">Buenos Aries</option>
-              <option value="Catamarca">Catamarca</option>
-              <option value="Chaco">Chaco</option>
-              <option value="Chubut">Chubut</option>
-              <option value="Córdoba">Córdoba</option>
-              <option value="Corrientes">Corrientes</option>
-              <option value="Entre Ríos">Entre Ríos</option>
-              <option value="Formosa">Formosa</option>
-              <option value="Jujuy">Jujuy</option>
-              <option value="La Pampa">La Pampa</option>
-              <option value="La Rioja">La Rioja</option>
-              <option value="Mendoza">Mendoza</option>
-              <option value="Misiones">Misiones</option>
-              <option value="Neuquén">Neuquén</option>
-              <option value="Río Negro">Río Negro</option>
-              <option value="Salta">Salta</option>
-              <option value="San Juan">San Juan</option>
-              <option value="San Luis">San Luis</option>
-              <option value="Santa Cruz">Santa Cruz</option>
-              <option value="Santa Fe">Santa Fe</option>
-              <option value="Santiago del Estero">Santiago del Estero</option>
-              <option value="Tierra del Fuego">Tierra del Fuego</option>
-              <option value="Tucumán">Tucumán</option>
+            <select id="seleccionProvincia" class="form-control">
+              <option disabled selected>Provincia</option>
+              <option value="buenosAires">Buenos Aries</option>
+              <option value="caba">Ciudad Autónoma de Buenos Aires</option>
+              <option value="catamarca">Catamarca</option>
+              <option value="chaco">Chaco</option>
+              <option value="chubut">Chubut</option>
+              <option value="cordoba">Córdoba</option>
+              <option value="corrientes">Corrientes</option>
+              <option value="entre Ríos">Entre Ríos</option>
+              <option value="formosa">Formosa</option>
+              <option value="jujuy">Jujuy</option>
+              <option value="laPampa">La Pampa</option>
+              <option value="laRioja">La Rioja</option>
+              <option value="mendoza">Mendoza</option>
+              <option value="misiones">Misiones</option>
+              <option value="neuquen">Neuquén</option>
+              <option value="rioNegro">Río Negro</option>
+              <option value="salta">Salta</option>
+              <option value="sanJuan">San Juan</option>
+              <option value="sanLuis">San Luis</option>
+              <option value="santaCruz">Santa Cruz</option>
+              <option value="santaFe">Santa Fe</option>
+              <option value="santiagoDelEstero">Santiago del Estero</option>
+              <option value="tierraDelFuego">Tierra del Fuego</option>
+              <option value="tucuman">Tucumán</option>
             </select>
           </div>
+          <div class="form-group col-md-4">
+            <select id="seleccionLocalidad" class="form-control">
+              <option disabled selected">Localidad</option>
+            </select>
+          </div>
+          <!-- <div class="form-group col-md-6">
+            <!-- <label for="localidadPaciente">Localidad</label> -->
+            <!-- <input placeholder="Localidad "type="text" class="form-control" id="localidadPaciente">
+          </div> -->
+
           <div class="form-group col-md-2">
             <!-- <label for="inputZip">Código Postal</label> -->
             <input placeholder="Código Postal" type="text" class="form-control" id="postalCliente">
