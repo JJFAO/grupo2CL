@@ -46,6 +46,10 @@ h2, li, p, label{
 .btn-outline-dark:hover{
     background-color:#691353 !important;
 }
+.btn-primary{
+    background-color:#691353 !important;
+    border-color: #691353 !important;   
+}
 
 .card, .home {
     background: rgba(128, 128, 128, 0.055) !important;
