@@ -1,3 +1,14 @@
+.titulo{
+background-color: #00000069;
+padding: 0.3rem;
+font-size: 28px;
+}
 
-    
+.fondotitulo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.card-img-overlay{
+    padding: 0rem;
 }
