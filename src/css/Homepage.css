@@ -1,4 +1,5 @@
 .titulo{
+font-family: 'Roboto Slab', serif;
 background-color: #00000069;
 padding: 0.3rem;
 font-size: 28px;
@@ -11,4 +12,12 @@ font-size: 28px;
 }
 .card-img-overlay{
     padding: 0rem;
+}
+.titulocards{
+    display: flex;
+    justify-content: center;
+    font-family:'Roboto Slab', serif; 
+}
+.card-body{
+    font-family: 'Montserrat', sans-serif;
 }
