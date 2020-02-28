@@ -6,10 +6,6 @@ html{
     justify-content: center;
     background-color: #225378;
 }
-body {
-  margin: 0;
-  font-family: "Lato", sans-serif;
-}
 .sidebar {
   margin: 0;
   padding: 0;
@@ -17,7 +13,6 @@ body {
   background-color: #225378;
   position: fixed;
   height: 100%;
-  overflow: auto;
 }
 .sidebar a {
   display: block;
@@ -55,6 +50,9 @@ body {
 .listabotones, .subboton{
   margin-left: 3vw;
   padding-top: 5vh;
+}
+.textoProfesional{
+  font-family: 'Roboto Slab', sans-serif;
 }
 .profesionales{
   border-block-end:solid 1px;
@@ -94,6 +92,7 @@ text-decoration: none;
   }
   .btn{
     align-self: center;
+    width: 200px !important;
   }
 }
 .tabla{
@@ -101,17 +100,18 @@ text-decoration: none;
 }
 @media screen and (max-width: 1440px) {
   .tabla{
-    width: 100% !important;
+    
   }
 }
 .table{
   margin-top: 2rem;
+  font-family: 'Montserrat', sans-serif;
 }
 .barramenu{
   background-color:#1595A3;
 }
 .tabla th{
-  max-width: 100px;
+  font-family: 'Montserrat', sans-serif;
 }
 .btn-primary{
   background-color: #1595A3 !important;
@@ -141,3 +141,4 @@ text-decoration: none;
   border: none !important;
   color: black !important;
 }
+
