@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>   
+<!-- Bootstrap.datepicker -->
+<script src="./src/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="./src/css/bootstrap-datepicker.min.css">
+<!-- Anexos -->
+<script src="./src/js/index.js"></script>
+<!-- contenido -->
+<img src="./assets/img/LogoRolling.svg" class= "rounded mx-auto d-block m-4" alt="Logo RollingCode" height="91px">
+<h1 class="tituloSeccion text-center">Registro del Paciente</h1>
+<div class="formularioRegistroCliente">
+<h2 class="tituloContenido text-center">Bienvenido</h2>
+<p class="textoContenido text-center">Gracias por tu interés en nuestros Servicios de Salud.<br>
+    Por favor, cargá los siguientes datos para poder usar nuestras prestaciones</p>
+    <form>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="apellidoPaciente">Apellido</label>
+            <input type="email" class="form-control" id="apellidoPaciente">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="nombrePaciente">Nombre</label>
+            <input type="password" class="form-control" id="nombrePaciente">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="edadPaciente">Edad</label>
+            <input type="text" class="form-control" id="edadPaciente" placeholder="">
+          </div>
+        </div>
+        <!-- division 2 -->
+        <div class="form-row d-flex mb-3">
+          <div class="form-group col-md-4">
+            <label for="documentoDNI">Documento</label>
+            <input type="text" class="form-control" id="documentoDNI" placeholder="">
+          </div>          
+          <div class="input-group d-flex flex-column col-md-4 mb-3">
+            <label for="documentoDNI">Fecha de Nacimiento</label>
+            <input type="text" class="form-control datePickerControl" id="datepicker" aria-describedby="inputGroup-sizing-default">
+          </div>                 
+          <div class="idSexoCliente d-flex col-md-4">
+            <div class="form-group">
+              <label for="idSexoCliente">Seleccione Sexo</label>
+              <select class="form-control" id="idSexoCliente">
+                <option>Masculino</option>
+                <option>Femenino</option>
+                <option>Prefiero no Decirlo</option>
+              </select>
+            </div>
+          </div>          
+        </div>
+        <!-- fin division 2 -->
+        <!-- Inicio Division 3 -->
+        <div class="form-row d-flex justify-content-around fill">
+            <div class="form-group col-md-4">
+                <label for="domicilioPaciente">Domicilio</label>
+                <input type="text" class="form-control" id="domicilioPaciente" placeholder="Calle 123">
+              </div>
+            <div class="form-group col-md-4">
+                <label for="telefonoCliente" >Teléfono</label>
+                <input type="text" class="form-control" id="telefonoCliente" placeholder="(381 *********)">
+                    <div class="opcionClientes">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="opcionTelFijo" id="opcionTelFijo" value="option1" checked>
+                        <label class="form-check-label" for="opcionTelFijo"> Fijo </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="opcionTelCel" id="opcionTelCel" value="option2">
+                        <label class="form-check-label" for="opcionTelCel"> Celular </label>
+                      </div>
+                    </div>
+        </div>
+            <div class="form-group col-md-4">
+              <label for="emailPaciente">Correo Electrónico</label>
+              <input type="text" class="form-control" id="emailPaciente" placeholder="example@mail.com">
+            </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="localidadPaciente">Localidad</label>
+            <input type="text" class="form-control" id="localidadPaciente">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">Provincia</label>
+            <select id="inputState" class="form-control">
+              <option selected>Seleccione</option>
+              <option>Buenos Aries</option>
+              <option>Catamarca</option>
+              <option>Chaco</option>
+              <option>Chubut</option>
+              <option>Córdoba</option>
+              <option>Corrientes</option>
+              <option>Entre Ríos</option>
+              <option>Formosa</option>
+              <option>Jujuy</option>
+              <option>La Pampa</option>
+              <option>La Rioja</option>
+              <option>Mendoza</option>
+              <option>Misiones</option>
+              <option>Neuquén</option>
+              <option>Río Negro</option>
+              <option>Salta</option>
+              <option>San Juan</option>
+              <option>San Luis</option>
+              <option>Santa Cruz</option>
+              <option>Santa Fe</option>
+              <option>Santiago del Estero</option>
+              <option>Tierra del Fuego</option>
+              <option>Tucumán</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Código Postal</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+        </div>
+<!-- Fin división 3 -->
+        <div class="form-group d-flex flex-column align-items-center mt-3 mb-5">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label mb-3" for="gridCheck">
+              Acepto Términos y Condiciones
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg mb-3 confirmarBoton">Confirmar</button>
+          <button type="submit" class="btn btn-secondary btn-sm mb-3 confirmarBotonProblema">Tengo problemas para registrarme</button>
+          </div>
+        <p class="terminosCondiciones">"SEGÚN EL ART 1 DISPOSICIÓN 4/2009, SE TRANSCRIBE: ART. 27 INC 3 LEY 25326: EL TITULAR PODRÁ EN CUALQUIER MOMENTO SOLICITAR EL RETIRO O BLOQUEO DE SU NOMBRE DE LOS BANCOS DE DATOS A LOS QUE SE REFIERE EL PRESENTE ARTÍCULO. Y ART. 27 ANEXO I DECRETO 1558/01: EN TODA COMUNICACIÓN CON FINES DE PUBLICIDAD QUE SE REALICE POR CORREO, TELÉFONO, CORREO ELECTRÓNICO, INTERNET U OTRO MEDIO A DISTANCIA A CONOCER, SE DEBERÁ INDICAR, EN FORMA EXPRESA Y DESTACADA, LA POSIBILIDAD DEL TITULAR DEL DATO DE SOLICITAR EL RETIRO O BLOQUEO, TOTAL O PARCIAL, DE SU NOMBRE DE LA BASE DE DATOS. A PEDIDO DEL INTERESADO, SE DEBERÁ INFORMAR EL NOMBRE DEL RESPONSABLE O USUARIO DEL BANCO DE DATOS QUE PROVEYÓ LA INFORMACIÓN."
+        </p>
+      </form>
+    </div>
+</body>
+</html>

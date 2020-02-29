@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /node_modules
 /test/js
 /test/browsertest/js
@@ -15,3 +16,6 @@
 .cache
 .eslintcache
 package-lock.json
+=======
+node_modules
+>>>>>>> release-candidate-07022020

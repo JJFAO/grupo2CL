@@ -1,22 +1,20 @@
 function hideModalRecover() {
-    $('#indexModal').modal("hide");
-    $('#modalrecover').modal("show");
+  $('#indexModal').modal("hide");
+  $('#modalrecover').modal("show");
 }
 function hideModalpp() {
-    $('#ppmodal').modal("hide");
-    
-    
+  $('#ppmodal').modal("hide");
 }
 function recoverPass() {
-    Swal.fire({
+  Swal.fire({
     position: 'top-center',
     icon: 'success',
     title: 'Mensaje enviado',
     showConfirmButton: false,
     timer: 5500
-  })}
-
-  const profesionales = [{ cuit: 28721218, pass: "1234" }]
+  })
+}
+const profesionales = [{ cuit: 28721218, pass: "1234" }]
 function validation4Profesional() {
   let cuitHtml = document.querySelector("#cuit")
   let passprofHtml = document.querySelector("#passProf")
@@ -34,3 +32,4 @@ function validation4Profesional() {
   }
   alert("El CUIT no esta registrado")
 }
+
