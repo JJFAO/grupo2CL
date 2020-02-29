@@ -48,3 +48,8 @@ label{
         height: 90px;
     }
  }
+@media (max-width: 768px) {
+    .letrasFooter {
+        font-size: 15px;
+    }
+ }
