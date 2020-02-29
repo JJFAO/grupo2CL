@@ -17,15 +17,15 @@
 <body>
   <div class="container-fluid">
     <div class="row">
-      <div class="barramenu col-12 col-lg-3 px-0" >
+      <div class="barramenu col-12 col-lg-3 px-0">
         <div class="contenedorLogo ml-4 ml-lg-0">
-          <nav class="navbar-expand-lg" >
+          <nav class="navbar-expand-lg">
             <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
               aria-controls="collapseExample">
               <i class="fas fa-bars d-lg-none text-white"></i>
             </a>
             <a class="navbar-brand" href="#">
-              <img class="LogoRolling animated pulse" src="img/LogoRolling white.svg" width="250" height=""
+              <img class="LogoRolling animated heartBeat <" src="img/LogoRolling white.svg" width="250" height=""
                 class="d-inline-block align-top" alt=""></a>
           </nav>
           <ul class="navbar-nav Lista collapse d-lg-block" id="collapseExample">
@@ -43,7 +43,8 @@
               <a class="subboton" href="#">Calendario</a>
             </li>
             <li class="listabotones">
-              <a class="pacientes" href="#pacientes" role="button" aria-haspopup="true" aria-expanded="false">Pacientes</a>
+              <a class="pacientes" href="#pacientes" role="button" aria-haspopup="true"
+                aria-expanded="false">Pacientes</a>
             </li>
             <li class="contienesubb mt-3">
               <a class="subboton" href="">Incidencias</a>
@@ -65,11 +66,13 @@
       <div class="textoconbtn col-12 col-lg-9 pr-0 pl-0 pl-md-5 text-center text-md-left mt-4">
         <h1 class="textoProfesional" id="profesionales">Profesionales</h1>
         <div class="btn-inc-aut mx-sm-3 mt-4 ">
-          <button type="button" class="btn btn-primary mx-2 mx-sm-3 mx-md-2 mx-lg-5 col-md-4 col-10 mt-2 pl-5 pl-md-1 my-4">
-            Incidencias 
+          <button type="button"
+            class="btn btn-primary mx-2 mx-sm-3 mx-md-2 mx-lg-5 col-md-4 col-10 mt-2 pl-5 pl-md-1 my-4">
+            Incidencias
             <span class="pelotas animated heartBeat badge badge-pill badge-success">0</span>
           </button>
-          <a type="button" class="btn btn-primary mx-2 mx-sm-3 mx-md-2 mx-lg-5 col-md-4 col-10 mt-2 " href="#autorizaciones">
+          <a type="button" class="btn btn-primary mx-2 mx-sm-3 mx-md-2 mx-lg-5 col-md-4 col-10 mt-2 "
+            href="#autorizaciones">
             Autorizaciones
           </a>
         </div>
@@ -224,85 +227,151 @@
         </div>
         <div>
           <h1 class="textoProfesional mt-5">Panel de Gestión</h1>
-            <h2 id="panel" class="textoProfesional my-5">Datos Doctores</h2>
+          <h2 id="panel" class="textoProfesional my-5">Datos Doctores</h2>
         </div>
         <div class="tabla tabla-doctores">
           <table class="table mt-4" id="autorizaciones">
             <thead class="thead-dark">
               <tr class="text-center">
                 <th scope="col">Doctor</th>
-                <th scope="col">Especialidad<th>
+                <th scope="col">Especialidad
+                <th scope="col">Turnos</th>
                 <th scope="col">Consulta</th>
-                <th scope="col">Admin</th>
+                <th scope="col">Autorizar</th>
               </tr>
             </thead>
             <tbody>
               <tr class="thead-light">
-                <td>Dr. Lopez</td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td>
+                  <button class="ml-5 text-success border-0">
+                    ✔
+                  </button>
+                  <button class="ml-5 text-success border-0">
+                    ❌
+                  </button>
+                </td>
               </tr>
               <tr class="thead-light">
-                <td>Dra. Ruiz</td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td>
+                  <button class="ml-5 text-success border-0">
+                    ✔
+                  </button>
+                  <button class="ml-5 text-success border-0">
+                    ❌
+                  </button>
+                </td>
               </tr>
               <tr class="thead-light">
-                <td>Dr. JJ</td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td>
+                  <button class="ml-5 text-success border-0">
+                  ✔
+                  </button>
+                  <button class="ml-5 text-success border-0">
+                    ❌
+                  </button>
+                </td>
               </tr>
               <tr class="thead-light">
-                <td>Dra. Baiad</td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td>
+                  <button class="ml-5 text-success border-0">
+                  ✔
+                </button>
+                <button class="ml-5 text-success border-0">
+                  ❌
+                  </button>
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
         <div>
-            <h2 class="textoProfesional my-5">Datos Pacientes</h2>
+          <h2 class="textoProfesional my-5">Datos Pacientes</h2>
         </div>
         <div class="tabla tablaPacientes">
           <table class="table w-100 mt-4">
             <thead class="thead-dark">
               <tr class="text-center">
                 <th scope="col">Doctor</th>
-                <th scope="col">Especialidad<th>
+                <th scope="col">Especialidad
+                <th>
                 <th scope="col">Consulta</th>
                 <th scope="col">Admin</th>
               </tr>
             </thead>
             <tbody>
               <tr class="thead-light">
-                <td>Dr. Lopez</td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td>
+                  <button class="ml-5 text-success border-0">
+                    ✔
+                  </button>
+                  <button class="ml-5 text-success border-0">
+                    ❌
+                  </button>
+                </td>
               </tr>
               <tr class="thead-light">
-                <td>Dra. Ruiz</td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td>
+                  <button class="ml-5 text-success border-0">
+                    ✔
+                  </button>
+                  <button class="ml-5 text-success border-0">
+                    ❌
+                  </button>
+                </td>
               </tr>
               <tr class="thead-light">
-                <td>Dr. JJ</td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td>
+                  <button class="ml-5 text-success border-0">
+                    ✔
+                  </button>
+                  <button class="ml-5 text-success border-0">
+                    ❌
+                  </button>
+                </td>
               </tr>
               <tr class="thead-light">
-                <td>Dra. Baiad</td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td>
+                  <button class="ml-5 text-success border-0">
+                    ✔
+                  </button>
+                  <button class="ml-5 text-success border-0">
+                    ❌
+                  </button>
+                </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>

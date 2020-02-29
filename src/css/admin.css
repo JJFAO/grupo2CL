@@ -123,17 +123,9 @@ text-decoration: none;
   background-color: #e9ecef !important;
   border: none !important;
 }
-@media screen and (min-width: 768px) {
-  .tabla th{
-    max-width: 45px;
-  }
-  .tablaDoctores th{
-    max-width: 40px;
-  }
-}
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .barramenu{
-    max-width: 270px;
+    max-width:20% !important;
   }
 }
 .Usuarios{
@@ -141,4 +133,3 @@ text-decoration: none;
   border: none !important;
   color: black !important;
 }
-
