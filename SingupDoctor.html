@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registro de Prodesionales</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/css/sigupdoctor.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -24,40 +24,40 @@
         <form>
             <div class="row flex-wrap">
                 <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control" placeholder="Nombres">
+                    <input type="text" class="form-control datos" id="nombre" placeholder="Nombres">
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control" placeholder="Apellidos">
-                </div>
-            </div>
-        </form>
-        <form>
-            <div class="row flex-wrap">
-                <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control" placeholder="CUIL">
-                </div>
-                <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control" placeholder="N° Tel/ Cel">
+                    <input type="text" class="form-control datos" id="apellido" placeholder="Apellidos">
                 </div>
             </div>
         </form>
         <form>
             <div class="row flex-wrap">
                 <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control" placeholder="Domicilio">
+                    <input type="number" class="form-control datos" min="20000000000" max="29999999999" id="cuil" placeholder="CUIL">
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control" placeholder="Localidad">
+                    <input type="number" class="form-control datos" id="telefono" placeholder="N° Tel/ Cel">
                 </div>
             </div>
         </form>
         <form>
             <div class="row flex-wrap">
                 <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control" placeholder="Provincia">
+                    <input type="text" class="form-control datos" id="domicilio" placeholder="Domicilio">
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control" placeholder="Código Postal">
+                    <input type="text" class="form-control datos" id="localidad" placeholder="Localidad">
+                </div>
+            </div>
+        </form>
+        <form>
+            <div class="row flex-wrap">
+                <div class="col-12 col-md-6 my-2">
+                    <input type="text" class="form-control datos" id="provincia" placeholder="Provincia">
+                </div>
+                <div class="col-12 col-md-6 my-2">
+                    <input type="number" class="form-control datos" id="codigopostal" placeholder="Código Postal">
                 </div>
             </div>
         </form>
@@ -126,10 +126,10 @@
             <form class="my-3">
                 <div class="row flex-wrap">
                     <div class="col-12 col-md-6 my-2">
-                        <input type="text" class="form-control" placeholder="Provincial N°">
+                        <input type="text" class="form-control datos" id="matriculaP" placeholder="Provincial N°">
                     </div>
                     <div class="col-12 col-md-6 my-2">
-                        <input type="text" class="form-control" placeholder="Nacional N°">
+                        <input type="text" class="form-control datos" id="matriculaN" placeholder="Nacional N°">
                     </div>
                 </div>
             </form>
@@ -154,7 +154,7 @@
         <div class="d-flex justify-content-center flex-wrap">
             <div class="d-flex flex-column align-items-center">
                 <div>
-                    <button class="btn btn-primary mt-3 font-weight-bold">Confirmar</button>
+                    <button class="btn btn-primary mt-3 font-weight-bold" onclick="getRegisterD()">Confirmar</button>
                 </div>
                 <div>
                     <button class="btn btn-secondary text-nowrap font-weight-bold mt-3">Tengo problemas para
@@ -173,7 +173,7 @@
         </div>
     </div>
 
-
+    <script src="src/js/SingUpdoctor.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
