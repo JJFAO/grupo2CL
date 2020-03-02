@@ -1,0 +1,34 @@
+* {
+    margin: 0px;
+
+}
+h1{
+    font-family: 'Roboto Slab', serif;
+}
+h2{
+    font-family:'Montserrat', sans-serif;
+}
+p{
+    font-family:'Montserrat', sans-serif;
+}
+label{
+    font-family:'Montserrat', sans-serif;
+}
+.btn{
+    font-family:'Montserrat', sans-serif;
+}
+.titulo-1 {
+    background-color: #225378;
+
+}
+
+#Dias .form-group, #Horarios .form-group {
+    display: flex;
+    margin: 5px;
+}
+#Dias input, #Horarios input {
+    width: 15px;
+    height: 15px;
+    margin: 5px 10px;
+}
+
