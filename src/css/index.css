@@ -14,6 +14,7 @@ h1{
 }
 h2, li, p, label{
     font-family:'Montserrat', sans-serif;
+    text-align: center;
 }
 .btn{
     font-family:'Montserrat', sans-serif;

@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="./src/css/bootstrap-datepicker.min.css">
 
 <!-- contenido -->
-<img src="./assets/img/LogoRolling.svg" class= "rounded mx-auto d-block m-4" alt="Logo RollingCode" height="91px">
+<!-- <img src="./assets/img/LogoRolling.svg" class= "rounded mx-auto d-block m-4" alt="Logo RollingCode" height="91px"> -->
 <h1 class="tituloSeccion text-center">Registro del Paciente</h1>
 <div class="formularioRegistroCliente">
 <h2 class="tituloContenido text-center">Bienvenido</h2>
@@ -28,25 +28,25 @@
     <form id="formPaciente">
         <div class="form-row">
           <div class="form-group col-md-4">
-            <input placeholder="Apellido" type="text" class="form-control" id="apellidoPaciente">
+            <input placeholder="Apellido" type="text" class="form-control datoPac" id="apellidoPaciente" title="Ingrese su Apellido" required>
           </div>
           <div class="form-group col-md-4">
-            <input placeholder="Nombre" type="text" class="form-control" id="nombrePaciente">
+            <input placeholder="Nombre" type="text" class="form-control datoPac" id="nombrePaciente" title="Ingrese su Nombre" required>
           </div>
           <div class="form-group col-md-4">
-            <input placeholder="Edad" type="number" maxlength="3" class="form-control" id="edadPaciente" >
+            <input placeholder="Edad" type="number" maxlength="3" size="3" min="0" max="150" class="form-control datoPac" id="edadPaciente" title="Ingrese su Edad" required>
           </div>
         </div>
         <!-- division 2 -->
         <div class="form-row d-flex mb-">
           <div class="form-group col-md-4">
-            <input placeholder="Documento" type="number" maxlength="8" class="form-control" id="documentoDNI">
+            <input placeholder="Documento" type="number" maxlength="8" size="8" min="0" max="99999999" class="form-control datoPac" id="documentoDNI" title="Ingrese su Documento" required>
           </div>          
           <div class="input-group d-flex flex-column col-md-4 mb-3">
-            <input placeholder="Fecha de Nacimiento" type="date" class="form-control" id="nacimientoPaciente" aria-describedby="inputGroup-sizing-default">
+            <input placeholder="Fecha de Nacimiento" type="date" min="1950-01-01" step="1" class="form-control datoPac" id="nacimientoPaciente" aria-describedby="inputGroup-sizing-default" title="Ingrese su Fecha de Nacimiento" required>
           </div>                 
-          <div class="idSexoCliente d-flex col-md-4 form-group">
-              <select class="form-control" id="idSexoCliente">
+          <div class="d-flex col-md-4 form-group">
+              <select class="form-control datoPac" id="idSexoCliente" title="Ingrese su Sexo">
                 <option value="Masculino">Masculino</option>
                 <option value="Femenino">Femenino</option>
                 <option value= "Prefiero no Decirlo">Prefiero no Decirlo</option>
@@ -56,23 +56,28 @@
         <!-- fin division 2 -->
         <!-- Inicio Division 3 -->
         <div class="form-row d-flex justify-content-around fill">
-            <div class="form-group col-md-3">
-                <input placeholder="Domicilio "type="text" class="form-control" id="domicilioPaciente">
+        <div class="form-group col-md-6">
+          <input placeholder="Correo Electrónico"type="email" class="form-control datoPac" id="emailPaciente" title="Introduzca una dirección de correo electrónico válida" required>
+        </div>
+        <div class="form-group col-md-6">
+          <input placeholder="Contraseña"type="password" class="form-control datoPac" id="passPaciente" minlength="5" maxlength="10" pattern="[A-Za-z0-9]+" title="Ingrese su Edad" required>
+        </div>
+      </div>
+        <div class="form-row d-flex justify-content-around fill">
+            <div class="form-group col-md-4">
+                <input placeholder="Domicilio "type="text" class="form-control datoPac" id="domicilioPaciente" title="Ingrese su Domicilio"required>
               </div>
-            <div class="form-group col-md-3">
-                <input placeholder="Teléfono Fijo" type="text" class="form-control" id="telefonoFijoCliente">
+            <div class="form-group col-md-4">
+                <input placeholder="Teléfono Fijo" type="text" class="form-control datoPac" id="telefonoFijoCliente" title="Ingrese su Teléfono Fijo">
             </div>
-            <div class="form-group col-md-3">
-              <input placeholder="Teléfono Movil" type="text" class="form-control" id="telefonoMovilCliente">
+            <div class="form-group col-md-4">
+              <input placeholder="Teléfono Movil" type="text" class="form-control datoPac" id="telefonoMovilCliente" title="Ingrese su Teléfono Celular" required>
           </div>
-            <div class="form-group col-md-3">
-              <input placeholder="Correo Electrónico"type="email" class="form-control" id="emailPaciente">
-            </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-4">
-            <select id="seleccionProvincia" class="form-control">
-              <option selected disabled>Provincia</option>
+            <select id="seleccionProvincia" class="form-control datoPac" title="Ingrese Provincia" required>
+              <option selected disabled value="">Provincia</option>
               <option value="buenosAires">Buenos Aries</option>
               <option value="caba">Ciudad Autónoma de Buenos Aires</option>
               <option value="catamarca">Catamarca</option>
@@ -100,58 +105,82 @@
             </select>
           </div>
           <div class="form-group col-md-4">
-            <select id="seleccionLocalidad" class="form-control">
-              <option selected disabled">Localidad</option>
+            <select id="seleccionLocalidad" class="form-control datoPac" title="Ingrese su Localidad">
+              <option selected disabled value=""">Localidad</option>
             </select>
           </div>
          <div class="form-group col-md-4">
-            <input placeholder="Código Postal" type="text" class="form-control" id="postalCliente">
+            <input placeholder="Código Postal" type="text" class="form-control" id="postalCliente" title="Ingrese el Código Postal" required>
           </div>
         </div>
 <!-- Fin división 3 -->
         <div class="form-group d-flex flex-column align-items-center mt-3 mb-5">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="aceptoTyC">
+          <div class="form-check" >
+            <input class="form-check-input" type="checkbox" id="aceptoTyC"  title="Para confirmar, acepte los Términos y Condiciones" required>
             <label class="form-check-label mb-3" for="aceptoTyC">
               Acepto Términos y Condiciones
             </label>
           </div>
-          <button type="submit" class="btn btn-primary btn-lg mb-3 confirmarBoton">Confirmar</button>
-          <button type="submit" class="btn btn-secondary btn-sm mb-3 confirmarBotonProblema">Tengo problemas para registrarme</button>
+          <button onclick="getRegisterPac()" type="submit" class="btn btn-primary btn-lg mb-3 confirmarBoton">Confirmar</button>
+          <button onclick= "errorEnvio()" type="button" class="btn btn-secondary btn-sm mb-3 confirmarBotonProblema">Tengo problemas para registrarme</button>
           </div>
         <p class="terminosCondiciones">"SEGÚN EL ART 1 DISPOSICIÓN 4/2009, SE TRANSCRIBE: ART. 27 INC 3 LEY 25326: EL TITULAR PODRÁ EN CUALQUIER MOMENTO SOLICITAR EL RETIRO O BLOQUEO DE SU NOMBRE DE LOS BANCOS DE DATOS A LOS QUE SE REFIERE EL PRESENTE ARTÍCULO. Y ART. 27 ANEXO I DECRETO 1558/01: EN TODA COMUNICACIÓN CON FINES DE PUBLICIDAD QUE SE REALICE POR CORREO, TELÉFONO, CORREO ELECTRÓNICO, INTERNET U OTRO MEDIO A DISTANCIA A CONOCER, SE DEBERÁ INDICAR, EN FORMA EXPRESA Y DESTACADA, LA POSIBILIDAD DEL TITULAR DEL DATO DE SOLICITAR EL RETIRO O BLOQUEO, TOTAL O PARCIAL, DE SU NOMBRE DE LA BASE DE DATOS. A PEDIDO DEL INTERESADO, SE DEBERÁ INFORMAR EL NOMBRE DEL RESPONSABLE O USUARIO DEL BANCO DE DATOS QUE PROVEYÓ LA INFORMACIÓN."
         </p>
       </form>
     </div>
+<!-- Modal -->
+<div class="modal fade" id="modalRegistrado" tabindex="-1" role="dialog" aria-labelledby="modalRegistradoLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="">
+        <h1 class="modal-title text-center mt-2">Paciente Registrado</h1>
+      </div>
+      <div class="modal-body">
+        <p>Gracias por registrarte en Nuestra Clínica. <br> En tu correo electrónico encontrarás la clave generada para iniciar sesión.</p>
+      </div>
+      <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-primary mb-4" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalError" tabindex="-1" role="dialog" aria-labelledby="modalErrorLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="">
+        <h1 class="modal-title text-center mt-2">Te pedimos disculpas</h1>
+      </div>
+      <div class="modal-body">
+        <p>Por favor, detalla debajo el problema que tuviste para registrarte.</p>
+        <p>Nuestro equipo técnico resolverá este inconveniente en 24 Hs hábiles.</p>
+        <p>Para continuar con tu gestión, comunicate al <br>(381) 403 03456.<br></p>
+        <p>Muchas Gracias</p>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1"></label>
+          <textarea class="form-control" id="errorEnvio" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-secondary mb-4" data-dismiss="modal">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade bd-example-modal-sm mt-2" id="modalFaltanDatos" tabindex="-1" role="dialog" aria-labelledby="modalIncorrectoDatos" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <p> Por favor, ingresá los datos correctamente.</p>
+    </div>
+  </div>
+</div>
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-analytics.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAdhag8TvPCAakcPCm_5_a384eAu825760",
-    authDomain: "grupo-2-cl.firebaseapp.com",
-    databaseURL: "https://grupo-2-cl.firebaseio.com",
-    projectId: "grupo-2-cl",
-    storageBucket: "grupo-2-cl.appspot.com",
-    messagingSenderId: "867224840699",
-    appId: "1:867224840699:web:1323988005d72fbdf2c35e",
-    measurementId: "G-92W7BK1VFB"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
 
-  
 </script>
 <!-- Anexos -->
 <script src="./src/js/index.js"></script>
+<script src="./src/js/pacientes.js"></script> 
+<script src="./src/js/RegPaciente.js"></script>
 </body>
-</html> -->
+</html>
