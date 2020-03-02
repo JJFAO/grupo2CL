@@ -1,6 +1,10 @@
 html{
   scroll-behavior: smooth;
 }
+body{
+  padding: 0;
+  margin: 0;
+}
 .divLogo{
     display: flex;
     justify-content: center;
@@ -48,8 +52,8 @@ html{
   height: 100vh;
 }
 .listabotones, .subboton{
-  margin-left: 3vw;
-  padding-top: 5vh;
+  margin-left: 3rem;
+  margin-top: 2rem;
 }
 .textoProfesional{
   font-family: 'Roboto Slab', sans-serif;
@@ -98,11 +102,6 @@ text-decoration: none;
 .tabla{
   overflow-x: auto;
 }
-@media screen and (max-width: 1440px) {
-  .tabla{
-    
-  }
-}
 .table{
   margin-top: 2rem;
   font-family: 'Montserrat', sans-serif;
@@ -132,4 +131,7 @@ text-decoration: none;
   background-color:#e9ecef !important;
   border: none !important;
   color: black !important;
+}
+.check{
+  margin-left: 25px!important;
 }

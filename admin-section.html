@@ -25,7 +25,7 @@
               <i class="fas fa-bars d-lg-none text-white"></i>
             </a>
             <a class="navbar-brand" href="#">
-              <img class="LogoRolling animated heartBeat <" src="img/LogoRolling white.svg" width="250" height=""
+              <img class="LogoRolling animated heartBeat " src="img/LogoRolling white.svg" width="250" height=""
                 class="d-inline-block align-top" alt=""></a>
           </nav>
           <ul class="navbar-nav Lista collapse d-lg-block" id="collapseExample">
@@ -35,22 +35,23 @@
             </li>
             <li class="contienesubb mt-3">
               <a class="subboton" href="#">Incidencias</a>
+              <span class="pelotas animated heartBeat badge badge-pill badge-success">0</span>
             </li>
             <li class="contienesubb my-3">
               <a class="subboton" href="#">Autorizaciones</a>
+              <span class="pelotas animated heartBeat badge badge-pill badge-success">0</span>
             </li>
             <li class="contienesubb">
               <a class="subboton" href="#">Calendario</a>
             </li>
             <li class="listabotones">
-              <a class="pacientes" href="#pacientes" role="button" aria-haspopup="true"
-                aria-expanded="false">Pacientes</a>
+              <a class="pacientes" href="#pacientes" aria-haspopup="true" aria-expanded="false">Pacientes</a>
             </li>
             <li class="contienesubb mt-3">
-              <a class="subboton" href="">Incidencias</a>
+              <p class="subboton ">Incidencias <span class="pelotas animated heartBeat badge badge-pill badge-success">0</span></p> 
             </li>
             <li class="contienesubb mt-3">
-              <a class="subboton" href="">Datos</a>
+              <p class="subboton ">Datos</p> 
             </li>
             <li class="listabotones">
               <a class="panel" href="#panel" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">
@@ -58,7 +59,7 @@
               </a>
             </li>
             <li class="contienesubb mt-3">
-              <a class="subboton" href="">Datos</a>
+              <p class="subboton ">Datos</p> 
             </li>
           </ul>
         </div>
@@ -67,10 +68,35 @@
         <h1 class="textoProfesional" id="profesionales">Profesionales</h1>
         <div class="btn-inc-aut mx-sm-3 mt-4 ">
           <button type="button"
-            class="btn btn-primary mx-2 mx-sm-3 mx-md-2 mx-lg-5 col-md-4 col-10 mt-2 pl-5 pl-md-1 my-4">
-            Incidencias
+            class="btn btn-primary mx-2 mx-sm-3 mx-md-2 mx-lg-5 col-md-4 col-10 mt-2 pl-5 pl-md-1 my-4"
+            data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Incidencias
             <span class="pelotas animated heartBeat badge badge-pill badge-success">0</span>
           </button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Incidencias</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Mensaje:</label>
+                      <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Enviar</button>
+                </div>
+              </div>
+            </div>
+          </div>
           <a type="button" class="btn btn-primary mx-2 mx-sm-3 mx-md-2 mx-lg-5 col-md-4 col-10 mt-2 "
             href="#autorizaciones">
             Autorizaciones
@@ -81,12 +107,24 @@
             <thead class="thead-dark">
               <tr class="text-center">
                 <th class="horario" scope="col"></th>
-                <th scope="col">Lunes</th>
-                <th scope="col">Martes</th>
-                <th scope="col">Miercoles</th>
-                <th scope="col">Jueves</th>
-                <th scope="col">Viernes</th>
-                <th scope="col">Sabado</th>
+                <th scope="col" style="
+    width: 13vw;
+">Lunes</th>
+                <th scope="col" style="
+    width: 13vw;
+">Martes</th>
+                <th scope="col" style="
+    width: 13vw;
+">Miercoles</th>
+                <th scope="col" style="
+    width: 13vw;
+">Jueves</th>
+                <th scope="col" style="
+    width: 13vw;
+">Viernes</th>
+                <th scope="col" style="
+    width: 13vw;
+">Sabado</th>
               </tr>
             </thead>
             <tbody>
@@ -149,22 +187,64 @@
         </div>
         <div class="sector-pacientes">
           <h1 class="textoProfesional mt-5" id="pacientes">Pacientes</h1>
-          <button type="button" class="btn btn-primary mx-2 mx-sm-3 mx-md-2 mx-lg-5 mt-4 w-25 my-5">
-            Incidencias
-            <span class="pelotas badge badge-pill badge-success">0</span>
-          </button>
+          <div class="btn-inc-aut mx-sm-3 mt-4 ">
+            <button type="button"
+              class="btn btn-primary mx-2 mx-sm-3 mx-md-2 mx-lg-5 col-md-4 col-10 mt-2 pl-5 pl-md-1 my-4"
+              data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Incidencias
+              <span class="pelotas animated heartBeat badge badge-pill badge-success">0</span>
+            </button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Incidencias</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="message-text" class="col-form-label">Mensaje:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="tabla tabla-pacientes">
           <table class="table mt-4">
             <thead class="thead-dark">
               <tr class="text-center">
-                <th scope="col">Paciente</th>
-                <th scope="col">Datos</th>
-                <th scope="col">Doctor</th>
-                <th scope="col">Edad</th>
-                <th scope="col">DNI</th>
-                <th scope="col">Turno</th>
-                <th scope="col">Admin</th>
+                <th scope="col" style="
+    width: 13vw;
+">Paciente</th>
+                <th scope="col" style="
+    width: 13vw;
+">Datos</th>
+                <th scope="col" style="
+    width: 13vw;
+">Doctor</th>
+                <th scope="col" style="
+    width: 13vw;
+">Edad</th>
+                <th scope="col" style="
+    width: 13vw;
+">DNI</th>
+                <th scope="col" style="
+    width: 13vw;
+">Turno</th>
+                <th scope="col" style="
+    width: 13vw;
+">Admin</th>
               </tr>
             </thead>
             <tbody>
@@ -226,18 +306,19 @@
           </table>
         </div>
         <div>
-          <h1 class="textoProfesional mt-5">Panel de Gestión</h1>
-          <h2 id="panel" class="textoProfesional my-5">Datos Doctores</h2>
+          <h1 id="panel" class="textoProfesional mt-5">Panel de Gestión</h1>
+          <h2 class="textoProfesional my-5">Datos Doctores</h2>
         </div>
         <div class="tabla tabla-doctores">
           <table class="table mt-4" id="autorizaciones">
             <thead class="thead-dark">
               <tr class="text-center">
-                <th scope="col">Doctor</th>
-                <th scope="col">Especialidad
-                <th scope="col">Turnos</th>
-                <th scope="col">Consulta</th>
-                <th scope="col">Autorizar</th>
+                <th scope="col" style="width: 13vw;">Doctor</th>
+                <th scope="col" style="width: 13vw;">Especialidad</th>
+                <th scope="col" style="width: 13vw;">Turnos</th>
+                <th scope="col" style="width: 13vw;">Horarios</th>
+                <th scope="col" style="width: 13vw;">Consulta</th>
+                <th scope="col" style="width: 13vw;">Autorizar</th>
               </tr>
             </thead>
             <tbody>
@@ -246,11 +327,27 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
                 <td>
-                  <button class="ml-5 text-success border-0">
+                  <button class="check text-success border-0 bg-light">
+                    ✔
+
+                    <button class="check text-success border-0 bg-light">
+                      ❌
+                    </button>
+                </td>
+              </tr>
+              <tr class="thead-light">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <button class="check text-success border-0 bg-light">
                     ✔
                   </button>
-                  <button class="ml-5 text-success border-0">
+                  <button class="check text-success border-0 bg-light">
                     ❌
                   </button>
                 </td>
@@ -260,11 +357,12 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
                 <td>
-                  <button class="ml-5 text-success border-0">
+                  <button class="check text-success border-0 bg-light">
                     ✔
                   </button>
-                  <button class="ml-5 text-success border-0">
+                  <button class="check text-success border-0 bg-light">
                     ❌
                   </button>
                 </td>
@@ -274,26 +372,13 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
                 <td>
-                  <button class="ml-5 text-success border-0">
-                  ✔
+                  <button class="check text-success border-0 bg-light">
+                    ✔
                   </button>
-                  <button class="ml-5 text-success border-0">
+                  <button class="check text-success border-0 bg-light">
                     ❌
-                  </button>
-                </td>
-              </tr>
-              <tr class="thead-light">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                  <button class="ml-5 text-success border-0">
-                  ✔
-                </button>
-                <button class="ml-5 text-success border-0">
-                  ❌
                   </button>
                 </td>
               </tr>
@@ -307,11 +392,24 @@
           <table class="table w-100 mt-4">
             <thead class="thead-dark">
               <tr class="text-center">
-                <th scope="col">Doctor</th>
-                <th scope="col">Especialidad
-                <th>
-                <th scope="col">Consulta</th>
-                <th scope="col">Admin</th>
+                <th scope="col" style="
+                    width: 13vw;
+                ">Paciente</th>
+                    <th scope="col" style="
+                    width: 13vw;
+                ">Edad</th>
+                    <th scope="col" style="
+                    width: 13vw;
+                ">Dni</th>
+                    <th scope="col" style="
+                    width: 13vw;
+                ">Doctor</th>
+                    <th scope="col" style="
+                    width: 13vw;
+                ">Turno</th>
+                    <th scope="col" style="
+                    width: 13vw;
+                ">Autorizar</th>
               </tr>
             </thead>
             <tbody>
@@ -320,11 +418,12 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
                 <td>
-                  <button class="ml-5 text-success border-0">
+                  <button class="check text-success border-0 bg-light">
                     ✔
                   </button>
-                  <button class="ml-5 text-success border-0">
+                  <button class="check text-success border-0 bg-light">
                     ❌
                   </button>
                 </td>
@@ -334,11 +433,12 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
                 <td>
-                  <button class="ml-5 text-success border-0">
+                  <button class="check text-success border-0 bg-light">
                     ✔
                   </button>
-                  <button class="ml-5 text-success border-0">
+                  <button class="check text-success border-0 bg-light">
                     ❌
                   </button>
                 </td>
@@ -348,11 +448,12 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
                 <td>
-                  <button class="ml-5 text-success border-0">
+                  <button class="check text-success border-0 bg-light">
                     ✔
                   </button>
-                  <button class="ml-5 text-success border-0">
+                  <button class="check text-success border-0 bg-light">
                     ❌
                   </button>
                 </td>
@@ -362,16 +463,16 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
                 <td>
-                  <button class="ml-5 text-success border-0">
+                  <button class="check text-success border-0 bg-light">
                     ✔
                   </button>
-                  <button class="ml-5 text-success border-0">
+                  <button class="check text-success border-0 bg-light">
                     ❌
                   </button>
                 </td>
               </tr>
-
             </tbody>
           </table>
         </div>
