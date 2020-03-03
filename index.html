@@ -1,14 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/css/HomePage.css">
     <link rel="stylesheet" href="src/css/login.css">
+    <link rel="stylesheet" href="src/css/HomePage.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:700&display=swap" rel="stylesheet">
 
     <title>Clínica RollingCode</title>
@@ -48,7 +50,7 @@
                     <a class="nav-link" id="inicio" href="#">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item mr-1 ml-1">
-                    <a class="nav-link" id="pacientes" href="#">Pacientes</a>
+                    <a class="nav-link" id="pacientes" onclick="turnoPaciente()" >Pacientes</a>
                 </li>
                 <li class="nav-item mr-1 ml-1">
                     <a class="nav-link" id="institucional" href="#">Institucional</a>
@@ -57,7 +59,7 @@
                     <a class="nav-link" id="servicios" href="#">Servicios</a>
                 </li>
                 <li class="nav-item mr-1 ml-1">
-                    <a class="nav-link" id="profesionales" href="#">Profesionales</a>
+                    <a class="nav-link" id="profesionales" onclick="pacienteProfesional()">Profesionales</a>
                 </li>
                 <li class="nav-item mr-1 ml-1">
                     <a class="nav-link" id="contacto" href="#">Contacto</a>
@@ -67,6 +69,48 @@
         </div>
 
     </nav>
+    <main>
+      <div class="d-flex justify-content-center m-3">
+        <a class="d-flex justify-content-center" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          <div class="card text-white border-white">
+            <img src="./src/imagenes/xs.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay fondotitulo">
+              <h5 class="titulo">¡Conoce Nuestra Institución!</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="collapse ml-4 mr-4 p-0 mt-2" id="collapseExample">
+        <div class="card-body">
+          La Clínica Rolling Code School es una entidad sin ánimo de lucro dedicada a la práctica clínica, la educación y la investigación y sus dependencias para la investigación están situadas en Tucuman, Salta y Buenos Aires. Además posee hospitales y clínicas en San Miguel de Tucuman (Tucuman). Está asociada con varias pequeñas clínicas y hospitales de Cordoba, Santiago del Estero y Santa Cruz.
+        </div>
+      </div>
+      <div class="container-fluid mt-4">
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <div class="card">
+              <img class="card-img-top" src="./src/imagenes/metodoleon.PNG" alt="Card image cap">
+              <h4 class="titulocards mt-3">Metodo Leon</h4>
+              <div class="card-body">  El acompañamiento cambia vidas y permite soñar  Clínica Mayo se sumó como Padrino al Programa "Aprendiendo en Casa - HIPPY", para que nuevas familias reciban acompañamiento a través de un proyecto 100% educativo, que estimula el aprendizaje, el [...] </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="card">
+              <img class="card-img-top" src="./src/imagenes/clinicayfundacion.PNG" alt="Card image cap">
+              <h4 class="titulocards mt-3">Clinica Rolling y Fundacion Leon</h4>
+              <div class="card-body"> Programa de acompañamiento familiar desde octubre de 2018 trabajamos juntos Clinca Mayo y FUndacion Leon acompañando familias en sitauciones de vulnerabilidad de la provincia. Todos los programas de Fundacion Leon se basan en... </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="card">
+              <img class="card-img-top" src="./src/imagenes/semanaprematu.PNG" alt="Card image cap">
+              <h4 class="titulocards mt-3">Semana de Prematuro</h4>
+              <div class="card-body"> Campaña de concientaziacion 2019 Este festejo y campaña de concientizacion comenzo a realizarse en Argentina hace 10 años, es una inicitiva conjunta entre UNICEF y la Secretaria de Gobierno de Salud de la ... </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </main>
     <!-- Modal -->
     <div class="modal fade" id="indexModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
@@ -232,6 +276,52 @@
       </div>
     </div>
   </div>
+      <!-- modal Paciente Logueado -->
+      <div class="modal fade" id="modalPacienteSesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title text-center">Bienvenido</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h1>Hola Juan</h1>
+              <p>Bienvenido a Clinica Rolling</p>
+              <p>No tiene turno disponible, puede solicitar haciendo clic en el botón "Pedir Turno"</p>
+              <p>Su próximo turno es el "día de la semana" a las "hora de turno", con el doctor "nombre del Doctor"</p>
+              <p>Por favor, llegue 15 minutos antes del turno cargado.¡Gracias!</p>
+            </div>
+            <div class="d-flex justify-content-around align-items-center">
+              <button type="button" class="btn btn-primary mb-3" data-dismiss="modal">Pedir Turno</button>
+              <button type="button" class="btn btn-primary mb-3" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- modal Profesional logueado -->
+      <div class="modal fade" id="modalProfesionalSesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" >Bienvenido</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h1>Buenas tardes, Juan</h1>
+                <p>Bienvenido a Clinica Rolling</p>
+                <p>No tiene pacientes asignados, aguarde un instante o comuniquese con Soporte para verificar inconsistencias</p>
+                <p>Tiene los siguientes pacientes para recibir en el día de hoy</p>
+                </div>
+            <div class="d-flex justify-content-around align-items-center">
+              <button type="button" class="btn btn-primary mb-3" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 <footer class="bg-dark">
         <img src="Assets/LogoRolling white.svg" alt="Logo Rolling Code">
 <div>
@@ -257,5 +347,4 @@
         <script src="src/js/HomePage.js"></script>
   <script src="./src/js/login.js"></script>
 </body>
-
 </html>
