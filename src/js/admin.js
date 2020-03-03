@@ -8,11 +8,11 @@
 // ]
 // function myFunction() {
 //     const doctor = "Marco"
-//     const tablahtml = document.getElementById("myTable");
+//     const tablahtml = document.getElementById("tablaHorarios");
 //     const turnosDoctor = Turnos.filter((turno) => {return turno.doctor == doctor})
 //     console.log(turnosDoctor);
 //     const turnosHora = turnosDoctor.filter((turno) => turno.fecha >= "8:00" && turno.fecha )
-    
+
 
 //     tablahtml.innerHTML = `
 //     <tr id="" class="thead-light">
@@ -35,10 +35,10 @@ const pacientes = [
     {nombre: 'Josefina', edad:'25', dni:'32019283', doctor:'ana', turno:'22:00'},
     ]
 function cargarPacientes() {
-    const tablaPaciente = document.getElementById("paciente");
-    for (let i = 0; i < pacientes.length; i++) {
-        const paciente = pacientes[i];
-        tablaPaciente.innerHTML += `
+  const tablaPaciente = document.getElementById("paciente");
+  for (let i = 0; i < pacientes.length; i++) {
+    const paciente = pacientes[i];
+    tablaPaciente.innerHTML += `
         <tr id="" class="thead-light">
             <td>${paciente.nombre}</td>
             <td>${paciente.edad}</td>
@@ -54,5 +54,5 @@ function cargarPacientes() {
           </td>
         </tr>
         `
-    }
+  }
 }
