@@ -49,7 +49,7 @@ body{
     }
   }
 .Lista{
-  height: 100vh;
+  height: 115vh;
 }
 .listabotones, .subboton{
   margin-left: 3rem;
@@ -107,13 +107,13 @@ text-decoration: none;
   font-family: 'Montserrat', sans-serif;
 }
 .barramenu{
-  background-color:#1595A3;
+  background-color:#225378;
 }
 .tabla th{
   font-family: 'Montserrat', sans-serif;
 }
 .btn-primary{
-  background-color: #1595A3 !important;
+  background-color: #225378 !important;
 }
 .pelotas{
   margin-left: 30px;
@@ -141,4 +141,10 @@ text-decoration: none;
 
 td{
   text-align: center;
+}
+.imagen-inicio-sesion{
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  border: 0;
 }
