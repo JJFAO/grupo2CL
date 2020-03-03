@@ -1,16 +1,16 @@
 class Pacientes
  {
-    constructor (nombre){
-        this.nombre = nombre,
-        this.apellido = apellido,
-        this.telefono = telefono,
-        this.edad = edad,
-        this.correo = correo,
-        this.password = password,
-        this.domicilio = domiciolio,
-        this.provincia = provincia,
-        this.localidad = localiad,
-        this.codigopostal = codigopostal,
-        this.celular = celular
+    constructor (nombrePaciente, apellidoPaciente, telefonoFijoCliente, edadPaciente, emailPaciente, passPaciente, domicilioPaciente,seleccionProvincia, seleccionLocalidad, postalCliente){
+        this.nombre = nombrePaciente;
+        this.apellido = apellidoPaciente;
+        this.telefono = telefonoFijoCliente;
+        this.celular = telefonoMovilCliente;
+        this.edad = edadPaciente;
+        this.correo = emailPaciente;   
+        this.password = passPaciente;
+        this.domicilio = domicilioPaciente;
+        this.provincia = seleccionProvincia;
+        this.localidad = seleccionLocalidad;
+        this.codigopostal = postalCliente;
     }
 }

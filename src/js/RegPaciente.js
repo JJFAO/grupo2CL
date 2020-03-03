@@ -12,9 +12,9 @@ function getRegisterPac (){
     registroPac[datoPac.id] = datoPac.value
   });
   const nPacientes = JSON.parse(localStorage.getItem('Pacientes')) || [];
-  nPacientes.push(registroPac);
+    nPacientes.push(registroPac);
   localStorage.setItem('Pacientes',JSON.stringify(nPacientes)); 
-
+ 
 }
 }
 

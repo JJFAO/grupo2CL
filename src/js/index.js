@@ -1,8 +1,8 @@
 
 
 function cargaLocalidades(){
-  let provSelect = document.getElementById('seleccionProvincia');
-  let listLocalidad = document.getElementById('seleccionLocalidad');
+  let provSelect = document.getElementById('provincia');
+  let listLocalidad = document.getElementById('localidad');
 
 let provincias={
   
