@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -48,10 +49,10 @@
               <a class="pacientes" href="#pacientes" aria-haspopup="true" aria-expanded="false">Pacientes</a>
             </li>
             <li class="contienesubb mt-3">
-              <p class="subboton ">Incidencias</p> 
+              <p class="subboton ">Incidencias</p>
             </li>
             <li class="contienesubb mt-3">
-              <p class="subboton ">Datos</p> 
+              <p class="subboton ">Datos</p>
             </li>
             <li class="listabotones">
               <a class="panel" href="#panel" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">
@@ -59,7 +60,7 @@
               </a>
             </li>
             <li class="contienesubb mt-3">
-              <p class="subboton ">Datos</p> 
+              <p class="subboton ">Datos</p>
             </li>
           </ul>
         </div>
@@ -110,27 +111,14 @@
             <thead class="thead-dark">
               <tr class="text-center">
                 <th class="horario" scope="col"></th>
-                <th scope="col" style="
-    width: 13vw;
-">Lunes</th>
-                <th scope="col" style="
-    width: 13vw;
-">Martes</th>
-                <th scope="col" style="
-    width: 13vw;
-">Miercoles</th>
-                <th scope="col" style="
-    width: 13vw;
-">Jueves</th>
-                <th scope="col" style="
-    width: 13vw;
-">Viernes</th>
-                <th scope="col" style="
-    width: 13vw;
-">Sabado</th>
+                <th scope="col" style="width: 13vw;">Lunes</th>
+                <th scope="col" style="width: 13vw;">Martes</th>
+                <th scope="col" style="width: 13vw;">Miercoles</th>
+                <th scope="col" style="width: 13vw;">Jueves</th>
+                <th scope="col" style="width: 13vw;">Viernes</th>
+                <th scope="col" style="width: 13vw;">Sabado</th>
               </tr>
             </thead>
-            
             <tbody id="myTable">
               <tr id="" class="thead-light">
                 <th id="myTr" scope="row" style="width: 60px;">8:00 12:00</th>
@@ -228,13 +216,13 @@
           </div>
         </div>
         <!-- Termina section2 -->
-        
+
         <div class="tabla tabla-pacientes">
           <table class="table mt-4">
             <thead class="thead-dark">
               <tr class="text-center">
                 <th scope="col" style="
-                width: 13vw;">Paciente</th> 
+                width: 13vw;">Paciente</th>
                 <th scope="col" style="width: 13vw;">Datos</th>
                 <th scope="col" style="width: 13vw;">Doctor</th>
                 <th scope="col" style="width: 13vw;">Edad</th>
@@ -377,8 +365,18 @@
           </table>
         </div>
         <div>
-          <h2 class="textoProfesional my-5">Datos Pacientes</h2>
-          <button onclick="cargarPacientes()">Hola perra</button>
+          <h2 class="textoProfesional mt-3">Datos Pacientes</h2>
+          <div class="dropdown d-flex">
+            <button class="btn btn-secondary dropdown-toggle my-4" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Seleccionar Doctor
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Dr. Mariano</a>
+              <a class="dropdown-item" href="#">Dra. Ana</a>
+              <a class="dropdown-item" href="#">Dr. JJ</a>
+            </div>
+          </div>
         </div>
         <div class="tabla tablaPacientes">
           <table class="table w-100 mt-4">
@@ -387,32 +385,24 @@
                 <th scope="col" style="
                     width: 13vw;
                 ">Paciente</th>
-                    <th scope="col" style="
+                <th scope="col" style="
                     width: 13vw;
                 ">Edad</th>
-                    <th scope="col" style="
+                <th scope="col" style="
                     width: 13vw;
                 ">Dni</th>
-                    <th scope="col" style="
+                <th scope="col" style="
                     width: 13vw;
                 ">Doctor</th>
-                    <th scope="col" style="
+                <th scope="col" style="
                     width: 13vw;
                 ">Turno</th>
-                    <th scope="col" style="
+                <th scope="col" style="
                     width: 13vw;
                 ">Autorizar</th>
               </tr>
             </thead>
             <tbody id="paciente">
-              <tr class="thead-light">
-              </tr>
-              <tr class="thead-light">
-              </tr>
-              <tr class="thead-light">
-              </tr>
-              <tr class="thead-light">
-              </tr>
             </tbody>
           </table>
         </div>

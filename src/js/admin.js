@@ -8,11 +8,11 @@
 // ]
 // function myFunction() {
 //     const doctor = "Marco"
-//     const tablahtml = document.getElementById("myTable");
+//     const tablahtml = document.getElementById("tablaHorarios");
 //     const turnosDoctor = Turnos.filter((turno) => {return turno.doctor == doctor})
 //     console.log(turnosDoctor);
 //     const turnosHora = turnosDoctor.filter((turno) => turno.fecha >= "8:00" && turno.fecha )
-    
+
 
 //     tablahtml.innerHTML = `
 //     <tr id="" class="thead-light">
@@ -27,17 +27,18 @@
 //     `
 // }
 
-const pacientes = JSON.parse(localStorage.getItem('pacientes')) 
-    // {nombre: 'Mariano De Filippo', edad:'20', dni:'42269845', doctor:'jj', turno:'8:00'},
-    // {nombre: 'Jj', edad:'29', dni:'0958475', doctor:'luis', turno:'12:00'},
-    // {nombre: 'Maria', edad:'80', dni:'43567876', doctor:'mirta', turno:'10:00'},
-    // {nombre: 'Franco', edad:'9', dni:'13326907', doctor:'leandro', turno:'16:00'},
-    // {nombre: 'Josefina', edad:'25', dni:'32019283', doctor:'ana', turno:'22:00'},
+const pacientes = [
+  { nombre: 'Mariano De Filippo', edad: '20', dni: '42269845', doctor: 'jj', turno: '8:00' },
+  { nombre: 'Jj', edad: '29', dni: '0958475', doctor: 'luis', turno: '12:00' },
+  { nombre: 'Maria', edad: '80', dni: '43567876', doctor: 'mirta', turno: '10:00' },
+  { nombre: 'Franco', edad: '9', dni: '13326907', doctor: 'leandro', turno: '16:00' },
+  { nombre: 'Josefina', edad: '25', dni: '32019283', doctor: 'ana', turno: '22:00' },
+]
 function cargarPacientes() {
-    const tablaPaciente = document.getElementById("paciente");
-    for (let i = 0; i < pacientes.length; i++) {
-        const paciente = pacientes[i];
-        tablaPaciente.innerHTML += `
+  const tablaPaciente = document.getElementById("paciente");
+  for (let i = 0; i < pacientes.length; i++) {
+    const paciente = pacientes[i];
+    tablaPaciente.innerHTML += `
         <tr id="" class="thead-light">
             <td>${paciente.nombre}</td>
             <td>${paciente.edad}</td>
@@ -53,5 +54,5 @@ function cargarPacientes() {
           </td>
         </tr>
         `
-    }
+  }
 }
