@@ -132,6 +132,13 @@ text-decoration: none;
   border: none !important;
   color: black !important;
 }
-.check{
-  margin-left: 25px!important;
+.check1{
+  margin-left: 20px!important;
+}
+.check2{
+  margin-left: 20px;
+}
+
+td{
+  text-align: center;
 }
