@@ -1,0 +1,56 @@
+h1{
+    font-family: 'Roboto Slab', serif;
+}
+h2{
+    font-family:'Montserrat', sans-serif;
+}
+p{
+    font-family:'Montserrat', sans-serif;
+}
+label{
+    font-family:'Montserrat', sans-serif;
+}
+.btn{
+    font-family:'Montserrat', sans-serif;
+}
+.form-control{
+    background-color: #d3d3d3 !important;
+    font-family:'Montserrat', sans-serif;
+    color: black;       
+    }
+    .form-control::-webkit-input-placeholder {
+        background-color: #d3d3d3;
+        border-radius: 11px;
+        color: black !important;
+    }
+    .form-control::-moz-placeholder {
+        background-color: #d3d3d3;
+        border-radius: 11px;
+        color: black !important;
+    }
+    ::-webkit-input-placeholder {
+        font-family:'Montserrat', sans-serif;
+    }
+    ::-moz-placeholder {
+        background-color: #d3d3d3;
+        font-family:'Montserrat', sans-serif;
+    }
+.borde-separacion {
+    border-color: #1595a3!important;
+    border-bottom: 5px solid;
+}
+
+.logoRolling {
+    height: 50px;
+}
+@media (min-width: 768px) {
+    .logoRolling {
+        height: 90px;
+    }
+ }
+@media (max-width: 768px) {
+    .letrasFooter {
+        font-size: 15px;
+    }
+ }
+ 
