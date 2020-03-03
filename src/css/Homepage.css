@@ -54,7 +54,6 @@ label{
     }
  }
 
-
 /*   main index */
 
 .titulo{
@@ -88,6 +87,7 @@ font-size: 27px;
     font-family:'Roboto Slab', serif; 
     font-size: 19px;
 }
+
 .card-body{
     font-family: 'Montserrat', sans-serif;
 }
