@@ -86,7 +86,7 @@ font-size: 27px;
     display: flex;
     justify-content: center;
     font-family:'Roboto Slab', serif; 
-    font-size: 19px};
+    font-size: 19px;
 }
 .card-body{
     font-family: 'Montserrat', sans-serif;
