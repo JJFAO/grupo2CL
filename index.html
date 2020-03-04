@@ -50,7 +50,7 @@
                     <a class="nav-link" id="inicio" href="#">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item mr-1 ml-1">
-                    <a class="nav-link" id="pacientes" href="#">Pacientes</a>
+                    <a class="nav-link" id="pacientes" onclick="turnoPaciente()" >Pacientes</a>
                 </li>
                 <li class="nav-item mr-1 ml-1">
                     <a class="nav-link" id="institucional" href="#">Institucional</a>
@@ -59,7 +59,7 @@
                     <a class="nav-link" id="servicios" href="#">Servicios</a>
                 </li>
                 <li class="nav-item mr-1 ml-1">
-                    <a class="nav-link" id="profesionales" href="#">Profesionales</a>
+                    <a class="nav-link" id="profesionales" onclick="pacienteProfesional()">Profesionales</a>
                 </li>
                 <li class="nav-item mr-1 ml-1">
                     <a class="nav-link" id="contacto" href="#">Contacto</a>
@@ -276,6 +276,52 @@
       </div>
     </div>
   </div>
+      <!-- modal Paciente Logueado -->
+      <div class="modal fade" id="modalPacienteSesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title text-center">Bienvenido</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h1>Hola Juan</h1>
+              <p>Bienvenido a Clinica Rolling</p>
+              <p>No tiene turno disponible, puede solicitar haciendo clic en el botón "Pedir Turno"</p>
+              <p>Su próximo turno es el "día de la semana" a las "hora de turno", con el doctor "nombre del Doctor"</p>
+              <p>Por favor, llegue 15 minutos antes del turno cargado.¡Gracias!</p>
+            </div>
+            <div class="d-flex justify-content-around align-items-center">
+              <button type="button" class="btn btn-primary mb-3" data-dismiss="modal">Pedir Turno</button>
+              <button type="button" class="btn btn-primary mb-3" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- modal Profesional logueado -->
+      <div class="modal fade" id="modalProfesionalSesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" >Bienvenido</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h1>Buenas tardes, Juan</h1>
+                <p>Bienvenido a Clinica Rolling</p>
+                <p>No tiene pacientes asignados, aguarde un instante o comuniquese con Soporte para verificar inconsistencias</p>
+                <p>Tiene los siguientes pacientes para recibir en el día de hoy</p>
+                </div>
+            <div class="d-flex justify-content-around align-items-center">
+              <button type="button" class="btn btn-primary mb-3" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 <footer class="bg-dark">
         <img src="Assets/LogoRolling white.svg" alt="Logo Rolling Code">
 <div>

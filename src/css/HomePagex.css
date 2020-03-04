@@ -53,44 +53,4 @@ label{
         font-size: 15px;
     }
  }
-
-/*   main index */
-
-.titulo{
-font-family: 'Roboto Slab', serif;
-background-color: #00000069;
-padding: 0.3rem;
-font-size: 27px;
-}
-
-.titulo{
-    font-size: 23px;
-}
-@media only screen and (min-width: 1000px) {
-   .titulo{
-       font-size: 60px;
-       padding: 0.5rem;
-   }
-  }
-
-.fondotitulo{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-.card-img-overlay{
-    padding: 0rem;
-}
-.titulocards{
-    display: flex;
-    justify-content: center;
-    font-family:'Roboto Slab', serif; 
-    font-size: 19px;
-}
-
-.card-body{
-    font-family: 'Montserrat', sans-serif;
-}
-.card-img{
-    width: 100vw; 
-}
+ 

@@ -35,6 +35,8 @@ function validation4Patient() {
   alert("El DNI no esta registrado")
 }
   const profesionaless = [{ cuit: 28721218, pass: "1234" }]
+  const pacientess = 
+
 function validation4Profesional() {
   let cuitHtml = document.querySelector("#cuit")
   let passprofHtml = document.querySelector("#passProf")
@@ -51,4 +53,12 @@ function validation4Profesional() {
     
   }
   alert("El CUIT no esta registrado")
+}
+
+function turnoPaciente (){
+  $('#modalPacienteSesion').modal("show");
+}
+function pacienteProfesional (){
+  $('#modalProfesionalSesion').modal("show");
+
 }
