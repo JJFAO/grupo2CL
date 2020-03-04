@@ -1,3 +1,4 @@
+
 class Pacientes
  {
     constructor (nombrePaciente, apellidoPaciente, telefonoFijoCliente, edadPaciente, emailPaciente, passPaciente, domicilioPaciente,seleccionProvincia, seleccionLocalidad, postalCliente){
@@ -12,5 +13,6 @@ class Pacientes
         this.provincia = seleccionProvincia;
         this.localidad = seleccionLocalidad;
         this.codigopostal = postalCliente;
+
     }
 }
