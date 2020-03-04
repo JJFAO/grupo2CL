@@ -53,7 +53,7 @@ body{
 }
 .listabotones, .subboton{
   margin-left: 3rem;
-  margin-top: 2rem;
+  margin-top: 25px;
 }
 .textoProfesional{
   font-family: 'Roboto Slab', sans-serif;
@@ -94,9 +94,8 @@ text-decoration: none;
     margin-top: 3vh;
     text-align: center;
   }
-  .btn{
+  .btn {
     align-self: center;
-    width: 200px !important;
   }
 }
 .tabla{
@@ -147,4 +146,14 @@ td{
   width: 30px;
   border-radius: 20px;
   border: 0;
+}
+@media screen and (min-width: 1200px) {
+  .contenedorLogo{
+    position: fixed;
+  }
+}
+.btn-doctores{
+  width: 300px;
+  height: 300px;
+  overflow-y:scroll;
 }

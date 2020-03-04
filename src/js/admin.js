@@ -56,3 +56,32 @@ function cargarPacientes() {
         `
   }
 }
+const doctores = [
+  {nombre: 'Mariano De Filippo', dni:'42269845', Especialidad:'pediatra', Horarios:'8:00'},
+  {nombre: 'Jj', dni:'0958475', Especialidad:'cardiologo', Horarios:'12:00'},
+  {nombre: 'Maria', dni:'43567876', Especialidad:'ginecologo', Horarios:'10:00'},
+  {nombre: 'Franco', dni:'13326907', Especialidad:'urologo', Horarios:'16:00'},
+  {nombre: 'Josefina', dni:'32019283', Especialidad:'pediatra', Horarios:'22:00'},
+  ]
+function cargarDoctores() {
+const tablaDoctor = document.getElementById("paciente");
+for (let i = 0; i < doctores.length; i++) {
+  const doctor = doctores[i];
+  tablaDoctor.innerHTML += `
+      <tr id="" class="thead-light">
+          <td>${doctor.nombre}</td>
+          <td>${doctor.edad}</td>
+          <td>${doctor.dni}</td>
+          <td>${doctor.doctor}</td>
+          <td>${doctor.turno}</td>
+          <td><button class="check2 text-success border-0 bg-light">
+          ✔
+        </button>
+        <button class="check2 text-success border-0 bg-light">
+          ❌
+        </button>
+        </td>
+      </tr>
+      `
+}
+}

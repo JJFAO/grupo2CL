@@ -14,12 +14,10 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Comienza navbar -->
   <div class="container-fluid">
     <div class="row">
-      <div class="barramenu col-12 col-lg-3 px-0">
-
-        <!-- Comienza navbar -->
-
+      <div class="barramenu col-12 col-lg-3 px-0 ">
         <div class="contenedorLogo ml-4 ml-lg-0">
           <nav class="navbar-expand-lg">
             <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
@@ -39,10 +37,10 @@
               <a class="subboton" href="#">Incidencias</a>
             </li>
             <li class="contienesubb my-3">
-              <a class="subboton" href="#">Autorizaciones</a>
+              <a class="subboton" href="#">Selecc. Doctor</a>
             </li>
             <li class="contienesubb">
-              <a class="subboton" href="#">Calendario</a>
+              <a class="subboton" href="#">Horarios</a>
             </li>
             <li class="listabotones">
               <a class="pacientes" href="#pacientes" aria-haspopup="true" aria-expanded="false">Pacientes</a>
@@ -89,41 +87,74 @@
             </div>
           </div>
         </div>
-        <div class="btn-inc-aut mx-sm-3 mt-4 ">
-          <button type="button"
-            class="btn btn-primary mx-2 mx-sm-3 mx-md-2 mx-lg-5 col-md-4 col-10 mt-2 pl-5 pl-md-1 my-4"
-            data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Incidencias
-            <span class="pelotas animated heartBeat badge badge-pill badge-success">0</span>
-          </button>
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Incidencias</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                    <div class="form-group">
-                      <label for="message-text" class="col-form-label">Mensaje:</label>
-                      <textarea class="form-control" id="message-text"></textarea>
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-primary">Enviar</button>
+        <div class="btn-inc-aut mx-sm-3 mt-4 row justify-content-around m-0">
+          <div>
+            <button type="button"
+              class="btn btn-primary mx-4 mx-sm-3 mx-md-2 mt-2 pl-5 pl-md-1 my-4"
+              data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" style="width: 300px;">Incidencias
+              <span class="pelotas animated heartBeat badge badge-pill badge-success">0</span>
+            </button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Incidencias</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="message-text" class="col-form-label"></label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <a type="button" class="btn btn-primary mx-2 mx-sm-3 mx-md-2 mx-lg-5 col-md-4 col-10 mt-2 "
-            href="#autorizaciones">
-            Autorizaciones
-          </a>
+          <div class="tablaDoctores dropdown">
+            <button class="btn dropdown-toggle my-4 text-white btn btn-primary mx-4 mx-sm-3 mx-md-2 mt-2 pl-md-1 my-4" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 300px;">
+              Doctor
+            </button>
+            <div class="dropdown-menu btn-doctores" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Dr. Mariano</a>
+              <a class="dropdown-item" href="#">Dra. Ana</a>
+              <a class="dropdown-item" href="#">Dr. JJ</a>
+              <a class="dropdown-item" href="#">Dr. Mariano</a>
+              <a class="dropdown-item" href="#">Dra. Ana</a>
+              <a class="dropdown-item" href="#">Dr. JJ</a>
+              <a class="dropdown-item" href="#">Dr. Mariano</a>
+              <a class="dropdown-item" href="#">Dra. Ana</a>
+              <a class="dropdown-item" href="#">Dr. JJ</a>
+              <a class="dropdown-item" href="#">Dr. Mariano</a>
+              <a class="dropdown-item" href="#">Dra. Ana</a>
+              <a class="dropdown-item" href="#">Dr. JJ</a>
+              <a class="dropdown-item" href="#">Dr. Mariano</a>
+              <a class="dropdown-item" href="#">Dra. Ana</a>
+              <a class="dropdown-item" href="#">Dr. JJ</a>
+              <a class="dropdown-item" href="#">Dr. Mariano</a>
+              <a class="dropdown-item" href="#">Dra. Ana</a>
+              <a class="dropdown-item" href="#">Dr. JJ</a>
+              <a class="dropdown-item" href="#">Dr. Mariano</a>
+              <a class="dropdown-item" href="#">Dra. Ana</a>
+              <a class="dropdown-item" href="#">Dr. JJ</a>
+              <a class="dropdown-item" href="#">Dr. Mariano</a>
+              <a class="dropdown-item" href="#">Dra. Ana</a>
+              <a class="dropdown-item" href="#">Dr. JJ</a>
+              <a class="dropdown-item" href="#">Dr. Mariano</a>
+              <a class="dropdown-item" href="#">Dra. Ana</a>
+              <a class="dropdown-item" href="#">Dr. JJ</a>
+            </div>
+          </div>
         </div>
         <div class="tabla">
           <table class="table w-100 pl-0 mt-5">
@@ -220,7 +251,7 @@
                   <div class="modal-body">
                     <form>
                       <div class="form-group">
-                        <label for="message-text" class="col-form-label">Mensaje:</label>
+                        <label for="message-text" class="col-form-label"></label>
                         <textarea class="form-control" id="message-text"></textarea>
                       </div>
                     </form>
@@ -252,7 +283,7 @@
             </thead>
             <tbody>
               <tr class="thead-light th.pacientes ">
-                <th scope="row" style="width: 100px;">Ruiz, Pedro</th>
+                <th scope="row" style="width: 100px;"></th>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -261,7 +292,7 @@
                 <td></td>
               </tr>
               <tr class="thead-light th.pacientes ">
-                <th scope="row">Arias, Luis</th>
+                <th scope="row"></th>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -270,7 +301,7 @@
                 <td></td>
               </tr>
               <tr class="thead-light th.pacientes ">
-                <th scope="row">Fuentes, Ana</th>
+                <th scope="row"></th>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -279,7 +310,7 @@
                 <td></td>
               </tr>
               <tr class="thead-light th.pacientes ">
-                <th scope="row">Sosa, Franco</th>
+                <th scope="row"></th>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -288,7 +319,7 @@
                 <td></td>
               </tr>
               <tr class="thead-light th.pacientes ">
-                <th scope="row">Sanchez, Jose</th>
+                <th scope="row"></th>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -297,7 +328,7 @@
                 <td></td>
               </tr>
               <tr class="thead-light th.pacientes ">
-                <th scope="row">Gomez, Paula</th>
+                <th scope="row"></th>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -311,6 +342,7 @@
         <div>
           <h1 id="panel" class="textoProfesional mt-5">Panel de Gestión</h1>
           <h2 class="textoProfesional my-5">Datos Doctores</h2>
+          <!-- boton drop -->
         </div>
         <div class="tabla tabla-doctores">
           <table class="table mt-4" id="autorizaciones">
@@ -323,7 +355,7 @@
                 <th scope="col" style="width: 13vw;">Autorizar</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="doctor">
               <tr class="thead-light">
                 <td></td>
                 <td></td>
@@ -385,17 +417,6 @@
         </div>
         <div>
           <h2 class="textoProfesional mt-3">Datos Pacientes</h2>
-          <div class="dropdown d-flex">
-            <button class="btn btn-secondary dropdown-toggle my-4" type="button" id="dropdownMenuButton"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Seleccionar Doctor
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Dr. Mariano</a>
-              <a class="dropdown-item" href="#">Dra. Ana</a>
-              <a class="dropdown-item" href="#">Dr. JJ</a>
-            </div>
-          </div>
         </div>
         <div class="tabla tablaPacientes">
           <table class="table w-100 mt-4">
