@@ -157,3 +157,6 @@ td{
   height: 300px;
   overflow-y:scroll;
 }
+.boton-perfil{
+  border: solid 1px #225378;
+}
