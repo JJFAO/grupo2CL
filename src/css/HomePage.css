@@ -158,3 +158,19 @@ label{
     .card-body{
         font-family: 'Montserrat', sans-serif;
 }
+.botonTurnero{
+    width: 50px!important;
+    margin-left: 77vw;
+    margin-bottom: 50px;
+    margin-right: 20px;
+}
+@media (min-width: 768px) {
+    .MargenLogo {
+        margin-left: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .MargenMapa {
+        margin-left: 38px;
+    }
+}
