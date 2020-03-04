@@ -6,6 +6,7 @@ class Doctor {
         this.especialidad = especialidad,
         this.matricula = matricula,
         this.cuil = cuil,
+        this.pass = pass,
         this.domicilio = domicilio,
         this.provincia = provincia,
         this.localidad = localiad,
