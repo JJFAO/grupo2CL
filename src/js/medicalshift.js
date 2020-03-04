@@ -94,6 +94,12 @@ function addOptions(id, array) {
 
 function filtrar_doctores() {
     const especialidadeshtml = document.querySelector("#especialidad")
+
+    const doctores1 = JSON.parse(localStorage.getItem("rDoctores"))
+    console.log(doctores1);
+    console.log(doctores1[0].apellido);
+    
+    
     const doctoresFiltrado = doctores.filter(doctor => doctor.especialidad == especialidadeshtml.value)
 
     const docFiltradosarray = doctoresFiltrado.map(function (profesional) {
