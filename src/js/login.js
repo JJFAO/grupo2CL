@@ -55,7 +55,7 @@ function validation4Profesional() {
   alert("El CUIT no esta registrado")
 }
 
-function turnoPaciente (){
+function consultaTurnoPaciente (){
   const usuarioClinica = JSON.parse(localStorage.getItem("Pacientes"))
   console.log(usuarioClinica)  
   $('#modalPacienteSesion').modal("show");
