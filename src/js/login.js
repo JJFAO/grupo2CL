@@ -62,6 +62,8 @@ function validation4Profesional() {
 }
 
 function turnoPaciente (){
+  const usuarioClinica = JSON.parse(localStorage.getItem("Pacientes"))
+  console.log(usuarioClinica)  
   $('#modalPacienteSesion').modal("show");
 }
 function pacienteProfesional (){
