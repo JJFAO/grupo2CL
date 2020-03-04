@@ -1,6 +1,6 @@
 var arrayespecialidades = ["ALERGOLOGIA", "ANESTESIOLOGIA", "BIOQUIMICO", "CARDIOLOGIA", "CARDIOLOGIA INFANTIL", "CIRUGIA CARDIOVASCULAR", "CIRUGIA DE CABEZA Y CUELLO", "CIRUGIA GENERAL", "CIRUGIA PEDIATRICA", "CLINICA", "DERMATOLOGIA", "DIAGNOSTICO POR IMAGENES", "ECOGRAFIA", "EMERGENCIA", "ENDOCRINOLOGIA", "ENDOCRINOLOGIA INFANTIL", "FLEBOLOGIA Y LINFOLOGIA", "GASTROENTEROLOGIA", "GASTROENTEROLOGIA INFANTIL", "GINECOLOGIA", "HEMATOLOGIA", "HEMOTERAPIA", "HEMOTERAPIA", "INFECTOLOGIA INFANTIL", "INMUNOLOGIA", "MASTOLOGIA", "MEDICINA DEL DEPORTE", "MEDICINA GENERAL", "MEDICO", "NEFROLOGIA", "NEFROLOGIA INFANTIL", "NEONATOLOGIA", "NEUMONOLOGIA", "NEUMONOLOGIA INFANTIL", "NEUROCIRUGIA", "NEUROCIRUGIA INFANTIL", "NEUROLOGIA", "NEUROLOGIA INFANTIL", "NUTRICION", "ODONTOLOGIA - ENDODONCIA ", "ODONTOLOGIA -CIRUGIA", "ODONTOLOGIA -PERIODONCIA", "ODONTOLOGIA GENERAL", "ODONTOPEDIATRIA", "OFTALMOLOGIA", "OFTALMOLOGIA INFANTIL", "ONCOLOGIA", "ONCOLOGIA INFANTIL", "OTORRINOLARINGOLOGIA", "OTORRINOLARINGOLOGIA INFANTIL", "PEDIATRIA", "PROCTOLOGIA", "PSICOLOGIA  - NIÑOS", "PSICOLOGIA - ADOLESCENTES - ADULTOS ", "PSIQUIATRIA - ADULTOS", "PSIQUIATRIA - INFANTO JUVENIL", "REUMATOLOGIA", "REUMATOLOGIA INFANTIL", "RX  ODONTOLOGIA", "TOCOGINECOLOGIA", "TRAUMATOLOGIA", "TRAUMATOLOGIA  Y ORTOPEDIA", "TRAUMATOLOGIA INFANTIL", "UROLOGIA", "UROLOGIA INFANTIL"];
 localStorage.setItem('arrayespecialidades', JSON.stringify(arrayespecialidades))
-var usuario= {
+var usuario = {
     nombre: 'jorge',
     id: '00001'
 }
@@ -10,6 +10,7 @@ const doctores = [{
         nombre: 'MARIA BELEN',
         apellido: 'ABRAHAN',
         especialidad: 'ALERGOLOGIA',
+        cuil: '000000000000',
         dias: [{
             lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
             martes: [],
@@ -22,6 +23,7 @@ const doctores = [{
         nombre: 'ANDRES',
         apellido: 'ANZORENA',
         especialidad: 'CARDIOLOGIA',
+        cuil: '11111111111',
         dias: [{
             lunes: [],
             martes: [],
@@ -34,6 +36,7 @@ const doctores = [{
         nombre: 'SILVANA RITA',
         apellido: 'DEPETRIS',
         especialidad: 'CARDIOLOGIA',
+        cuil: '22222222222',
         dias: [{
             lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
             martes: [],
@@ -46,6 +49,7 @@ const doctores = [{
         nombre: 'SILIVIA LOURDES',
         apellido: 'LORENZO',
         especialidad: 'GASTROENTEROLOGIA',
+        cuil: '3333333333',
         dias: [{
             lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
             martes: [],
@@ -58,6 +62,7 @@ const doctores = [{
         nombre: 'JOEL',
         apellido: 'CARABAJAL',
         especialidad: 'TRAUMATOLOGIA',
+        cuil: '44444444444',
         dias: [{
             lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
             martes: [],
@@ -66,20 +71,31 @@ const doctores = [{
             viernes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00']
         }]
     }
-
 ]
-// let especialidades= localStorage.getItem('arrayespecialidades')
-//Codigo a Ejecutar al Cargar la Pagina
-function myOnLoad() {
-    cargar_select(arrayespecialidades, '#especialidad')
+
+
+function cargar_select_con_cuil(array, id, prop) {
+    const doc_filtrados = (cargador(array))
+    const select_limpio = doc_filtrados.map(function (profesional) {
+        return profesional[prop]
+    })
+    addOptions(id, select_limpio);
+    console.log(select_limpio);
 }
-// funcion para Cargar Provincias al campo <select>
-function cargar_select(array, id) {
-    // Ordena el Array Alfabeticamente, es muy facil ;)):
-    array.sort();
-    addOptions(id, array);
+
+function cargador(array) {
+    const doc_filtrados = []
+    for (let i = 0; i < array.length; i++) {
+        let cuils = array[i];
+        for (let k = 0; k < doctores.length; k++) {
+            if (doctores[k].cuil == cuils) {
+                doc_filtrados.push(doctores[k])
+            }
+        }
+    }
+    return doc_filtrados
 }
-// Rutina para agregar opciones a un <select>
+
 function addOptions(id, array) {
     var select = document.querySelector(id);
     for (let i = select.options.length; i >= 1; i--) {
@@ -92,75 +108,71 @@ function addOptions(id, array) {
     }
 }
 
+
+let doctores_filtrados = []
+doctores.forEach(doctor => {
+    doctores_filtrados.push(doctor.especialidad)
+});
+
+let esp_sinRepetidos = doctores_filtrados.filter(function (valor, indiceActual, arreglo) {
+    let indiceAlBuscar = arreglo.indexOf(valor);
+    if (indiceActual === indiceAlBuscar) {
+        return true;
+    } else {
+        return false;
+    }
+});
+
+// let especialidades= localStorage.getItem('arrayespecialidades')
+//Codigo a Ejecutar al Cargar la Pagina
+function myOnLoad() {
+    cargar_select(esp_sinRepetidos, '#especialidad')
+}
+
+function cargar_select(array, id) {
+    // Ordena el Array Alfabeticamente, es muy facil ;)):
+    array.sort();
+    addOptions(id, array);
+}
+
+
+
 function filtrar_doctores() {
     const especialidadeshtml = document.querySelector("#especialidad")
-
-    const doctores1 = JSON.parse(localStorage.getItem("rDoctores"))
-    console.log(doctores1);
-    console.log(doctores1[0].apellido);
-    
-    
-    const doctoresFiltrado = doctores.filter(doctor => doctor.especialidad == especialidadeshtml.value)
-
-    const docFiltradosarray = doctoresFiltrado.map(function (profesional) {
-        return profesional.nombre + " " + profesional.apellido
-    })
-    return docFiltradosarray
+    // const doctores1 = JSON.parse(localStorage.getItem("rDoctores"))
+    // console.log(doctores1);
+    const cuil_filter = []
+    for (let i = 0; i < doctores.length; i++) {
+        if (doctores[i].especialidad == especialidadeshtml.value) {
+            cuil_filter.push(doctores[i].cuil)
+        }
+    }
+    return cuil_filter
 }
 
 function cargar_doctores() {
-    const docFiltradosarray = (filtrar_doctores())
-    const nohaydoc = ["no tenemos doctores disponibles para esa especialidad"]
-    if (docFiltradosarray.length == 0) {
-        cargar_select(nohaydoc, "#doctores")
-    } else {
-        cargar_select(docFiltradosarray, "#doctores")
-    }
+    const array_doc_filt = (cargador(filtrar_doctores("#especialidad", 'especialidad')))
+    const name_doc = array_doc_filt.map(function (profesional) {
+        return profesional.nombre + " " + profesional.apellido
+    });
+    cargar_select(name_doc, "#doctores")
 }
 
-function filtrar_dias() {
-    const doctorhtml = document.querySelector("#doctores")
-    const docFiltradosarray = (filtrar_doctores())
-    // console.log(docFiltradosarray);
-    docFiltradosarray.forEach(doc => {
-        if (doc == doctorhtml.value) {
-            docFiltrado = doc
-        }
-    });
-    // const docFiltrado = docFiltradosarray.filter(function (dias) { 
-    //     console.log(dias);
-    //     console.log(doctorhtml.value);        
-    //    return dias == doctorhtml.value
-    // })
-    console.log(docFiltrado);
-    const namearray = docFiltrado.split(' ');
-    console.log(namearray);
-   let nombre_doc = '' //preguntar ///////////////////////////////////////////////////////////////////////////////
-    for (let i = 0; i < (namearray.length - 1); i++) {
-        if (i == 0) {
-            nombre_doc = namearray[0]
-        } else {
-            nombre_doc = (nombre_doc + ' ' + namearray[i])
+function select_a_cuil(id, prop) {
+    const select_elegido = document.querySelector(id)
+    let cuil_filter = ''
+    for (let i = 0; i < doctores.length; i++) {
+        if (doctores[i][prop] == select_elegido.value) {
+            cuil_filter = doctores[i].cuil
         }
     }
-    const apellido_doc = namearray[(namearray.length - 1)]
-    console.log(apellido_doc);
-    console.log(nombre_doc);
-    // filtrar doctores por apellido_doc
-    const filapellido_doc = doctores.filter(doctor => doctor.apellido == apellido_doc)
-    console.log(filapellido_doc);
-    // filtro doctores por nombre
-    const filnombre_y_apellido = filapellido_doc.filter(doctor => doctor.nombre == nombre_doc)
-    console.log(filnombre_y_apellido);
-    
-    return filnombre_y_apellido
+    return cuil_filter
 }
 
 function dias_disponibles() {
     const doctorhtml = document.querySelector("#doctores")
     const filnombre_y_apellido = (filtrar_dias())
-    console.log('plis'+filnombre_y_apellido);
-    
+    console.log('plis' + filnombre_y_apellido);
     const diasArray = filnombre_y_apellido[0].dias[0] //preguntar ########################################################3
     console.log(diasArray);
     const diasdisponibles = []
@@ -173,70 +185,61 @@ function dias_disponibles() {
             }
         }
     }
-    return diasdisponibles    
+    return diasdisponibles
 }
+
+
+function filtrar_dias() {
+    const doctorhtml = document.querySelector("#doctores")
+    const docFiltradosarray = (filtrar_doctores()) 
+    // =============================================================   para filtrar el nombre por cuil
+    const namearray = doctorhtml.value.split(' ');
+    console.log(namearray);
+            let nombre_doc = ''
+        for (let i = 0; i < (namearray.length - 1); i++) {
+            if (i == 0) {
+                nombre_doc = namearray[0]
+            } else {
+                nombre_doc = (nombre_doc + ' ' + namearray[i])
+            }
+        }
+        const apellido_doc = namearray[(namearray.length - 1)]
+        console.log(apellido_doc);
+        console.log(nombre_doc);
+        // filtrar doctores por apellido_doc
+        const filapellido_doc = doctores.filter(doctor => doctor.apellido == apellido_doc)
+        console.log(filapellido_doc);
+        // filtro doctores por nombre
+        const filnombre_y_apellido = filapellido_doc.filter(doctor => doctor.nombre == nombre_doc)
+        console.log(filnombre_y_apellido[0].cuil);
+// ===============================================================
+return filnombre_y_apellido
+    }
 
 function cargar_dias() {
-      const diasdisponibles = (dias_disponibles())
-    addOptions("#dias", diasdisponibles);
+addOptions('#dias', dias_disponibles())
 }
 
-
-// function cargar_dias() {
-//     const doctorhtml = document.querySelector("#doctores")
-//     const docFiltrados = doctores.filter((day) => {
-//         const nombre_completo = day.nombre + " " + day.apellido
-//         return nombre_completo == doctorhtml.value
-//     })
-//     console.log(docFiltrados);
-//     const diasArray = docFiltrados[0].dias[0]
-//     console.log(diasArray);
-//     const diasdisponibles = []
-//     for (const i in diasArray) {
-//         if (diasArray.hasOwnProperty(i)) {
-//             const dias = diasArray[i];
-//             console.log(dias.length); 
-//             if (dias.length !== 0) {
-//                 diasdisponibles.push(i)
-//             }
-//         }
-//     }
-//     addOptions("#dias", diasdisponibles);
-// }
-
-function filtrar_horario() {
-    const diashtml = document.querySelector("#dias")
-    // const diasdisponibles = (dias_disponibles())
-    // dia_elegido =''//preguntarrr################################################################
-    // diasdisponibles.forEach(dias => {
-    //     if (dias == diashtml.value) {
-    //         dia_elegido = dias
-    //     }
-    //     console.log(dia_elegido);        
-    // });
-    const docFiltradosarray = (filtrar_dias())
-    console.log('nose='+ docFiltradosarray);
-    const day = diashtml.value
+function filtrar_horarios() {
+    const day = document.querySelector("#dias").value
     console.log(day);
     
-    const horasArray = docFiltradosarray[0].dias[0][day]//preguntar ########################################################3
-    console.log(horasArray);
-    // const diasdisponibles = []
-    // for (const i in diasArray) {
-    //     if (diasArray.hasOwnProperty(i)) {
-    //         const dias = diasArray[i];
-    //         // console.log(dias.length); 
-    //         if (dias.length !== 0) {
-    //             diasdisponibles.push(i)
-    //         }
-    //     }
-    // }
-    
-    
-   
+    const array = [filtrar_dias()[0].cuil]
+   console.log( cargador(array)[0].dias[0][day])
+  
+return cargador(array)[0].dias[0][day]
 }
-
 
 function cargar_horario() {
-    filtrar_horario()
+   const array= filtrar_horarios()
+    addOptions("#horario", array)
 }
+
+
+
+
+
+
+
+
+
