@@ -50,7 +50,76 @@ label{
  }
 @media (max-width: 768px) {
     .letrasFooter {
-        font-size: 15px;
+        font-size: 13px;
     }
  }
- 
+.bordeFooter {
+    border-color: white;
+    border-bottom: 2px solid;
+}
+.textoCopy {
+    font-size: small;
+}
+.loguitosFooter {
+    width: 25px;
+    height: 25px;
+}
+.logoTelephone {
+    margin-top: 15px; 
+    margin-right: 5px;
+}
+.LogosRedes {
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
+    margin-left: 7px;
+}
+@media (min-width: 768px) {
+    .logoRollingFooter {
+        width: 25vw;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+}
+@media (min-width: 768px) {
+    .ubiTelDesktop {
+        font-size: 20px;
+    }
+}
+@media (min-width: 768px) {
+    .LogosRedes {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .otrosEnlacesMobile {
+        width: 75vw!important;
+    }
+}
+@media (min-width: 768px) {
+    .otrosEnlacesDesktop {
+        width: 25vw!important;
+        margin-left: 14vw;
+    }
+}
+@media (min-width: 768px) {
+    .copyMobile {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .copyDesktop {
+        display: none;
+    }
+}
+.textoCopyDesktop {
+    background-color: #1595a3!important;
+    text-align: center;
+}
+.active{
+    background-color: #1595A3;
+    color: white!important;
+}
