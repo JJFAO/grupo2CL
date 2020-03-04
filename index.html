@@ -1,119 +1,138 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/css/login.css">
-    <link rel="stylesheet" href="src/css/HomePage.css">
-    <link rel="stylesheet" href="src/css/HomePagex.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:700&display=swap">
+  <link rel="stylesheet" href="src/css/login.css">
+  <link rel="stylesheet" href="src/css/HomePage.css">
+  <link rel="stylesheet" href="src/css/HomePagex.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:700&display=swap">
 
-    <title>Clínica RollingCode</title>
+  <title>Clínica RollingCode</title>
 </head>
 
 <body>
-    <nav class="navbar p-0 navbar-expand-lg navbar-light bg-light borde-separacion d-flex flex-column">
-        <div class="d-flex justify-content-between w-100">
-            <img class="logoRolling d-flex justify-content-start ml-3 mt-3" src="Assets/LogoRolling.svg" alt="Logo Rolling Code">
-            <div class="d-flex justify-content-end align-self-center">
-                <div class="collapse navbar-collapse" id="botoncitobusqueda">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <form class="form-inline my-lg-0"></form>
-                            <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">
-                        </li>
-                    </ul>
-                </div>
-                <button id="menuDesplegado" class="navbar-toggler p-0" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <button id="menuBusqueda" class="m-1 p-0" type="button" data-toggle="collapse"
-                    data-target="#botoncitobusqueda" aria-controls="botoncitobusqueda" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <img class="vw-5" src="Assets/problem2.png" alt="Buscar">
-                </button>
-                <button id="botonLogueo" class="m-1 p-0" data-toggle="modal" data-target="#indexModal">
-                    <img src="Assets/user.png" alt="">
-                </button>
-            </div>
+  <nav class="navbar p-0 navbar-expand-lg navbar-light bg-light borde-separacion d-flex flex-column">
+    <div class="d-flex justify-content-between w-100">
+      <img class="logoRolling d-flex justify-content-start MargenLogo mt-3" src="Assets/LogoRolling.svg"
+        alt="Logo Rolling Code">
+      <div class="d-flex justify-content-end align-self-center">
+        <div class="collapse navbar-collapse" id="botoncitobusqueda">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <form class="form-inline my-lg-0"></form>
+              <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">
+            </li>
+          </ul>
         </div>
-        <div class="collapse navbar-collapse align-self-start align-self-lg-end" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item mr-1 ml-1">
-                    <a class="nav-link" id="inicio" href="#">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item mr-1 ml-1">
-                    <a class="nav-link" id="pacientes" onclick="consultaTurnoPaciente()" href="#">Pacientes</a>
-                </li>
-                <li class="nav-item mr-1 ml-1">
-                    <a class="nav-link" id="institucional" href="#">Institucional</a>
-                </li>
-                <li class="nav-item mr-1 ml-1">
-                    <a class="nav-link" id="servicios" href="#">Servicios</a>
-                </li>
-                <li class="nav-item mr-1 ml-1">
-                    <a class="nav-link" id="profesionales" onclick="pacienteProfesional() "href="#">Profesionales</a>
-                </li>
-                <li class="nav-item mr-1 ml-1">
-                    <a class="nav-link" id="contacto" href="#">Contacto</a>
-                </li>
-            </ul>
+        <button id="menuDesplegado" class="navbar-toggler p-0" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <button id="menuBusqueda" class="m-1 p-0" type="button" data-toggle="collapse" data-target="#botoncitobusqueda"
+          aria-controls="botoncitobusqueda" aria-expanded="false" aria-label="Toggle navigation">
+          <img class="vw-5" src="Assets/problem2.png" alt="Buscar">
+        </button>
+        <button id="botonLogueo" class="m-1 p-0" data-toggle="modal" data-target="#indexModal">
+          <img src="Assets/user.png" alt="">
+        </button>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse align-self-start align-self-lg-end" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item mr-1 ml-1">
+          <a class="nav-link" id="inicio" href="#">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item mr-1 ml-1">
+          <a class="nav-link" id="pacientes" onclick="consultaTurnoPaciente()" href="#">Pacientes</a>
+        </li>
+        <li class="nav-item mr-1 ml-1">
+          <a class="nav-link" id="institucional" href="#">Institucional</a>
+        </li>
+        <li class="nav-item mr-1 ml-1">
+          <a class="nav-link" id="servicios" href="#">Servicios</a>
+        </li>
+        <li class="nav-item mr-1 ml-1">
+          <a class="nav-link" id="profesionales" onclick="pacienteProfesional() " href="#">Profesionales</a>
+        </li>
+        <li class="nav-item mr-1 ml-1">
+          <a class="nav-link" id="contacto" href="#">Contacto</a>
+        </li>
+      </ul>
 
-        </div>
+    </div>
 
-    </nav>
-    <main>
-      <div class="d-flex justify-content-center">
-        <a class="d-flex justify-content-center w-100" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-          <div class="card text-white border-white w-100">
-            <img src="./src/imagenes/xs.jpg" class="card-img" alt="...">
-            <div class="card-img-overlay fondotitulo">
-              <h5 class="titulo">¡Conoce Nuestra Institución!</h5>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="collapse ml-4 mr-4 p-0 mt-2" id="collapseExample">
-        <div class="card-body">
-          La Clínica Rolling Code School es una entidad sin ánimo de lucro dedicada a la práctica clínica, la educación y la investigación y sus dependencias para la investigación están situadas en Tucuman, Salta y Buenos Aires. Además posee hospitales y clínicas en San Miguel de Tucuman (Tucuman). Está asociada con varias pequeñas clínicas y hospitales de Cordoba, Santiago del Estero y Santa Cruz.
-        </div>
-      </div>
-      <div class="container-fluid mt-4">
-        <div class="row">
-          <div class="col-12 my-3 col-lg-4">
-            <div class="card h-100">
-              <img class="card-img-top" src="./src/imagenes/metodoleon.PNG" alt="Card image cap">
-              <h4 class="titulocards mt-3">Metodo Leon</h4>
-              <div class="card-body">  El acompañamiento cambia vidas y permite soñar  Clínica Mayo se sumó como Padrino al Programa "Aprendiendo en Casa - HIPPY", para que nuevas familias reciban acompañamiento a través de un proyecto 100% educativo, que estimula el aprendizaje, el [...] </div>
-            </div>
-          </div>
-          <div class="col-12  my-3 col-lg-4">
-            <div class="card h-100">
-              <img class="card-img-top" src="./src/imagenes/clinicayfundacion.PNG" alt="Card image cap">
-              <h4 class="titulocards mx-3 mt-3">Clinica Rolling y Fundacion Leon</h4>
-              <div class="card-body"> Programa de acompañamiento familiar desde octubre de 2018 trabajamos juntos Clinca Mayo y FUndacion Leon acompañando familias en sitauciones de vulnerabilidad de la provincia. Todos los programas de Fundacion Leon se basan en... </div>
-            </div>
-          </div>
-          <div class="col-12 my-3 col-lg-4">
-            <div class="card h-100">
-              <img class="card-img-top" src="./src/imagenes/semanaprematu.PNG" alt="Card image cap">
-              <h4 class="titulocards mt-3">Semana de Prematuro</h4>
-              <div class="card-body"> Campaña de concientaziacion 2019 Este festejo y campaña de concientizacion comenzo a realizarse en Argentina hace 10 años, es una inicitiva conjunta entre UNICEF y la Secretaria de Gobierno de Salud de la ... </div>
-            </div>  
+  </nav>
+  <div class="fixed-bottom botonTurnero float-right">
+    <button class="shadow-lg" type="button">
+      <a href="medicalshift.html">Boton</a>
+    </button>
+  </div>
+
+  <main>
+    <div class="d-flex justify-content-center">
+      <a class="d-flex justify-content-center w-100" data-toggle="collapse" href="#collapseExample"
+        aria-expanded="false" aria-controls="collapseExample">
+        <div class="card text-white border-white w-100">
+          <img src="./src/imagenes/xs.jpg" class="card-img" alt="...">
+          <div class="card-img-overlay fondotitulo">
+            <h5 class="titulo">¡Conoce Nuestra Institución!</h5>
           </div>
         </div>
+      </a>
+    </div>
+    <div class="collapse ml-4 mr-4 p-0 mt-2" id="collapseExample">
+      <div class="card-body">
+        La Clínica Rolling Code School es una entidad sin ánimo de lucro dedicada a la práctica clínica, la educación y
+        la investigación y sus dependencias para la investigación están situadas en Tucuman, Salta y Buenos Aires.
+        Además posee hospitales y clínicas en San Miguel de Tucuman (Tucuman). Está asociada con varias pequeñas
+        clínicas y hospitales de Cordoba, Santiago del Estero y Santa Cruz.
       </div>
-    </main>
-    <!-- Modal -->
-    <div class="modal fade" id="indexModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    </div>
+    <div class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-12 my-3 col-lg-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="./src/imagenes/metodoleon.PNG" alt="Card image cap">
+            <h4 class="titulocards mt-3">Metodo Leon</h4>
+            <div class="card-body"> El acompañamiento cambia vidas y permite soñar Clínica Mayo se sumó como Padrino al
+              Programa "Aprendiendo en Casa - HIPPY", para que nuevas familias reciban acompañamiento a través de un
+              proyecto 100% educativo, que estimula el aprendizaje, el [...] </div>
+          </div>
+        </div>
+        <div class="col-12  my-3 col-lg-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="./src/imagenes/clinicayfundacion.PNG" alt="Card image cap">
+            <h4 class="titulocards mx-3 mt-3">Clinica Rolling y Fundacion Leon</h4>
+            <div class="card-body"> Programa de acompañamiento familiar desde octubre de 2018 trabajamos juntos Clinca
+              Mayo y FUndacion Leon acompañando familias en sitauciones de vulnerabilidad de la provincia. Todos los
+              programas de Fundacion Leon se basan en... </div>
+          </div>
+        </div>
+        <div class="col-12 my-3 col-lg-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="./src/imagenes/semanaprematu.PNG" alt="Card image cap">
+            <h4 class="titulocards mt-3">Semana de Prematuro</h4>
+            <div class="card-body"> Campaña de concientaziacion 2019 Este festejo y campaña de concientizacion comenzo a
+              realizarse en Argentina hace 10 años, es una inicitiva conjunta entre UNICEF y la Secretaria de Gobierno
+              de Salud de la ... </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="indexModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -142,57 +161,59 @@
         <div class="modal-body">
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-              <form class="d-flex justify-content-around">                          
-                  <select class="custom-select col-4">
-                    <option selected>Documento</option>
-                    <option value="1">DNI</option>
-                    <option value="2">CI</option>
-                    <option value="4">LE</option>
-                    <option value="5">LC</option>
-                    <option value="6">Pas</option>
-                  </select>
-                  <input type="number" class="form-control col-8" id="DNI" placeholder="Nro de Documento">                            
-                </form>
-                  <div class="mt-3">
-                    <label for="formGroupExampleInput2">Contraseña</label>
-                    <input type="password" class="form-control" id="passPatient"
-                      placeholder="Ingrese Contraseña">
-                      <div class="d-flex justify-content-between mt-3">
-                        <button type="submit" class="btn text-white mb-3 d-flex justify-content-center" onclick="validation4Patient()">Ingresar</button>
-                        <a href="registropaciente.html" class="btn btn-default mb-3 d-flex justify-content-center btnregister text-white">Registrarme                            
-                        </a>
-                      </div>                    
-                  </div>
+              <form class="d-flex justify-content-around">
+                <select class="custom-select col-4">
+                  <option selected>Documento</option>
+                  <option value="1">DNI</option>
+                  <option value="2">CI</option>
+                  <option value="4">LE</option>
+                  <option value="5">LC</option>
+                  <option value="6">Pas</option>
+                </select>
+                <input type="number" class="form-control col-8" id="DNI" placeholder="Nro de Documento">
+              </form>
+              <div class="mt-3">
+                <label for="formGroupExampleInput2">Contraseña</label>
+                <input type="password" class="form-control" id="passPatient" placeholder="Ingrese Contraseña">
+                <div class="d-flex justify-content-between mt-3">
+                  <button type="submit" class="btn text-white mb-3 d-flex justify-content-center"
+                    onclick="validation4Patient()">Ingresar</button>
+                  <a href="registropaciente.html"
+                    class="btn btn-default mb-3 d-flex justify-content-center btnregister text-white">Registrarme
+                  </a>
+                </div>
+              </div>
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
               <form>
-                <div class="form-group">                  
+                <div class="form-group">
                   <div class="dropdown open d-flex">
                     <input type="number" class="form-control" id="cuit" placeholder="CUIL/CUIT">
                   </div>
                 </div>
                 <div class="form-group mt-3">
                   <label for="formGroupExampleInput2">Contraseña</label>
-                  <input type="password" class="form-control" id="passProf"
-                    placeholder="Ingrese Contraseña">
-                    <div class="d-flex justify-content-between mt-3">
-                      <button type="submit" class="btn text-white mb-3 d-flex justify-content-center" onclick="validation4Profesional()">Ingresar</button>
-                      <a href="SingupDoctor.html" class="btn btn-default mb-3 d-flex justify-content-center btnregister text-white">Registrarme                            
-                      </a>
-                    </div>                    
+                  <input type="password" class="form-control" id="passProf" placeholder="Ingrese Contraseña">
+                  <div class="d-flex justify-content-between mt-3">
+                    <button type="submit" class="btn text-white mb-3 d-flex justify-content-center"
+                      onclick="validation4Profesional()">Ingresar</button>
+                    <a href="SingupDoctor.html"
+                      class="btn btn-default mb-3 d-flex justify-content-center btnregister text-white">Registrarme
+                    </a>
+                  </div>
                 </div>
-              </div>              
-              </form>
             </div>
-        <div class="card-footer text-muted d-flex flex-column align-items-center ">
-          <div class="mt-3">
-            <img class="flecha" src="./assets/right-chevron.svg" alt="flecha">
-            <a id="btnrecover" onclick="hideModalRecover()">Olvidé mi contraseña</a>
-          </div>        
-          <div>
-            <img class="flecha" src="./assets/right-chevron.svg" alt="flecha">
-            <!-- buttom politica de privacidad -->
-            <a data-toggle="modal" href="#ppmodal" onclick="show">Politica de Privacidad</a>
+            </form>
+          </div>
+          <div class="card-footer text-muted d-flex flex-column align-items-center ">
+            <div class="mt-3">
+              <img class="flecha" src="./assets/right-chevron.svg" alt="flecha">
+              <a id="btnrecover" onclick="hideModalRecover()">Olvidé mi contraseña</a>
+            </div>
+            <div>
+              <img class="flecha" src="./assets/right-chevron.svg" alt="flecha">
+              <!-- buttom politica de privacidad -->
+              <a data-toggle="modal" href="#ppmodal" onclick="show">Politica de Privacidad</a>
             </div>
             <!-- Modal politica de privacidad -->
             <div class="modal fade" id="ppmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -232,54 +253,59 @@
         </div>
       </div>
     </div>
-</div>
-    <footer class="bg-dark">
-        <div class="d-lg-flex"><img class="mb-5 logoRollingFooter" src="Assets/LogoRolling white.svg" alt="Logo Rolling Code">
-        <div>
-            <div class="d-flex ml-5 mb-2">
-                <img class="loguitosFooter logoTelephone " src="assets/pin.png" alt="Ubicación">
-                <h1 class="text-light letrasFooter mt-3 ml-2 ubiTelDesktop">General Paz 576 - CP 4000 - San Miguel de
-                    Tucumán</h1>
-            </div>
-            <div class="d-flex ml-5 ml-2 mb-5">
-                <img class="loguitosFooter mr-3" src="assets/phone.png" alt="Call Center">
-                <h1 class="text-light letrasFooter mt-3 ubiTelDesktop">Call Center: +54 (0381) 15 3331003</h1>
-            </div>
+  </div>
+  <footer class="bg-dark">
+    <div class="d-lg-flex"><img class="mb-5 logoRollingFooter" src="Assets/LogoRolling white.svg"
+        alt="Logo Rolling Code">
+      <div>
+        <div class="d-flex ml-5 mb-2">
+          <img class="loguitosFooter logoTelephone " src="assets/pin.png" alt="Ubicación">
+          <h1 class="text-light letrasFooter mt-3 ml-2 ubiTelDesktop">General Paz 576 - CP 4000 - San Miguel de
+            Tucumán</h1>
         </div>
+        <div class="d-flex ml-5 ml-2 mb-5">
+          <img class="loguitosFooter mr-3" src="assets/phone.png" alt="Call Center">
+          <h1 class="text-light letrasFooter mt-3 ubiTelDesktop">Call Center: +54 (0381) 15 3331003</h1>
+        </div>
+      </div>
     </div>
-        <div class="ml-5 mr-2 mb-5 logoRollingFooter d-inline-block">
-            <img class="LogosRedes" src="Assets/002-facebook.svg" alt="Nuestro Facebook">
-            <img class="LogosRedes" src="Assets/001-twitter (1).svg" alt="Nuestro Twitter">
-            <img class="LogosRedes" src="Assets/003-instagram.svg" alt="Nuestro Instagram">
-            <img class="LogosRedes" src="Assets/004-linkedin.svg" alt="Nuestro linkedin">
-        </div>
-        <div class="ml-4 mr-3 mb-5 d-inline-block otrosEnlacesMobile otrosEnlacesDesktop">
-            <h1 class="text-light mb-1">Otros Enlaces</h1>
-            <a class="bordeFooter d-block text-light mb-2" href="">> Envía tu CV</a>
-            <a class="bordeFooter d-block text-light mb-2" href="">> Provedores</a>
-        </div>
-        <div class="otrosEnlacesDesktop mb-5 d-inline-block">
-            <iframe class="d-flex align-self-center w-75" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1174432046328!2d-65.2080364902503!3d-26.83621664190631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c0e8d0271b7%3A0x7946062ac490db30!2sGral.%20Paz%20576%2C%20T4000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1583359327932!5m2!1ses-419!2sar" allowfullscreen=true>
-                frameborder="0"></iframe>
-        </div>
-        <div class="ml-3 mt-5">
-            <h1 class="text-light ml-3 mb-0 mr-5 textoCopy copyMobile">Copy Right 2020 | Clínica Rolling Code</h1>
-        </div>
-        <div class="m-0 textoCopyDesktop copyDesktop">
-            <h1 class="text-light font-weight-light ml-3 mb-0 mr-5 textoCopy"> Copy Right 2020 | Clínica Rolling Code | General Paz 576 | CP:4000 | San Miguel de Tucumán | +54 (0381) 333 1003</h1>
-        </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-        <script src="src/js/HomePage.js"></script>
+    <div class="ml-5 mr-2 mb-5 logoRollingFooter d-inline-block">
+      <img class="LogosRedes" src="Assets/002-facebook.svg" alt="Nuestro Facebook">
+      <img class="LogosRedes" src="Assets/001-twitter (1).svg" alt="Nuestro Twitter">
+      <img class="LogosRedes" src="Assets/003-instagram.svg" alt="Nuestro Instagram">
+      <img class="LogosRedes" src="Assets/004-linkedin.svg" alt="Nuestro linkedin">
+    </div>
+    <div class="ml-4 mr-3 mb-5 d-inline-block otrosEnlacesMobile otrosEnlacesDesktop">
+      <h1 class="text-light mb-1">Otros Enlaces</h1>
+      <a class="bordeFooter d-block text-light mb-2" href="">> Envía tu CV</a>
+      <a class="bordeFooter d-block text-light mb-2" href="">> Provedores</a>
+    </div>
+    <div class="otrosEnlacesDesktop mb-5 d-inline-block">
+      <iframe class="d-flex align-self-center MargenMapa w-75"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1174432046328!2d-65.2080364902503!3d-26.83621664190631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c0e8d0271b7%3A0x7946062ac490db30!2sGral.%20Paz%20576%2C%20T4000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1583359327932!5m2!1ses-419!2sar"
+        allowfullscreen=true>
+        frameborder="0"></iframe>
+    </div>
+    <div class="ml-3 mt-5">
+      <h1 class="text-light ml-3 mb-0 mr-5 textoCopy copyMobile">Copy Right 2020 | Clínica Rolling Code</h1>
+    </div>
+    <div class="m-0 textoCopyDesktop copyDesktop">
+      <h1 class="text-light font-weight-light ml-3 mb-0 mr-5 textoCopy"> Copy Right 2020 | Clínica Rolling Code |
+        General Paz 576 | CP:4000 | San Miguel de Tucumán | +54 (0381) 333 1003</h1>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="src/js/HomePage.js"></script>
   <script src="./src/js/login.js"></script>
 </body>
+
 </html>
