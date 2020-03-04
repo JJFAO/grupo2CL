@@ -62,7 +62,7 @@ body{
   border-block-end:solid 1px;
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-size: 20px;
 }
 .pacientes{
   border-block-end:solid 1px;
@@ -75,6 +75,9 @@ body{
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
+}
+#panel{
+  padding-left: 16px;
 }
 .subboton{
   color:#ffffff;
@@ -159,4 +162,5 @@ td{
 }
 .boton-perfil{
   border: solid 1px #225378;
+  right: 0;
 }
