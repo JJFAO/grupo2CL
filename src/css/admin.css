@@ -164,3 +164,7 @@ td{
   border: solid 1px #225378;
   right: 0;
 }
+.boton-flotante{
+  position: fixed;
+  float: right;
+}
