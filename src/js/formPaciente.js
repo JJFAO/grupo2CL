@@ -63,4 +63,7 @@ let yyyy = today.getFullYear();
     } 
 
 today = yyyy+'-'+mm+'-'+dd;
-document.getElementById("nacimientoPaciente").setAttribute("max", today);
+document.getElementById("nacimiento").setAttribute("max", today);
+$( function() {
+    $( "#datepicker" ).datepicker();
+  } ); 

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro de Prodesionales</title>
+    <link rel="stylesheet" href="src/css/sigupdoctor.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="text-center text-white titulo-1">
+        <h1 class="mt-4">¡Bienvenido!</h1>
+    </div>
+    <div class="text-center">
+        <p class="mb-0">Gracias por querer formar parte de nuestro servicio de salud.</p>
+        <p>Por favor, cargá los siguientes datos.</p>
+    </div>
+    <div class="container mt-5">
+        <h2 class="mt-3">Datos Personales</h2>
+        <p>Estos datos son necesarios para poder registrarte</p>
+        <form>
+            <div class="row flex-wrap">
+                <div class="col-12 col-md-6 my-2">
+                    <input type="text" class="form-control datos" id="nombre" placeholder="Nombres">
+                </div>
+                <div class="col-12 col-md-6 my-2">
+                    <input type="text" class="form-control datos" id="apellido" placeholder="Apellidos">
+                </div>
+            </div>
+        </form>
+        <form>
+            <div class="row flex-wrap">
+                <div class="col-12 col-md-6 my-2">
+                    <input type="number" class="form-control datos" min="20000000000" max="29999999999" id="cuil" placeholder="CUIL/CUIT">
+                </div>
+                <div class="col-12 col-md-6 my-2">
+                    <input type="number" class="form-control datos" id="telefono" placeholder="N° Tel/ Cel">
+                </div>
+            </div>
+        </form>
+        <form>
+            <div class="row flex-wrap">
+                <div class="col-12 col-md-6 my-2">
+                    <input type="text" class="form-control datos" id="domicilio" placeholder="Domicilio">
+                </div>
+                <div class="col-12 col-md-6 my-2">
+                    <input type="text" class="form-control datos" id="localidad" placeholder="Localidad">
+                </div>
+            </div>
+        </form>
+        <form>
+            <div class="row flex-wrap">
+                <div class="col-12 col-md-6 my-2">
+                    <input type="text" class="form-control datos" id="provincia" placeholder="Provincia">
+                </div>
+                <div class="col-12 col-md-6 my-2">
+                    <input type="number" class="form-control datos" id="codigopostal" placeholder="Código Postal">
+                </div>
+            </div>
+        </form>
+        <h2 class="mt-3">Horarios de atención</h2>
+        <p>En ésta sección deberás elegir los días y horarios de consultas.</p>
+        <div class="d-flex flex-wrap justify-content-sm-center">
+            <form class="col-5 col-md-12 px-0 my-2">
+                <div class="d-md-flex justify-content-md-around" id="Dias">
+                    <div class="form-group">
+                        <input type="checkbox">
+                        <label for="text">Lunes</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox">
+                        <label for="text">Martes</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox">
+                        <label for="text">Miercoles</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox">
+                        <label for="text">Jueves</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox">
+                        <label for="text">Viernes</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox">
+                        <label for="text">Sabado</label>
+                    </div>
+                </div>
+            </form>
+            <form class="col-7 col-md-12 px-0 my-2">
+                <div class="d-md-flex justify-content-md-around" id="Horarios">
+                    <div class="form-group flex-md-column-reverse align-items-md-center">
+                        <input type="checkbox">
+                        <label for="text">08am - 12pm</label>
+                    </div>
+                    <div class="form-group flex-md-column-reverse align-items-md-center">
+                        <input type="checkbox">
+                        <label for="text">10pm - 14pm</label>
+                    </div>
+                    <div class="form-group flex-md-column-reverse align-items-md-center">
+                        <input type="checkbox">
+                        <label for="text">12pm - 16pm</label>
+                    </div>
+                    <div class="form-group flex-md-column-reverse align-items-md-center">
+                        <input type="checkbox">
+                        <label for="text">14pm - 18pm</label>
+                    </div>
+                    <div class="form-group flex-md-column-reverse align-items-md-center">
+                        <input type="checkbox">
+                        <label for="text">16pm - 20pm</label>
+                    </div>
+                    <div class="form-group flex-md-column-reverse align-items-md-center">
+                        <input type="checkbox">
+                        <label for="text">18pm - 22pm</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <h2 class="mt-3">Matricula</h2>
+        <div class="my-3">
+            <form class="my-3">
+                <div class="row flex-wrap">
+                    <div class="col-12 col-md-6 my-2">
+                        <input type="text" class="form-control datos" id="matriculaP" placeholder="Provincial N°">
+                    </div>
+                    <div class="col-12 col-md-6 my-2">
+                        <input type="text" class="form-control datos" id="matriculaN" placeholder="Nacional N°">
+                    </div>
+                </div>
+            </form>
+            <div class="form-group my-4 mt-4 pt-2">
+                <div class="d-flex">
+                    <p class="pt-2 pr-2">Especialidad</p>
+                    <select class="custom-select datos">
+                        <option value="Cardiología">Cardiología</option>
+                        <option value="Gastroenterología">Gastroenterología</option>
+                        <option value="Infectología">Infectología</option>
+                        <option value="Neurología">Neurología</option>
+                        <option value="Neumonología">Neumonología</option>
+                        <option value="Pediatría">Pediatría</option>
+                        <option value="Endocrinología">Endocrinología</option>
+                        <option value="Reumatología">Reumatología</option>
+                        <option value="Oncología">Oncología</option>
+                        <option value="Urología">Urología</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center flex-wrap">
+            <div class="d-flex flex-column align-items-center">
+                <div>
+                    <button class="btn btn-primary mt-3 font-weight-bold" onclick="getRegisterD()">Confirmar</button>
+                </div>
+                <div>
+                    <button class="btn btn-secondary text-nowrap font-weight-bold mt-3">Tengo problemas para
+                        registrarme</button>
+                </div>
+            </div>
+        </div>
+        <div class="my-5">
+            <p>"SEGÚN EL ART 1 DISPOSICIÓN 4/2009, SE TRANSCRIBE: ART. 27 INC 3 LEY 25326: EL TITULAR PODRÁ EN CUALQUIER
+                MOMENTO SOLICITAR EL RETIRO O BLOQUEO DE SU NOMBRE DE LOS BANCOS DE DATOS A LOS QUE SE REFIERE EL
+                PRESENTE ARTÍCULO. Y ART. 27 ANEXO I DECRETO 1558/01: EN TODA COMUNICACIÓN CON FINES DE PUBLICIDAD QUE
+                SE REALICE POR CORREO, TELÉFONO, CORREO ELECTRÓNICO, INTERNET U OTRO MEDIO A DISTANCIA A CONOCER, SE
+                DEBERÁ INDICAR, EN FORMA EXPRESA Y DESTACADA, LA POSIBILIDAD DEL TITULAR DEL DATO DE SOLICITAR EL RETIRO
+                O BLOQUEO, TOTAL O PARCIAL, DE SU NOMBRE DE LA BASE DE DATOS. A PEDIDO DEL INTERESADO, SE DEBERÁ
+                INFORMAR EL NOMBRE DEL RESPONSABLE O USUARIO DEL BANCO DE DATOS QUE PROVEYÓ LA INFORMACIÓN."</p>
+        </div>
+    </div>
+
+    <script src="src/js/SingUpdoctor.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
