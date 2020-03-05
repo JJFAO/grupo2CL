@@ -72,8 +72,8 @@
 
   </nav>
   <div class="fixed-bottom botonTurnero float-right">
-    <button class="shadow-lg" type="button">
-      <a href="medicalshift.html">Boton</a>
+    <button class="shadow-lg" type="button" data-toggle="modal" data-target="#MedicalShift">
+      <img src="Assets/calendar.png" alt="Turnero">
     </button>
   </div>
 
@@ -130,121 +130,218 @@
     </div>
 
   </main>
-
-  <!-- Modal -->
-  <div class="modal fade" id="indexModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+  <!-- Modal Medical Shift-->
+  <div class="modal fade" id="MedicalShift" tabindex="-1" role="dialog" aria-labelledby="MedicalShiftLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header loginheader text-white d-flex flex-column align-items-center flex-grow-1">
-          <h1 class="tituloSesion">Iniciar Sesión</h1>
-          <img class="user" src="./assets/userwhite.svg" alt="user">
+        <div class="modal-header">
+          <h5 class="modal-title" id="MedicalShiftLabel">Modal title</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <img class="iconcheck" src="./assets/removeWhite.svg" alt="not">
+            <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="">
-          <h2 class="d-flex justify-content-center mt-2">Tipo de Usuario</h2>
-          <div class=" d-flex justify-content-around">
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-                  aria-controls="pills-home" aria-selected="true">Paciente</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-                  aria-controls="pills-profile" aria-selected="false">Profesional</a>
-              </li>
-            </ul>
-          </div>
-        </div>
         <div class="modal-body">
-          <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-              <form class="d-flex justify-content-around">
-                <select class="custom-select col-4">
-                  <option selected>Documento</option>
-                  <option value="1">DNI</option>
-                  <option value="2">CI</option>
-                  <option value="4">LE</option>
-                  <option value="5">LC</option>
-                  <option value="6">Pas</option>
-                </select>
-                <input type="number" class="form-control col-8" id="DNI" placeholder="Nro de Documento">
-              </form>
-              <div class="mt-3">
-                <label for="formGroupExampleInput2">Contraseña</label>
-                <input type="password" class="form-control" id="passPatient" placeholder="Ingrese Contraseña">
-                <div class="d-flex justify-content-between mt-3">
-                  <button type="submit" class="btn text-white mb-3 d-flex justify-content-center"
-                    onclick="validation4Patient()">Ingresar</button>
-                  <a href="registropaciente.html"
-                    class="btn btn-default mb-3 d-flex justify-content-center btnregister text-white">Registrarme
-                  </a>
-                </div>
-              </div>
+<!-- /body del modal -->
+            <div class="container py-3 d-flex justify-content-center"><img src="img/logoblack.png" alt="logo clinica rolling">
             </div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-              <form>
-                <div class="form-group">
-                  <div class="dropdown open d-flex">
-                    <input type="number" class="form-control" id="cuit" placeholder="CUIL/CUIT">
-                  </div>
+            <div class="container-fluid bg-Copia-de-Health-Care-1-rgba text-center text-white py-2 h2">
+                Solicitar turno
+            </div>
+            <div class="container pt-5 text-center">
+                <h3>¡Bienvenido!</h3>
+            </div>
+            <div class="container pt-3 text-center">
+                <h5>
+                    Gracias por tu interes en nuestro servicio de salud.</h5>
+                <h5>Por favor, carga los siguientes datos para que te asignemos un turno.
+                </h5>
+            </div>
+            <div class="container py-5 bg-Copia-de-Health-Care-3-hex">
+                <div class="row">
+                    <div class="col-12 text-center h1 pt-2"><label for="especialidad">Especialidad</label></div>
+                    <div class="col-12">
+                        <div class="form-group">
+        
+                            <select class="form-control" id="especialidad" onchange="cargar_doctores()">
+                                <option>Seleccione una Especialidad...</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group mt-3">
+            </div>
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-12 text-center h1 pt-2"><label for="doctores">Profesional</label></div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <select class="form-control" id="doctores" onchange="cargar_dias()">
+                                <option>Seleccione un profesional...</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container py-5 bg-Copia-de-Health-Care-3-hex">
+                <div class="row">
+                    <div class="col-12 text-center h1 pt-5">Turnos disponibles</div>
+                    <div class="col-12">
+                        <form>
+                            <div class="form-group">
+                                <label for="dias" class="h5">DIA</label>
+                                <select class="form-control" id="dias"  onchange="cargar_horario()">
+                                    <option>dias disponibles...</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="horario" class="h5">HORA</label>
+                                <select class="form-control" id="horario">
+                                    <option>seleccione un horario...</option>
+                                </select>
+                            </div>
+        
+        
+                        </form>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="container py-5">
+                <div class="row">
+                    <div class=" text-center h1">Describa el motivo de su consulta</div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <textarea class="form-control" id="textarea" rows="5"
+                            placeholder="Describa brevemente el motivo de su consulta..." required></textarea>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="container p-5 btn">
+                    <button type="button" class="btn btn-primary font-weight-bold">confirmar turno
+                    </button>
+                </div>
+         <!-- /body del modal -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="indexModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header loginheader text-white d-flex flex-column align-items-center flex-grow-1">
+            <h1 class="tituloSesion">Iniciar Sesión</h1>
+            <img class="user" src="./assets/userwhite.svg" alt="user">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <img class="iconcheck" src="./assets/removeWhite.svg" alt="not">
+            </button>
+          </div>
+          <div class="">
+            <h2 class="d-flex justify-content-center mt-2">Tipo de Usuario</h2>
+            <div class=" d-flex justify-content-around">
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                    aria-controls="pills-home" aria-selected="true">Paciente</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                    aria-controls="pills-profile" aria-selected="false">Profesional</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <form class="d-flex justify-content-around">
+                  <select class="custom-select col-4">
+                    <option selected>Documento</option>
+                    <option value="1">DNI</option>
+                    <option value="2">CI</option>
+                    <option value="4">LE</option>
+                    <option value="5">LC</option>
+                    <option value="6">Pas</option>
+                  </select>
+                  <input type="number" class="form-control col-8" id="DNI" placeholder="Nro de Documento">
+                </form>
+                <div class="mt-3">
                   <label for="formGroupExampleInput2">Contraseña</label>
-                  <input type="password" class="form-control" id="passProf" placeholder="Ingrese Contraseña">
+                  <input type="password" class="form-control" id="passPatient" placeholder="Ingrese Contraseña">
                   <div class="d-flex justify-content-between mt-3">
                     <button type="submit" class="btn text-white mb-3 d-flex justify-content-center"
-                      onclick="validation4Profesional()">Ingresar</button>
-                    <a href="SingupDoctor.html"
+                      onclick="validation4Patient()">Ingresar</button>
+                    <a href="registropaciente.html"
                       class="btn btn-default mb-3 d-flex justify-content-center btnregister text-white">Registrarme
                     </a>
                   </div>
                 </div>
-            </div>
-            </form>
-          </div>
-          <div class="card-footer text-muted d-flex flex-column align-items-center ">
-            <div class="mt-3">
-              <img class="flecha" src="./assets/right-chevron.svg" alt="flecha">
-              <a id="btnrecover" onclick="hideModalRecover()">Olvidé mi contraseña</a>
-            </div>
-            <div>
-              <img class="flecha" src="./assets/right-chevron.svg" alt="flecha">
-              <!-- buttom politica de privacidad -->
-              <a data-toggle="modal" href="#ppmodal" onclick="show">Politica de Privacidad</a>
-            </div>
-            <!-- Modal politica de privacidad -->
-            <div class="modal fade" id="ppmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Politica de Privacidad</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
+              </div>
+              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <form>
+                  <div class="form-group">
+                    <div class="dropdown open d-flex">
+                      <input type="number" class="form-control" id="cuit" placeholder="CUIL/CUIT">
+                    </div>
                   </div>
-                  <div class="modal-body">
-                    Política de privacidad
-                    Los datos aportados forman parte de un banco de datos de RollingCode Medical
-                    Health, con domicilio en Gral Paz 657 piso 8 S.M. de Tucuman y serán tratados
-                    para brindar servicios a los asociados. El titular de los datos personales no se
-                    encuentra obligado a proporcionar datos sensibles. Asimismo, el titular se
-                    responsabiliza por la exactitud de los datos proporcionados. El titular de los
-                    datos personales tiene la facultad de ejercer el derecho de acceso a los mismos
-                    en forma gratuita, a intervalos no inferiores a seis meses, salvo que se
-                    acredite un interés legítimo al efecto, conforme lo establecido en el artículo
-                    14, inciso 3 de la Ley N° 25.326.
+                  <div class="form-group mt-3">
+                    <label for="formGroupExampleInput2">Contraseña</label>
+                    <input type="password" class="form-control" id="passProf" placeholder="Ingrese Contraseña">
+                    <div class="d-flex justify-content-between mt-3">
+                      <button type="submit" class="btn text-white mb-3 d-flex justify-content-center"
+                        onclick="validation4Profesional()">Ingresar</button>
+                      <a href="SingupDoctor.html"
+                        class="btn btn-default mb-3 d-flex justify-content-center btnregister text-white">Registrarme
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              </form>
+            </div>
+            <div class="card-footer text-muted d-flex flex-column align-items-center ">
+              <div class="mt-3">
+                <img class="flecha" src="./assets/right-chevron.svg" alt="flecha">
+                <a id="btnrecover" onclick="hideModalRecover()">Olvidé mi contraseña</a>
+              </div>
+              <div>
+                <img class="flecha" src="./assets/right-chevron.svg" alt="flecha">
+                <!-- buttom politica de privacidad -->
+                <a data-toggle="modal" href="#ppmodal" onclick="show">Politica de Privacidad</a>
+              </div>
+              <!-- Modal politica de privacidad -->
+              <div class="modal fade" id="ppmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Politica de Privacidad</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      Política de privacidad
+                      Los datos aportados forman parte de un banco de datos de RollingCode Medical
+                      Health, con domicilio en Gral Paz 657 piso 8 S.M. de Tucuman y serán tratados
+                      para brindar servicios a los asociados. El titular de los datos personales no se
+                      encuentra obligado a proporcionar datos sensibles. Asimismo, el titular se
+                      responsabiliza por la exactitud de los datos proporcionados. El titular de los
+                      datos personales tiene la facultad de ejercer el derecho de acceso a los mismos
+                      en forma gratuita, a intervalos no inferiores a seis meses, salvo que se
+                      acredite un interés legítimo al efecto, conforme lo establecido en el artículo
+                      14, inciso 3 de la Ley N° 25.326.
 
-                    La DIRECCIÓN NACIONAL DE PROTECCIÓN DE DATOS PERSONALES, órgano de control de la
-                    Ley N° 25.326, tiene la atribución de atender las denuncias y reclamos que se
-                    interpongan con relación al incumplimiento de las normas sobre protección de
-                    datos personales.
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" onclick="hideModalpp()">Aceptar</button>
+                      La DIRECCIÓN NACIONAL DE PROTECCIÓN DE DATOS PERSONALES, órgano de control de la
+                      Ley N° 25.326, tiene la atribución de atender las denuncias y reclamos que se
+                      interpongan con relación al incumplimiento de las normas sobre protección de
+                      datos personales.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" onclick="hideModalpp()">Aceptar</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -254,58 +351,59 @@
       </div>
     </div>
   </div>
-  <footer class="bg-dark">
-    <div class="d-lg-flex"><img class="mb-5 logoRollingFooter" src="Assets/LogoRolling white.svg"
-        alt="Logo Rolling Code">
-      <div>
-        <div class="d-flex ml-5 mb-2">
-          <img class="loguitosFooter logoTelephone " src="assets/pin.png" alt="Ubicación">
-          <h1 class="text-light letrasFooter mt-3 ml-2 ubiTelDesktop">General Paz 576 - CP 4000 - San Miguel de
-            Tucumán</h1>
-        </div>
-        <div class="d-flex ml-5 ml-2 mb-5">
-          <img class="loguitosFooter mr-3" src="assets/phone.png" alt="Call Center">
-          <h1 class="text-light letrasFooter mt-3 ubiTelDesktop">Call Center: +54 (0381) 15 3331003</h1>
+    
+    <footer class="bg-dark">
+      <div class="d-lg-flex"><img class="mb-5 logoRollingFooter" src="Assets/LogoRolling white.svg"
+          alt="Logo Rolling Code">
+        <div>
+          <div class="d-flex ml-5 mb-2">
+            <img class="loguitosFooter logoTelephone " src="assets/pin.png" alt="Ubicación">
+            <h1 class="text-light letrasFooter mt-3 ml-2 ubiTelDesktop">General Paz 576 - CP 4000 - San Miguel de
+              Tucumán</h1>
+          </div>
+          <div class="d-flex ml-5 ml-2 mb-5">
+            <img class="loguitosFooter mr-3" src="assets/phone.png" alt="Call Center">
+            <h1 class="text-light letrasFooter mt-3 ubiTelDesktop">Call Center: +54 (0381) 15 3331003</h1>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="ml-5 mr-2 mb-5 logoRollingFooter d-inline-block">
-      <img class="LogosRedes" src="Assets/002-facebook.svg" alt="Nuestro Facebook">
-      <img class="LogosRedes" src="Assets/001-twitter (1).svg" alt="Nuestro Twitter">
-      <img class="LogosRedes" src="Assets/003-instagram.svg" alt="Nuestro Instagram">
-      <img class="LogosRedes" src="Assets/004-linkedin.svg" alt="Nuestro linkedin">
-    </div>
-    <div class="ml-4 mr-3 mb-5 d-inline-block otrosEnlacesMobile otrosEnlacesDesktop">
-      <h1 class="text-light mb-1">Otros Enlaces</h1>
-      <a class="bordeFooter d-block text-light mb-2" href="">> Envía tu CV</a>
-      <a class="bordeFooter d-block text-light mb-2" href="">> Provedores</a>
-    </div>
-    <div class="otrosEnlacesDesktop mb-5 d-inline-block">
-      <iframe class="d-flex align-self-center MargenMapa w-75"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1174432046328!2d-65.2080364902503!3d-26.83621664190631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c0e8d0271b7%3A0x7946062ac490db30!2sGral.%20Paz%20576%2C%20T4000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1583359327932!5m2!1ses-419!2sar"
-        allowfullscreen=true>
-        frameborder="0"></iframe>
-    </div>
-    <div class="ml-3 mt-5">
-      <h1 class="text-light ml-3 mb-0 mr-5 textoCopy copyMobile">Copy Right 2020 | Clínica Rolling Code</h1>
-    </div>
-    <div class="m-0 textoCopyDesktop copyDesktop">
-      <h1 class="text-light font-weight-light ml-3 mb-0 mr-5 textoCopy"> Copy Right 2020 | Clínica Rolling Code |
-        General Paz 576 | CP:4000 | San Miguel de Tucumán | +54 (0381) 333 1003</h1>
-    </div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-  <script src="src/js/HomePage.js"></script>
-  <script src="./src/js/login.js"></script>
+      <div class="ml-5 mr-2 mb-5 logoRollingFooter d-inline-block">
+        <img class="LogosRedes" src="Assets/002-facebook.svg" alt="Nuestro Facebook">
+        <img class="LogosRedes" src="Assets/001-twitter (1).svg" alt="Nuestro Twitter">
+        <img class="LogosRedes" src="Assets/003-instagram.svg" alt="Nuestro Instagram">
+        <img class="LogosRedes" src="Assets/004-linkedin.svg" alt="Nuestro linkedin">
+      </div>
+      <div class="ml-4 mr-3 mb-5 d-inline-block otrosEnlacesMobile otrosEnlacesDesktop">
+        <h1 class="text-light mb-1">Otros Enlaces</h1>
+        <a class="bordeFooter d-block text-light mb-2" href="">> Envía tu CV</a>
+        <a class="bordeFooter d-block text-light mb-2" href="">> Provedores</a>
+      </div>
+      <div class="otrosEnlacesDesktop mb-5 d-inline-block">
+        <iframe class="d-flex align-self-center MargenMapa w-75"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1174432046328!2d-65.2080364902503!3d-26.83621664190631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c0e8d0271b7%3A0x7946062ac490db30!2sGral.%20Paz%20576%2C%20T4000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1583359327932!5m2!1ses-419!2sar"
+          allowfullscreen=true>
+          frameborder="0"></iframe>
+      </div>
+      <div class="ml-3 mt-5">
+        <h1 class="text-light ml-3 mb-0 mr-5 textoCopy copyMobile">Copy Right 2020 | Clínica Rolling Code</h1>
+      </div>
+      <div class="m-0 textoCopyDesktop copyDesktop">
+        <h1 class="text-light font-weight-light ml-3 mb-0 mr-5 textoCopy"> Copy Right 2020 | Clínica Rolling Code |
+          General Paz 576 | CP:4000 | San Miguel de Tucumán | +54 (0381) 333 1003</h1>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="src/js/HomePage.js"></script>
+    <script src="./src/js/login.js"></script>
 </body>
 
 </html>

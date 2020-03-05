@@ -160,9 +160,16 @@ label{
 }
 .botonTurnero{
     width: 50px!important;
-    margin-left: 77vw;
+    margin-left: 70vw;
     margin-bottom: 50px;
     margin-right: 20px;
+}
+@media (min-width: 768px) {
+    .botonTurnero {
+        margin-left: 90vw;
+        margin-bottom: 50px;
+        margin-right: 20px; 
+    }
 }
 @media (min-width: 768px) {
     .MargenLogo {
