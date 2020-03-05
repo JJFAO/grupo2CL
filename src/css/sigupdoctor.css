@@ -32,3 +32,37 @@ label{
     margin: 5px 10px;
 }
 
+.form-control, .custom-select{
+background-color: #d3d3d3 !important;
+font-family:'Montserrat', sans-serif;
+color: black;       
+}
+
+.form-control::-webkit-input-placeholder {
+    background-color: #d3d3d3;
+    border-radius: 11px;
+    color: black !important;
+}
+.form-control::-moz-placeholder {
+    background-color: #d3d3d3;
+    border-radius: 11px;
+    color: black !important;
+}
+
+::-webkit-input-placeholder {
+    font-family:'Montserrat', sans-serif;
+}
+::-moz-placeholder {
+    background-color: #d3d3d3;
+    font-family:'Montserrat', sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+input[type=number] { 
+    -moz-appearance:textfield; 
+}
