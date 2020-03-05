@@ -27,6 +27,12 @@
 //     `
 // }
 
+
+
+
+
+
+
 // const pacientes = [
 //     {nombre: 'Mariano De Filippo', edad:'20', dni:'42269845', doctor:'jj', turno:'8:00'},
 //     {nombre: 'Jj', edad:'29', dni:'0958475', doctor:'luis', turno:'12:00'},
@@ -56,6 +62,17 @@
 //         `
 //   }
 // }
+
+
+
+
+
+
+
+
+
+
+
 // const doctores = [
 //   {nombre: 'Mariano De Filippo', dni:'42269845', Especialidad:'pediatra', Horarios:'8:00'},
 //   {nombre: 'Jj', dni:'0958475', Especialidad:'cardiologo', Horarios:'12:00'},
