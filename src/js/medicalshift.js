@@ -1,4 +1,4 @@
-var arrayespecialidades = ["ALERGOLOGIA", "ANESTESIOLOGIA", "BIOQUIMICO", "CARDIOLOGIA", "CARDIOLOGIA INFANTIL", "CIRUGIA CARDIOVASCULAR", "CIRUGIA DE CABEZA Y CUELLO", "CIRUGIA GENERAL", "CIRUGIA PEDIATRICA", "CLINICA", "DERMATOLOGIA", "DIAGNOSTICO POR IMAGENES", "ECOGRAFIA", "EMERGENCIA", "ENDOCRINOLOGIA", "ENDOCRINOLOGIA INFANTIL", "FLEBOLOGIA Y LINFOLOGIA", "GASTROENTEROLOGIA", "GASTROENTEROLOGIA INFANTIL", "GINECOLOGIA", "HEMATOLOGIA", "HEMOTERAPIA", "HEMOTERAPIA", "INFECTOLOGIA INFANTIL", "INMUNOLOGIA", "MASTOLOGIA", "MEDICINA DEL DEPORTE", "MEDICINA GENERAL", "MEDICO", "NEFROLOGIA", "NEFROLOGIA INFANTIL", "NEONATOLOGIA", "NEUMONOLOGIA", "NEUMONOLOGIA INFANTIL", "NEUROCIRUGIA", "NEUROCIRUGIA INFANTIL", "NEUROLOGIA", "NEUROLOGIA INFANTIL", "NUTRICION", "ODONTOLOGIA - ENDODONCIA ", "ODONTOLOGIA -CIRUGIA", "ODONTOLOGIA -PERIODONCIA", "ODONTOLOGIA GENERAL", "ODONTOPEDIATRIA", "OFTALMOLOGIA", "OFTALMOLOGIA INFANTIL", "ONCOLOGIA", "ONCOLOGIA INFANTIL", "OTORRINOLARINGOLOGIA", "OTORRINOLARINGOLOGIA INFANTIL", "PEDIATRIA", "PROCTOLOGIA", "PSICOLOGIA  - NIÑOS", "PSICOLOGIA - ADOLESCENTES - ADULTOS ", "PSIQUIATRIA - ADULTOS", "PSIQUIATRIA - INFANTO JUVENIL", "REUMATOLOGIA", "REUMATOLOGIA INFANTIL", "RX  ODONTOLOGIA", "TOCOGINECOLOGIA", "TRAUMATOLOGIA", "TRAUMATOLOGIA  Y ORTOPEDIA", "TRAUMATOLOGIA INFANTIL", "UROLOGIA", "UROLOGIA INFANTIL"];
+var arrayespecialidades = ["Alergología", "Anestesiología", "Bioquímico", "Cardiología", "Cardiología Infantil", "Cirugía Cardiovascular", "Cirugía de Cabeza y Cuello", "Cirugía General", "Cirugía Pediatrica", "Clínica", "Dermatología", "Diagnóstico por Imágenes", "Ecografía", "Emergencia", "Endocrinología", "Endocrinología Infantil", "Flebología Y Linfología", "Gastroenterología", "Gastroenterología Infatil", "Ginecología", "Hematología", "Hemoterapia", "Hemoterapia", "Infectología Infantil", "Inmunología", "Mastología", "Medicina del Deporte", "Medicina General", "Médico", "Nefrología", "Nefrología Infantil", "Neonatología", "Neumonología", "Neumonología Infantil", "Neurocirugía", "Neurocirugía Infantil", "Neurología", "Neurología Infantil", "Nutrición", "Odontología - Endodoncia", "Odontología - Cirugía", "Odontología - Periodoncia", "Odontología General", "Odontopediatría", "Oftalmología", "Oftalmología Infantil", "Oncología", "Oncología Infantil", "Otorrinolaringología", "Otorrinolaringología Infantil", "Pediatría", "Proctología", "Psicología - Niños", "Psicología - Adolescentes - Adultos", "Psiquiatría - Adultos", "Psiquiatría - Infanto Juvenil", "Reumatología", "Reumatología Infantil", "RX - Odontología", "Tocoginecología", "Traumatología", "Traumatología y Ortodopedia", "Traumatología Infantil", "Urología", "Urología Infantil"];
 localStorage.setItem('arrayespecialidades', JSON.stringify(arrayespecialidades))
 var usuario = {
     nombre: 'jorge',
@@ -7,9 +7,9 @@ var usuario = {
 // const doctor = new Doctor(nombre, apellido, telefono, especialidad, matricula, cuil, domicilio, provincia, localiad, codigopostal);
 
 const doctores = [{
-        nombre: 'MARIA BELEN',
-        apellido: 'ABRAHAN',
-        especialidad: 'ALERGOLOGIA',
+        nombre: 'María Belén',
+        apellido: 'Abraham',
+        especialidad: 'Alergología',
         cuil: '000000000000',
         dias: [{
             lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
@@ -20,9 +20,9 @@ const doctores = [{
         }]
     },
     {
-        nombre: 'ANDRES',
-        apellido: 'ANZORENA',
-        especialidad: 'CARDIOLOGIA',
+        nombre: 'Andrés',
+        apellido: 'Anzorena',
+        especialidad: 'Cardiología',
         cuil: '11111111111',
         dias: [{
             lunes: [],
@@ -33,9 +33,9 @@ const doctores = [{
         }]
     },
     {
-        nombre: 'SILVANA RITA',
-        apellido: 'DEPETRIS',
-        especialidad: 'CARDIOLOGIA',
+        nombre: 'Silvina Rita',
+        apellido: 'Depetris',
+        especialidad: 'Cardiología',
         cuil: '22222222222',
         dias: [{
             lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
@@ -46,9 +46,9 @@ const doctores = [{
         }]
     },
     {
-        nombre: 'SILIVIA LOURDES',
-        apellido: 'LORENZO',
-        especialidad: 'GASTROENTEROLOGIA',
+        nombre: 'Silvia Lourdes',
+        apellido: 'Lorenzo',
+        especialidad: 'Gastroenterología',
         cuil: '3333333333',
         dias: [{
             lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
@@ -59,9 +59,9 @@ const doctores = [{
         }]
     },
     {
-        nombre: 'JOEL',
-        apellido: 'CARABAJAL',
-        especialidad: 'TRAUMATOLOGIA',
+        nombre: 'Joel',
+        apellido: 'Carabajal',
+        especialidad: 'Traumatología',
         cuil: '44444444444',
         dias: [{
             lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
