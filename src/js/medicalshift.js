@@ -245,6 +245,7 @@ function guardar_turno () {
         localStorage.setItem('rTurnos',JSON.stringify(nTurnos))
         return registro
 }
+
 function borrar_turno(obj) {
 console.log(obj.doctores)
 console.log(obj.dias);
@@ -253,7 +254,19 @@ console.log(obj.horario);
 }
 
 function confirmar() {
+    console.log(document.querySelector("#doctores").value);
+    console.log("Seleccione un Profesional...");
     
+
+    
+    if (document.querySelector("#doctores").value == "Seleccione un Profesional...") {
+      console.log("debe llenar doctoreddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddds");
+        
+    } else {
+        console.log("doctor llenokkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
+        
+    }
+
 const turno_paciente = guardar_turno()
 borrar_turno(turno_paciente)
 
