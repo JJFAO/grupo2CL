@@ -1,0 +1,219 @@
+h1{
+    font-family: 'Roboto Slab', serif;
+}
+h2{
+    font-family:'Montserrat', sans-serif;
+}
+p{
+    font-family:'Montserrat', sans-serif;
+}
+label{
+    font-family:'Montserrat', sans-serif;
+}
+.btn{
+    font-family:'Montserrat', sans-serif;
+}
+.form-control{
+    background-color: #d3d3d3 !important;
+    font-family:'Montserrat', sans-serif;
+    color: black;       
+    }
+    .form-control::-webkit-input-placeholder {
+        background-color: #d3d3d3;
+        border-radius: 11px;
+        color: black !important;
+    }
+    .form-control::-moz-placeholder {
+        background-color: #d3d3d3;
+        border-radius: 11px;
+        color: black !important;
+    }
+    ::-webkit-input-placeholder {
+        font-family:'Montserrat', sans-serif;
+    }
+    ::-moz-placeholder {
+        background-color: #d3d3d3;
+        font-family:'Montserrat', sans-serif;
+    }
+.borde-separacion {
+    border-color: #1595a3!important;
+    border-bottom: 5px solid;
+}
+
+.logoRolling {
+    height: 50px;
+}
+@media (min-width: 768px) {
+    .logoRolling {
+        height: 90px;
+    }
+ }
+@media (max-width: 768px) {
+    .letrasFooter {
+        font-size: 13px;
+    }
+ }
+.bordeFooter {
+    border-color: white;
+    border-bottom: 2px solid;
+}
+.textoCopy {
+    font-size: small;
+}
+.loguitosFooter {
+    width: 25px;
+    height: 25px;
+}
+.logoTelephone {
+    margin-top: 15px; 
+    margin-right: 5px;
+}
+.LogosRedes {
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
+    margin-left: 7px;
+}
+@media (min-width: 768px) {
+    .logoRollingFooter {
+        width: 25vw;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+}
+@media (min-width: 768px) {
+    .ubiTelDesktop {
+        font-size: 20px;
+    }
+}
+@media (min-width: 768px) {
+    .LogosRedes {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .otrosEnlacesMobile {
+        width: 75vw!important;
+    }
+}
+@media (min-width: 768px) {
+    .otrosEnlacesDesktop {
+        width: 25vw!important;
+        margin-left: 14vw;
+    }
+}
+@media (min-width: 768px) {
+    .copyMobile {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .copyDesktop {
+        display: none;
+    }
+}
+.textoCopyDesktop {
+    background-color: #1595a3!important;
+    text-align: center;
+}
+.active{
+    background-color: #1595A3!important ;
+    color: white!important;
+}
+
+h1{
+    font-family: 'Roboto Slab', serif;
+}
+h2{
+    font-family:'Montserrat', sans-serif;
+}
+p{
+    font-family:'Montserrat', sans-serif;
+}
+label{
+    font-family:'Montserrat', sans-serif;
+}
+.btn{
+    font-family:'Montserrat', sans-serif;
+}
+.form-control{
+    background-color: #d3d3d3 !important;
+    font-family:'Montserrat', sans-serif;
+    color: black;       
+    }
+    .form-control::-webkit-input-placeholder {
+        background-color: #d3d3d3;
+        border-radius: 11px;
+        color: black !important;
+    }
+    .form-control::-moz-placeholder {
+        background-color: #d3d3d3;
+        border-radius: 11px;
+        color: black !important;
+    }
+    ::-webkit-input-placeholder {
+        font-family:'Montserrat', sans-serif;
+    }
+    ::-moz-placeholder {
+        background-color: #d3d3d3;
+        font-family:'Montserrat', sans-serif;
+    }
+.borde-separacion {
+    border-color: #1595a3!important;
+    border-bottom: 5px solid;
+}
+
+.logoRolling {
+    height: 50px;
+}
+@media (min-width: 768px) {
+    .logoRolling {
+        height: 90px;
+    }
+ }
+@media (max-width: 768px) {
+    .letrasFooter {
+        font-size: 15px;
+    }
+ }
+
+/*   main index */
+
+.titulo{
+font-family: 'Roboto Slab', serif;
+background-color: #00000069;
+padding: 0.3rem;
+font-size: 27px;
+}
+
+.titulo{
+    font-size: 23px;
+}
+@media only screen and (min-width: 1000px) {
+   .titulo{
+       font-size: 60px;
+       padding: 0.5rem;
+   }
+  }
+
+.fondotitulo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.card-img-overlay{
+    padding: 0rem;
+}
+.titulocards{
+    display: flex;
+    justify-content: center;
+    font-family:'Roboto Slab', serif; 
+    font-size: 19px;
+}
+
+.card-body{
+    font-family: 'Montserrat', sans-serif;
+}
