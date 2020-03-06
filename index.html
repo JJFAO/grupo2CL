@@ -72,8 +72,8 @@
 
   </nav>
   <div class="fixed-bottom botonTurnero float-right">
-    <button class="shadow-lg" type="button" data-toggle="modal" data-target="#MedicalShift">
-      <img src="Assets/calendar.png" alt="Turnero">
+    <button class="shadow-lg rounded-circle" type="button" data-toggle="modal" data-target="#MedicalShift">
+      <img class="tamañoBotonTurnero" src="Assets/calendar.png" alt="Turnero">
     </button>
   </div>
 
@@ -349,7 +349,49 @@
       </div>
     </div>
   </div>
-    
+  <div class="modal fade" id="modalrecover" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="text-center">
+          <div class="card-header loginheader text-white d-flex">
+            <div class="d-flex flex-column align-items-center flex-grow-1">
+              <h1 class="tituloSesion">Olvidé mi Contraseña</h1>
+              <img class="user" src="./assets/userwhite.svg" alt="user">
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <img class="iconcheck" src="./assets/removeWhite.svg" alt="not">
+            </button>
+          </div>
+          <div class="card-header">
+            <div class=" col justify-content-">
+              <h2 class="card-title">Tipo de Usuario</h2>
+              <h2>Paciente | Profesional</h2>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>Ingrese su correo electronico para recibir en su bandeja de entrada los pasos a seguir para
+            restablecer su contraseña.</p>
+          <form>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="mail@mail.com">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary" onclick="recoverPass()">Recuperar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     <footer class="bg-dark">
       <div class="d-lg-flex">
         <a href="#top"><img class="mt-5 logoRollingFooter" src="Assets/LogoRolling white.svg"
@@ -367,14 +409,14 @@
         </div>
       </div>
       <div class="ml-5 logoRollingFooter d-inline-block">
-        <a href="https://www.facebook.com/RollingCodeSchool/"><img class="LogosRedes" src="Assets/002-facebook.svg" alt="Nuestro Facebook"></a>
-        <a href="https://twitter.com/rollingcode3"><img class="LogosRedes" src="Assets/001-twitter (1).svg" alt="Nuestro Twitter"></a>
-        <a href="https://www.instagram.com/rollingcodeschool/"><img class="LogosRedes" src="Assets/003-instagram.svg" alt="Nuestro Instagram"></a>
-        <a href="https://ar.linkedin.com/company/rollingcode-school"><img class="LogosRedes" src="Assets/004-linkedin.svg" alt="Nuestro linkedin"></a>
+        <a href="https://www.facebook.com/RollingCodeSchool/" target="_blank"><img class="LogosRedes" src="Assets/002-facebook.svg" alt="Nuestro Facebook"></a>
+        <a href="https://twitter.com/rollingcode3" target="_blank"><img class="LogosRedes" src="Assets/001-twitter (1).svg" alt="Nuestro Twitter"></a>
+        <a href="https://www.instagram.com/rollingcodeschool/" target="_blank"><img class="LogosRedes" src="Assets/003-instagram.svg" alt="Nuestro Instagram"></a>
+        <a href="https://ar.linkedin.com/company/rollingcode-school" target="_blank"><img class="LogosRedes" src="Assets/004-linkedin.svg" alt="Nuestro linkedin"></a>
       </div>
       <div class="ml-4 mr-3 mb-5 d-inline-block otrosEnlacesMobile otrosEnlacesDesktop">
         <h1 class="text-light mb-1">Otros Enlaces</h1>
-        <a class="bordeFooter d-block text-light mb-2" href="">> Envía tu CV</a>
+        <a class="bordeFooter d-block text-light mb-2" href="https://mail.google.com/mail/?view=cm&fs=1&to=rollingcodeschool@gmail.com&su=Envío CV&body=Adjuntanos tu CV y los motivos por los que estás interesado en trabajar con nosotros. ¡Te esperamos!" target="_blank">> Envía tu CV</a>
         <a class="bordeFooter d-block text-light mb-2" href="">> Provedores</a>
       </div>
       <div class="otrosEnlacesDesktop d-inline-block">
