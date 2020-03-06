@@ -159,7 +159,6 @@ label{
         font-family: 'Montserrat', sans-serif;
 }
 .botonTurnero{
-    width: 50px!important;
     margin-left: 70vw;
     margin-bottom: 50px;
     margin-right: 20px;
@@ -202,4 +201,8 @@ label{
 }
 .tamañoMapa{
     height: 250px;
+}
+.tamañoBotonTurnero{
+    width: 55px;
+    height: 55px;
 }
