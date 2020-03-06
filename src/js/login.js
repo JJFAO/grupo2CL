@@ -1,6 +1,10 @@
 function hideModalRecover() {
     $('#indexModal').modal("hide");
+    console.log("hola");
+    
     $('#modalrecover').modal("show");
+    console.log("chau");
+    
 }
 function hideModalpp() {
     $('#ppmodal').modal("hide");
@@ -34,7 +38,7 @@ function recoverPass() {
         localStorage.setItem("usuariologueado", usuariologueado)
         return
       }
-      alert("La contraseña no coincide")
+      alert("Las credenciales no son correctas")
       return
     }
     
@@ -44,17 +48,17 @@ function recoverPass() {
   
 
 function validation4Profesional() {
-  const profesionales = JSON.parse(localStorage.getItem("Doctor"))
+  const profesionales = JSON.parse(localStorage.getItem("rDoctores"))
   let cuitHtml = document.querySelector("#cuit")
   let passprofHtml = document.querySelector("#passProf")
-  for(let index = 0; index < profesionaless.length; index++) {
+  for(let index = 0; index < profesionales.length; index++) {
     const profesional = profesionales[index];
     if (cuitHtml.value == profesional.cuil) {
       if (passprofHtml.value == profesional.pass) {
-        alert("Iniciando sesion")
+        alert("Inicio exitosos")
         return
       }
-      alert("La contraseña no coincide")
+      alert("La credenciales no son correctas")
       return
     }    
   }
