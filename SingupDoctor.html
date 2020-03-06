@@ -11,6 +11,56 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
+    <nav class="navbar p-0 navbar-expand-lg navbar-light bg-light borde-separacion d-flex flex-column">
+        <div class="d-flex justify-content-between w-100">
+          <img class="logoRolling d-flex justify-content-start MargenLogo mt-3" src="Assets/LogoRolling.svg"
+            alt="Logo Rolling Code">
+          <div class="d-flex justify-content-end align-self-center">
+            <div class="collapse navbar-collapse" id="botoncitobusqueda">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <form class="form-inline my-lg-0"></form>
+                  <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">
+                </li>
+              </ul>
+            </div>
+            <button id="menuDesplegado" class="navbar-toggler p-0" type="button" data-toggle="collapse"
+              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <button id="menuBusqueda" class="m-1 p-0" type="button" data-toggle="collapse" data-target="#botoncitobusqueda"
+              aria-controls="botoncitobusqueda" aria-expanded="false" aria-label="Toggle navigation">
+              <img class="vw-5" src="Assets/problem2.png" alt="Buscar">
+            </button>
+            <button id="botonLogueo" class="m-1 p-0" data-toggle="modal" data-target="#indexModal">
+              <img src="Assets/user.png" alt="">
+            </button>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse align-self-start align-self-lg-end" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item mr-1 ml-1">
+              <a class="nav-link" id="inicio" href="#">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-1 ml-1">
+              <a class="nav-link" id="pacientes" onclick="consultaTurnoPaciente()" href="#">Pacientes</a>
+            </li>
+            <li class="nav-item mr-1 ml-1">
+              <a class="nav-link" id="institucional" href="#">Institucional</a>
+            </li>
+            <li class="nav-item mr-1 ml-1">
+              <a class="nav-link" id="servicios" href="#">Servicios</a>
+            </li>
+            <li class="nav-item mr-1 ml-1">
+              <a class="nav-link" id="profesionales" onclick="pacienteProfesional() " href="#">Profesionales</a>
+            </li>
+            <li class="nav-item mr-1 ml-1">
+              <a class="nav-link" id="contacto" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     <div class="text-center text-white titulo-1">
         <h1 class="mt-4">¡Bienvenido!</h1>
     </div>
@@ -24,119 +74,124 @@
         <form>
             <div class="row flex-wrap">
                 <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control datos" id="nombre" placeholder="Nombres">
+                    <input type="text" class="form-control datos" id="nombre" placeholder="Nombre/s">
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control datos" id="apellido" placeholder="Apellidos">
+                    <input type="text" class="form-control datos" id="apellido" placeholder="Apellido/s">
                 </div>
-            </div>
-        </form>
-        <form>
-            <div class="row flex-wrap">
                 <div class="col-12 col-md-6 my-2">
-                    <input type="number" class="form-control datos" min="20000000000" max="29999999999" id="cuil" placeholder="CUIL/CUIT">
+                    <input type="number" class="form-control datos" min="20000000000" max="29999999999" id="cuit" placeholder="CUIL/ CUIT">
                 </div>
                 <div class="col-12 col-md-6 my-2">
                     <input type="number" class="form-control datos" id="telefono" placeholder="N° Tel/ Cel">
                 </div>
-            </div>
-        </form>
-        <form>
-            <div class="row flex-wrap">
+                <div class="col-12 col-md-6 my-2">
+                    <input type="password" class="form-control datos" min="20000000000" max="29999999999" id="passProf" placeholder="Contraseña">
+                </div>
+                <div class="col-12 col-md-6 my-2">
+                    <input type="email" class="form-control datos" id="mail" placeholder="Correo Electronico">
+                </div>
                 <div class="col-12 col-md-6 my-2">
                     <input type="text" class="form-control datos" id="domicilio" placeholder="Domicilio">
                 </div>
                 <div class="col-12 col-md-6 my-2">
                     <input type="text" class="form-control datos" id="localidad" placeholder="Localidad">
                 </div>
-            </div>
-        </form>
-        <form>
-            <div class="row flex-wrap">
-                <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control datos" id="provincia" placeholder="Provincia">
-                </div>
                 <div class="col-12 col-md-6 my-2">
                     <input type="number" class="form-control datos" id="codigopostal" placeholder="Código Postal">
+                </div>
+                <div class="col-12 col-md-6 my-2">
+                    <input type="text" class="form-control datos" id="provincia" placeholder="Provincia">
                 </div>
             </div>
         </form>
         <h2 class="mt-3">Horarios de atención</h2>
         <p>En ésta sección deberás elegir los días y horarios de consultas.</p>
         <div class="d-flex flex-wrap justify-content-sm-center">
-            <form class="col-5 col-md-12 px-0 my-2">
-                <div class="d-md-flex justify-content-md-around" id="Dias">
-                    <div class="form-group">
-                        <input type="checkbox">
-                        <label for="text">Lunes</label>
+            <form class="col-12 px-0 my-2">
+                <div id="Dias">
+                    <div class="d-flex my-3">
+                        <div class="form-group mr-4 pr-2">
+                            <input type="checkbox">
+                            <label for="text">Lunes</label>
+                        </div>
+                        <select id="Lunes" class="custom-select horarios" multiple>
+                            <option>Horarios dia Lunes</option>
+                            <option value="08:00 - 09:00">08:00 - 09:00</option>
+                            <option value="09:00 - 10:00">09:00 - 10:00</option>
+                            <option value="11:00 - 12:00">11:00 - 12:00</option>
+                            <option value="12:00 - 13:00">12:00 - 13:00</option>
+                            <option value="13:00 - 14:00">13:00 - 14:00</option>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <input type="checkbox">
-                        <label for="text">Martes</label>
+                    <div class="d-flex my-3">
+                        <div class="form-group mr-4 pr-1">
+                            <input type="checkbox">
+                            <label for="text">Martes</label>
+                        </div>
+                        <select id="Martes" class="custom-select horarios" multiple>
+                            <option>Horarios dia Martes</option>
+                            <option value="Martes 08:00 - 09:00">08:00 - 09:00</option>
+                            <option value="Martes 09:00 - 10:00">09:00 - 10:00</option>
+                            <option value="Martes 11:00 - 12:00">11:00 - 12:00</option>
+                            <option value="Martes 12:00 - 13:00">12:00 - 13:00</option>
+                            <option value="Martes 13:00 - 14:00">13:00 - 14:00</option>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <input type="checkbox">
-                        <label for="text">Miercoles</label>
+                    <div class="d-flex my-3">
+                        <div class="form-group">
+                            <input type="checkbox">
+                            <label for="text">Miercoles</label>
+                        </div>
+                        <select id="Miercoles" class="custom-select horarios" multiple>
+                            <option>Horarios dia Miercoles</option>
+                            <option value="Miercoles 08:00 - 09:00">08:00 - 09:00</option>
+                            <option value="Miercoles 09:00 - 10:00">09:00 - 10:00</option>
+                            <option value="Miercoles 11:00 - 12:00">11:00 - 12:00</option>
+                            <option value="Miercoles 12:00 - 13:00">12:00 - 13:00</option>
+                            <option value="Miercoles 13:00 - 14:00">13:00 - 14:00</option>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <input type="checkbox">
-                        <label for="text">Jueves</label>
+                    <div class="d-flex">
+                        <div class="form-group mr-4">
+                            <input type="checkbox">
+                            <label for="text">Jueves</label>
+                        </div>
+                        <select id="Jueves" class="custom-select horarios" multiple>
+                            <option>Horarios dia Jueves</option>
+                            <option value="Jueves 08:00 - 09:00">08:00 - 09:00</option>
+                            <option value="Jueves 09:00 - 10:00">09:00 - 10:00</option>
+                            <option value="Jueves 11:00 - 12:00">11:00 - 12:00</option>
+                            <option value="Jueves 12:00 - 13:00">12:00 - 13:00</option>
+                            <option value="Jueves 13:00 - 14:00">13:00 - 14:00</option>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <input type="checkbox">
-                        <label for="text">Viernes</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox">
-                        <label for="text">Sabado</label>
-                    </div>
-                </div>
-            </form>
-            <form class="col-7 col-md-12 px-0 my-2">
-                <div class="d-md-flex justify-content-md-around" id="Horarios">
-                    <div class="form-group flex-md-column-reverse align-items-md-center">
-                        <input type="checkbox">
-                        <label for="text">08am - 12pm</label>
-                    </div>
-                    <div class="form-group flex-md-column-reverse align-items-md-center">
-                        <input type="checkbox">
-                        <label for="text">10pm - 14pm</label>
-                    </div>
-                    <div class="form-group flex-md-column-reverse align-items-md-center">
-                        <input type="checkbox">
-                        <label for="text">12pm - 16pm</label>
-                    </div>
-                    <div class="form-group flex-md-column-reverse align-items-md-center">
-                        <input type="checkbox">
-                        <label for="text">14pm - 18pm</label>
-                    </div>
-                    <div class="form-group flex-md-column-reverse align-items-md-center">
-                        <input type="checkbox">
-                        <label for="text">16pm - 20pm</label>
-                    </div>
-                    <div class="form-group flex-md-column-reverse align-items-md-center">
-                        <input type="checkbox">
-                        <label for="text">18pm - 22pm</label>
+                    <div class="d-flex my-3">
+                        <div class="form-group mr-3 pr-1">
+                            <input type="checkbox">
+                            <label for="text">Viernes</label>
+                        </div>
+                        <select id="Viernes" class="custom-select horarios" multiple>
+                            <option>Horarios dia Viernes</option>
+                            <option value="Viernes 08:00 - 09:00">08:00 - 09:00</option>
+                            <option value="Viernes 09:00 - 10:00">09:00 - 10:00</option>
+                            <option value="Viernes 11:00 - 12:00">11:00 - 12:00</option>
+                            <option value="Viernes 12:00 - 13:00">12:00 - 13:00</option>
+                            <option value="Viernes 13:00 - 14:00">13:00 - 14:00</option>
+                        </select>
                     </div>
                 </div>
             </form>
         </div>
-        <h2 class="mt-3">Matricula</h2>
+        <h2 class="mt-3">Matricula y Especialidad</h2>
         <div class="my-3">
-            <form class="my-3">
-                <div class="row flex-wrap">
-                    <div class="col-12 col-md-6 my-2">
-                        <input type="text" class="form-control datos" id="matriculaP" placeholder="Provincial N°">
-                    </div>
-                    <div class="col-12 col-md-6 my-2">
-                        <input type="text" class="form-control datos" id="matriculaN" placeholder="Nacional N°">
-                    </div>
+            <form class="my-3 row flex-wrap">
+                <div class="col-12 col-md-6 my-2">
+                    <input type="number" class="form-control datos" id="matriculaP" placeholder="Provincial N°">
                 </div>
-            </form>
-            <div class="form-group my-4 mt-4 pt-2">
-                <div class="d-flex">
-                    <p class="pt-2 pr-2">Especialidad</p>
-                    <select class="custom-select datos">
+                <div class="form-group col-12 col-md-6 my-2">
+                    <select class="custom-select">
+                        <option>Especialidad</option>
                         <option value="Cardiología">Cardiología</option>
                         <option value="Gastroenterología">Gastroenterología</option>
                         <option value="Infectología">Infectología</option>
@@ -148,8 +203,7 @@
                         <option value="Oncología">Oncología</option>
                         <option value="Urología">Urología</option>
                     </select>
-                </div>
-            </div>
+            </form>
         </div>
         <div class="d-flex justify-content-center flex-wrap">
             <div class="d-flex flex-column align-items-center">
@@ -174,6 +228,7 @@
     </div>
 
     <script src="src/js/SingUpdoctor.js"></script>
+    <script src="src/js/turnoDoctores.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
