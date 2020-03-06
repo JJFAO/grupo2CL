@@ -76,8 +76,9 @@ function validation4Profesional() {
 
 //testing//
 
-const pacientesForTesting = JSON.parse(localStorage.getItem("usuariologueado"));
+const pacientesForTesting = JSON.parse(localStorage.getItem("usuariologueado"))
 const usuarioForTesting = pacientesForTesting;
+
 
 
     let userLogued= {
