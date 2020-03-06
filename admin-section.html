@@ -14,7 +14,6 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Comienza navbar -->
   <div class="container-fluid">
     <div class="row">
       <div class="barramenu col-12 col-lg-3 px-0 ">
@@ -74,9 +73,6 @@
           </ul>
         </div>
       </div>
-      <!-- Termina navbar -->
-      
-      <!-- Empieza section1 -->
       <div class="textoconbtn col-12 col-lg-9 pr-0 pl-0 pl-md-5 text-center text-md-left mt-4">
         <div>
           <div class="row justify-content-between mr-0">
@@ -91,7 +87,6 @@
               </div>
             </div>
           </div>
-          
           <div>
             <h2 class="textoProfesional my-5">Datos Doctores</h2>
           </div>
@@ -100,15 +95,14 @@
               <thead class="thead-light">
                 <tr class="text-center">
                   <th scope="col" style="width: 13vw;">Doctor</th>
-                  <th scope="col" style="width: 13vw;">Dni</th>
                   <th scope="col" style="width: 13vw;">Especialidad</th>
-                  <th scope="col" style="width: 13vw;">Horarios</th>
+                  <th scope="col" style="width: 13vw;">Matricula</th>
+                  <!-- <th scope="col" style="width: 13vw;">Horarios</th> -->
                   <th scope="col" style="width: 13vw;">Autorizar</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody  id="doctores">
                 <tr class="thead-light">
-                  <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -125,7 +119,6 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td></td>
                   <td>
                     <button class="check1 text-success border-0 bg-light">
                       ✔
@@ -139,7 +132,6 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td></td>
                   <td>
                     <button class="check1 text-success border-0 bg-light">
                       ✔
@@ -150,7 +142,6 @@
                   </td>
                 </tr>
                 <tr class="thead-light">
-                  <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -513,7 +504,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-  <script src="src/js/admin.js"></script>
+  <script src="src/js/tablaPacientes.js"></script>
+  <script src="src/js/tablaDoctores.js"></script>
 </body>
 ​ ​
 
