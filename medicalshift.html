@@ -14,110 +14,116 @@
 <body>
     <!-- Button trigger modal -->
 
-  <div class="fixed-bottom botonTurnero float-right">
-    <button class="shadow-lg" type="button" data-toggle="modal" data-target="#MedicalShift">
-      <img src="Assets/calendar.png" alt="Turnero">
-    </button>
-  </div>
+    <div class="fixed-bottom botonTurnero float-right">
+        <button class="shadow-lg" type="button" data-toggle="modal" data-target="#MedicalShift">
+            <img src="Assets/calendar.png" alt="Turnero">
+        </button>
+    </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="MedicalShift" tabindex="-1" role="dialog" aria-labelledby="MedicalShiftLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="MedicalShiftLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-<!-- /body del modal -->
-            <div class="container py-3 d-flex justify-content-center"><img src="img/logoblack.png" alt="logo clinica rolling">
-            </div>
-            <div class="container-fluid bg-Copia-de-Health-Care-1-rgba text-center text-white py-2 h2">
-                Solicitar turno
-            </div>
-            <div class="container pt-5 text-center">
-                <h3>¡Bienvenido!</h3>
-            </div>
-            <div class="container pt-3 text-center">
-                <h5>
-                    Gracias por tu interes en nuestro servicio de salud.</h5>
-                <h5>Por favor, carga los siguientes datos para que te asignemos un turno.
-                </h5>
-            </div>
-            <div class="container py-5 bg-Copia-de-Health-Care-3-hex">
-                <div class="row">
-                    <div class="col-12 text-center h1 pt-2"><label for="especialidad">Especialidad</label></div>
-                    <div class="col-12">
-                        <div class="form-group">
-        
-                            <select class="form-control datos" id="especialidad" onchange="cargar_doctores()">
-                                <option>Seleccione una Especialidad...</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container py-5">
-                <div class="row">
-                    <div class="col-12 text-center h1 pt-2"><label for="doctores">Profesional</label></div>
-                    <div class="col-12">
-                        <div class="form-group">
-                            <select class="form-control datos" id="doctores" onchange="cargar_dias()">
-                                <option>Seleccione un profesional...</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container py-5 bg-Copia-de-Health-Care-3-hex">
-                <div class="row">
-                    <div class="col-12 text-center h1 pt-5">Turnos disponibles</div>
-                    <div class="col-12">
-                        <form>
-                            <div class="form-group">
-                                <label for="dias" class="h5">DIA</label>
-                                <select class="form-control datos" id="dias"  onchange="cargar_horario()">
-                                    <option>dias disponibles...</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="horario" class="h5">HORA</label>
-                                <select class="form-control datos" id="horario">
-                                    <option>seleccione un horario...</option>
-                                </select>
-                            </div>
-        
-        
-                        </form>
-        
-                    </div>
-                </div>
-            </div>
-            <div class="container py-5">
-                <div class="row">
-                    <div class=" text-center h1">Describa el motivo de su consulta</div>
-                </div>
-                <div class="row pt-3">
-                    <div class="col-2"></div>
-                    <div class="col-8">
-                        <textarea class="form-control" id="textarea" rows="5"
-                            placeholder="Describa brevemente el motivo de su consulta..." required></textarea>
-                    </div>
-                    <div class="col-2"></div>
-                </div>
-                <div class="container p-5 btn">
-                    <button type="button" class="btn btn-primary font-weight-bold" onclick="confirmar()">confirmar turno
+    <!-- Modal -->
+    <div class="modal fade" id="MedicalShift" tabindex="-1" role="dialog" aria-labelledby="MedicalShiftLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="MedicalShiftLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-         <!-- /body del modal -->
-        </div>
-      </div>
-    </div>
-  </div>
+                <div class="modal-body">
+                    <!-- /body del modal -->
+                    <div class="container py-3 d-flex justify-content-center"><img src="img/logoblack.png"
+                            alt="logo clinica rolling">
+                    </div>
+                    <div class="container-fluid bg-Copia-de-Health-Care-1-rgba text-center text-white py-2 h2">
+                        Solicitar turno
+                    </div>
+                    <div class="container pt-5 text-center">
+                        <h3>¡Bienvenido!</h3>
+                    </div>
+                    <div class="container pt-3 text-center">
+                        <h5>
+                            Gracias por tu interes en nuestro servicio de salud.</h5>
+                        <h5>Por favor, carga los siguientes datos para que te asignemos un turno.
+                        </h5>
+                    </div>
+                    <div class="container py-5 bg-Copia-de-Health-Care-3-hex">
+                        <div class="row">
+                            <div class="col-12 text-center h1 pt-2"><label for="especialidad">Especialidad</label></div>
+                            <div class="col-12">
+                                <div class="form-group">
 
-    
+                                    <select class="form-control datos" id="especialidad" onchange="cargar_doctores()">
+                                        <option>Seleccione una Especialidad...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container py-5">
+                        <div class="row">
+                            <div class="col-12 text-center h1 pt-2"><label for="doctores">Profesional</label></div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <select class="form-control datos" id="doctores" onchange="cargar_dias()">
+                                        <option>Seleccione un profesional...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container py-5 bg-Copia-de-Health-Care-3-hex">
+                        <div class="row">
+                            <div class="col-12 text-center h1 pt-5">Turnos disponibles</div>
+                            <div class="col-12">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="dias" class="h5">DIA</label>
+                                        <select class="form-control datos" id="dias" onchange="cargar_horario()">
+                                            <option>dias disponibles...</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="horario" class="h5">HORA</label>
+                                        <select class="form-control datos" id="horario">
+                                            <option>seleccione un horario...</option>
+                                        </select>
+                                    </div>
+
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container py-5">
+                        <div class="row">
+                            <div class=" text-center h1">Describa el motivo de su consulta</div>
+                        </div>
+                        <div class="row pt-3">
+                            <div class="col-2"></div>
+                            <div class="col-8">
+                                <textarea class="form-control" id="textarea" rows="5"
+                                    placeholder="Describa brevemente el motivo de su consulta..." required></textarea>
+                            </div>
+                            <div class="col-2"></div>
+                        </div>
+                        <div class="row pt-3">
+                            <div class="col-12">
+                        <div class="container p-5 btn">
+                            <button type="button" class="btn btn-primary font-weight-bold"
+                                onclick="confirmar()">confirmar turno
+                            </button>
+                        </div></div>
+                        </div>
+                        <!-- /body del modal -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">

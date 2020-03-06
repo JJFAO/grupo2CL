@@ -1,10 +1,5 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 
 <head>
   <!-- Required meta tags -->
@@ -12,17 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="src/css/login.css">
-  <link rel="stylesheet" href="src/css/HomePage.css">
-  <link rel="stylesheet" href="src/css/HomePagex.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:700&display=swap">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Clínica RollingCode</title>
-</head>
-<a name="top"></a>
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/login.css">
+    <link rel="stylesheet" href="src/css/HomePage.css">
+    <link rel="stylesheet" href="src/css/HomePagex.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:700&display=swap">
+    <link rel="stylesheet" href="src/css/medicalshift.css">
+    <title>Clínica RollingCode</title>
+  </head>
+  <a name="top"></a>
+
 <body>
   <nav class="navbar p-0 navbar-expand-lg navbar-light bg-light borde-separacion d-flex flex-column">
     <div class="d-flex justify-content-between w-100">
@@ -118,7 +120,8 @@
             <img class="card-img-top" src="./src/imagenes/clinicayfundacion.PNG" alt="Card image cap">
             <h4 class="titulocards mx-3 mt-3">Clínica Rolling y Fundación León</h4>
             <div class="card-body"> Programa de acompañamiento familiar desde octubre de 2018 trabajamos juntos Clínica
-              Rolling Code y Fundación León acompañando familias en situaciones de vulnerabilidad de la provincia. Todos los
+              Rolling Code y Fundación León acompañando familias en situaciones de vulnerabilidad de la provincia. Todos
+              los
               programas de Fundación León se basan en... </div>
           </div>
         </div>
@@ -126,110 +129,109 @@
           <div class="card h-100">
             <img class="card-img-top" src="./src/imagenes/semanaprematu.PNG" alt="Card image cap">
             <h4 class="titulocards mt-3">Semana de Prematuro</h4>
-            <div class="card-body"> Campaña de concientaziación 2019: Este festejo y campaña de concientización comenzó a
+            <div class="card-body"> Campaña de concientaziación 2019: Este festejo y campaña de concientización comenzó
+              a
               realizarse en Argentina hace 10 años, es una inicitiva conjunta entre UNICEF y la Secretaría de Gobierno
               de Salud de la ... </div>
           </div>
         </div>
       </div>
     </div>
-
   </main>
   <!-- Modal Medical Shift-->
-  <div class="modal fade" id="MedicalShift" tabindex="-1" role="dialog" aria-labelledby="MedicalShiftLabel" aria-hidden="true">
+  <div class="modal fade" id="MedicalShift" tabindex="-1" role="dialog" aria-labelledby="MedicalShiftLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="MedicalShiftLabel">Modal title</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-<!-- /body del modal -->
-            <div class="container py-3 d-flex justify-content-center"><img src="img/logoblack.png" alt="logo clinica rolling">
-            </div>
-            <div class="container-fluid bg-Copia-de-Health-Care-1-rgba text-center py-2 h2">
-                Solicitar turno
-            </div>
-            <div class="container pt-5 text-center">
-                <h3>¡Bienvenido!</h3>
-            </div>
-            <div class="container pt-3 text-center">
-                <h5>Gracias por tu interés en nuestro servicio de salud.</h5>
-                <h5>Por favor, cargá los siguientes datos para que te asignemos un turno.</h5>
-            </div>
-            <div class="container py-5 bg-Copia-de-Health-Care-3-hex">
-                <div class="row">
-                    <div class="col-12 text-center h1 pt-2"><label for="especialidad">Especialidad</label></div>
-                    <div class="col-12">
-                        <div class="form-group">
-        
-                            <select class="form-control" id="especialidad" onchange="cargar_doctores()">
-                                <option>Seleccione una Especialidad...</option>
-                            </select>
-                        </div>
-                    </div>
+          <!-- /body del modal -->
+          <div class="container py-3 d-flex justify-content-center"><img src="img/logoblack.png"
+              alt="logo clinica rolling">
+          </div>
+          <div class="container-fluid bg-Copia-de-Health-Care-1-rgba text-center py-2 h2">
+            Solicitar turno
+          </div>
+          <div class="container pt-3 text-center">
+            <h3>¡Bienvenido!</h3>
+          </div>
+          <div class="container pt-3 text-center">
+            <h5>Gracias por tu interés en nuestro servicio de salud.</h5>
+            <h5>Por favor, cargá los siguientes datos para que te asignemos un turno.</h5>
+          </div>
+          <div class="container py-3 bg-Copia-de-Health-Care-3-hex">
+            <div class="row">
+              <div class="col-12 text-center h1 "><label for="especialidad">Especialidad</label></div>
+              <div class="col-12 py-2">
+                <div class="form-group">
+
+                  <select class="form-control datos" id="especialidad" onchange="cargar_doctores()">
+                    <option>Seleccione una Especialidad...</option>
+                  </select>
                 </div>
+              </div>
             </div>
-            <div class="container py-5">
-                <div class="row">
-                    <div class="col-12 text-center h1 pt-2"><label for="doctores">Profesional</label></div>
-                    <div class="col-12">
-                        <div class="form-group">
-                            <select class="form-control" id="doctores" onchange="cargar_dias()">
-                                <option>Seleccione un Profesional...</option>
-                            </select>
-                        </div>
-                    </div>
+          </div>
+          <div class="container py-2">
+            <div class="row">
+              <div class="col-12 text-center h1"><label for="doctores">Profesional</label></div>
+              <div class="col-12 py-2">
+                <div class="form-group">
+                  <select class="form-control datos" id="doctores" onchange="cargar_dias()">
+                    <option>Seleccione un Profesional...</option>
+                  </select>
                 </div>
+              </div>
             </div>
-            <div class="container py-5 bg-Copia-de-Health-Care-3-hex">
-                <div class="row">
-                    <div class="col-12 text-center h1 pt-5">Turnos disponibles</div>
-                    <div class="col-12">
-                        <form>
-                            <div class="form-group">
-                                <label for="dias" class="h5">Día</label>
-                                <select class="form-control" id="dias"  onchange="cargar_horario()">
-                                    <option>Días disponibles...</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="horario" class="h5">Hora</label>
-                                <select class="form-control" id="horario">
-                                    <option>Seleccione un horario...</option>
-                                </select>
-                            </div>
-        
-        
-                        </form>
-        
-                    </div>
-                </div>
+          </div>
+          <div class="container bg-Copia-de-Health-Care-3-hex py-3">
+            <div class="row">
+              <div class="col-12 text-center h1 ">Turnos disponibles</div>
+              <div class="col-12">
+                <form>
+                  <div class="form-group">
+                    <label for="dias" class="h5">Día</label>
+                    <select class="form-control datos" id="dias" onchange="cargar_horario()">
+                      <option>Días disponibles...</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="horario" class="h5">Hora</label>
+                    <select class="form-control datos" id="horario">
+                      <option>Seleccione un horario...</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
             </div>
-            <div class="container py-5">
-                <div class="row">
-                    <div class=" text-center h1">Describa el motivo de su consulta</div>
-                </div>
-                <div class="row pt-3">
-                    <div class="col-2"></div>
-                    <div class="col-8">
-                        <textarea class="form-control" id="textarea" rows="5"
-                            placeholder="Describa brevemente el motivo de su consulta..." required></textarea>
-                    </div>
-                    <div class="col-2"></div>
-                </div>
-                <div class="container p-5 btn">
-                    <button type="button" class="btn btn-primary font-weight-bold">Confirmar turno
-                    </button>
-                </div>
-         <!-- /body del modal -->
+          </div>
+          <div class="container py-3">
+            <div class="row">
+              <div class=" text-center h1">Describa el motivo de su consulta</div>
+            </div>
+            <div class="row pt-3">
+              <div class="col-2"></div>
+              <div class="col-8">
+                <textarea class="form-control" id="textarea" rows="5"
+                  placeholder="Describa brevemente el motivo de su consulta..." required></textarea>
+                <div class="col-2"></div>
+              </div>
+            </div>
+            <div class="row pt-5">
+              <div class="col-12 text-center">
+                <button type="button" class="btn btn-primary font-weight-bold" onclick="confirmar()">confirmar turno
+                </button>
+              </div>
+            </div>
+            <!-- /body del modal -->
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  </div>
     <!-- Modal -->
     <div class="modal fade" id="indexModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
       aria-hidden="true">
@@ -393,13 +395,14 @@
               </div>
             </form>
           </div>
->>>>>>> 7d15540b91e0489d979e028a5bad2ab85f974625
+          >>>>>>> 7d15540b91e0489d979e028a5bad2ab85f974625
         </div>
       </div>
     </div>
   </div>
 
-  <div class="modal fade" id="modalPacienteSesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="modalPacienteSesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content d-flex justify-content-around">
         <div class="">
@@ -408,7 +411,7 @@
           </button>
         </div>
         <div class="modal-body text-center" id="modalPacienteLogueado">
-<!-- <h1>Bienvenido, Juan</h1>
+          <!-- <h1>Bienvenido, Juan</h1>
 <br>
 <p>Usted no tiene turnos asignados.</p>
 <p>Puede solicitar un turno haciendo click en el botón Solicitar Turno</p> -->
@@ -420,49 +423,54 @@
       </div>
     </div>
   </div>
-    <footer class="bg-dark">
-      <div class="d-lg-flex">
-        <a href="#top"><img class="mt-5 logoRollingFooter" src="Assets/LogoRolling white.svg"
-          alt="Logo Rolling Code"></a>
-        <div>
-          <div class="d-flex ml-5 mt-5 mb-2">
-            <img class="loguitosFooter logoTelephone " src="assets/pin.png" alt="Ubicación">
-            <h1 class="text-light letrasFooter mt-3 ml-2 ubiTelDesktop">General Paz 576 - CP 4000 - San Miguel de
-              Tucumán</h1>
-          </div>
-          <div class="d-flex ml-5 ml-2">
-            <img class="loguitosFooter mr-3" src="assets/phone.png" alt="Call Center">
-            <h1 class="text-light letrasFooter mt-3 ubiTelDesktop">Call Center: +54 (0381) 15 3331003</h1>
-          </div>
+  <footer class="bg-dark">
+    <div class="d-lg-flex">
+      <a href="#top"><img class="mt-5 logoRollingFooter" src="Assets/LogoRolling white.svg" alt="Logo Rolling Code"></a>
+      <div>
+        <div class="d-flex ml-5 mt-5 mb-2">
+          <img class="loguitosFooter logoTelephone " src="assets/pin.png" alt="Ubicación">
+          <h1 class="text-light letrasFooter mt-3 ml-2 ubiTelDesktop">General Paz 576 - CP 4000 - San Miguel de
+            Tucumán</h1>
+        </div>
+        <div class="d-flex ml-5 ml-2">
+          <img class="loguitosFooter mr-3" src="assets/phone.png" alt="Call Center">
+          <h1 class="text-light letrasFooter mt-3 ubiTelDesktop">Call Center: +54 (0381) 15 3331003</h1>
         </div>
       </div>
-      <div class="ml-5 logoRollingFooter d-inline-block">
-        <a href="https://www.facebook.com/RollingCodeSchool/" target="_blank"><img class="LogosRedes" src="Assets/002-facebook.svg" alt="Nuestro Facebook"></a>
-        <a href="https://twitter.com/rollingcode3" target="_blank"><img class="LogosRedes" src="Assets/001-twitter (1).svg" alt="Nuestro Twitter"></a>
-        <a href="https://www.instagram.com/rollingcodeschool/" target="_blank"><img class="LogosRedes" src="Assets/003-instagram.svg" alt="Nuestro Instagram"></a>
-        <a href="https://ar.linkedin.com/company/rollingcode-school" target="_blank"><img class="LogosRedes" src="Assets/004-linkedin.svg" alt="Nuestro linkedin"></a>
-      </div>
-      <div class="ml-4 mr-3 mb-5 d-inline-block otrosEnlacesMobile otrosEnlacesDesktop">
-        <h1 class="text-light mb-1">Otros Enlaces</h1>
-        <a class="bordeFooter d-block text-light mb-2" href="https://mail.google.com/mail/?view=cm&fs=1&to=rollingcodeschool@gmail.com&su=Envío CV&body=Adjuntanos tu CV y los motivos por los que estás interesado en trabajar con nosotros. ¡Te esperamos!" target="_blank">> Envía tu CV</a>
-        <a class="bordeFooter d-block text-light mb-2" href="">> Provedores</a>
-      </div>
-      <div class="otrosEnlacesDesktop d-inline-block">
-        <iframe class="d-flex align-self-center tamañoMapa MargenMapa"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1174432046328!2d-65.2080364902503!3d-26.83621664190631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c0e8d0271b7%3A0x7946062ac490db30!2sGral.%20Paz%20576%2C%20T4000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1583359327932!5m2!1ses-419!2sar"
-          allowfullscreen=true>
-          frameborder="0"></iframe>
-      </div>
-      <div class="ml-3 mt-5">
-        <h1 class="text-light ml-3 mb-0 mr-5 textoCopy copyMobile">Copyright 2020 | Clínica Rolling Code</h1>
-      </div>
-      <div class="m-0 textoCopyDesktop copyDesktop">
-        <h1 class="text-light font-weight-light ml-3 mb-0 mr-5 textoCopy"> Copyright 2020 | Clínica Rolling Code |
-          General Paz 576 | CP:4000 | San Miguel de Tucumán | +54 (0381) 333 1003</h1>
-      </div>
-    </footer>
-    <script src="src/js/medicalshift.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    </div>
+    <div class="ml-5 logoRollingFooter d-inline-block">
+      <a href="https://www.facebook.com/RollingCodeSchool/" target="_blank"><img class="LogosRedes"
+          src="Assets/002-facebook.svg" alt="Nuestro Facebook"></a>
+      <a href="https://twitter.com/rollingcode3" target="_blank"><img class="LogosRedes"
+          src="Assets/001-twitter (1).svg" alt="Nuestro Twitter"></a>
+      <a href="https://www.instagram.com/rollingcodeschool/" target="_blank"><img class="LogosRedes"
+          src="Assets/003-instagram.svg" alt="Nuestro Instagram"></a>
+      <a href="https://ar.linkedin.com/company/rollingcode-school" target="_blank"><img class="LogosRedes"
+          src="Assets/004-linkedin.svg" alt="Nuestro linkedin"></a>
+    </div>
+    <div class="ml-4 mr-3 mb-5 d-inline-block otrosEnlacesMobile otrosEnlacesDesktop">
+      <h1 class="text-light mb-1">Otros Enlaces</h1>
+      <a class="bordeFooter d-block text-light mb-2"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=rollingcodeschool@gmail.com&su=Envío CV&body=Adjuntanos tu CV y los motivos por los que estás interesado en trabajar con nosotros. ¡Te esperamos!"
+        target="_blank">> Envía tu CV</a>
+      <a class="bordeFooter d-block text-light mb-2" href="">> Provedores</a>
+    </div>
+    <div class="otrosEnlacesDesktop d-inline-block">
+      <iframe class="d-flex align-self-center tamañoMapa MargenMapa"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1174432046328!2d-65.2080364902503!3d-26.83621664190631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c0e8d0271b7%3A0x7946062ac490db30!2sGral.%20Paz%20576%2C%20T4000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1583359327932!5m2!1ses-419!2sar"
+        allowfullscreen=true>
+        frameborder="0"></iframe>
+    </div>
+    <div class="ml-3 mt-5">
+      <h1 class="text-light ml-3 mb-0 mr-5 textoCopy copyMobile">Copyright 2020 | Clínica Rolling Code</h1>
+    </div>
+    <div class="m-0 textoCopyDesktop copyDesktop">
+      <h1 class="text-light font-weight-light ml-3 mb-0 mr-5 textoCopy"> Copyright 2020 | Clínica Rolling Code |
+        General Paz 576 | CP:4000 | San Miguel de Tucumán | +54 (0381) 333 1003</h1>
+    </div>
+  </footer>
+  <script src="src/js/medicalshift.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
   </script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -472,11 +480,12 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <script src="src/js/HomePage.js"></script>
-    <script src="src/js/doctores.js"></script>
-    <script src="src/js/login.js"></script>
-    <script>
-      myOnLoad();
+  <script src="src/js/HomePage.js"></script>
+  <script src="src/js/doctores.js"></script>
+  <script src="src/js/login.js"></script>
+  <script>
+    myOnLoad();
   </script>
 </body>
+
 </html>
