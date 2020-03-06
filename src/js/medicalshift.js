@@ -171,7 +171,7 @@ function select_a_cuil(id, prop) {
 
 function dias_disponibles() {
     const doctorhtml = document.querySelector("#doctores")
-    const filnombre_y_apellido = (filtrar_dias())
+    const filnombre_y_apellido = (convertir(doctorhtml.value))
     console.log('plis' + filnombre_y_apellido);
     const diasArray = filnombre_y_apellido[0].dias[0] //preguntar ########################################################3
     console.log(diasArray);
@@ -189,11 +189,13 @@ function dias_disponibles() {
 }
 
 
-function filtrar_dias() {
-    const doctorhtml = document.querySelector("#doctores")
-    const docFiltradosarray = (filtrar_doctores()) 
-    // =============================================================   para filtrar el nombre por cuil
-    const namearray = doctorhtml.value.split(' ');
+
+function cargar_dias() {
+addOptions('#dias', dias_disponibles())
+}
+
+function convertir(nombre) { // a esta funcion le ingreso el nombre del doctor y me devuelve el objeto doctor
+    const namearray = nombre.split(' ');
     console.log(namearray);
             let nombre_doc = ''
         for (let i = 0; i < (namearray.length - 1); i++) {
@@ -212,19 +214,14 @@ function filtrar_dias() {
         // filtro doctores por nombre
         const filnombre_y_apellido = filapellido_doc.filter(doctor => doctor.nombre == nombre_doc)
         console.log(filnombre_y_apellido[0].cuil);
-// ===============================================================
-return filnombre_y_apellido
-    }
-
-function cargar_dias() {
-addOptions('#dias', dias_disponibles())
+return filnombre_y_apellido 
 }
 
 function filtrar_horarios() {
     const day = document.querySelector("#dias").value
     console.log(day);
-    
-    const array = [filtrar_dias()[0].cuil]
+    const doctorhtml = document.querySelector("#doctores")
+    const array = [convertir(doctorhtml.value)[0].cuil]
    console.log( cargador(array)[0].dias[0][day])
   
 return cargador(array)[0].dias[0][day]
@@ -233,6 +230,47 @@ return cargador(array)[0].dias[0][day]
 function cargar_horario() {
    const array= filtrar_horarios()
     addOptions("#horario", array)
+}
+
+function guardar_turno () {
+        const inputs = document.querySelectorAll('.datos');
+        const registro = {};
+        inputs.forEach((dato) => {
+            registro[dato.id] = dato.value
+        });
+        console.log(registro);
+
+        const nTurnos = JSON.parse(localStorage.getItem('rTurnos')) || [];
+        nTurnos.push(registro);
+        localStorage.setItem('rTurnos',JSON.stringify(nTurnos))
+        return registro
+}
+
+function borrar_turno(obj) {
+console.log(obj.doctores)
+console.log(obj.dias);
+console.log(obj.horario);
+ console.log(convertir(obj.doctores)[0].cuil) //cuil
+}
+
+function confirmar() {
+    console.log(document.querySelector("#doctores").value);
+    console.log("Seleccione un Profesional...");
+    
+
+    
+    if (document.querySelector("#doctores").value == "Seleccione un Profesional...") {
+      console.log("debe llenar doctoreddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddds");
+        
+    } else {
+        console.log("doctor llenokkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
+        
+    }
+
+const turno_paciente = guardar_turno()
+borrar_turno(turno_paciente)
+
+    alert('confirmado')
 }
 
 

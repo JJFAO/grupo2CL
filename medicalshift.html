@@ -52,7 +52,7 @@
                     <div class="col-12">
                         <div class="form-group">
         
-                            <select class="form-control" id="especialidad" onchange="cargar_doctores()">
+                            <select class="form-control datos" id="especialidad" onchange="cargar_doctores()">
                                 <option>Seleccione una Especialidad...</option>
                             </select>
                         </div>
@@ -64,7 +64,7 @@
                     <div class="col-12 text-center h1 pt-2"><label for="doctores">Profesional</label></div>
                     <div class="col-12">
                         <div class="form-group">
-                            <select class="form-control" id="doctores" onchange="cargar_dias()">
+                            <select class="form-control datos" id="doctores" onchange="cargar_dias()">
                                 <option>Seleccione un profesional...</option>
                             </select>
                         </div>
@@ -78,13 +78,13 @@
                         <form>
                             <div class="form-group">
                                 <label for="dias" class="h5">DIA</label>
-                                <select class="form-control" id="dias"  onchange="cargar_horario()">
+                                <select class="form-control datos" id="dias"  onchange="cargar_horario()">
                                     <option>dias disponibles...</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="horario" class="h5">HORA</label>
-                                <select class="form-control" id="horario">
+                                <select class="form-control datos" id="horario">
                                     <option>seleccione un horario...</option>
                                 </select>
                             </div>
@@ -108,7 +108,7 @@
                     <div class="col-2"></div>
                 </div>
                 <div class="container p-5 btn">
-                    <button type="button" class="btn btn-primary font-weight-bold">confirmar turno
+                    <button type="button" class="btn btn-primary font-weight-bold" onclick="confirmar()">confirmar turno
                     </button>
                 </div>
          <!-- /body del modal -->
