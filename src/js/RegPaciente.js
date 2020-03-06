@@ -11,7 +11,6 @@ function getRegisterPac (){
     $('#modalRegistrado').modal('show')
     entrada.forEach((datoPac) => { 
     registroPac[datoPac.id] = datoPac.value
-    window.location.href(pacienteLink)
   });
   const nPacientes = JSON.parse(localStorage.getItem('Pacientes')) || [];
     nPacientes.push(registroPac);
