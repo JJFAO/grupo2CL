@@ -20,10 +20,10 @@ const paciente = [
             <td>${aPacientes.dni}</td>
             <td>${aPacientes.doctor}</td>
             <td>${aPacientes.turno}</td>
-            <td><button class="check2 text-success border-0 bg-light">
+            <td><button id="checkAprob1" class="check2 text-success border-0 bg-light">
             ✔
           </button>
-          <button class="check2 text-success border-0 bg-light">
+          <button id="checkRecha2" class="check2 text-success border-0 bg-light">
             ❌
           </button>
           </td>

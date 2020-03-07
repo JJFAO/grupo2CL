@@ -34,32 +34,23 @@
               </a>
             </li>
             <li class="contienesubb mt-0">
-              <p class="subboton ">Datos Doctores</p>
+              <p class="subboton mt-5">Datos Doctores</p>
             </li>
             <li class="contienesubb mt-0">
-              <p class="subboton mt-0">Datos Pacientes</p>
+              <p class="subboton mt-5">Datos Pacientes</p>
             </li>
-            <li class="listabotones mt-4">
+            <li class="listabotones mt-5">
               <a class="profesionales" href="#profesionales" role="button" aria-haspopup="true" aria-expanded="false">
                 Profesionales</a>
               </li>
-              <li class="contienesubb mt-3">
+              <li class="contienesubb mt-5">
                 <a class="subboton" href="#">Incidencias</a>
               </li>
-              <li class="contienesubb my-3">
+              <li class="contienesubb my-5">
                 <a class="subboton" href="#">Selecc. Doctor</a>
               </li>
             <li class="contienesubb">
               <a class="subboton" href="#">Horarios</a>
-            </li>
-            <li class="listabotones">
-              <a class="pacientes" href="#pacientes" aria-haspopup="true" aria-expanded="false">Pacientes</a>
-            </li>
-            <li class="contienesubb">
-              <p class="subboton ">Incidencias</p>
-            </li>
-            <li class="contienesubb">
-              <p class="subboton mt-0 ">Datos</p>
             </li>
             <li class="d-md-none">
               <button class=" btn dropdown-toggle text-white mt-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -92,9 +83,9 @@
           </div>
           <!-- boton contador -->
           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+          <button type="button" id="autorizados" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
             Autorizados
-            <span class="pelotas animated heartBeat badge badge-pill badge-success">0</span>
+            <span id="contadorAutorizados" class="pelotas animated heartBeat badge badge-pill badge-success">0</span>
           </button>
           <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -117,9 +108,9 @@
           </div>
           <!-- termina boton contador1 -->
           <!-- boton contador2 -->
-          <button type="button" class="btn btn-primary mx-5" data-toggle="modal" data-target="#exampleModalLong">
+          <button type="button" id="rechazados" class="btn btn-primary mx-5" data-toggle="modal" data-target="#exampleModalLong">
             Rechazados
-            <span class="pelotas animated heartBeat badge badge-pill badge-danger">0</span>
+            <span id="contadorRechazados" class="pelotas animated heartBeat badge badge-pill badge-danger">0</span>
           </button>
           <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -157,10 +148,10 @@
                   <td></td>
                   <td></td>
                   <td>
-                    <button class="check1 text-success border-0 bg-light">
+                    <button id="checkAprob3" class="check1 text-success border-0 bg-light">
                       ✔
     
-                      <button class="check1 text-success border-0 bg-light">
+                      <button id="checkRecha3" class="check1 text-success border-0 bg-light">
                         ❌
                       </button>
                   </td>
@@ -170,10 +161,10 @@
                   <td></td>
                   <td></td>
                   <td>
-                    <button class="check1 text-success border-0 bg-light">
+                    <button id="checkAprob4" class="check1 text-success border-0 bg-light">
                       ✔
                     </button>
-                    <button class="check1 text-success border-0 bg-light">
+                    <button id="checkRecha4" class="check1 text-success border-0 bg-light">
                       ❌
                     </button>
                   </td>
@@ -183,10 +174,10 @@
                   <td></td>
                   <td></td>
                   <td>
-                    <button class="check1 text-success border-0 bg-light">
+                    <button id="checkAprob5" class="check1 text-success border-0 bg-light">
                       ✔
                     </button>
-                    <button class="check1 text-success border-0 bg-light">
+                    <button id="checkRecha5" class="check1 text-success border-0 bg-light">
                       ❌
                     </button>
                   </td>
@@ -196,10 +187,10 @@
                   <td></td>
                   <td></td>
                   <td>
-                    <button class="check1 text-success border-0 bg-light">
+                    <button id="checkAprob6" class="check1 text-success border-0 bg-light">
                       ✔
                     </button>
-                    <button class="check1 text-success border-0 bg-light">
+                    <button id="checkRecha6" class="check1 text-success border-0 bg-light">
                       ❌
                     </button>
                   </td>
@@ -242,10 +233,10 @@
                     <td></td>
                     <td></td>
                     <td>
-                      <button class="check1 text-success border-0 bg-light">
+                      <button id="checkAprob7" class="check1 text-success border-0 bg-light">
                         ✔
     
-                        <button class="check1 text-success border-0 bg-light">
+                        <button id="checkRecha7" class="check1 text-success border-0 bg-light">
                           ❌
                         </button>
                     </td>
@@ -257,10 +248,10 @@
                     <td></td>
                     <td></td>
                     <td>
-                      <button class="check1 text-success border-0 bg-light">
+                      <button id="checkAprob8" class="check1 text-success border-0 bg-light">
                         ✔
                       </button>
-                      <button class="check1 text-success border-0 bg-light">
+                      <button id="checkRecha8" class="check1 text-success border-0 bg-light">
                         ❌
                       </button>
                     </td>
@@ -272,10 +263,10 @@
                     <td></td>
                     <td></td>
                     <td>
-                      <button class="check1 text-success border-0 bg-light">
+                      <button id="checkAprob9" class="check1 text-success border-0 bg-light">
                         ✔
                       </button>
-                      <button class="check1 text-success border-0 bg-light">
+                      <button id="checkRecha9" class="check1 text-success border-0 bg-light">
                         ❌
                       </button>
                     </td>
@@ -287,10 +278,10 @@
                     <td></td>
                     <td></td>
                     <td>
-                      <button class="check1 text-success border-0 bg-light">
+                      <button id="checkAprob10" class="check1 text-success border-0 bg-light">
                         ✔
                       </button>
-                      <button class="check1 text-success border-0 bg-light">
+                      <button id="checkRecha10" class="check1 text-success border-0 bg-light">
                         ❌
                       </button>
                     </td>
@@ -432,114 +423,6 @@
           </table>
         </div>
         <!-- Termina section1 -->
-        <!-- Empieza section2 -->
-        <div class="sector-pacientes">
-          <h1 class="textoProfesional mt-5" id="pacientes">Pacientes</h1>
-          <div class="btn-inc-aut mx-sm-3 mt-4 ">
-            <button type="button"
-              class="btn btn-primary mx-2 mx-sm-3 mx-md-2 mx-lg-5 col-md-4 col-10 mt-2 pl-5 pl-md-1 my-4"
-              data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Incidencias
-              <span class="pelotas animated heartBeat badge badge-pill badge-success">0</span>
-            </button>
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Incidencias</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                      <div class="form-group">
-                        <label for="message-text" class="col-form-label"></label>
-                        <textarea class="form-control" id="message-text"></textarea>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Enviar</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Termina section2 -->
-        <div class="tabla tabla-pacientes">
-          <table class="table mt-4">
-            <thead class="thead-light">
-              <tr class="text-center">
-                <th scope="col" style="
-                width: 13vw;">Paciente</th>
-                <th scope="col" style="width: 13vw;">Datos</th>
-                <th scope="col" style="width: 13vw;">Edad</th>
-                <th scope="col" style="width: 13vw;">Dni</th>
-                <th scope="col" style="width: 13vw;">Doctor</th>
-                <th scope="col" style="width: 13vw;">Turno</th>
-                <th scope="col" style="width: 13vw;">Admin</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="thead-light th.pacientes ">
-                <th scope="row" style="width: 100px;"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr class="thead-light th.pacientes ">
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr class="thead-light th.pacientes ">
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr class="thead-light th.pacientes ">
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr class="thead-light th.pacientes ">
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr class="thead-light th.pacientes ">
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </div>
@@ -556,6 +439,8 @@
     crossorigin="anonymous"></script>
   <script src="src/js/tablaPacientes.js"></script>
   <script src="src/js/tablaDoctores.js"></script>
+  <script src="src/js/contadorAutorizados.js"></script>
+  <script src="src/js/contadorRechazados.js"></script>
 </body>
 ​ ​
 
