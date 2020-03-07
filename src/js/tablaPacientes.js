@@ -1,9 +1,9 @@
 const paciente = [
-    {nombre: 'Mariano', apellido: ' De Filippo', dni: '', edad: '', doctor: '', turno:''},
-    {nombre: 'Jj', apellido: '', dni: '', edad: '', doctor: ''},
-    {nombre: 'Maria',apellido: '', dni: '', edad: '', doctor: ''},
-    {nombre: 'Franco', apellido: '', dni: '', edad: '', doctor: ''},
-    {nombre: 'Josefina', apellido: '', dni: '', edad: '', doctor: ''},
+    {nombre: 'Mariano', apellido: '', edad: '', dni: '', doctor: '', turno:''},
+    {nombre: 'Jj', apellido: '', edad: '', dni: '', doctor: '', turno:''},
+    {nombre: 'Maria',apellido: '', edad: '', dni: '', doctor: '', turno:''},
+    {nombre: 'Franco', apellido: '', edad: '', dni: '', doctor: '', turno:''},
+    {nombre: 'Josefina', apellido: '', edad: '', dni: '', doctor: '', turno:''},
     ]
   function cargarPacientes() {
       console.log(paciente);
