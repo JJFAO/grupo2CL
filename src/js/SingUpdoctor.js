@@ -19,3 +19,7 @@ function getRegisterD() {
     nDoctores.push(registro);
     localStorage.setItem('rDoctores',JSON.stringify(nDoctores))
 }
+
+function errorEnvio(){
+    $('#modalError').modal('show');
+}
