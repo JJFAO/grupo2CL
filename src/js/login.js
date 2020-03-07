@@ -53,9 +53,10 @@ function validation4Profesional() {
   let passprofHtml = document.querySelector("#passProf")
   for(let index = 0; index < profesionales.length; index++) {
     const profesional = profesionales[index];
-    if (cuitHtml.value == profesional.cuil) {
-      if (passprofHtml.value == profesional.pass) {
-        alert("Inicio exitosos")
+    if (cuitHtml.value == profesional.cuit) {
+            
+      if (passprofHtml.value == profesional.passProf) {
+        alert("Inicio exitoso")
         return
       }
       alert("La credenciales no son correctas")
