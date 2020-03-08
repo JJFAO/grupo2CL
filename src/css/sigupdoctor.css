@@ -26,7 +26,7 @@ label{
 
 }
 
-.form-control, .custom-select{
+.form-control{
 background-color: #d3d3d3 !important;
 font-family:'Montserrat', sans-serif;
 color: black;       
@@ -59,4 +59,9 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type=number] { 
     -moz-appearance:textfield; 
+}
+
+.horarios option:hover{
+    background: #007bff;
+    color: white;
 }

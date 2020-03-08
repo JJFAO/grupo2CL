@@ -23,3 +23,7 @@ function getRegisterD() {
 function errorEnvio(){
     $('#modalError').modal('show');
 }
+
+function Registrado(){
+    $('#modalRegistrado').modal('show');
+}
