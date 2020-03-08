@@ -17,18 +17,54 @@ label{
 .btn{
     font-family:'Montserrat', sans-serif;
 }
+.btn-primary {
+    background: #691353 !important;
+    border-color: #691353 !important;
+}
 .titulo-1 {
     background-color: #225378;
 
 }
 
-#Dias .form-group, #Horarios .form-group {
-    display: flex;
-    margin: 5px;
-}
-#Dias input, #Horarios input {
-    width: 15px;
-    height: 15px;
-    margin: 5px 10px;
+.form-control{
+background-color: #d3d3d3 !important;
+font-family:'Montserrat', sans-serif;
+color: black;       
 }
 
+.form-control::-webkit-input-placeholder {
+    background-color: #d3d3d3;
+    border-radius: 11px;
+    color: black !important;
+}
+.form-control::-moz-placeholder {
+    background-color: #d3d3d3;
+    border-radius: 11px;
+    color: black !important;
+}
+
+::-webkit-input-placeholder {
+    font-family:'Montserrat', sans-serif;
+}
+::-moz-placeholder {
+    background-color: #d3d3d3;
+    font-family:'Montserrat', sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+input[type=number] { 
+    -moz-appearance:textfield; 
+}
+
+.horarios option:hover{
+    background: #007bff;
+    color: white;
+}
+.container::-webkit-scrollbar{
+    width: 0.1px;
+}
