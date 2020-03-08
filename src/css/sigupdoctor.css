@@ -65,3 +65,6 @@ input[type=number] {
     background: #007bff;
     color: white;
 }
+.container::-webkit-scrollbar{
+    width: 0.1px;
+}
