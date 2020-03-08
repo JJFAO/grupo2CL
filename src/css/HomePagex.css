@@ -1,4 +1,4 @@
-h1{
+/* h1{
     font-family: 'Roboto Slab', serif;
 }
 h2{
@@ -38,9 +38,9 @@ label{
 .borde-separacion {
     border-color: #1595a3!important;
     border-bottom: 5px solid;
-}
+} */
 
-.logoRolling {
+/* .logoRolling {
     height: 50px;
 }
 @media (min-width: 768px) {
@@ -52,8 +52,8 @@ label{
     .letrasFooter {
         font-size: 13px;
     }
- }
-.bordeFooter {
+ } */
+/* .bordeFooter {
     border-color: white;
     border-bottom: 2px solid;
 }
@@ -93,8 +93,8 @@ label{
         margin-right: 10px;
         margin-left: 10px;
     }
-}
-@media (max-width: 768px) {
+} */
+/* @media (max-width: 768px) {
     .otrosEnlacesMobile {
         width: 75vw!important;
     }
@@ -118,11 +118,12 @@ label{
 .textoCopyDesktop {
     background-color: #1595a3!important;
     text-align: center;
-}
-.active{
+} */
+/* .active{
     background-color: #1595A3!important ;
     color: white!important;
-}
+} */
+
 
 h1{
     font-family: 'Roboto Slab', serif;

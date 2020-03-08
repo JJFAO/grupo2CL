@@ -1,4 +1,4 @@
-h1{
+/* h1{
     font-family: 'Roboto Slab', serif;
 }
 h2{
@@ -38,9 +38,9 @@ label{
 .borde-separacion {
     border-color: #1595a3!important;
     border-bottom: 5px solid;
-}
+} */
 
-.logoRolling {
+/* .logoRolling {
     height: 50px;
 }
 @media (min-width: 768px) {
@@ -52,11 +52,11 @@ label{
     .letrasFooter {
         font-size: 15px;
     }
- }
+ } */
 
 /*   main index */
 
-.titulo{
+/* .titulo{
 font-family: 'Roboto Slab', serif;
 background-color: #00000069;
 padding: 0.3rem;
@@ -93,4 +93,4 @@ font-size: 27px;
 }
 .card-img{
     width: 100vw; 
-}
+} */

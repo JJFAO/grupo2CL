@@ -48,89 +48,89 @@ inicio.addEventListener("click", botonInicioHandler);
 function botonInicioHandler() {
     if (botonInicio == false) {
         botonInicio = !botonInicio
-        inicio.classList.add("active")
-        pacientes.classList.remove("active")
-        institucional.classList.remove("active")
-        servicios.classList.remove("active")
-        profesionales.classList.remove("active")
-        contacto.classList.remove("active")
+        inicio.classList.add("activeSeba")
+        pacientes.classList.remove("activeSeba")
+        institucional.classList.remove("activeSeba")
+        servicios.classList.remove("activeSeba")
+        profesionales.classList.remove("activeSeba")
+        contacto.classList.remove("activeSeba")
     } else if (botonInicio == true) {
         botonInicio = !botonInicio
-        inicio.classList.remove("active")
+        inicio.classList.remove("activeSeba")
     }
 }
 pacientes.addEventListener("click", botonPacientesHandler);
 function botonPacientesHandler() {
     if (botonPacientes == false) {
         botonPacientes = !botonPacientes
-        pacientes.classList.add("active")
-        inicio.classList.remove("active")
-        institucional.classList.remove("active")
-        servicios.classList.remove("active")
-        profesionales.classList.remove("active")
-        contacto.classList.remove("active")
+        pacientes.classList.add("activeSeba")
+        inicio.classList.remove("activeSeba")
+        institucional.classList.remove("activeSeba")
+        servicios.classList.remove("activeSeba")
+        profesionales.classList.remove("activeSeba")
+        contacto.classList.remove("activeSeba")
     } else if (botonPacientes == true) {
         botonPacientes = !botonPacientes
-        pacientes.classList.remove("active")
+        pacientes.classList.remove("activeSeba")
     }
 }
 institucional.addEventListener("click", botonInstitucionalHandler);
 function botonInstitucionalHandler() {
     if (botonInstitucional == false) {
         botonInstitucional = !botonInstitucional
-        institucional.classList.add("active")
-        inicio.classList.remove("active")
-        pacientes.classList.remove("active")
-        servicios.classList.remove("active")
-        profesionales.classList.remove("active")
-        contacto.classList.remove("active")
+        institucional.classList.add("activeSeba")
+        inicio.classList.remove("activeSeba")
+        pacientes.classList.remove("activeSeba")
+        servicios.classList.remove("activeSeba")
+        profesionales.classList.remove("activeSeba")
+        contacto.classList.remove("activeSeba")
     } else if (botonInstitucional == true) {
         botonInstitucional = !botonInstitucional
-        institucional.classList.remove("active")
+        institucional.classList.remove("activeSeba")
     }
 }
 servicios.addEventListener("click", botonServiciosHandler);
 function botonServiciosHandler() {
     if (botonServicios == false) {
         botonServicios = !botonServicios
-        servicios.classList.add("active")
-        inicio.classList.remove("active")
-        pacientes.classList.remove("active")
-        institucional.classList.remove("active")
-        profesionales.classList.remove("active")
-        contacto.classList.remove("active")
+        servicios.classList.add("activeSeba")
+        inicio.classList.remove("activeSeba")
+        pacientes.classList.remove("activeSeba")
+        institucional.classList.remove("activeSeba")
+        profesionales.classList.remove("activeSeba")
+        contacto.classList.remove("activeSeba")
     } else if (botonServicios == true) {    
         botonServicios = !botonServicios
-        servicios.classList.remove("active")
+        servicios.classList.remove("activeSeba")
     }
 }
 profesionales.addEventListener("click", botonProfesionalesHandler);
 function botonProfesionalesHandler() {
     if (botonProfesionales == false) {
         botonProfesionales = !botonProfesionales
-        profesionales.classList.add("active")
-        inicio.classList.remove("active")
-        pacientes.classList.remove("active")
-        institucional.classList.remove("active")
-        servicios.classList.remove("active")
-        contacto.classList.remove("active")
+        profesionales.classList.add("activeSeba")
+        inicio.classList.remove("activeSeba")
+        pacientes.classList.remove("activeSeba")
+        institucional.classList.remove("activeSeba")
+        servicios.classList.remove("activeSeba")
+        contacto.classList.remove("activeSeba")
     } else if (botonProfesionales == true) {
         botonProfesionales = !botonProfesionales
-        profesionales.classList.remove("active")
+        profesionales.classList.remove("activeSeba")
     }
 }
 contacto.addEventListener("click", botonContactoHandler);
 function botonContactoHandler() {
     if (botonContacto == false) {
         botonContacto = !botonContacto
-        contacto.classList.add("active")
-        inicio.classList.remove("active")
-        pacientes.classList.remove("active")
-        institucional.classList.remove("active")
-        servicios.classList.remove("active")
-        profesionales.classList.remove("active")
+        contacto.classList.add("activeSeba")
+        inicio.classList.remove("activeSeba")
+        pacientes.classList.remove("activeSeba")
+        institucional.classList.remove("activeSeba")
+        servicios.classList.remove("activeSeba")
+        profesionales.classList.remove("activeSeba")
     } else if (botonContacto == true) {
         botonContacto = !botonContacto
-        contacto.classList.remove("active")
+        contacto.classList.remove("activeSeba")
     }
 }

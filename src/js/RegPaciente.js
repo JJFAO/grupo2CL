@@ -7,6 +7,7 @@ function getRegisterPac (){
  
   const entrada = document.querySelectorAll('.datoPac');
   const registroPac = {};
+  const pacienteLink = document.getElementById("pacientes");
     $('#modalRegistrado').modal('show')
     entrada.forEach((datoPac) => { 
     registroPac[datoPac.id] = datoPac.value
@@ -28,3 +29,6 @@ document.getElementById("formPaciente").addEventListener("submit", (e) => {
       $('#modalError').modal('show');
   }
   
+  function newDoc() {
+    window.location.assign("./../../index.html")
+  }

@@ -50,7 +50,7 @@ label{
  }
 @media (max-width: 768px) {
     .letrasFooter {
-        font-size: 13px;
+        font-size: 15px;
     }
  }
 .bordeFooter {
@@ -119,7 +119,101 @@ label{
     background-color: #1595a3!important;
     text-align: center;
 }
-.active{
+.activeSeba{
     background-color: #1595A3!important;
     color: white!important;
+}
+.titulo{
+    font-family: 'Roboto Slab', serif;
+    background-color: #00000069;
+    padding: 0.3rem;
+    font-size: 27px;
+    }
+    
+    .titulo{
+        font-size: 23px;
+    }
+    @media only screen and (min-width: 1000px) {
+       .titulo{
+           font-size: 60px;
+           padding: 0.5rem;
+       }
+      }
+    
+    .fondotitulo{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .card-img-overlay{
+        padding: 0rem;
+    }
+    .titulocards{
+        display: flex;
+        justify-content: center;
+        font-family:'Roboto Slab', serif; 
+        font-size: 19px;
+    }
+    
+    .card-body{
+        font-family: 'Montserrat', sans-serif;
+}
+.botonTurnero{
+    margin-left: 70vw;
+    margin-bottom: 50px;
+    margin-right: 20px;
+}
+@media (min-width: 768px) {
+    .botonTurnero {
+        margin-left: 90vw;
+        margin-bottom: 50px;
+        margin-right: 20px; 
+    }
+}
+@media (min-width: 768px) {
+    .MargenLogo {
+        margin-left: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .MargenMapa {
+        margin-left: 38px;
+    }
+}
+.Copia-de-Health-Care-1-hex {
+    color: #225378;
+}
+
+.Copia-de-Health-Care-2-hex {
+    color: #1595A3;
+}
+
+.Copia-de-Health-Care-3-hex {
+    color: #ACF0F2;
+}
+
+.Copia-de-Health-Care-4-hex {
+    color: #F2FFE3;
+}
+
+.Copia-de-Health-Care-5-hex {
+    color: #691353;
+}
+.tamañoMapa{
+    height: 250px;
+}
+.tamañoBotonTurnero{
+    width: 55px;
+    height: 55px;
+}
+@media (max-width: 768px){
+    .tamañoMapa {
+        width: 240px;
+        height: 240px;
+    }
+}
+@media (max-width: 768px){
+    .bordesFooter {
+    margin-bottom: 60px!important;
+}
 }
