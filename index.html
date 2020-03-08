@@ -31,22 +31,10 @@
       <img class="logoRolling d-flex justify-content-start MargenLogo mt-3" src="Assets/LogoRolling.svg"
         alt="Logo Rolling Code">
       <div class="d-flex justify-content-end align-self-center">
-        <div class="collapse navbar-collapse" id="botoncitobusqueda">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <form class="form-inline my-lg-0"></form>
-              <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">
-            </li>
-          </ul>
-        </div>
         <button id="menuDesplegado" class="navbar-toggler p-0" type="button" data-toggle="collapse"
           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
-        <button id="menuBusqueda" class="m-1 p-0" type="button" data-toggle="collapse" data-target="#botoncitobusqueda"
-          aria-controls="botoncitobusqueda" aria-expanded="false" aria-label="Toggle navigation">
-          <img class="vw-5" src="Assets/problem2.png" alt="Buscar">
         </button>
         <button id="botonLogueo" class="m-1 p-0" data-toggle="modal" data-target="#indexModal">
           <img src="Assets/user.png" alt="">
@@ -58,8 +46,8 @@
         <li class="nav-item mr-1 ml-1">
           <a class="nav-link activeSeba" id="inicio" href="#">Inicio <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item mr-1 ml-1">
-          <a class="nav-link" id="pacientes" onclick="consultaTurnoPaciente()" href="#">Pacientes</a>
+        <li class="nav-item mr-1 pl-1">
+          <a class="nav-link" id="pacientes" onclick="consultaTurnoPaciente()" href="#modalPacienteSesion" data-target="#modalPacienteSesion">Pacientes</a>
         </li>
         <li class="nav-item mr-1 ml-1">
           <a class="nav-link" id="institucional" href="#">Institucional</a>
@@ -71,7 +59,7 @@
           <a class="nav-link" id="profesionales" onclick="pacienteProfesional() " href="#">Profesionales</a>
         </li>
         <li class="nav-item mr-1 ml-1">
-          <a class="nav-link" id="contacto" href="#hicisteClickenContacto">Contacto</a>
+          <a class="nav-link" id="contacto" href="#hicisteClickEnContacto">Contacto</a>
         </li>
       </ul>
 
@@ -425,8 +413,8 @@
   </div>
   <footer class="bg-dark">
     <div class="d-lg-flex">
-      <a id="hicisteClickenContacto" href="#top"><img class="mt-5 logoRollingFooter" src="Assets/LogoRolling white.svg" alt="Logo Rolling Code"></a>
-      <div>
+      <a id="hicisteClickEnContacto" href="#top"><img class="mt-5 logoRollingFooter" src="Assets/LogoRolling white.svg" alt="Logo Rolling Code"></a>
+      <div class="tamañoLinkTablet">
         <div class="d-flex ml-5 mt-5 mb-2">
           <img class="loguitosFooter logoTelephone " src="assets/pin.png" alt="Ubicación">
           <h1 class="text-light letrasFooter mt-3 ml-2 ubiTelDesktop">General Paz 576 - CP 4000 - San Miguel de
@@ -461,8 +449,8 @@
         allowfullscreen=true>
         frameborder="0"></iframe>
     </div>
-    <div class="ml-3 mt-5">
-      <h1 class="text-light ml-3 mb-0 mr-5 textoCopy copyMobile">Copyright 2020 | Clínica Rolling Code</h1>
+    <div class="mt-5">
+      <h1 class="text-light textoCopy textoCopyMobile copyMobile">Copyright 2020 | Clínica Rolling Code</h1>
     </div>
     <div class="m-0 textoCopyDesktop copyDesktop">
       <h1 class="text-light font-weight-light ml-3 mb-0 mr-5 textoCopy"> Copyright 2020 | Clínica Rolling Code |
@@ -483,9 +471,14 @@
   <script src="src/js/HomePage.js"></script>
   <script src="src/js/doctores.js"></script>
   <script src="src/js/login.js"></script>
+  <script src="src/js/formPaciente.js"></script>
   <script>
     myOnLoad();
   </script>
 </body>
+<<<<<<< HEAD
+</html>
+=======
 
 </html>
+>>>>>>> c8a4a29ac5fc34fec27945bddff1ea45c8c5703a
