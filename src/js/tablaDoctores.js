@@ -7,7 +7,7 @@ let matricula = document.querySelector("#matriculaP");
 function cargarDoctores() {
 //   const doctores = getLocal("rDoctores");
   const tablaDoctor = document.getElementById("doctores");
-  const selectDoctors = document.getElementById("cargaDoc");
+  let selectDoctors = document.querySelector("#cargaDoc")
   tablaDoctor.innerHTML = '';
   for (let i = 0; i < doctores.length; i++) {
     const doctor = doctores[i];
@@ -26,12 +26,7 @@ function cargarDoctores() {
       </td>
     </tr>`;
 
-    selectDoctors.innerHTML += `<option> ${doctor.nombre + " " + doctor.apellido} <option>`; 
-    const dropDoc = document.querySelector(".tablaDoctores")
-    dropDoc.addEventListener('change', (event) => {
-      const resultado = document.querySelector('.tabla');
-      resultado.textContent = `Te gusta el sabor ${event.target.value}`;
-    });
+    selectDoctors.innerHTML += `<option>${doctor.nombre + " " + doctor.apellido}<option>`; 
   }
 }
 
