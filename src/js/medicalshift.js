@@ -76,6 +76,24 @@ var usuario = {
 const doctores = JSON.parse(localStorage.getItem("rDoctores"))
 console.log(doctores);
 
+function inicioshift() {
+   
+        let select = document.querySelector("#especialidad");
+        for (let i = select.options.length; i >= 1; i--) {
+            select.remove(i);
+        }
+        let select1 = document.querySelector("#doctores");
+        for (let i = select1.options.length; i >= 1; i--) {
+            select1.remove(i);
+        }let select2 = document.querySelector("#dias");
+        for (let i = select2.options.length; i >= 1; i--) {
+            select2.remove(i);
+        }let select3 = document.querySelector("#horario");
+        for (let i = select3.options.length; i >= 1; i--) {
+            select3.remove(i);
+        }
+       myOnLoad()
+}
 
 
  
@@ -83,7 +101,6 @@ let doctores_filtrados = []
 doctores.forEach(doctor => {
     doctores_filtrados.push(doctor.especialidad)
 });
-
 let esp_sinRepetidos = doctores_filtrados.filter(function (valor, indiceActual, arreglo) {
     let indiceAlBuscar = arreglo.indexOf(valor);
     if (indiceActual === indiceAlBuscar) {
@@ -176,6 +193,7 @@ function dias_disponibles() {
     const doctorhtml = document.querySelector("#doctores")
     const filnombre_y_apellido = (convertir_cuil_en_doc(doctorhtml.value))
     const diasArray = filnombre_y_apellido[0].dias[0] //preguntar ########################################################3
+    
     const diasdisponibles = []
     for (const i in diasArray) {
         if (diasArray.hasOwnProperty(i)) {
@@ -185,7 +203,9 @@ function dias_disponibles() {
             }
         }
     }
+    console.log(diasdisponibles);
     return diasdisponibles
+    
 }
 
 function cargar_dias() {
@@ -209,6 +229,8 @@ function filtrar_horarios() {
 
 function cargar_horario() {
     const array = filtrar_horarios()
+    console.log(array);
+    
     cargarOptions("#horario", array)
 }
 
@@ -219,46 +241,56 @@ function guardar_turno() {
         registro[dato.id] = dato.value
     });
     console.log(registro);
-
-    const nTurnos = JSON.parse(localStorage.getItem('rTurnos'))|| [];
+    const nTurnos = JSON.parse(localStorage.getItem('rTurnos')) || [];
     console.log(nTurnos);
-    
     nTurnos.push(registro);
     localStorage.setItem('rTurnos', JSON.stringify(nTurnos))
     return registro
 }
 
-function borrar_turno(obj) {  
-    console.log(obj.doctores)//cuil de doctor
+function borrar_turno(obj) {
+    console.log(obj.doctores) //cuil de doctor
     console.log(obj.dias);
     console.log(obj.horario);
-    const doctor_obj = (convertir_cuil_en_doc(obj.doctores)) 
+    const doctor_obj = (convertir_cuil_en_doc(obj.doctores))
     console.log(doctor_obj);
     const horas_filtradas = doctor_obj[0].dias[0][obj.dias]
     console.log(horas_filtradas);
-    const horas_borradas = horas_filtradas.filter(doctor => doctor != obj.horario)
-    console.log(horas_borradas);
-    doctor_obj[0].dias[0][obj.dias] = horas_borradas
-    console.log(doctor_obj[0].dias[0][obj.dias]);
-    
+    horas_borradas = horas_filtradas.filter(doctor => doctor != obj.horario)
+    doctor_obj[0].dias[0][obj.dias]= horas_borradas
+    localStorage.setItem("rDoctores", JSON.stringify(doctores))
+}
+
+function MENSAJE_CONFIR() {
+    Swal.fire({
+        icon: 'success',
+        title: 'TURNO CONFIRMADO',
+        showConfirmButton: false,
+    })
+}
+
+function MENSAJE_error() {
+    Swal.fire({
+        icon: 'error',
+        title: 'DEBE LLENAR TODO LOS CAMPOS PARA CONFIRMAR EL TURNO',
+        showConfirmButton: false,
+    })
+}
+
+function MENSAJE_error_medico() {
+    Swal.fire({
+        icon: 'error',
+        title: 'este doctor ya no tiene turnos disponibles, elija otro medico',
+        showConfirmButton: false,
+    })
 }
 
 function confirmar() {
-    console.log(document.querySelector("#doctores").value);
-    console.log("Seleccione un Profesional...");
-
-
-
-    if (document.querySelector("#doctores").value == "Seleccione un Profesional...") {
-        console.log("debe llenar doctoreddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddds");
-
-    } else {
-        console.log("doctor llenokkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
-
-    }
-
-    const turno_paciente = guardar_turno()
-  borrar_turno(turno_paciente)
-
-    alert('confirmado')
+    if ((document.querySelector("#especialidad").value == "Seleccione una Especialidad...") || (document.querySelector("#doctores").value == "Seleccione un Profesional...") || (document.querySelector("#dias").value == "Días disponibles...") || (document.querySelector("#horario").value == "Seleccione un horario...")) {
+        MENSAJE_error()
+        }else{
+        const turno_paciente = guardar_turno()
+        borrar_turno(turno_paciente)    
+        MENSAJE_CONFIR()}
+        inicioshift()
 }

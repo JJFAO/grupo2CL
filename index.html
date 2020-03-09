@@ -74,7 +74,7 @@
           <a class="nav-link" id="profesionales" onclick="pacienteProfesional() " href="#">Profesionales</a>
         </li>
         <li class="nav-item mr-1 ml-1">
-          <a class="nav-link" id="contacto" href="#">Contacto</a>
+          <a class="nav-link" id="contacto" href="#hicisteClickenContacto">Contacto</a>
         </li>
       </ul>
 
@@ -82,7 +82,7 @@
 
   </nav>
   <div class="fixed-bottom botonTurnero float-right">
-    <button class="shadow-lg rounded-circle" type="button" data-toggle="modal" data-target="#MedicalShift">
+    <button class="shadow-lg rounded-circle" type="button" data-toggle="modal" data-target="#MedicalShift" onclick="inicioshift()">
       <img class="tamañoBotonTurnero" src="Assets/calendar.png" alt="Turnero">
     </button>
   </div>
@@ -151,7 +151,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body p-0">
           <!-- /body del modal -->
           <div class="container py-3 d-flex justify-content-center"><img src="img/logoblack.png"
               alt="logo clinica rolling">
@@ -235,6 +235,7 @@
         </div>
       </div>
     </div>
+  </div>
     <!-- Modal -->
     <div class="modal fade" id="indexModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
       aria-hidden="true">
@@ -427,20 +428,20 @@
   </div>
   <footer class="bg-dark">
     <div class="d-lg-flex">
-      <a href="#top"><img class="mt-5 logoRollingFooter" src="Assets/LogoRolling white.svg" alt="Logo Rolling Code"></a>
+      <a id="hicisteClickenContacto" href="#top"><img class="mt-5 logoRollingFooter" src="Assets/LogoRolling white.svg" alt="Logo Rolling Code"></a>
       <div>
         <div class="d-flex ml-5 mt-5 mb-2">
           <img class="loguitosFooter logoTelephone " src="assets/pin.png" alt="Ubicación">
           <h1 class="text-light letrasFooter mt-3 ml-2 ubiTelDesktop">General Paz 576 - CP 4000 - San Miguel de
             Tucumán</h1>
         </div>
-        <div class="d-flex ml-5 ml-2">
+        <div class="d-flex bordesFooter ml-5 ml-2">
           <img class="loguitosFooter mr-3" src="assets/phone.png" alt="Call Center">
           <h1 class="text-light letrasFooter mt-3 ubiTelDesktop">Call Center: +54 (0381) 15 3331003</h1>
         </div>
       </div>
     </div>
-    <div class="ml-5 logoRollingFooter d-inline-block">
+    <div class="ml-5 logoRollingFooter bordesFooter d-inline-block">
       <a href="https://www.facebook.com/RollingCodeSchool/" target="_blank"><img class="LogosRedes"
           src="Assets/002-facebook.svg" alt="Nuestro Facebook"></a>
       <a href="https://twitter.com/rollingcode3" target="_blank"><img class="LogosRedes"
@@ -450,8 +451,8 @@
       <a href="https://ar.linkedin.com/company/rollingcode-school" target="_blank"><img class="LogosRedes"
           src="Assets/004-linkedin.svg" alt="Nuestro linkedin"></a>
     </div>
-    <div class="ml-4 mr-3 mb-5 d-inline-block otrosEnlacesMobile otrosEnlacesDesktop">
-      <h1 class="text-light mb-1">Otros Enlaces</h1>
+    <div class="ml-4 mr-3 mb-5 d-inline-block otrosEnlacesMobile bordesFooter otrosEnlacesDesktop">
+      <h1 class=" text-light mb-1">Otros Enlaces</h1>
       <a class="bordeFooter d-block text-light mb-2"
         href="https://mail.google.com/mail/?view=cm&fs=1&to=rollingcodeschool@gmail.com&su=Envío CV&body=Adjuntanos tu CV y los motivos por los que estás interesado en trabajar con nosotros. ¡Te esperamos!"
         target="_blank">> Envía tu CV</a>
