@@ -85,7 +85,7 @@
           <!-- Button trigger modal -->
           <button type="button" id="autorizados" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
             Autorizados
-            <span id="contadorAutorizados" class="pelotas animated heartBeat badge badge-pill badge-success">0</span>
+            <span id="contadorAutorizados" class="pelotas animated heartBeat badge badge-pill badge-success"></span>
           </button>
           <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -110,7 +110,7 @@
           <!-- boton contador2 -->
           <button type="button" id="rechazados" class="btn btn-primary mx-5" data-toggle="modal" data-target="#exampleModalLong">
             Rechazados
-            <span id="contadorRechazados" class="pelotas animated heartBeat badge badge-pill badge-danger">0</span>
+            <span id="contadorRechazados" class="pelotas animated heartBeat badge badge-pill badge-danger"></span>
           </button>
           <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -325,39 +325,9 @@
             </div>
           </div>
           <div class="tablaDoctores dropdown">
-            <button class="btn dropdown-toggle my-4 text-white btn btn-primary mx-4 mx-sm-3 mx-md-2 mt-2 pl-md-1 my-4" type="button" id="dropdownMenuButton"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 250px;">
-              Doctor
-            </button>
-            <div class="dropdown-menu btn-doctores" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Dr. Mariano</a>
-              <a class="dropdown-item" href="#">Dra. Ana</a>
-              <a class="dropdown-item" href="#">Dr. JJ</a>
-              <a class="dropdown-item" href="#">Dr. Mariano</a>
-              <a class="dropdown-item" href="#">Dra. Ana</a>
-              <a class="dropdown-item" href="#">Dr. JJ</a>
-              <a class="dropdown-item" href="#">Dr. Mariano</a>
-              <a class="dropdown-item" href="#">Dra. Ana</a>
-              <a class="dropdown-item" href="#">Dr. JJ</a>
-              <a class="dropdown-item" href="#">Dr. Mariano</a>
-              <a class="dropdown-item" href="#">Dra. Ana</a>
-              <a class="dropdown-item" href="#">Dr. JJ</a>
-              <a class="dropdown-item" href="#">Dr. Mariano</a>
-              <a class="dropdown-item" href="#">Dra. Ana</a>
-              <a class="dropdown-item" href="#">Dr. JJ</a>
-              <a class="dropdown-item" href="#">Dr. Mariano</a>
-              <a class="dropdown-item" href="#">Dra. Ana</a>
-              <a class="dropdown-item" href="#">Dr. JJ</a>
-              <a class="dropdown-item" href="#">Dr. Mariano</a>
-              <a class="dropdown-item" href="#">Dra. Ana</a>
-              <a class="dropdown-item" href="#">Dr. JJ</a>
-              <a class="dropdown-item" href="#">Dr. Mariano</a>
-              <a class="dropdown-item" href="#">Dra. Ana</a>
-              <a class="dropdown-item" href="#">Dr. JJ</a>
-              <a class="dropdown-item" href="#">Dr. Mariano</a>
-              <a class="dropdown-item" href="#">Dra. Ana</a>
-              <a class="dropdown-item" href="#">Dr. JJ</a>
-            </div>
+            <select id="cargaDoc" class="custom-select mx-4 mx-sm-3 mx-md-2 mt-2 pl-5 pl-md-1 my-4">
+              <option disabled selected>Doctores</option>
+            </select>
           </div>
         </div>
         <div class="tabla">
