@@ -16,15 +16,22 @@ function cargarDoctores() {
       <td>${doctor.nombre + " " + doctor.apellido}</td>
       <td>${doctor.Especialidad}</td>
       <td>${doctor.matriculaP}</td>
+      <td class="aprobado"> - </td>
       <td><button id="checkAprob2" class="check2 text-success border-0 bg-light" onclick="confirmarDoc()">
         ✔
       </button>
-      <button id="checkRecha1" class="check2 text-success border-0 bg-light" onclick="rechazarDoc()">
+      <button id="checkRecha1" class="check2 text-danger border-0 bg-light" onclick="rechazarDoc()">
         ❌
       </button>
       </td>
-    </tr>`
-    selectDoctors.innerHTML += `<option> ${doctor.nombre + " " + doctor.apellido} <option>` 
+    </tr>`;
+
+    selectDoctors.innerHTML += `<option> ${doctor.nombre + " " + doctor.apellido} <option>`; 
+    const dropDoc = document.querySelector(".tablaDoctores")
+    dropDoc.addEventListener('change', (event) => {
+      const resultado = document.querySelector('.tabla');
+      resultado.textContent = `Te gusta el sabor ${event.target.value}`;
+    });
   }
 }
 
