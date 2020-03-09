@@ -1,18 +1,265 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registro de Prodesionales</title>
     <link rel="stylesheet" href="src/css/sigupdoctor.css">
+    <link rel="stylesheet" href="src/css/HomePagex.css">
+    <link rel="stylesheet" href="src/css/HomePage.css">
+    <link rel="stylesheet" href="src/css/login.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-
 <body>
+    <nav class="navbar p-0 navbar-expand-lg navbar-light bg-light borde-separacion d-flex flex-column">
+        <div class="d-flex justify-content-between w-100">
+            <img class="logoRolling d-flex justify-content-start MargenLogo mt-3" src="Assets/LogoRolling.svg"
+                alt="Logo Rolling Code">
+            <div class="d-flex justify-content-end align-self-center">
+                <div class="collapse navbar-collapse" id="botoncitobusqueda">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <form class="form-inline my-lg-0"></form>
+                            <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">
+                        </li>
+                    </ul>
+                </div>
+                <button id="menuDesplegado" class="navbar-toggler p-0" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button id="menuBusqueda" class="m-1 p-0" type="button" data-toggle="collapse"
+                    data-target="#botoncitobusqueda" aria-controls="botoncitobusqueda" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <img class="vw-5" src="Assets/problem2.png" alt="Buscar">
+                </button>
+                <button id="botonLogueo" class="m-1 p-0" data-toggle="modal" data-target="#indexModal">
+                    <img src="Assets/user.png" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse align-self-start align-self-lg-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item mr-1 ml-1">
+                    <a class="nav-link activeSeba" id="inicio" href="#">Inicio <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item mr-1 ml-1">
+                    <a class="nav-link" id="pacientes" onclick="consultaTurnoPaciente()" href="#">Pacientes</a>
+                </li>
+                <li class="nav-item mr-1 ml-1">
+                    <a class="nav-link" id="institucional" href="#">Institucional</a>
+                </li>
+                <li class="nav-item mr-1 ml-1">
+                    <a class="nav-link" id="servicios" href="#">Servicios</a>
+                </li>
+                <li class="nav-item mr-1 ml-1">
+                    <a class="nav-link" id="profesionales" onclick="pacienteProfesional() " href="#">Profesionales</a>
+                </li>
+                <li class="nav-item mr-1 ml-1">
+                    <a class="nav-link" id="contacto" href="#hicisteClickenContacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="indexModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header loginheader text-white d-flex flex-column align-items-center flex-grow-1">
+                    <h1 class="tituloSesion">Iniciar Sesión</h1>
+                    <img class="user" src="./assets/userwhite.svg" alt="user">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img class="iconcheck" src="./assets/removeWhite.svg" alt="not">
+                    </button>
+                </div>
+                <div>
+                    <h2 class="d-flex justify-content-center mt-2">Tipo de Usuario</h2>
+                    <div class=" d-flex justify-content-around">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
+                                    role="tab" aria-controls="pills-home" aria-selected="true">Paciente</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+                                    role="tab" aria-controls="pills-profile" aria-selected="false">Profesional</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <form class="d-flex justify-content-around">
+                                <select class="custom-select col-4">
+                                    <option selected>Documento</option>
+                                    <option value="1">DNI</option>
+                                    <option value="2">CI</option>
+                                    <option value="4">LE</option>
+                                    <option value="5">LC</option>
+                                    <option value="6">Pass</option>
+                                </select>
+                                <input type="number" class="form-control col-8" id="DNI" placeholder="Nro de Documento">
+                            </form>
+                            <div class="mt-3">
+                                <label for="formGroupExampleInput2">Contraseña</label>
+                                <input type="password" class="form-control" id="passPatient"
+                                    placeholder="Ingrese Contraseña">
+                                <div class="d-flex justify-content-between mt-3">
+                                    <button type="submit" class="btn text-white mb-3 d-flex justify-content-center"
+                                        onclick="validation4Patient()">Ingresar</button>
+                                    <a href="registropaciente.html"
+                                        class="btn btn-default mb-3 d-flex justify-content-center btnregister text-white">Registrarme
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+                            <form>
+                                <div class="form-group">
+                                    <div class="dropdown open d-flex">
+                                        <input type="number" class="form-control" id="cuit" placeholder="CUIL/CUIT">
+                                    </div>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label for="formGroupExampleInput2">Contraseña</label>
+                                    <input type="password" class="form-control" id="passProf"
+                                        placeholder="Ingrese Contraseña">
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <button type="submit" class="btn text-white mb-3 d-flex justify-content-center"
+                                            onclick="validation4Profesional()">Ingresar</button>
+                                        <a href="SingupDoctor.html"
+                                            class="btn btn-default mb-3 d-flex justify-content-center btnregister text-white">Registrarme
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-muted d-flex flex-column align-items-center ">
+                        <div class="mt-3">
+                            <img class="flecha" src="./assets/right-chevron.svg" alt="flecha">
+                            <a id="btnrecover" href="#" onclick="hideModalRecover()">Olvidé mi contraseña</a>
+                        </div>
+                        <div>
+                            <img class="flecha" src="./assets/right-chevron.svg" alt="flecha">
+                            <!-- buttom politica de privacidad -->
+                            <a data-toggle="modal" href="#ppmodal" onclick="show">Política de Privacidad</a>
+                        </div>
+                        <!-- Modal politica de privacidad -->
+                        <div class="modal fade" id="ppmodal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Política de Privacidad</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Política de privacidad:
+                                        Los datos aportados forman parte de un banco de datos de RollingCode Medical
+                                        Health, con domicilio en Gral Paz 657 piso 8 S.M. de Tucumán y serán tratados
+                                        para brindar servicios a los asociados. El titular de los datos personales no se
+                                        encuentra obligado a proporcionar datos sensibles. Asimismo, el titular se
+                                        responsabiliza por la exactitud de los datos proporcionados. El titular de los
+                                        datos personales tiene la facultad de ejercer el derecho de acceso a los mismos
+                                        en forma gratuita, a intervalos no inferiores a seis meses, salvo que se
+                                        acredite un interés legítimo al efecto, conforme lo establecido en el artículo
+                                        14, inciso 3 de la Ley N° 25.326.
+
+                                        La DIRECCIÓN NACIONAL DE PROTECCIÓN DE DATOS PERSONALES, órgano de control de la
+                                        Ley N° 25.326, tiene la atribución de atender las denuncias y reclamos que se
+                                        interpongan con relación al incumplimiento de las normas sobre protección de
+                                        datos personales.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            onclick="hideModalpp()">Aceptar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="modal fade" id="modalrecover" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="text-center">
+                        <div class="card-header loginheader text-white d-flex">
+                            <div class="d-flex flex-column align-items-center flex-grow-1">
+                                <h1 class="tituloSesion">Olvidé mi Contraseña</h1>
+                                <img class="user" src="./assets/userwhite.svg" alt="user">
+                            </div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <img class="iconcheck" src="./assets/removeWhite.svg" alt="not">
+                            </button>
+                        </div>
+                        <div class="card-header">
+                            <div class=" col justify-content-">
+                                <h2 class="card-title">Tipo de Usuario</h2>
+                                <h2>Paciente | Profesional</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>Ingrese su correo electronico para recibir en su bandeja de entrada los pasos a seguir para
+                            restablecer su contraseña.</p>
+                        <form>
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="inputEmail3"
+                                        placeholder="mail@mail.com">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-10 offset-sm-2">
+                                    <button type="submit" class="btn btn-primary"
+                                        onclick="recoverPass()">Recuperar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalPacienteSesion" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content d-flex justify-content-around">
+                <div class="">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center" id="modalPacienteLogueado">
+
+                </div>
+                <div class="modal-footer d-flex justify-content-around">
+                    <button type="button" class="btn btn-primary">Solicitar Turno</button>
+                    <button type="button" class="btn btn-primary">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="text-center text-white titulo-1">
         <h1 class="mt-1">¡Bienvenido!</h1>
     </div>
@@ -32,7 +279,8 @@
                     <input type="text" class="form-control datos" id="apellido" placeholder="Apellido/s">
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="number" class="form-control datos" min="20000000000" max="29999999999" id="cuil" placeholder="CUIL/CUIT">
+                    <input type="number" class="form-control datos" min="20000000000" max="29999999999" id="cuil"
+                        placeholder="CUIL/CUIT">
                 </div>
                 <div class="col-12 col-md-6 my-2">
                     <input type="number" class="form-control datos" id="telefono" placeholder="N° Tel/ Cel">
@@ -146,6 +394,7 @@
                     <select id="Especialidad" class="custom-select datos">
                         <option disabled selected>Especialidad</option>
                     </select>
+                </div>
             </form>
         </div>
         <div class="d-flex justify-content-center flex-wrap">
@@ -168,8 +417,8 @@
                 O BLOQUEO, TOTAL O PARCIAL, DE SU NOMBRE DE LA BASE DE DATOS. A PEDIDO DEL INTERESADO, SE DEBERÁ
                 INFORMAR EL NOMBRE DEL RESPONSABLE O USUARIO DEL BANCO DE DATOS QUE PROVEYÓ LA INFORMACIÓN."</p>
         </div>
-        <div class="modal fade" id="modalRegistrado" tabindex="-1" role="dialog"
-            aria-labelledby="modalRegistradoLabel" aria-hidden="true">
+        <div class="modal fade" id="modalRegistrado" tabindex="-1" role="dialog" aria-labelledby="modalRegistradoLabel"
+            aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="">
@@ -179,8 +428,7 @@
                         <p>Gracias por registrarte en Nuestra Clínica. </p>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <a href="index.html" role="button" class="btn btn-primary mb-4"
-                            data-dismiss="modal">Cerrar</a>
+                        <a href="index.html" role="button" class="btn btn-primary mb-4" data-dismiss="modal">Cerrar</a>
                     </div>
                 </div>
             </div>
@@ -216,8 +464,56 @@
                 </div>
             </div>
         </div>
-    
+
     </div>
+    <footer class="bg-dark">
+        <div class="d-lg-flex">
+            <a id="hicisteClickenContacto" href="#top"><img class="mt-5 logoRollingFooter"
+                    src="Assets/LogoRolling white.svg" alt="Logo Rolling Code"></a>
+            <div>
+                <div class="d-flex ml-5 mt-5 mb-2">
+                    <img class="loguitosFooter logoTelephone " src="assets/pin.png" alt="Ubicación">
+                    <h1 class="text-light letrasFooter mt-3 ml-2 ubiTelDesktop">General Paz 576 - CP 4000 - San Miguel
+                        de
+                        Tucumán</h1>
+                </div>
+                <div class="d-flex bordesFooter ml-5 ml-2">
+                    <img class="loguitosFooter mr-3" src="assets/phone.png" alt="Call Center">
+                    <h1 class="text-light letrasFooter mt-3 ubiTelDesktop">Call Center: +54 (0381) 15 3331003</h1>
+                </div>
+            </div>
+        </div>
+        <div class="ml-5 logoRollingFooter bordesFooter d-inline-block">
+            <a href="https://www.facebook.com/RollingCodeSchool/" target="_blank"><img class="LogosRedes"
+                    src="Assets/002-facebook.svg" alt="Nuestro Facebook"></a>
+            <a href="https://twitter.com/rollingcode3" target="_blank"><img class="LogosRedes"
+                    src="Assets/001-twitter (1).svg" alt="Nuestro Twitter"></a>
+            <a href="https://www.instagram.com/rollingcodeschool/" target="_blank"><img class="LogosRedes"
+                    src="Assets/003-instagram.svg" alt="Nuestro Instagram"></a>
+            <a href="https://ar.linkedin.com/company/rollingcode-school" target="_blank"><img class="LogosRedes"
+                    src="Assets/004-linkedin.svg" alt="Nuestro linkedin"></a>
+        </div>
+        <div class="ml-4 mr-3 mb-5 d-inline-block otrosEnlacesMobile bordesFooter otrosEnlacesDesktop">
+            <h1 class=" text-light mb-1">Otros Enlaces</h1>
+            <a class="bordeFooter d-block text-light mb-2"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=rollingcodeschool@gmail.com&su=Envío CV&body=Adjuntanos tu CV y los motivos por los que estás interesado en trabajar con nosotros. ¡Te esperamos!"
+                target="_blank">> Envía tu CV</a>
+            <a class="bordeFooter d-block text-light mb-2" href="">> Provedores</a>
+        </div>
+        <div class="otrosEnlacesDesktop d-inline-block">
+            <iframe class="d-flex align-self-center tamañoMapa MargenMapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1174432046328!2d-65.2080364902503!3d-26.83621664190631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c0e8d0271b7%3A0x7946062ac490db30!2sGral.%20Paz%20576%2C%20T4000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1583359327932!5m2!1ses-419!2sar"
+                allowfullscreen=true>
+                frameborder="0"></iframe>
+        </div>
+        <div class="ml-3 mt-5">
+            <h1 class="text-light ml-3 mb-0 mr-5 textoCopy copyMobile">Copyright 2020 | Clínica Rolling Code</h1>
+        </div>
+        <div class="m-0 textoCopyDesktop copyDesktop">
+            <h1 class="text-light font-weight-light ml-3 mb-0 mr-5 textoCopy"> Copyright 2020 | Clínica Rolling Code |
+                General Paz 576 | CP:4000 | San Miguel de Tucumán | +54 (0381) 333 1003</h1>
+        </div>
+    </footer>
 
     <script src="src/js/SingUpdoctor.js"></script>
     <script src="src/js/especialidadDoc.js"></script>
