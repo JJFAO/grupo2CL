@@ -73,6 +73,7 @@ var usuario = {
 //     }
 // ]
 // localStorage.setItem("rDoctores", JSON.stringify(doctores))
+
 const doctores = JSON.parse(localStorage.getItem("rDoctores"))
 console.log(doctores);
 
@@ -102,8 +103,10 @@ function inicioshift() {
       
 }
 
+function esp_sinrepetir () {    
 
 let doctores_filtrados = []
+const doctores = JSON.parse(localStorage.getItem("rDoctores"))
 doctores.forEach(doctor => {
     doctores_filtrados.push(doctor.especialidad)
 });
@@ -115,6 +118,8 @@ let esp_sinRepetidos = doctores_filtrados.filter(function (valor, indiceActual, 
         return false;
     }
 });
+return esp_sinRepetidos
+}
 
 function cargador(array) {
     const doc_filtrados = []
@@ -158,6 +163,7 @@ function cargarOptions(id, array) { //carga los opcion pasandole una array e id
 // let especialidades= localStorage.getItem('arrayespecialidades')
 //Codigo a Ejecutar al Cargar la Pagina
 function myOnLoad() {
+    const esp_sinRepetidos = esp_sinrepetir ()
     const arrayesp = esp_sinRepetidos.map((esp, i) => {
         return {
             texto: esp,
