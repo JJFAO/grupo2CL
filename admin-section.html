@@ -83,54 +83,9 @@
           </div>
           <!-- boton contador -->
           <!-- Button trigger modal -->
-          <button type="button" id="autorizados" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-            Autorizados
-            <span id="contadorAutorizados" class="pelotas animated heartBeat badge badge-pill badge-success"></span>
-          </button>
-          <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">Autorizados</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
+
           <!-- termina boton contador1 -->
           <!-- boton contador2 -->
-          <button type="button" id="rechazados" class="btn btn-primary mx-5" data-toggle="modal" data-target="#exampleModalLong">
-            Rechazados
-            <span id="contadorRechazados" class="pelotas animated heartBeat badge badge-pill badge-danger"></span>
-          </button>
-          <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">Rechazados</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="tabla">
             <table class="table mt-4" id="autorizaciones">
               <thead class="thead-light">
@@ -164,13 +119,10 @@
                   ">Dni</th>
                   <th scope="col" style="
                       width: 13vw;
-                  ">Doctor</th>
+                  ">Autorizado</th>
                   <th scope="col" style="
                       width: 13vw;
-                  ">Turno</th>
-                  <th scope="col" style="
-                      width: 13vw;
-                  ">Autorizar</th>
+                  ">Acción</th>
                 </tr>
               </thead>
               <tbody id="paciente">
@@ -239,39 +191,7 @@
           </div>
           <h1 class="textoProfesional" id="profesionales">Profesionales</h1>
         </div>
-        <div class="btn-inc-aut mx-sm-3 mt-4 row justify-content-around m-0">
-          <div>
-            <button type="button"
-            class="btn btn-primary mx-4 mx-sm-3 mx-md-2 mt-2 pl-5 pl-md-1 my-4"
-            data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" style="width: 250px;">Incidencias
-            <span class="pelotas animated heartBeat badge badge-pill badge-success">0</span>
-          </button>
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Incidencias</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                      <div class="form-group">
-                        <label for="message-text" class="col-form-label"></label>
-                        <textarea class="form-control" id="message-text"></textarea>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Enviar</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="btn-inc-aut mx-sm-3 mt-4 row justify-content-around m-0"> 
           <div class="tablaDoctores dropdown">
             <select id="cargaDoc" class="custom-select btn btn-primary text-white text-center mx-4 mx-sm-3 mx-md-2 mt-2 pl-5 pl-md-1 my-4" style="width: 250px;">
               <option disabled selected>Doctores</option>
@@ -313,8 +233,6 @@
     crossorigin="anonymous"></script>
   <script src="src/js/tablaPacientes.js"></script>
   <script src="src/js/tablaDoctores.js"></script>
-  <script src="src/js/contadorAutorizados.js"></script>
-  <script src="src/js/contadorRechazados.js"></script>
 </body>
 ​ ​
 

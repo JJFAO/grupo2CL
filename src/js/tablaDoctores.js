@@ -7,7 +7,7 @@ let matricula = document.querySelector("#matriculaP");
 function cargarDoctores() {
 //   const doctores = getLocal("rDoctores");
   const tablaDoctor = document.getElementById("doctores");
-  let selectDoctors = document.querySelector("#cargaDoc")
+  let selectDoctors = document.querySelector("#cargaDoc");
   tablaDoctor.innerHTML = '';
   for (let i = 0; i < doctores.length; i++) {
     const doctor = doctores[i];
