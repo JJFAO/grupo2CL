@@ -19,7 +19,7 @@ function recoverPass() {
     showConfirmButton: false,
     timer: 3000   
     })}
-  // const usuarios = [{ DNI: 28721218, pass: "1234" }]
+  
   function validation4Patient() {
     const usuarios = JSON.parse(localStorage.getItem("Pacientes"))    
   let dniHtml = document.querySelector("#DNI")
@@ -60,6 +60,7 @@ function validation4Profesional() {
           window.location.assign("./../../admin-section.html")
               } 
           alert("Inicio exitoso")
+          localStorage.setItem("proflogueado", JSON.stringify(proflogueado));
           // window.location.href = 'index.html';
             return
           }
@@ -79,21 +80,4 @@ function validation4Profesional() {
       $('#modalProfesionalSesion').modal("show");
     }
     
-    // }
-    // function ingresar(){
-      //   let usuario = localStorage.getItem('rDoctores');
-      //   switch (cuit.value) {
-        //     case 2028721218:
-        //       window.location.href = 'login.html'
-        
-        //       break;
-        
-        //     default:
-        //       break;
-        //   }
-        // }
-        
-        // if (cuitHtml.value == 20287212187) {            
-        //   if (passprofHtml.value == 1234) {        
-        //     window.location.href = 'login.html';
-        //       }  
+
