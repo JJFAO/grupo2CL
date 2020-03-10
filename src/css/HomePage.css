@@ -288,3 +288,11 @@ label{
         display: inline-grid;
     }
 }
+
+.textHome{
+    font-size: 9pt;
+}
+.tituloHome{
+    font-size: 20pt;
+    color: #691353;
+}

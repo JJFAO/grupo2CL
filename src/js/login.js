@@ -50,19 +50,22 @@ function recoverPass() {
 function validation4Profesional() {
   const profesionales = JSON.parse(localStorage.getItem("rDoctores"))
   let cuitHtml = document.querySelector("#cuit")
-  let passprofHtml = document.querySelector("#passProf")
+  let passprofHtml = document.querySelector("#passProf")   
   for(let index = 0; index < profesionales.length; index++) {
-    const profesional = profesionales[index];
-    if (cuitHtml.value == profesional.cuit) {
-            
-      if (passprofHtml.value == profesional.passProf) {
-        localStorage.setItem("proflogueado", JSON.stringify(proflogueado));
-        alert("Inicio exitoso")
-        return
+    const profesional = profesionales[index];  
+    if (cuitHtml.value == profesional.cuil ) {            
+      if (passprofHtml.value == profesional.passProf) {  
+         if (profesional.cuil == 20287212187 && profesional.passProf == 1234) {           
+              window.location.href = 'login.html';
+              } 
+          alert("Inicio exitoso")
+          // window.location.href = 'index.html';
+            return
+          }
+          alert("La credenciales no son correctas")
+          return
+        }    
       }
-      alert("La credenciales no son correctas")
-      return
-    }    
-  }
-  alert("El CUIT no esta registrado")
-}
+      alert("El CUIT no esta registrado")
+      
+    }
