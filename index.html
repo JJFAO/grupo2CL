@@ -67,7 +67,7 @@
 
   </nav>
   <div class="fixed-bottom botonTurnero float-right">
-    <button class="shadow-lg rounded-circle" type="button" data-toggle="modal" data-target="#MedicalShift">
+    <button class="shadow-lg rounded-circle" type="button" data-toggle="modal" data-target="#MedicalShift" onclick="inicioshift()">
       <img class="tamañoBotonTurnero" src="Assets/calendar.png" alt="Turnero">
     </button>
   </div>
@@ -399,18 +399,35 @@
           </button>
         </div>
         <div class="modal-body text-center" id="modalPacienteLogueado">
-          <!-- <h1>Bienvenido, Juan</h1>
-<br>
-<p>Usted no tiene turnos asignados.</p>
-<p>Puede solicitar un turno haciendo click en el botón Solicitar Turno</p> -->
         </div>
-        <div class="modal-footer d-flex justify-content-around">
-          <button type="button" class="btn btn-primary">Solicitar Turno</button>
-          <button type="button" class="btn btn-primary">Aceptar</button>
+        <div id = "footerModalBoton" class="footerModalBoton modal-footer d-flex justify-content-around">
+          <button id ="soliciTurno" type="button" class="btn btn-primary"  data-dismiss="modal" onclick="buttonTestTurno()">Solicitar Turno</button>
+          <button id ="elimiTurno" type="button" class="btn btn-primary" onclick="buttonEliminarTestTurno()"data-dismiss="modal">Eliminar Turno</button>
+          <button id ="acepTurno "type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="modal fade" id="modalProfesionalSesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content d-flex justify-content-around">
+      <div class="">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center" id="modalProfeLogueado">
+      </div>
+      <div id = "footerModalBoton" class="footerModalBoton modal-footer d-flex justify-content-around">
+        <!-- <button id ="soliciTurno" type="button" class="btn btn-primary"  data-dismiss="modal" onclick="buttonTestProfTurno()">Solicitar Turno</button>
+        <button id ="elimiTurno" type="button" class="btn btn-primary" onclick="buttonEliminarTestProfTurno()"data-dismiss="modal">Eliminar Turno</button> -->
+        <button id ="acepTurno "type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
   <footer class="bg-dark">
     <div class="d-lg-flex">
       <a id="hicisteClickEnContacto" href="#top"><img class="mt-5 logoRollingFooter" src="Assets/LogoRolling white.svg" alt="Logo Rolling Code"></a>
@@ -472,6 +489,7 @@
   <script src="src/js/doctores.js"></script>
   <script src="src/js/login.js"></script>
   <script src="src/js/formPaciente.js"></script>
+  <script src="./src/js/validationUsersLogged.js"></script>
   <script>
     myOnLoad();
   </script>

@@ -36,7 +36,7 @@ function recoverPass() {
       if (passHtml.value == usuario.password) {
         window.location.href = 'index.html';
         alert("Inicio exitoso")
-        localStorage.setItem("usuariologueado", usuariologueado)
+        localStorage.setItem("usuariologueado", JSON.stringify(usuariologueado));
         return
       }
       alert("Las credenciales no son correctas")
@@ -46,7 +46,7 @@ function recoverPass() {
   }
   alert("El DNI no esta registrado")
 }
-  
+// localStorage.setItem("proflogueado", JSON.stringify(proflogueado));
 
 function validation4Profesional() {
   const profesionales = JSON.parse(localStorage.getItem("rDoctores"))
@@ -57,10 +57,10 @@ function validation4Profesional() {
     if (cuitHtml.value == profesional.cuil ) {            
       if (passprofHtml.value == profesional.passProf) {  
          if (profesional.cuil == 20287212187 && profesional.passProf == 1234) {           
-              window.location.href = 'login.html';
+          window.location.assign("./../../admin-section.html")
               } 
           alert("Inicio exitoso")
-          window.location.href = 'index.html';
+          // window.location.href = 'index.html';
             return
           }
           alert("La credenciales no son correctas")
