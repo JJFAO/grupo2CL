@@ -1,8 +1,8 @@
-function confirmarDoc(){
-    const resultadoSi = document.querySelector('.aprobado');
+function confirmarDoc(element){
+    const resultadoSi = element.closest('tr').querySelector('.aprobado');
     resultadoSi.innerHTML = ` Si `;
 }
-function confirmadoPac(){
-    const resultadoPacSi = document.querySelector('.aprobadosP');
+function confirmadoPac(element){
+    const resultadoPacSi = element.closest('tr').querySelector('.aprobadosP');
     resultadoPacSi.innerHTML = ` Si `;
 }

@@ -17,10 +17,10 @@ function cargarDoctores() {
       <td>${doctor.especialidad}</td>
       <td>${doctor.matriculaP}</td>
       <td class="aprobado"> - </td>
-      <td><button id="checkAprobD" class="check2 text-success border-0 bg-light" onclick="confirmarDoc()">
+      <td><button id="checkAprobD" class="check2 text-success border-0 bg-light" onclick="confirmarDoc(this)">
         ✔
       </button>
-      <button id="checkRechaD" class="check2 text-danger border-0 bg-light" onclick="rechazarDoc()">
+      <button id="checkRechaD" class="check2 text-danger border-0 bg-light" onclick="rechazarDoc(this)">
         ❌
       </button>
       </td>
