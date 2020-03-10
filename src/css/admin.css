@@ -103,6 +103,7 @@ text-decoration: none;
 }
 .tabla{
   overflow-x: auto;
+  overflow-y: auto;
 }
 .table{
   margin-top: 2rem;

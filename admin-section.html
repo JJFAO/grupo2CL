@@ -44,13 +44,13 @@
                 Profesionales</a>
               </li>
               <li class="contienesubb mt-5">
-                <a class="subboton" href="#">Incidencias</a>
+                <p class="subboton" href="#">Incidencias</p>
               </li>
               <li class="contienesubb my-5">
-                <a class="subboton" href="#">Selecc. Doctor</a>
+                <p class="subboton" href="#">Selecc. Doctor</p>
               </li>
             <li class="contienesubb">
-              <a class="subboton" href="#">Horarios</a>
+              <p class="subboton" href="#">Horarios</p>
             </li>
             <li class="d-md-none">
               <button class=" btn dropdown-toggle text-white mt-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -58,7 +58,7 @@
                 Mariano De Filippo
               </button>
               <div class="inicio-sesion dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Cerrar Sesion</a>
+                <a href="index.html">Cerrar Sesion</a>
               </div>
             </li>
           </ul>
@@ -74,7 +74,7 @@
                 Mariano De Filippo
               </button>
               <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Cerrar Sesion</a>
+                <a class="dropdown-item" href="index.html">Cerrar Sesion</a>
               </div>
             </div>
           </div>
@@ -126,74 +126,14 @@
                 </tr>
               </thead>
               <tbody id="paciente">
-                  <tr class="thead-light">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <button id="checkAprob7" class="check1 text-success border-0 bg-light">
-                        ✔
-    
-                        <button id="checkRecha7" class="check1 text-success border-0 bg-light">
-                          ❌
-                        </button>
-                    </td>
-                  </tr>
-                  <tr class="thead-light">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <button id="checkAprob8" class="check1 text-success border-0 bg-light">
-                        ✔
-                      </button>
-                      <button id="checkRecha8" class="check1 text-success border-0 bg-light">
-                        ❌
-                      </button>
-                    </td>
-                  </tr>
-                  <tr class="thead-light">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <button id="checkAprob9" class="check1 text-success border-0 bg-light">
-                        ✔
-                      </button>
-                      <button id="checkRecha9" class="check1 text-success border-0 bg-light">
-                        ❌
-                      </button>
-                    </td>
-                  </tr>
-                  <tr class="thead-light">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <button id="checkAprob10" class="check1 text-success border-0 bg-light">
-                        ✔
-                      </button>
-                      <button id="checkRecha10" class="check1 text-success border-0 bg-light">
-                        ❌
-                      </button>
-                    </td>
-                  </tr>
               </tbody>
             </table>
           </div>
           <h1 class="textoProfesional" id="profesionales">Profesionales</h1>
         </div>
-        <div class="btn-inc-aut mx-sm-3 mt-4 row justify-content-around m-0"> 
-          <div class="tablaDoctores dropdown">
-            <select id="cargaDoc" class="custom-select btn btn-primary text-white text-center mx-4 mx-sm-3 mx-md-2 mt-2 pl-5 pl-md-1 my-4" style="width: 250px;">
+        <div class="btn-inc-aut mx-sm-3 mt-4 m-0"> 
+          <div class="tablaDoctores">
+            <select id="cargaDoc" class=" btn btn-primary text-white text-center mx-4 mx-sm-3 mx-md-2 mt-2 pl-5 pl-md-1 my-4" style="width: 250px;">
               <option disabled selected>Doctores</option>
             </select>
           </div>
@@ -233,6 +173,8 @@
     crossorigin="anonymous"></script>
   <script src="src/js/tablaPacientes.js"></script>
   <script src="src/js/tablaDoctores.js"></script>
+  <script src="src/js/checkAprob.js"></script>
+  <script src="src/js/checkRecha.js"></script>
 </body>
 ​ ​
 
