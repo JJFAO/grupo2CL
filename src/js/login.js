@@ -17,8 +17,8 @@ function recoverPass() {
     icon: 'success',
     title: 'Mensaje enviado',
     showConfirmButton: false,
-    timer: 5500
-  })}
+    timer: 3000   
+    })}
   // const usuarios = [{ DNI: 28721218, pass: "1234" }]
   function validation4Patient() {
     const usuarios = JSON.parse(localStorage.getItem("Pacientes"))    
@@ -34,6 +34,7 @@ function recoverPass() {
 
     if (dniHtml.value == usuario.documento) {
       if (passHtml.value == usuario.password) {
+        window.location.href = 'index.html';
         alert("Inicio exitoso")
         localStorage.setItem("usuariologueado", usuariologueado)
         return
@@ -50,28 +51,49 @@ function recoverPass() {
 function validation4Profesional() {
   const profesionales = JSON.parse(localStorage.getItem("rDoctores"))
   let cuitHtml = document.querySelector("#cuit")
-  let passprofHtml = document.querySelector("#passProf")
+  let passprofHtml = document.querySelector("#passProf")   
   for(let index = 0; index < profesionales.length; index++) {
-    const profesional = profesionales[index];
-    if (cuitHtml.value == profesional.cuit) {
-            
-      if (passprofHtml.value == profesional.passProf) {
-        
-        alert("Inicio exitoso")
-        return
+    const profesional = profesionales[index];  
+    if (cuitHtml.value == profesional.cuil ) {            
+      if (passprofHtml.value == profesional.passProf) {  
+         if (profesional.cuil == 20287212187 && profesional.passProf == 1234) {           
+              window.location.href = 'login.html';
+              } 
+          alert("Inicio exitoso")
+          window.location.href = 'index.html';
+            return
+          }
+          alert("La credenciales no son correctas")
+          return
+        }    
       }
-      alert("La credenciales no son correctas")
-      return
-    }    
-  }
-  alert("El CUIT no esta registrado")
-}
-
-function consultaTurnoPaciente (){
-  const usuarioClinica = JSON.parse(localStorage.getItem("Pacientes"))
-  $('#modalPacienteSesion').modal("show");
-}
-function pacienteProfesional (){
-  $('#modalProfesionalSesion').modal("show");
-
-}
+      alert("El CUIT no esta registrado")
+      
+    }
+    
+    function consultaTurnoPaciente (){
+      const usuarioClinica = JSON.parse(localStorage.getItem("Pacientes"))
+      $('#modalPacienteSesion').modal("show");
+    }
+    function pacienteProfesional (){
+      $('#modalProfesionalSesion').modal("show");
+    }
+    
+    // }
+    // function ingresar(){
+      //   let usuario = localStorage.getItem('rDoctores');
+      //   switch (cuit.value) {
+        //     case 2028721218:
+        //       window.location.href = 'login.html'
+        
+        //       break;
+        
+        //     default:
+        //       break;
+        //   }
+        // }
+        
+        // if (cuitHtml.value == 20287212187) {            
+        //   if (passprofHtml.value == 1234) {        
+        //     window.location.href = 'login.html';
+        //       }  
