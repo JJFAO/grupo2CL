@@ -35,7 +35,7 @@ function recoverPass() {
     if (dniHtml.value == usuario.documento) {
       if (passHtml.value == usuario.password) {
         alert("Inicio exitoso")
-        localStorage.setItem("usuariologueado", usuariologueado)
+        localStorage.setItem("usuariologueado", JSON.stringify(usuariologueado));
         return
       }
       alert("Las credenciales no son correctas")
@@ -56,7 +56,7 @@ function validation4Profesional() {
     if (cuitHtml.value == profesional.cuit) {
             
       if (passprofHtml.value == profesional.passProf) {
-        
+        localStorage.setItem("proflogueado", JSON.stringify(proflogueado));
         alert("Inicio exitoso")
         return
       }
@@ -65,13 +65,4 @@ function validation4Profesional() {
     }    
   }
   alert("El CUIT no esta registrado")
-}
-
-function consultaTurnoPaciente (){
-  const usuarioClinica = JSON.parse(localStorage.getItem("Pacientes"))
-  $('#modalPacienteSesion').modal("show");
-}
-function pacienteProfesional (){
-  $('#modalProfesionalSesion').modal("show");
-
 }
