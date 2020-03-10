@@ -1,8 +1,9 @@
-function rechazarDoc(){
-    const resultadoNo = document.querySelector('.aprobado');
+function rechazarDoc(elements){
+    const resultadoNo = elements.closest('tr').querySelector('.aprobado');
     resultadoNo.innerHTML = ` No `;
 }
-function rechazadoPac(){
-    const resultadoPacNo = document.querySelector('.aprobadosP');
+function rechazadoPac(element){
+    const resultadoPacNo = element.closest('tr').querySelector('.aprobadosP');
     resultadoPacNo.innerHTML = ` No `;
 }
+

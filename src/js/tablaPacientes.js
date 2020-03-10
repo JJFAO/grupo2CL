@@ -15,10 +15,10 @@ let dni = document.querySelector("#documento")
             <td>${aPacientes.edad}</td>
             <td>${aPacientes.documento}</td>
             <td class="aprobadosP">-</td>
-            <td><button id="checkAprobP" class="check2 text-success border-0 bg-light" onclick="confirmadoPac()">
+            <td><button id="checkAprobP" class="check2 text-success border-0 bg-light" onclick="confirmadoPac(this)">
             ✔
           </button>
-          <button id="checkRechaP" class="check2 text-danger border-0 bg-light" onclick="rechazadoPac()">
+          <button id="checkRechaP" class="check2 text-danger border-0 bg-light" onclick="rechazadoPac(this)">
             ❌
           </button>
           </td>
