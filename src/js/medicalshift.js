@@ -92,13 +92,13 @@ function inicioshift() {
         for (let i = select3.options.length; i >= 1; i--) {
             select3.remove(i);
         }
-        const log= 'no logueado'
-        if (log== 'logueado') {
+        // const log= 'no logueado'
+        // if (log== 'logueado') {
 
             myOnLoad() 
-        } else {
-           alert('debe loguearse para solicitar turno') 
-        }
+        // } else {
+        //    alert('debe loguearse para solicitar turno') 
+        // }
       
 }
 
