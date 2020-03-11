@@ -10,7 +10,7 @@ function cargarDoctores() {
       <td>${doctor.especialidad}</td>
       <td>${doctor.matriculaP}</td>
       <td class="aprobado"> ${doctor.autorizado} </td>
-      <td class="row mx-0 flex-nowrap"><button id="${
+      <td class="d-flex flex-nowrap justify-content-center"><button id="${
         doctor.matriculaP
       }" class="check2 text-success border-0 bg-light" onclick="confirmarDoc(this)">
         ✔
@@ -23,9 +23,9 @@ function cargarDoctores() {
       </td>
     </tr>`;
 
-    selectDoctors.innerHTML += `<option>${doctor.nombre +
+    selectDoctors.innerHTML += `<option value = "${doctor.matriculaP}">${doctor.nombre +
       " " +
-      doctor.apellido}<option>`;
+      doctor.apellido}</option>`;
   }
 }
 document.addEventListener("load", cargarDoctores());
