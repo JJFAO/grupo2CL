@@ -103,6 +103,8 @@ text-decoration: none;
 }
 .tabla{
   overflow-x: auto;
+  height: 350px;
+  overflow-y: auto;
 }
 .table{
   margin-top: 2rem;
@@ -147,7 +149,7 @@ td{
 .imagen-inicio-sesion{
   height: 30px;
   width: 30px;
-  border-radius: 20px;
+  border-radius: 30px;
   border: 0;
 }
 @media screen and (min-width: 1200px) {
@@ -167,4 +169,7 @@ td{
 .boton-flotante{
   position: fixed;
   float: right;
+}
+#cargaDoc{
+  width: 190px;
 }

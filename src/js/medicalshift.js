@@ -6,79 +6,114 @@ var usuario = {
 }
 // const doctor = new Doctor(nombre, apellido, telefono, especialidad, matricula, cuil, domicilio, provincia, localiad, codigopostal);
 
-const doctores = [{
-        nombre: 'María Belén',
-        apellido: 'Abraham',
-        especialidad: 'Alergología',
-        cuil: '000000000000',
-        dias: [{
-            lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
-            martes: [],
-            miercoles: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
-            jueves: [],
-            viernes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00']
-        }]
-    },
-    {
-        nombre: 'Andrés',
-        apellido: 'Anzorena',
-        especialidad: 'Cardiología',
-        cuil: '11111111111',
-        dias: [{
-            lunes: [],
-            martes: [],
-            miercoles: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
-            jueves: [],
-            viernes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00']
-        }]
-    },
-    {
-        nombre: 'Silvina Rita',
-        apellido: 'Depetris',
-        especialidad: 'Cardiología',
-        cuil: '22222222222',
-        dias: [{
-            lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
-            martes: [],
-            miercoles: ['10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
-            jueves: [],
-            viernes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00']
-        }]
-    },
-    {
-        nombre: 'Silvia Lourdes',
-        apellido: 'Lorenzo',
-        especialidad: 'Gastroenterología',
-        cuil: '3333333333',
-        dias: [{
-            lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
-            martes: [],
-            miercoles: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
-            jueves: [],
-            viernes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00']
-        }]
-    },
-    {
-        nombre: 'Joel',
-        apellido: 'Carabajal',
-        especialidad: 'Traumatología',
-        cuil: '44444444444',
-        dias: [{
-            lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
-            martes: [],
-            miercoles: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
-            jueves: [],
-            viernes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00']
-        }]
-    }
-]
+// const doctores = [{
+//         nombre: 'María Belén',
+//         apellido: 'Abraham',
+//         especialidad: 'Alergología',
+//         cuil: '000000000000',
+//         dias: [{
+//             lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
+//             martes: [],
+//             miercoles: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
+//             jueves: [],
+//             viernes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00']
+//         }]
+//     },
+//     {
+//         nombre: 'Andrés',
+//         apellido: 'Anzorena',
+//         especialidad: 'Cardiología',
+//         cuil: '11111111111',
+//         dias: [{
+//             lunes: [],
+//             martes: [],
+//             miercoles: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
+//             jueves: [],
+//             viernes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00']
+//         }]
+//     },
+//     {
+//         nombre: 'Silvina Rita',
+//         apellido: 'Depetris',
+//         especialidad: 'Cardiología',
+//         cuil: '22222222222',
+//         dias: [{
+//             lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
+//             martes: [],
+//             miercoles: ['10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
+//             jueves: [],
+//             viernes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00']
+//         }]
+//     },
+//     {
+//         nombre: 'Silvia Lourdes',
+//         apellido: 'Lorenzo',
+//         especialidad: 'Gastroenterología',
+//         cuil: '3333333333',
+//         dias: [{
+//             lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
+//             martes: [],
+//             miercoles: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
+//             jueves: [],
+//             viernes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00']
+//         }]
+//     },
+//     {
+//         nombre: 'Joel',
+//         apellido: 'Carabajal',
+//         especialidad: 'Traumatología',
+//         cuil: '44444444444',
+//         dias: [{
+//             lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
+//             martes: [],
+//             miercoles: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
+//             jueves: [],
+//             viernes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00']
+//         }]
+//     }
+// ]
+// localStorage.setItem("rDoctores", JSON.stringify(doctores))
 
+const doctores = JSON.parse(localStorage.getItem("rDoctores"))
+console.log(doctores);
+const pacientesForTesting = JSON.parse(localStorage.getItem("usuariologueado"));
+
+function inicioshift() {   
+        let select = document.querySelector("#especialidad");
+        for (let i = select.options.length; i >= 1; i--) {
+            select.remove(i);
+        }
+        let select1 = document.querySelector("#doctores");
+        for (let i = select1.options.length; i >= 1; i--) {
+            select1.remove(i);
+        }let select2 = document.querySelector("#dias");
+        for (let i = select2.options.length; i >= 1; i--) {
+            select2.remove(i);
+        }let select3 = document.querySelector("#horario");
+        for (let i = select3.options.length; i >= 1; i--) {
+            select3.remove(i);
+        }
+        const log = JSON.parse(localStorage.getItem("usuariologueado"));
+        console.log(log);
+        
+        if (log==null) {
+            alert('debe loguearse para solicitar turno') 
+
+        } else {
+            $('#MedicalShift').modal('show')
+           myOnLoad() 
+            
+        }
+      
+}
+
+function esp_sinrepetir () {    
 
 let doctores_filtrados = []
+const doctores = JSON.parse(localStorage.getItem("rDoctores"))
 doctores.forEach(doctor => {
     doctores_filtrados.push(doctor.especialidad)
 });
-
 let esp_sinRepetidos = doctores_filtrados.filter(function (valor, indiceActual, arreglo) {
     let indiceAlBuscar = arreglo.indexOf(valor);
     if (indiceActual === indiceAlBuscar) {
@@ -87,6 +122,8 @@ let esp_sinRepetidos = doctores_filtrados.filter(function (valor, indiceActual, 
         return false;
     }
 });
+return esp_sinRepetidos
+}
 
 function cargador(array) {
     const doc_filtrados = []
@@ -130,6 +167,7 @@ function cargarOptions(id, array) { //carga los opcion pasandole una array e id
 // let especialidades= localStorage.getItem('arrayespecialidades')
 //Codigo a Ejecutar al Cargar la Pagina
 function myOnLoad() {
+    const esp_sinRepetidos = esp_sinrepetir ()
     const arrayesp = esp_sinRepetidos.map((esp, i) => {
         return {
             texto: esp,
@@ -171,6 +209,7 @@ function dias_disponibles() {
     const doctorhtml = document.querySelector("#doctores")
     const filnombre_y_apellido = (convertir_cuil_en_doc(doctorhtml.value))
     const diasArray = filnombre_y_apellido[0].dias[0] //preguntar ########################################################3
+    
     const diasdisponibles = []
     for (const i in diasArray) {
         if (diasArray.hasOwnProperty(i)) {
@@ -180,7 +219,9 @@ function dias_disponibles() {
             }
         }
     }
+    console.log(diasdisponibles);
     return diasdisponibles
+    
 }
 
 function cargar_dias() {
@@ -204,46 +245,74 @@ function filtrar_horarios() {
 
 function cargar_horario() {
     const array = filtrar_horarios()
+    console.log(array);
+    
     cargarOptions("#horario", array)
 }
 
 function guardar_turno() {
     const inputs = document.querySelectorAll('.datos');
     const registro = {};
+    const pacientesForTesting = JSON.parse(localStorage.getItem("usuariologueado"));
+    registro.nombrePac = pacientesForTesting.nombre
+    registro.apelliPopac = pacientesForTesting.apellido
+    registro.dniPac = pacientesForTesting.documento
+    
     inputs.forEach((dato) => {
         registro[dato.id] = dato.value
     });
     console.log(registro);
-
     const nTurnos = JSON.parse(localStorage.getItem('rTurnos')) || [];
+    console.log(nTurnos);
     nTurnos.push(registro);
     localStorage.setItem('rTurnos', JSON.stringify(nTurnos))
     return registro
 }
 
 function borrar_turno(obj) {
-    console.log(obj.doctores)
+    console.log(obj.doctores) //cuil de doctor
     console.log(obj.dias);
     console.log(obj.horario);
-    console.log(convertir(obj.doctores)[0].cuil) //cuil
+    const doctor_obj = (convertir_cuil_en_doc(obj.doctores))
+    console.log(doctor_obj);
+    const horas_filtradas = doctor_obj[0].dias[0][obj.dias]
+    console.log(horas_filtradas);
+    horas_borradas = horas_filtradas.filter(doctor => doctor != obj.horario)
+    doctor_obj[0].dias[0][obj.dias]= horas_borradas
+    localStorage.setItem("rDoctores", JSON.stringify(doctores))
+}
+
+function MENSAJE_CONFIR() {
+    Swal.fire({
+        icon: 'success',
+        title: 'TURNO CONFIRMADO',
+        showConfirmButton: false,
+    })
+    $('#MedicalShift').modal('hide')
+}
+
+function MENSAJE_error() {
+    Swal.fire({
+        icon: 'error',
+        title: 'DEBE LLENAR TODO LOS CAMPOS PARA CONFIRMAR EL TURNO',
+        showConfirmButton: false,
+    })
+}
+
+function MENSAJE_error_medico() {
+    Swal.fire({
+        icon: 'error',
+        title: 'este doctor ya no tiene turnos disponibles, elija otro medico',
+        showConfirmButton: false,
+    })
 }
 
 function confirmar() {
-    console.log(document.querySelector("#doctores").value);
-    console.log("Seleccione un Profesional...");
-
-
-
-    if (document.querySelector("#doctores").value == "Seleccione un Profesional...") {
-        console.log("debe llenar doctoreddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddds");
-
-    } else {
-        console.log("doctor llenokkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
-
-    }
-
-    const turno_paciente = guardar_turno()
-    borrar_turno(turno_paciente)
-
-    alert('confirmado')
+    if ((document.querySelector("#especialidad").value == "Seleccione una Especialidad...") || (document.querySelector("#doctores").value == "Seleccione un Profesional...") || (document.querySelector("#dias").value == "Días disponibles...") || (document.querySelector("#horario").value == "Seleccione un horario...")) {
+        MENSAJE_error()
+        }else{
+        const turno_paciente = guardar_turno()
+        borrar_turno(turno_paciente)    
+        MENSAJE_CONFIR()}
+        inicioshift()
 }

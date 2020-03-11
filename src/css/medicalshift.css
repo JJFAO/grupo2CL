@@ -59,3 +59,14 @@ label {
 .btn {
     font-family: 'Montserrat', sans-serif;
 }
+
+.titulo_turno{
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    
+}
+
+.titulo_sol{
+    font-family: 'Roboto Slab', serif;
+    color: white;  
+}
