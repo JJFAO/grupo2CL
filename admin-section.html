@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <title>Panel de Administrador</title>
+  <link rel="stylesheet" href="src/css/admin.css" />
+  <link rel="stylesheet" href="src/css/animate.css">
+  <script src="https://kit.fontawesome.com/8103fe7802.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="barramenu col-12 col-lg-3 px-0 ">
+        <div class="contenedorLogo ml-4 ml-lg-0">
+          <nav class="navbar-expand-lg">
+            <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            <i class="fas fa-bars d-lg-none text-white"></i>
+          </a>
+          <a class="navbar-brand" href="#">
+            <img class="LogoRolling animated pulse" src="img/LogoRolling white.svg" width="250" height=""
+            class="d-inline-block align-top" alt=""></a>
+          </nav>
+          <ul class="navbar-nav Lista collapse d-lg-block" id="collapseExample">
+            <li class="listabotones">
+              <a class="panel" href="#panel" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">
+                Panel de gestión
+              </a>
+            </li>
+            <li class="contienesubb mt-0">
+              <p class="subboton mt-5">Datos Doctores</p>
+            </li>
+            <li class="contienesubb mt-0">
+              <p class="subboton mt-5">Datos Pacientes</p>
+            </li>
+            <li class="listabotones mt-5">
+              <a class="profesionales" href="#profesionales" role="button" aria-haspopup="true" aria-expanded="false">
+                Profesionales</a>
+              </li>
+              <li class="contienesubb mt-5">
+                <p class="subboton" href="#">Incidencias</p>
+              </li>
+              <li class="contienesubb my-5">
+                <p class="subboton" href="#">Selecc. Doctor</p>
+              </li>
+            <li class="contienesubb">
+              <p class="subboton" href="#">Horarios</p>
+            </li>
+            <li class="d-md-none">
+              <button class=" btn dropdown-toggle text-white mt-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="imagen-inicio-sesion" src="https://www.diariodecuyo.com.ar/export/sites/diariodecuyo/img/2017/03/01/brad_p.jpg_1057082476.jpg">
+                Mariano De Filippo
+              </button>
+              <div class="inicio-sesion dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a href="index.html">Cerrar Sesion</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="textoconbtn col-12 col-lg-9 pr-0 pl-0 pl-md-5 text-center text-md-left mt-4">
+        <div>
+          <div class="row justify-content-between mr-0">
+            <h1 id="panel" class="textoProfesional mt-5">Panel de Gestión</h1>
+            <div class="dropdown d-none d-md-block">
+              <button class="boton-perfil btn dropdown-toggle text-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="imagen-inicio-sesion" src="https://www.diariodecuyo.com.ar/export/sites/diariodecuyo/img/2017/03/01/brad_p.jpg_1057082476.jpg">
+                Mariano De Filippo
+              </button>
+              <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="index.html">Cerrar Sesion</a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 class="textoProfesional my-5">Datos Doctores</h2>
+          </div>
+          <!-- boton contador -->
+          <!-- Button trigger modal -->
+
+          <!-- termina boton contador1 -->
+          <!-- boton contador2 -->
+          <div class="tabla">
+            <table class="table mt-0" id="autorizaciones">
+              <thead class="thead-light">
+                <tr class="text-center">
+                  <th scope="col" style="width: 13vw;">Doctor</th>
+                  <th scope="col" style="width: 13vw;">Especialidad</th>
+                  <th scope="col" style="width: 13vw;">Matricula</th>
+                  <th scope="col" style="width: 13vw;">Autorizado</th>
+                  <th scope="col" style="width: 13vw;">Acción</th>
+                </tr>
+              </thead>
+              <tbody  id="doctores">
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h2 class="textoProfesional mt-3">Datos Pacientes</h2>
+          </div>
+          <div class="tabla tablaPacientes">
+            <table class="table w-100 mt-0">
+              <thead class="thead-light">
+                <tr class="text-center">
+                  <th scope="col" style="
+                      width: 13vw;
+                  ">Paciente</th>
+                  <th scope="col" style="
+                      width: 13vw;
+                  ">Edad</th>
+                  <th scope="col" style="
+                      width: 13vw;
+                  ">Dni</th>
+                  <th scope="col" style="
+                      width: 13vw;
+                  ">Autorizado</th>
+                  <th scope="col" style="
+                      width: 13vw;
+                  ">Acción</th>
+                </tr>
+              </thead>
+              <tbody id="paciente">
+              </tbody>
+            </table>
+          </div>
+          <h1 class="textoProfesional" id="profesionales">Profesionales</h1>
+        </div>
+        <div class="btn-inc-aut mx-sm-3 mt-4 m-0"> 
+          <div class="tablaDoctores dropdown">
+            <select id="cargaDoc" class="btn btn-primary text-white text-center mx-4 mx-sm-3 mx-md-2 mt-2 pl-5 pl-md-1 my-4">
+              <option disabled selected>Doctores</option>
+            </select>
+          </div>
+        </div>
+        <div class="tabla">
+          <table class="table w-100 pl-0 mt-0">
+            <thead class="thead-light">
+              <tr class="text-center">
+                <th class="horario" scope="col">Horario</th>
+                <th scope="col" style="width: 13vw;">Lunes</th>
+                <th scope="col" style="width: 13vw;">Martes</th>
+                <th scope="col" style="width: 13vw;">Miercoles</th>
+                <th scope="col" style="width: 13vw;">Jueves</th>
+                <th scope="col" style="width: 13vw;">Viernes</th>
+                <th scope="col" style="width: 13vw;">Sabado</th>
+              </tr>
+            </thead>
+            <tbody id="horarios-doctores">
+              
+            </tbody>
+          </table>
+        </div>
+        <!-- Termina section1 -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="src/js/tablaPacientes.js"></script>
+  <script src="src/js/tablaDoctores.js"></script>
+  <script src="src/js/checkAprob.js"></script>
+  <script src="src/js/checkRecha.js"></script>
+  <script src="src/js/calendarioDoc.js"></script>
+</body>
+​ ​
+
+</html>

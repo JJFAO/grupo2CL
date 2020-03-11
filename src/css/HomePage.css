@@ -47,12 +47,12 @@ label{
     .logoRolling {
         height: 90px;
     }
- }
+}
 @media (max-width: 768px) {
     .letrasFooter {
         font-size: 15px;
     }
- }
+}
 .bordeFooter {
     border-color: white;
     border-bottom: 2px solid;
@@ -86,12 +86,28 @@ label{
         font-size: 20px;
     }
 }
-@media (min-width: 768px) {
+@media (max-width: 1440px) {
     .LogosRedes {
         width: 60px;
         height: 60px;
         margin-right: 10px;
         margin-left: 10px;
+    }
+}
+@media (min-width: 1024px) {
+    .LogosRedes {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .LogosRedes {
+        width: 35px;
+        height: 35px;
+        margin-left: 4px;
+        margin-right: 4px;
     }
 }
 @media (max-width: 768px) {
@@ -102,7 +118,7 @@ label{
 @media (min-width: 768px) {
     .otrosEnlacesDesktop {
         width: 25vw!important;
-        margin-left: 14vw;
+  
     }
 }
 @media (min-width: 768px) {
@@ -110,7 +126,7 @@ label{
         display: none;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 425px) {
     .copyDesktop {
         display: none;
     }
@@ -119,44 +135,86 @@ label{
     background-color: #1595a3!important;
     text-align: center;
 }
+.textoCopyMobile {
+    text-align: center;
+}
 .activeSeba{
     background-color: #1595A3!important;
     color: white!important;
 }
-.titulo{
+
+/* SECCIONES HOME */
+.pos-abs{
+    position: absolute;
+}
+.titulo-header{
     font-family: 'Roboto Slab', serif;
-    background-color: #00000069;
-    padding: 0.3rem;
-    font-size: 27px;
+    z-index: 20;
+    font-size: 2.8rem;
+}  
+.p-header {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.8rem;
+}
+.firstimg {
+    height: 520px;
+}
+@media (max-width: 866px) {
+    .titulo-header{
+        font-size: 2rem;
+    }  
+    .p-header {
+        font-size: 1.3rem;
     }
-    
-    .titulo{
-        font-size: 23px;
+    .firstimg {
+        height: 260px;
     }
-    @media only screen and (min-width: 1000px) {
-       .titulo{
-           font-size: 60px;
-           padding: 0.5rem;
-       }
-      }
-    
-    .fondotitulo{
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
+}
+@media (max-width: 425px) {
+    .titulo-header{
+        font-size: 1.7rem;
+    }  
+    .p-header {
+        font-size: 1rem;
     }
-    .card-img-overlay{
-        padding: 0rem;
+    .firstimg {
+        height: 210px;
     }
-    .titulocards{
-        display: flex;
-        justify-content: center;
-        font-family:'Roboto Slab', serif; 
-        font-size: 19px;
+}
+@media (max-width: 375px) {
+    .titulo-header{
+        font-size: 1.3rem;
+    }  
+    .p-header {
+        font-size: .85rem;
     }
-    
-    .card-body{
-        font-family: 'Montserrat', sans-serif;
+    .firstimg {
+        height: 150px;
+    }
+}
+@media (max-width: 320px) {
+    .titulo-header{
+        font-size: 1.1rem;
+    }  
+    .p-header {
+        font-size: .7rem;
+    }
+    .firstimg {
+        height: 150px;
+    }
+}
+.clinica {
+    color: #691353;
+}
+.titulocards{
+    display: flex;
+    justify-content: center;
+    font-family:'Roboto Slab', serif; 
+    font-size: 19px;
+}
+
+.card-body{
+    font-family: 'Montserrat', sans-serif;
 }
 .botonTurnero{
     margin-left: 70vw;
@@ -206,14 +264,93 @@ label{
     width: 55px;
     height: 55px;
 }
-@media (max-width: 768px){
+@media (max-width: 1024px){
     .tamañoMapa {
         width: 240px;
         height: 240px;
     }
 }
+
 @media (max-width: 768px){
     .bordesFooter {
     margin-bottom: 60px!important;
 }
+}
+@media (min-width: 768px){
+    .tamañoMapa {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media (max-width: 425px){
+    .tamañoMapa {
+        margin-left: 95px;
+    }
+
+}
+@media (max-width: 375px){
+    .tamañoMapa {
+        margin-left: 70px;
+    }
+
+}
+@media (max-width: 320px){
+    .tamañoMapa {
+        margin-left: 42px;
+    }
+
+}
+@media (min-width: 1024px){
+    .tamañoMapa {
+        width: 250px;
+        height: 250px;
+        margin-left: 100px; 
+    }
+}
+@media (min-width: 1440px){
+    .tamañoMapa {
+        width: 320px;
+        height: 320px;
+        margin-left: 150px;
+    }
+}
+@media (min-width: 2560px){
+    .tamañoMapa {
+        width: 450px;
+        height: 450px;
+        margin-left: 350px;
+    }
+}
+@media (min-width: 768px){
+    .tamañoLinkTablet {
+        width: 500px;
+        display: inline-grid;
+    }
+}
+.botonLogueo{
+    width: 45px;
+    height: 45px;
+    background-color: #225378;
+}
+.botonLogueoIMG{
+    width: 35px;
+    height: 35px;
+}
+.PLB{
+    margin: 0px;
+}
+@media (max-width: 320px){
+    .PLB{
+        display: none;
+    }
+}
+.textHome{
+    font-size: 9pt;
+}
+.tituloHome{
+    font-size: 20pt;
+    color: #691353;
+}
+.imageHome{
+    object-fit: center;
 }

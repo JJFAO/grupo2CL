@@ -28,7 +28,17 @@ document.getElementById("formPaciente").addEventListener("submit", (e) => {
   function errorEnvio(){
       $('#modalError').modal('show');
   }
-  
   function newDoc() {
     window.location.assign("./../../index.html")
   }
+  function sendTXT() {
+    let messajeError = document.getElementById("errorEnvioTXT").value;
+    // console.log(messajeError);
+    // const txtError = document.querySelectorAll('.errorEnvioTXT');
+    const registroErrores ={};
+    const nRegistros = JSON.parse(localStorage.getItem('RegistroDeErrores')) || [];
+    nRegistros.push(messajeError);
+  localStorage.setItem('RegistroDeErrores',JSON.stringify(nRegistros)); 
+  messajeError.reset();
+}
+  

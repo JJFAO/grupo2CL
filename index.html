@@ -18,12 +18,14 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="src/css/login.css">
     <link rel="stylesheet" href="src/css/HomePage.css">
-    <link rel="stylesheet" href="src/css/HomePagex.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:700&display=swap">
     <link rel="stylesheet" href="src/css/medicalshift.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="src/css/HomePagex.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:700&display=swap" rel="stylesheet">
 
+=======
+>>>>>>> release-candidate-07022020
     <title>Clínica RollingCode</title>
   </head>
   <a name="top"></a>
@@ -34,25 +36,15 @@
       <img class="logoRolling d-flex justify-content-start MargenLogo mt-3" src="Assets/LogoRolling.svg"
         alt="Logo Rolling Code">
       <div class="d-flex justify-content-end align-self-center">
-        <div class="collapse navbar-collapse" id="botoncitobusqueda">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <form class="form-inline my-lg-0"></form>
-              <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">
-            </li>
-          </ul>
-        </div>
         <button id="menuDesplegado" class="navbar-toggler p-0" type="button" data-toggle="collapse"
           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <button id="menuBusqueda" class="m-1 p-0" type="button" data-toggle="collapse" data-target="#botoncitobusqueda"
-          aria-controls="botoncitobusqueda" aria-expanded="false" aria-label="Toggle navigation">
-          <img class="vw-5" src="Assets/problem2.png" alt="Buscar">
-        </button>
-        <button id="botonLogueo" class="m-1 p-0" data-toggle="modal" data-target="#indexModal">
-          <img src="Assets/user.png" alt="">
+        <div class="d-flex" id="cartelBienvenida">
+        </div>
+        <button type="button" id="botonLogueo" class="m-1 p-0 botonLogueo btn-link" data-toggle="modal" data-target="#indexModal">
+          <img class="botonLogueoIMG text-light" src="Assets/user.png" alt="">
         </button>
       </div>
     </div>
@@ -61,8 +53,8 @@
         <li class="nav-item mr-1 ml-1">
           <a class="nav-link activeSeba" id="inicio" href="#">Inicio <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item mr-1 ml-1">
-          <a class="nav-link" id="pacientes" onclick="consultaTurnoPaciente()" href="#">Pacientes</a>
+        <li class="nav-item mr-1 pl-1">
+          <a class="nav-link" id="pacientes" onclick="consultaTurnoPaciente()" href="#modalPacienteSesion" data-target="#modalPacienteSesion">Pacientes</a>
         </li>
         <li class="nav-item mr-1 ml-1">
           <a class="nav-link" id="institucional" href="#">Institucional</a>
@@ -74,7 +66,7 @@
           <a class="nav-link" id="profesionales" onclick="pacienteProfesional() " href="#">Profesionales</a>
         </li>
         <li class="nav-item mr-1 ml-1">
-          <a class="nav-link" id="contacto" href="#hicisteClickenContacto">Contacto</a>
+          <a class="nav-link" id="contacto" href="#hicisteClickEnContacto">Contacto</a>
         </li>
       </ul>
 
@@ -82,7 +74,7 @@
 
   </nav>
   <div class="fixed-bottom botonTurnero float-right">
-    <button class="shadow-lg rounded-circle" type="button" data-toggle="modal" data-target="#MedicalShift" onclick="inicioshift()">
+    <button class="shadow-lg rounded-circle" type="button" data-toggle="modal" data-target="#MedicalShift" onclick="inicioshift()"> Turnos
       <img class="tamañoBotonTurnero" src="Assets/calendar.png" alt="Turnero">
     </button>
   </div>
@@ -91,23 +83,86 @@
     <div class="d-flex justify-content-center">
       <a class="d-flex justify-content-center w-100" data-toggle="collapse" href="#collapseExample"
         aria-expanded="false" aria-controls="collapseExample">
-        <div class="card text-white border-white w-100">
-          <img src="./src/imagenes/xs.jpg" class="card-img" alt="...">
-          <div class="card-img-overlay fondotitulo">
-            <h5 class="titulo">¡Conoce Nuestra Institución!</h5>
+        <div class="border-white w-100 d-flex flex-column justify-content-center">
+          <img src="src/imagenes/newmaxresdefault.jpg" class="firstimg" alt="">
+          <div class="pos-abs ml-4 ml-md-4 mt-2 mt-md-3">
+            <h5 class="text-dark titulo-header font-weight-bold ml-md-5 pl-md-5 mb-0">Bienvenido a</h5>
+            <p class="clinica titulo-header mb-0 ml-md-5 pl-md-5">Clinica Rolling</p>
+            <p class="text-dark p-header ml-md-5 pl-md-5">Estamos a tu cuidado</p>
           </div>
         </div>
       </a>
     </div>
     <div class="collapse ml-4 mr-4 p-0 mt-2" id="collapseExample">
       <div class="card-body">
-        La Clínica Rolling Code School es una entidad sin ánimo de lucro dedicada a la práctica clínica, la educación y
+        La Clínica Rolling Code School es una entidad a la práctica clínica, la educación y
         la investigación. Sus dependencias para la investigación están situadas en Tucumán, Salta y Buenos Aires.
         Además, posee hospitales y clínicas en San Miguel de Tucumán (Tucumán). Está asociada con varias pequeñas
         clínicas y hospitales de Córdoba, Santiago del Estero y Santa Cruz.
       </div>
     </div>
-    <div class="container-fluid mt-4">
+    <div class="d-flex justify-content-center">
+      <a class="d-flex justify-content-center w-100" data-toggle="collapse" href="#collapseExample"
+        aria-expanded="false" aria-controls="collapseExample">
+        <div class="border-white w-100 mt-5 d-flex flex-column justify-content-center">
+          <img src="src/imagenes/hearthome.jpg" class="firstimg" alt="">
+          <div class="pos-abs mr-4 mr-md-5 mt-2 mt-md-3 align-self-end">
+            <h5 class="text-dark text-nowrap titulo-header font-weight-bold mr-md-5 pr-md-5 mb-0">Los mejores</h5>
+            <p class="clinica titulo-header mb-0 mr-md-5 p3-md-5">Especialistas</p>
+            <p class="text-dark text-nowrap p-header mr-md-5 p3-md-5">Para una atención de calidad</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+
+<div class="container d-flex align-items-center mt-5">
+      <img src="./src/imagenes/buildingclinic.jpg" class="col-8 img-fluid" alt="Responsive image">
+    <div class="col-4">
+           <h1 class="tituloHome">Conocé <br>Nuestra Institución</h1>
+            <p class="card-text text-justify textHome" >La Clínica Rolling Code School es una entidad sin ánimo de lucro dedicada a la práctica clínica, la educación y la investigación. Sus dependencias para la investigación están situadas en Tucumán, Salta y Buenos Aires. Además, posee hospitales y clínicas en San Miguel de Tucumán (Tucumán). Está asociada con varias pequeñas clínicas y hospitales de Córdoba, Santiago del Estero y Santa Cruz.
+            </p>
+    </div>
+</div>
+
+  
+  
+  
+  
+   <h1 class="text-center titulosHome mt-5 mb-5">Nuestros Compromisos</h1>
+    
+    <div class="container-fluid">
+    <div class="card-deck d-flex justify-content-between row row-cols-1 row-cols-sm-2 mt-3 mb-3">
+  <div class="col card border-0 shadow p-3 mb-5 bg-white rounded">
+    <img src="./src/imagenes/metodoleon.PNG" class="card-img-top" alt="Metodo Leon">
+    <div class="card-body">
+      <h5 class="card-title">Método León</h5>
+      <p class="card-text">El acompañamiento cambia vidas y permite soñar Clínica Mayo se sumó como Padrino al programa "Aprendiendo en Casa - HIPPY", para que nuevas familias reciban acompañamiento a través de un proyecto 100% educativo, que estimula el aprendizaje, el [...] </p>
+    </div>
+  </div>
+  <div class="col card border-0 shadow p-3 mb-5 bg-white rounded">
+    <img src="./src/imagenes/clinicayfundacion.PNG" class="card-img-top" alt="Fundacion Leon">
+    <div class="card-body">
+      <h5 class="card-title">Clínica Rolling y Fundación León</h5>
+      <p class="card-text">Programa de acompañamiento familiar desde octubre de 2018 trabajamos juntos Clínica Rolling Code y Fundación León acompañando familias en situaciones de vulnerabilidad de la provincia. Todos los programas de Fundación León se basan en....</p>
+    </div>
+  </div>
+  <div class="col card border-0 shadow p-3 mb-5 bg-white rounded">
+    <img src="./src/imagenes/semanaprematu.PNG" class="card-img-top" alt="Semana del Niño Prematuro">
+    <div class="card-body">
+      <h5 class="card-title">Semana de Prematuro</h5>
+      <p class="card-text">Programa de acompañamiento familiar desde octubre de 2018 trabajamos juntos Clínica
+              Rolling Code y Fundación León acompañando familias en situaciones de vulnerabilidad de la provincia. Todos
+              losprogramas de Fundación León se basan en...</p>
+    </div>
+  </div>
+</div>
+    </div>
+    
+    
+    
+    
+  <!--  <div class="container-fluid mt-4">
       <div class="row">
         <div class="col-12 my-3 col-lg-4">
           <div class="card h-100">
@@ -139,7 +194,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
   </main>
   <!-- Modal Medical Shift-->
   <div class="modal fade" id="MedicalShift" tabindex="-1" role="dialog" aria-labelledby="MedicalShiftLabel"
@@ -156,7 +211,7 @@
           <div class="container py-3 d-flex justify-content-center"><img src="img/logoblack.png"
               alt="logo clinica rolling">
           </div>
-          <div class="container-fluid bg-Copia-de-Health-Care-1-rgba text-center py-2 h2">
+          <div class="container-fluid bg-Copia-de-Health-Care-1-rgba text-center py-2 h1 titulo_sol">
             Solicitar turno
           </div>
           <div class="container pt-3 text-center">
@@ -168,7 +223,7 @@
           </div>
           <div class="container py-3 bg-Copia-de-Health-Care-3-hex">
             <div class="row">
-              <div class="col-12 text-center h1 "><label for="especialidad">Especialidad</label></div>
+              <div class="col-12 text-center titulo_turno ">Especialidad</div>
               <div class="col-12 py-2">
                 <div class="form-group">
 
@@ -181,7 +236,7 @@
           </div>
           <div class="container py-2">
             <div class="row">
-              <div class="col-12 text-center h1"><label for="doctores">Profesional</label></div>
+              <div class="col-12 text-center titulo_turno">Profesional</div>
               <div class="col-12 py-2">
                 <div class="form-group">
                   <select class="form-control datos" id="doctores" onchange="cargar_dias()">
@@ -193,7 +248,7 @@
           </div>
           <div class="container bg-Copia-de-Health-Care-3-hex py-3">
             <div class="row">
-              <div class="col-12 text-center h1 ">Turnos disponibles</div>
+              <div class="col-12 text-center titulo_turno ">Turnos disponibles</div>
               <div class="col-12">
                 <form>
                   <div class="form-group">
@@ -212,14 +267,14 @@
               </div>
             </div>
           </div>
-          <div class="container py-3">
+          <div class="container-fluid py-3">
             <div class="row">
-              <div class=" text-center h1">Describa el motivo de su consulta</div>
+              <div class=" text-center titulo_turno ml-5">Describa el motivo de su consulta</div>
             </div>
             <div class="row pt-3">
               <div class="col-2"></div>
               <div class="col-8">
-                <textarea class="form-control" id="textarea" rows="5"
+                <textarea class="form-control datos" id="textmedicalshit"  rows="5"
                   placeholder="Describa brevemente el motivo de su consulta..." required></textarea>
                 <div class="col-2"></div>
               </div>
@@ -300,7 +355,7 @@
                     <label for="formGroupExampleInput2">Contraseña</label>
                     <input type="password" class="form-control" id="passProf" placeholder="Ingrese Contraseña">
                     <div class="d-flex justify-content-between mt-3">
-                      <button type="submit" class="btn text-white mb-3 d-flex justify-content-center"
+                      <button type="button" class="btn text-white mb-3 d-flex justify-content-center"
                         onclick="validation4Profesional()">Ingresar</button>
                       <a href="SingupDoctor.html"
                         class="btn btn-default mb-3 d-flex justify-content-center btnregister text-white">Registrarme
@@ -414,22 +469,39 @@
           </button>
         </div>
         <div class="modal-body text-center" id="modalPacienteLogueado">
-          <!-- <h1>Bienvenido, Juan</h1>
-<br>
-<p>Usted no tiene turnos asignados.</p>
-<p>Puede solicitar un turno haciendo click en el botón Solicitar Turno</p> -->
         </div>
-        <div class="modal-footer d-flex justify-content-around">
-          <button type="button" class="btn btn-primary">Solicitar Turno</button>
-          <button type="button" class="btn btn-primary">Aceptar</button>
+        <div id = "footerModalBoton" class="footerModalBoton modal-footer d-flex justify-content-around">
+          <button id ="soliciTurno" type="button" class="btn btn-primary"  data-dismiss="modal" onclick="buttonTestTurno()">Solicitar Turno</button>
+          <button id ="elimiTurno" type="button" class="btn btn-primary" onclick="buttonEliminarTestTurno()"data-dismiss="modal">Eliminar Turno</button>
+          <button id ="acepTurno "type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="modal fade" id="modalProfesionalSesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content d-flex justify-content-around">
+      <div class="">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center" id="modalProfeLogueado">
+      </div>
+      <div id = "footerModalBoton" class="footerModalBoton modal-footer d-flex justify-content-around">
+        <!-- <button id ="soliciTurno" type="button" class="btn btn-primary"  data-dismiss="modal" onclick="buttonTestProfTurno()">Solicitar Turno</button>
+        <button id ="elimiTurno" type="button" class="btn btn-primary" onclick="buttonEliminarTestProfTurno()"data-dismiss="modal">Eliminar Turno</button> -->
+        <button id ="acepTurno "type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
   <footer class="bg-dark">
     <div class="d-lg-flex">
-      <a id="hicisteClickenContacto" href="#top"><img class="mt-5 logoRollingFooter" src="Assets/LogoRolling white.svg" alt="Logo Rolling Code"></a>
-      <div>
+      <a id="hicisteClickEnContacto" href="#top"><img class="mt-5 logoRollingFooter" src="Assets/LogoRolling white.svg" alt="Logo Rolling Code"></a>
+      <div class="tamañoLinkTablet">
         <div class="d-flex ml-5 mt-5 mb-2">
           <img class="loguitosFooter logoTelephone " src="assets/pin.png" alt="Ubicación">
           <h1 class="text-light letrasFooter mt-3 ml-2 ubiTelDesktop">General Paz 576 - CP 4000 - San Miguel de
@@ -464,8 +536,8 @@
         allowfullscreen=true>
         frameborder="0"></iframe>
     </div>
-    <div class="ml-3 mt-5">
-      <h1 class="text-light ml-3 mb-0 mr-5 textoCopy copyMobile">Copyright 2020 | Clínica Rolling Code</h1>
+    <div class="mt-5">
+      <h1 class="text-light textoCopy textoCopyMobile copyMobile">Copyright 2020 | Clínica Rolling Code</h1>
     </div>
     <div class="m-0 textoCopyDesktop copyDesktop">
       <h1 class="text-light font-weight-light ml-3 mb-0 mr-5 textoCopy"> Copyright 2020 | Clínica Rolling Code |
@@ -486,6 +558,8 @@
   <script src="src/js/HomePage.js"></script>
   <script src="src/js/doctores.js"></script>
   <script src="src/js/login.js"></script>
+  <script src="src/js/formPaciente.js"></script>
+  <script src="./src/js/validationUsersLogged.js"></script>
   <script>
     myOnLoad();
   </script>

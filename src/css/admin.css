@@ -1,0 +1,175 @@
+html{
+  scroll-behavior: smooth;
+}
+body{
+  padding: 0;
+  margin: 0;
+}
+.divLogo{
+    display: flex;
+    justify-content: center;
+    background-color: #225378;
+}
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #225378;
+  position: fixed;
+  height: 100%;
+}
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  color: white;
+}
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+@media screen and (min-width: 320px) {
+    .logoClinica{
+      width: 150px;
+    }
+  }
+  @media screen and (max-width: 1440px) {
+    .logoClinica{
+      width: 300px;
+    }
+  }
+.Lista{
+  height: 115vh;
+}
+.listabotones, .subboton{
+  margin-left: 3rem;
+  margin-top: 25px;
+}
+.textoProfesional{
+  font-family: 'Roboto Slab', sans-serif;
+}
+.profesionales{
+  border-block-end:solid 1px;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+.pacientes{
+  border-block-end:solid 1px;
+  color:#ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+.panel{
+  border-block-end:solid 0.1px;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+#panel{
+  padding-left: 16px;
+}
+.subboton{
+  color:#ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+}
+.Lista a:hover{
+color: #ffffff;
+text-decoration: none;
+}
+.contienesubb{
+  margin-left: 15px;
+}
+@media screen and (max-width: 425px) {
+  .textoProfesional{
+    font-size: 40px;
+    margin-top: 3vh;
+    text-align: center;
+  }
+  .btn {
+    align-self: center;
+  }
+}
+.tabla{
+  overflow-x: auto;
+  height: 350px;
+  overflow-y: auto;
+}
+.table{
+  margin-top: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+.barramenu{
+  background-color:#225378;
+}
+.tabla th{
+  font-family: 'Montserrat', sans-serif;
+}
+.btn-primary{
+  background-color: #225378 !important;
+}
+.pelotas{
+  margin-left: 30px;
+}
+.horario{
+  background-color: #e9ecef !important;
+  border: none !important;
+}
+@media screen and (min-width: 1200px) {
+  .barramenu{
+    max-width:20% !important;
+  }
+}
+.Usuarios{
+  background-color:#e9ecef !important;
+  border: none !important;
+  color: black !important;
+}
+.check1{
+  margin-left: 20px!important;
+}
+.check2{
+  margin-left: 20px;
+}
+
+td{
+  text-align: center;
+}
+.imagen-inicio-sesion{
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  border: 0;
+}
+@media screen and (min-width: 1200px) {
+  .contenedorLogo{
+    position: fixed;
+  }
+}
+.btn-doctores{
+  width: 300px;
+  height: 300px;
+  overflow-y:scroll;
+}
+.boton-perfil{
+  border: solid 1px #225378;
+  right: 0;
+}
+.boton-flotante{
+  position: fixed;
+  float: right;
+}
+#cargaDoc{
+  width: 190px;
+}
