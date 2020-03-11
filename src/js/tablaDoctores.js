@@ -14,13 +14,13 @@ function cargarDoctores() {
     tablaDoctor.innerHTML += 
     `<tr id="" class="thead-light">
       <td>${doctor.nombre + " " + doctor.apellido}</td>
-      <td>${doctor.Especialidad}</td>
+      <td>${doctor.especialidad}</td>
       <td>${doctor.matriculaP}</td>
       <td class="aprobado"> - </td>
-      <td><button id="checkAprob2" class="check2 text-success border-0 bg-light" onclick="confirmarDoc()">
+      <td><button id="checkAprobD" class="check2 text-success border-0 bg-light" onclick="confirmarDoc(this)">
         ✔
       </button>
-      <button id="checkRecha1" class="check2 text-danger border-0 bg-light" onclick="rechazarDoc()">
+      <button id="checkRechaD" class="check2 text-danger border-0 bg-light" onclick="rechazarDoc(this)">
         ❌
       </button>
       </td>
@@ -29,5 +29,4 @@ function cargarDoctores() {
     selectDoctors.innerHTML += `<option>${doctor.nombre + " " + doctor.apellido}<option>`; 
   }
 }
-
 document.addEventListener('load', cargarDoctores())

@@ -17,9 +17,9 @@ function recoverPass() {
     icon: 'success',
     title: 'Mensaje enviado',
     showConfirmButton: false,
-    timer: 5500
-  })}
-  // const usuarios = [{ DNI: 28721218, pass: "1234" }]
+    timer: 3000   
+    })}
+  
   function validation4Patient() {
     const usuarios = JSON.parse(localStorage.getItem("Pacientes"))    
   let dniHtml = document.querySelector("#DNI")
@@ -34,6 +34,7 @@ function recoverPass() {
 
     if (dniHtml.value == usuario.documento) {
       if (passHtml.value == usuario.password) {
+        window.location.href = 'index.html';
         alert("Inicio exitoso")
         localStorage.setItem("usuariologueado", JSON.stringify(usuariologueado));
         return
@@ -45,24 +46,39 @@ function recoverPass() {
   }
   alert("El DNI no esta registrado")
 }
-  
+// localStorage.setItem("proflogueado", JSON.stringify(proflogueado));
 
 function validation4Profesional() {
   const profesionales = JSON.parse(localStorage.getItem("rDoctores"))
   let cuitHtml = document.querySelector("#cuit")
-  let passprofHtml = document.querySelector("#passProf")
+  let passprofHtml = document.querySelector("#passProf")   
   for(let index = 0; index < profesionales.length; index++) {
-    const profesional = profesionales[index];
-    if (cuitHtml.value == profesional.cuit) {
-            
-      if (passprofHtml.value == profesional.passProf) {
-        localStorage.setItem("proflogueado", JSON.stringify(proflogueado));
-        alert("Inicio exitoso")
-        return
+    const profesional = profesionales[index];  
+    if (cuitHtml.value == profesional.cuil ) {            
+      if (passprofHtml.value == profesional.passProf) {  
+         if (profesional.cuil == 20287212187 && profesional.passProf == 1234) {           
+          window.location.href="./admin-section.html"          
+
+              } 
+          alert("Inicio exitoso")
+          localStorage.setItem("proflogueado", JSON.stringify(proflogueado));
+          // window.location.href = 'index.html';
+            return
+          }
+          alert("La credenciales no son correctas")
+          return
+        }    
       }
-      alert("La credenciales no son correctas")
-      return
-    }    
-  }
-  alert("El CUIT no esta registrado")
-}
+      alert("El CUIT no esta registrado")
+      
+    }
+    
+    function consultaTurnoPaciente (){
+      const usuarioClinica = JSON.parse(localStorage.getItem("Pacientes"))
+      $('#modalPacienteSesion').modal("show");
+    }
+    function pacienteProfesional (){
+      $('#modalProfesionalSesion').modal("show");
+    }
+    
+

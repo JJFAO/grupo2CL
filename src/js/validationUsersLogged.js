@@ -34,7 +34,7 @@ function consultaTurnoPaciente (){
             var testingModalConTurnos = `
                   <h1>Hola, ${userLogued.nombre}</h1>
                   <br>
-                  <p>Usted turno el día 
+                  <p>Usted tiene turno el día 
                   <p>${userLogued.diasTesting}</p> 
                   <p>entre las ${userLogued.turnoTesting} Hs</p>
                   <p>con el doctor ${userLogued.doctor}</p>
