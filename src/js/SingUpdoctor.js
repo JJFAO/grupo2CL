@@ -15,6 +15,7 @@ function getRegisterD() {
             turnos[h.id] = Array.from(h.selectedOptions).map(o => o.value);
         });
         registro.dias = [turnos];
+        registro.autorizado = "Pendiente"
         $('#modalRegistrado').modal('show')
         const nDoctores = JSON.parse(localStorage.getItem('rDoctores')) || [];
         nDoctores.push(registro);
