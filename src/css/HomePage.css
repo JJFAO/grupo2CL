@@ -52,6 +52,9 @@ label{
     .letrasFooter {
         font-size: 15px;
     }
+    .textHome {
+        font-size: .8rem !important;
+    }
 }
 .bordeFooter {
     border-color: white;
@@ -130,7 +133,43 @@ label{
     .copyDesktop {
         display: none;
     }
+    .img-build {
+        height: 230px;
+        object-fit: cover;
+    }
+    .tituloHome, .tituloHome1 {
+        font-size: 1.15rem !important;
+    }
+    .textHome {
+        font-size: .6rem !important;
+    }
+
 }
+@media (max-width: 320px) {
+    .tituloHome {
+        font-size: .80rem !important;
+    }
+    .textHome {
+        font-size: .57rem !important;
+    }
+    .tituloHome1 {
+        font-size:.80rem !important;
+    }
+}
+.img-build {
+    object-fit: cover;
+}
+.textHome{
+    font-size: 1.1rem;
+}
+.tituloHome1 {
+    font-size: 1.8rem;
+}
+.tituloHome{
+    font-size: 1.8rem;
+    color: #691353;
+}
+
 .textoCopyDesktop {
     background-color: #1595a3!important;
     text-align: center;
@@ -191,6 +230,9 @@ label{
     .firstimg {
         height: 150px;
     }
+    .tituloHome1, .tituloHome {
+        font-size:.80rem !important;
+    }
 }
 @media (max-width: 320px) {
     .titulo-header{
@@ -227,13 +269,10 @@ label{
         margin-bottom: 50px;
         margin-right: 20px; 
     }
-}
-@media (min-width: 768px) {
+
     .MargenLogo {
         margin-left: 20px;
     }
-}
-@media (max-width: 768px) {
     .MargenMapa {
         margin-left: 38px;
     }
@@ -328,13 +367,6 @@ label{
     }
 }
 
-.textHome{
-    font-size: 9pt;
-}
-.tituloHome{
-    font-size: 20pt;
-    color: #691353;
-}
 .imageHome{
     object-fit: center;
 }
