@@ -1,19 +1,20 @@
 //testing Pacientes//
 
-const pacientesForTestings = JSON.parse(localStorage.getItem("usuariologueado"));
-const turnoForTesting = JSON.parse(localStorage.getItem('rTurnos'));
+const pacientesForTestings = JSON.parse(localStorage.getItem("rTurnos"));
+const logueoForTesting = JSON.parse(localStorage.getItem('usuariologueado'));
 const usuarioForTesting = pacientesForTestings;
-const turnosForTesting = turnoForTesting;
 
-    let userLogued= {
-    id : usuarioForTesting.id,
-    nombre : usuarioForTesting.nombre,
-    apellido : usuarioForTesting.apellido,
-    diasTesting: '',
-    turnoTesting:'',
-    doctor: '',
+const modalACargar = pacientesForTesting.find(apellido =>logueoForTesting.apellido);
+
+  let userLogued = {
+    id : modalACargar.id,
+    nombre : modalACargar.nombre,
+    apellido : modalACargar.apellido,
+    diasTesting: modalACargar.dias,
+    turnoTesting: modalACargar.horario,
+    doctor: modalACargar.doctores,
+  
 }
-
 function consultaTurnoPaciente (){
   $('#modalPacienteSesion').modal("show");
   if (pacientesForTestings !== []){
@@ -44,16 +45,19 @@ function consultaTurnoPaciente (){
           }
         }
 
+
+
+
         
-function buttonTestTurno(){
-  userLogued.diasTesting = 'Jueves 12 de Marzo de 2020',
-  userLogued.turnoTesting = '16 a 17',
-  userLogued.doctor = 'Juan José Alonso';
-  $('#modalPacienteSesion').modal("hide");
-  let elimTurno = document.getElementById('elimiTurno').style.visibility = "visible";
-  let solicTurno = document.getElementById('soliciTurno').style.visibility = "collapse";
+// function buttonTestTurno(){
+//   userLogued.diasTesting = 'Jueves 12 de Marzo de 2020',
+//   userLogued.turnoTesting = '16 a 17',
+//   userLogued.doctor = 'Juan José Alonso';
+//   $('#modalPacienteSesion').modal("hide");
+//   let elimTurno = document.getElementById('elimiTurno').style.visibility = "visible";
+//   let solicTurno = document.getElementById('soliciTurno').style.visibility = "collapse";
  
-}
+// }
 function buttonEliminarTestTurno(){
   userLogued.diasTesting = '',
   userLogued.turnoTesting = '',

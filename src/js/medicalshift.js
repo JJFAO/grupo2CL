@@ -76,7 +76,7 @@ var usuario = {
 
 const doctores = JSON.parse(localStorage.getItem("rDoctores"))
 console.log(doctores);
-const pacientesForTesting = JSON.parse(localStorage.getItem("usuariologueado"));
+const pacientesForTesting = JSON.parse(localStorage.getItem("rDoctores"));
 
 function inicioshift() {   
         let select = document.querySelector("#especialidad");
