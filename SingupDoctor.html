@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,47 +14,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
+
 <body>
-    <nav class="navbar p-0 navbar-expand-lg navbar-light bg-light borde-separacion d-flex flex-column">
-        <div class="d-flex justify-content-between w-100">
-          <img class="logoRolling d-flex justify-content-start MargenLogo mt-3" src="Assets/LogoRolling.svg"
-            alt="Logo Rolling Code">
-          <div class="d-flex justify-content-end align-self-center">
-            <button id="menuDesplegado" class="navbar-toggler p-0" type="button" data-toggle="collapse"
-              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <button id="botonLogueo" class="m-1 p-0" data-toggle="modal" data-target="#indexModal">
-              <img src="Assets/user.png" alt="">
-            </button>
-          </div>
-        </div>
-        <div class="collapse navbar-collapse align-self-start align-self-lg-end" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item mr-1 ml-1">
-              <a class="nav-link activeSeba" id="inicio" href="index.html">Inicio <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item mr-1 pl-1">
-              <a class="nav-link" id="pacientes" onclick="consultaTurnoPaciente()" href="#modalPacienteSesion" data-target="#modalPacienteSesion">Pacientes</a>
-            </li>
-            <li class="nav-item mr-1 ml-1">
-              <a class="nav-link" id="institucional" href="#">Institucional</a>
-            </li>
-            <li class="nav-item mr-1 ml-1">
-              <a class="nav-link" id="servicios" href="#">Servicios</a>
-            </li>
-            <li class="nav-item mr-1 ml-1">
-              <a class="nav-link" id="profesionales" onclick="pacienteProfesional() " href="#">Profesionales</a>
-            </li>
-            <li class="nav-item mr-1 ml-1">
-              <a class="nav-link" id="contacto" href="#hicisteClickEnContacto">Contacto</a>
-            </li>
-          </ul>
-    
-        </div>
-    
-      </nav>
     <!-- Modal -->
     <div class="modal fade" id="indexModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -122,7 +84,7 @@
                                     <input type="password" class="form-control" id="passProf"
                                         placeholder="Ingrese Contraseña">
                                     <div class="d-flex justify-content-between mt-3">
-                                        <button type="submit" class="btn text-white mb-3 d-flex justify-content-center"
+                                        <button type="button" class="btn text-white mb-3 d-flex justify-content-center"
                                             onclick="validation4Profesional()">Ingresar</button>
                                         <a href="SingupDoctor.html"
                                             class="btn btn-default mb-3 d-flex justify-content-center btnregister text-white">Registrarme
@@ -258,45 +220,45 @@
     <div class="container mt-5">
         <h2 class="mt-3">Datos Personales</h2>
         <p>Estos datos son necesarios para poder registrarte</p>
-        <form>
+        <form id="formDoctor">
             <div class="row flex-wrap">
                 <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control datos" id="nombre" placeholder="Nombre/s">
+                    <input type="text" class="form-control datos" id="nombre" placeholder="Nombre/s" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control datos" id="apellido" placeholder="Apellido/s">
+                    <input type="text" class="form-control datos" id="apellido" placeholder="Apellido/s" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
                     <input type="number" class="form-control datos" min="20000000000" max="29999999999" id="cuil"
-                        placeholder="CUIL/CUIT">
+                        placeholder="CUIL/CUIT" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="number" class="form-control datos" id="telefono" placeholder="N° Tel/ Cel">
+                    <input type="number" class="form-control datos" id="telefono" placeholder="N° Tel/ Cel" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
                     <input type="password" class="form-control datos" min="20000000000" max="29999999999" id="passProf"
-                        placeholder="Contraseña">
+                        placeholder="Contraseña" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="email" class="form-control datos" id="mail" placeholder="Correo Electronico">
+                    <input type="email" class="form-control datos" id="mail" placeholder="Correo Electronico" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control datos" id="domicilio" placeholder="Domicilio">
+                    <input type="text" class="form-control datos" id="domicilio" placeholder="Domicilio" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control datos" id="localidad" placeholder="Localidad">
+                    <input type="text" class="form-control datos" id="localidad" placeholder="Localidad" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="number" class="form-control datos" id="codigopostal" placeholder="Código Postal">
+                    <input type="number" class="form-control datos" id="codigopostal" placeholder="Código Postal" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control datos" id="provincia" placeholder="Provincia">
+                    <input type="text" class="form-control datos" id="provincia" placeholder="Provincia" required>
                 </div>
             </div>
-        </form>
-        <h2 class="mt-3">Horarios de atención</h2>
-        <p>En ésta sección deberás elegir los días y horarios de consultas.</p>
-        <form class="col-12 my-2">
+
+            <h2 class="mt-3">Horarios de atención</h2>
+            <p>En ésta sección deberás elegir los días y horarios de consultas.</p>
+
             <div class="d-flex flex-wrap justify-content-around">
                 <div class="row my-3">
                     <div class="form-group mr-4 pr-3">
@@ -371,135 +333,87 @@
                     </select>
                 </div>
             </div>
-        </form>
-        <h2 class="mt-3">Matricula y Especialidad</h2>
-        <div class="my-3">
-            <form class="my-3 row flex-wrap">
+
+            <h2 class="mt-3">Matricula y Especialidad</h2>
+            <div class="my-3 row flex-wrap">
+
                 <div class="col-12 col-md-6 my-2">
-                    <input type="number" class="form-control datos" id="matriculaP" placeholder="Provincial N°">
+                    <input type="number" class="form-control datos" id="matriculaP" placeholder="Provincial N°" required>
                 </div>
                 <div class="form-group col-12 col-md-6 my-2">
-                    <select id="especialidad" class="custom-select datos">
+                    <select id="especialidad" class="custom-select datos" required>
                         <option disabled selected>Especialidad</option>
                     </select>
                 </div>
-            </form>
-        </div>
-        <div class="d-flex justify-content-center flex-wrap">
-            <div class="d-flex flex-column align-items-center">
-                <div>
-                    <button class="btn btn-primary mt-3 font-weight-bold" onclick="getRegisterD()">Confirmar</button>
-                </div>
-                <div>
-                    <button class="btn btn-secondary text-nowrap mt-3" onclick="errorEnvio ()">Tengo problemas para
-                        registrarme</button>
-                </div>
-            </div>
-        </div>
-        <div class="my-5">
-            <p>"SEGÚN EL ART 1 DISPOSICIÓN 4/2009, SE TRANSCRIBE: ART. 27 INC 3 LEY 25326: EL TITULAR PODRÁ EN CUALQUIER
-                MOMENTO SOLICITAR EL RETIRO O BLOQUEO DE SU NOMBRE DE LOS BANCOS DE DATOS A LOS QUE SE REFIERE EL
-                PRESENTE ARTÍCULO. Y ART. 27 ANEXO I DECRETO 1558/01: EN TODA COMUNICACIÓN CON FINES DE PUBLICIDAD QUE
-                SE REALICE POR CORREO, TELÉFONO, CORREO ELECTRÓNICO, INTERNET U OTRO MEDIO A DISTANCIA A CONOCER, SE
-                DEBERÁ INDICAR, EN FORMA EXPRESA Y DESTACADA, LA POSIBILIDAD DEL TITULAR DEL DATO DE SOLICITAR EL RETIRO
-                O BLOQUEO, TOTAL O PARCIAL, DE SU NOMBRE DE LA BASE DE DATOS. A PEDIDO DEL INTERESADO, SE DEBERÁ
-                INFORMAR EL NOMBRE DEL RESPONSABLE O USUARIO DEL BANCO DE DATOS QUE PROVEYÓ LA INFORMACIÓN."</p>
-        </div>
-        <div class="modal fade" id="modalRegistrado" tabindex="-1" role="dialog" aria-labelledby="modalRegistradoLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="">
-                        <h1 class="modal-title text-center mt-2">Paciente Registrado</h1>
-                    </div>
-                    <div class="modal-body">
-                        <p>Gracias por registrarte en Nuestra Clínica. </p>
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <a href="index.html" role="button" class="btn btn-primary mb-4" data-dismiss="modal">Cerrar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="modalError" tabindex="-1" role="dialog" aria-labelledby="modalErrorLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="">
-                        <h1 class="modal-title text-center mt-2">Te pedimos disculpas</h1>
-                    </div>
-                    <div class="modal-body">
-                        <p>Por favor, detalla debajo el problema que tuviste para registrarte.</p>
-                        <p>Nuestro equipo técnico resolverá este inconveniente en 24 Hs hábiles.</p>
-                        <p>Para continuar con tu gestión, comunicate al <br>(381) 403 03456.<br></p>
-                        <p>Muchas Gracias</p>
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1"></label>
-                            <textarea class="form-control" id="errorEnvio" rows="3"></textarea>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-secondary mb-4" data-dismiss="modal">Enviar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade bd-example-modal-sm mt-2" id="modalFaltanDatos" tabindex="-1" role="dialog"
-            aria-labelledby="modalIncorrectoDatos" aria-hidden="true">
-            <div class="modal-dialog modal-sm" role="document">
-                <div class="modal-content">
-                    <p> Por favor, ingresá los datos correctamente.</p>
-                </div>
-            </div>
-        </div>
-
+        </form>
     </div>
-    <footer class="bg-dark">
-        <div class="d-lg-flex">
-          <a id="hicisteClickEnContacto" href="#top"><img class="mt-5 logoRollingFooter" src="Assets/LogoRolling white.svg" alt="Logo Rolling Code"></a>
-          <div class="tamañoLinkTablet">
-            <div class="d-flex ml-5 mt-5 mb-2">
-              <img class="loguitosFooter logoTelephone " src="assets/pin.png" alt="Ubicación">
-              <h1 class="text-light letrasFooter mt-3 ml-2 ubiTelDesktop">General Paz 576 - CP 4000 - San Miguel de
-                Tucumán</h1>
+    <div class="d-flex justify-content-center flex-wrap">
+        <div class="d-flex flex-column align-items-center">
+            <div>
+                <button class="btn btn-primary mt-3 font-weight-bold" type="submit" onclick="getRegisterD()">Confirmar</button>
             </div>
-            <div class="d-flex bordesFooter ml-5 ml-2">
-              <img class="loguitosFooter mr-3" src="assets/phone.png" alt="Call Center">
-              <h1 class="text-light letrasFooter mt-3 ubiTelDesktop">Call Center: +54 (0381) 15 3331003</h1>
+            <div>
+                <button class="btn btn-secondary text-nowrap mt-3" onclick="errorEnvio ()">Tengo problemas para
+                    registrarme</button>
+            </div>
+        </div>
+    </div>
+    <div class="my-5">
+        <p>"SEGÚN EL ART 1 DISPOSICIÓN 4/2009, SE TRANSCRIBE: ART. 27 INC 3 LEY 25326: EL TITULAR PODRÁ EN CUALQUIER
+            MOMENTO SOLICITAR EL RETIRO O BLOQUEO DE SU NOMBRE DE LOS BANCOS DE DATOS A LOS QUE SE REFIERE EL
+            PRESENTE ARTÍCULO. Y ART. 27 ANEXO I DECRETO 1558/01: EN TODA COMUNICACIÓN CON FINES DE PUBLICIDAD QUE
+            SE REALICE POR CORREO, TELÉFONO, CORREO ELECTRÓNICO, INTERNET U OTRO MEDIO A DISTANCIA A CONOCER, SE
+            DEBERÁ INDICAR, EN FORMA EXPRESA Y DESTACADA, LA POSIBILIDAD DEL TITULAR DEL DATO DE SOLICITAR EL RETIRO
+            O BLOQUEO, TOTAL O PARCIAL, DE SU NOMBRE DE LA BASE DE DATOS. A PEDIDO DEL INTERESADO, SE DEBERÁ
+            INFORMAR EL NOMBRE DEL RESPONSABLE O USUARIO DEL BANCO DE DATOS QUE PROVEYÓ LA INFORMACIÓN."</p>
+    </div>
+    <div class="modal fade" id="modalRegistrado" tabindex="-1" role="dialog" aria-labelledby="modalRegistradoLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="">
+              <h1 class="modal-title text-center mt-2">Profesional Registrado</h1>
+            </div>
+            <div class="modal-body">
+              <p>Gracias por registrarte en Nuestra Clínica. </p>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button role="button" onclick="newDoc()" class="btn btn-primary mb-4" data-dismiss="modal" data-target>Cerrar</button>
             </div>
           </div>
         </div>
-        <div class="ml-5 logoRollingFooter bordesFooter d-inline-block">
-          <a href="https://www.facebook.com/RollingCodeSchool/" target="_blank"><img class="LogosRedes"
-              src="Assets/002-facebook.svg" alt="Nuestro Facebook"></a>
-          <a href="https://twitter.com/rollingcode3" target="_blank"><img class="LogosRedes"
-              src="Assets/001-twitter (1).svg" alt="Nuestro Twitter"></a>
-          <a href="https://www.instagram.com/rollingcodeschool/" target="_blank"><img class="LogosRedes"
-              src="Assets/003-instagram.svg" alt="Nuestro Instagram"></a>
-          <a href="https://ar.linkedin.com/company/rollingcode-school" target="_blank"><img class="LogosRedes"
-              src="Assets/004-linkedin.svg" alt="Nuestro linkedin"></a>
+      </div>
+    <div class="modal fade" id="modalError" tabindex="-1" role="dialog" aria-labelledby="modalErrorLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="">
+                    <h1 class="modal-title text-center mt-2">Te pedimos disculpas</h1>
+                </div>
+                <div class="modal-body">
+                    <p>Por favor, detalla debajo el problema que tuviste para registrarte.</p>
+                    <p>Nuestro equipo técnico resolverá este inconveniente en 24 Hs hábiles.</p>
+                    <p>Para continuar con tu gestión, comunicate al <br>(381) 403 03456.<br></p>
+                    <p>Muchas Gracias</p>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1"></label>
+                        <textarea class="form-control" id="errorEnvio" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-secondary mb-4" data-dismiss="modal">Enviar</button>
+                </div>
+            </div>
         </div>
-        <div class="ml-4 mr-3 mb-5 d-inline-block otrosEnlacesMobile bordesFooter otrosEnlacesDesktop">
-          <h1 class=" text-light mb-1">Otros Enlaces</h1>
-          <a class="bordeFooter d-block text-light mb-2"
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=rollingcodeschool@gmail.com&su=Envío CV&body=Adjuntanos tu CV y los motivos por los que estás interesado en trabajar con nosotros. ¡Te esperamos!"
-            target="_blank">> Envía tu CV</a>
-          <a class="bordeFooter d-block text-light mb-2" href="">> Provedores</a>
+    </div>
+    <div class="modal fade bd-example-modal-sm mt-2" id="modalFaltanDatos" tabindex="-1" role="dialog"
+        aria-labelledby="modalIncorrectoDatos" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <p> Por favor, ingresá los datos correctamente.</p>
+            </div>
+          </div>
         </div>
-        <div class="otrosEnlacesDesktop d-inline-block">
-          <iframe class="d-flex align-self-center tamañoMapa MargenMapa"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1174432046328!2d-65.2080364902503!3d-26.83621664190631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c0e8d0271b7%3A0x7946062ac490db30!2sGral.%20Paz%20576%2C%20T4000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1583359327932!5m2!1ses-419!2sar"
-            allowfullscreen=true>
-            frameborder="0"></iframe>
-        </div>
-        <div class="mt-5">
-          <h1 class="text-light textoCopy textoCopyMobile copyMobile">Copyright 2020 | Clínica Rolling Code</h1>
-        </div>
-        <div class="m-0 textoCopyDesktop copyDesktop">
-          <h1 class="text-light font-weight-light ml-3 mb-0 mr-5 textoCopy"> Copyright 2020 | Clínica Rolling Code |
-            General Paz 576 | CP:4000 | San Miguel de Tucumán | +54 (0381) 333 1003</h1>
-        </div>
-      </footer>
+    </div>
 
     <script src="src/js/SingUpdoctor.js"></script>
     <script src="src/js/especialidadDoc.js"></script>

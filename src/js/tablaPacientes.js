@@ -14,11 +14,11 @@ let dni = document.querySelector("#documento")
             <td>${aPacientes.apellido + " " + aPacientes.nombre}</td>
             <td>${aPacientes.edad}</td>
             <td>${aPacientes.documento}</td>
-            <td class="aprobadosP">-</td>
-            <td><button id="checkAprobP" class="check2 text-success border-0 bg-light" onclick="confirmadoPac(this)">
+            <td class="aprobadosP"> ${aPacientes.autorizado} </td>
+            <td class="row flex-nowrap"><button id= ${aPacientes.documento} class="check2 text-success border-0 bg-light" onclick="confirmadoPac(this)">
             ✔
           </button>
-          <button id="checkRechaP" class="check2 text-danger border-0 bg-light" onclick="rechazadoPac(this)">
+          <button id=${aPacientes.documento} class="check2 text-danger border-0 bg-light" onclick="rechazadoPac(this)">
             ❌
           </button>
           </td>
