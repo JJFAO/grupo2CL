@@ -8,50 +8,52 @@ var usuario = {
 const doctores = JSON.parse(localStorage.getItem("rDoctores"))
 const pacientesForTesting = JSON.parse(localStorage.getItem("usuariologueado"));
 
-function inicioshift() {   
-        let select = document.querySelector("#especialidad");
-        for (let i = select.options.length; i >= 1; i--) {
-            select.remove(i);
-        }
-        let select1 = document.querySelector("#doctores");
-        for (let i = select1.options.length; i >= 1; i--) {
-            select1.remove(i);
-        }let select2 = document.querySelector("#dias");
-        for (let i = select2.options.length; i >= 1; i--) {
-            select2.remove(i);
-        }let select3 = document.querySelector("#horario");
-        for (let i = select3.options.length; i >= 1; i--) {
-            select3.remove(i);
-        }
-        document.querySelector('#textmedicalshit').value=''
-        const log = JSON.parse(localStorage.getItem("usuariologueado"));
-        if (log==null) {
-            MENSAJE_usuario_nolog()
+function inicioshift() {
+    let select = document.querySelector("#especialidad");
+    for (let i = select.options.length; i >= 1; i--) {
+        select.remove(i);
+    }
+    let select1 = document.querySelector("#doctores");
+    for (let i = select1.options.length; i >= 1; i--) {
+        select1.remove(i);
+    }
+    let select2 = document.querySelector("#dias");
+    for (let i = select2.options.length; i >= 1; i--) {
+        select2.remove(i);
+    }
+    let select3 = document.querySelector("#horario");
+    for (let i = select3.options.length; i >= 1; i--) {
+        select3.remove(i);
+    }
+    document.querySelector('#textmedicalshit').value = ''
+    const log = JSON.parse(localStorage.getItem("usuariologueado"));
+    if (log == null) {
+        MENSAJE_usuario_nolog()
 
-        } else {
-            $('#MedicalShift').modal('show')
-           myOnLoad() 
-            
-        }
-      
+    } else {
+        $('#MedicalShift').modal('show')
+        myOnLoad()
+
+    }
+
 }
 
-function esp_sinrepetir () {    
+function esp_sinrepetir() {
 
-let doctores_filtrados = []
-const doctores = JSON.parse(localStorage.getItem("rDoctores"))
-doctores.forEach(doctor => {
-    doctores_filtrados.push(doctor.especialidad)
-});
-let esp_sinRepetidos = doctores_filtrados.filter(function (valor, indiceActual, arreglo) {
-    let indiceAlBuscar = arreglo.indexOf(valor);
-    if (indiceActual === indiceAlBuscar) {
-        return true;
-    } else {
-        return false;
-    }
-});
-return esp_sinRepetidos
+    let doctores_filtrados = []
+    const doctores = JSON.parse(localStorage.getItem("rDoctores"))
+    doctores.forEach(doctor => {
+        doctores_filtrados.push(doctor.especialidad)
+    });
+    let esp_sinRepetidos = doctores_filtrados.filter(function (valor, indiceActual, arreglo) {
+        let indiceAlBuscar = arreglo.indexOf(valor);
+        if (indiceActual === indiceAlBuscar) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    return esp_sinRepetidos
 }
 
 function cargador(array) {
@@ -94,7 +96,7 @@ function cargarOptions(id, array) { //carga los opcion pasandole una array e id
 }
 
 function myOnLoad() {
-    const esp_sinRepetidos = esp_sinrepetir ()
+    const esp_sinRepetidos = esp_sinrepetir()
     const arrayesp = esp_sinRepetidos.map((esp, i) => {
         return {
             texto: esp,
@@ -145,7 +147,7 @@ function dias_disponibles() {
         }
     }
     return diasdisponibles
-    
+
 }
 
 function cargar_dias() {
@@ -178,8 +180,7 @@ function guardar_turno() {
     const pacientesForTesting = JSON.parse(localStorage.getItem("usuariologueado"));
     registro.nombrePac = pacientesForTesting.nombre
     registro.apelliPopac = pacientesForTesting.apellido
-    registro.dniPac = pacientesForTesting.documento
-    
+    registro.dniPac = pacientesForTesting.id
     inputs.forEach((dato) => {
         registro[dato.id] = dato.value
     });
@@ -193,7 +194,7 @@ function borrar_turno(obj) {
     const doctor_obj = (convertir_cuil_en_doc(obj.doctores))
     const horas_filtradas = doctor_obj[0].dias[0][obj.dias]
     horas_borradas = horas_filtradas.filter(doctor => doctor != obj.horario)
-    doctor_obj[0].dias[0][obj.dias]= horas_borradas
+    doctor_obj[0].dias[0][obj.dias] = horas_borradas
     localStorage.setItem("rDoctores", JSON.stringify(doctores))
 }
 
@@ -225,11 +226,12 @@ function MENSAJE_error_medico() {
 function confirmar() {
     if ((document.querySelector("#especialidad").value == "Seleccione una Especialidad...") || (document.querySelector("#doctores").value == "Seleccione un Profesional...") || (document.querySelector("#dias").value == "Días disponibles...") || (document.querySelector("#horario").value == "Seleccione un horario...")) {
         MENSAJE_error()
-        }else{
+    } else {
         const turno_paciente = guardar_turno()
-        borrar_turno(turno_paciente)    
-        MENSAJE_CONFIR()}
-        inicioshift()
+        borrar_turno(turno_paciente)
+        MENSAJE_CONFIR()
+    }
+    inicioshift()
 }
 
 function MENSAJE_usuario_nolog() {
