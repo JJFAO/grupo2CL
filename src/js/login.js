@@ -69,7 +69,8 @@ function recoverPass() {
     if (dniHtml.value == usuario.documento) {
       if (passHtml.value == usuario.password) {
         $('#indexModal').modal("hide");
-        inicioExitoso()       
+        inicioExitoso()     
+        window.location.href = "index.html"  
         localStorage.setItem("usuariologueado", JSON.stringify(usuariologueado));
         return
       }
