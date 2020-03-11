@@ -149,6 +149,10 @@ seDaLaBienvenida();
 let botonCierreSesion = document.querySelector("#botonCierreSesion");
 let cierreSesion = false;
 
+function reinicioPag(){
+  window.location.assign("index.html");
+  }
+
 botonCierreSesion.addEventListener("click",cierreSesionHandler);
 function cierreSesionHandler(){
     if(cierreSesion==false);
