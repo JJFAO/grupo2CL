@@ -1,10 +1,8 @@
-
-
 //testing Pacientes//
 
-const pacientesForTesting = JSON.parse(localStorage.getItem("usuariologueado"));
+const pacientesForTestings = JSON.parse(localStorage.getItem("usuariologueado"));
 const turnoForTesting = JSON.parse(localStorage.getItem('rTurnos'));
-const usuarioForTesting = pacientesForTesting;
+const usuarioForTesting = pacientesForTestings;
 const turnosForTesting = turnoForTesting;
 
     let userLogued= {
@@ -18,7 +16,7 @@ const turnosForTesting = turnoForTesting;
 
 function consultaTurnoPaciente (){
   $('#modalPacienteSesion').modal("show");
-  if (pacientesForTesting !== []){
+  if (pacientesForTestings !== []){
     if(userLogued.turnoTesting ==''){
       $('#modalPacienteSesion').modal("show");
       var testingModalSinTurnos = `
