@@ -4,78 +4,8 @@ var usuario = {
     nombre: 'jorge',
     id: '00001'
 }
-// const doctor = new Doctor(nombre, apellido, telefono, especialidad, matricula, cuil, domicilio, provincia, localiad, codigopostal);
-
-// const doctores = [{
-//         nombre: 'María Belén',
-//         apellido: 'Abraham',
-//         especialidad: 'Alergología',
-//         cuil: '000000000000',
-//         dias: [{
-//             lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
-//             martes: [],
-//             miercoles: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
-//             jueves: [],
-//             viernes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00']
-//         }]
-//     },
-//     {
-//         nombre: 'Andrés',
-//         apellido: 'Anzorena',
-//         especialidad: 'Cardiología',
-//         cuil: '11111111111',
-//         dias: [{
-//             lunes: [],
-//             martes: [],
-//             miercoles: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
-//             jueves: [],
-//             viernes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00']
-//         }]
-//     },
-//     {
-//         nombre: 'Silvina Rita',
-//         apellido: 'Depetris',
-//         especialidad: 'Cardiología',
-//         cuil: '22222222222',
-//         dias: [{
-//             lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
-//             martes: [],
-//             miercoles: ['10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
-//             jueves: [],
-//             viernes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00']
-//         }]
-//     },
-//     {
-//         nombre: 'Silvia Lourdes',
-//         apellido: 'Lorenzo',
-//         especialidad: 'Gastroenterología',
-//         cuil: '3333333333',
-//         dias: [{
-//             lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
-//             martes: [],
-//             miercoles: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
-//             jueves: [],
-//             viernes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00']
-//         }]
-//     },
-//     {
-//         nombre: 'Joel',
-//         apellido: 'Carabajal',
-//         especialidad: 'Traumatología',
-//         cuil: '44444444444',
-//         dias: [{
-//             lunes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
-//             martes: [],
-//             miercoles: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00'],
-//             jueves: [],
-//             viernes: ['9:00 a 10:00', '10:00 a 1:00', '11:00 a 12:00', '12:00 a 13:00']
-//         }]
-//     }
-// ]
-// localStorage.setItem("rDoctores", JSON.stringify(doctores))
 
 const doctores = JSON.parse(localStorage.getItem("rDoctores"))
-console.log(doctores);
 const pacientesForTesting = JSON.parse(localStorage.getItem("usuariologueado"));
 
 function inicioshift() {   
@@ -95,8 +25,6 @@ function inicioshift() {
         }
         document.querySelector('#textmedicalshit').value=''
         const log = JSON.parse(localStorage.getItem("usuariologueado"));
-        console.log(log);
-        
         if (log==null) {
             MENSAJE_usuario_nolog()
 
@@ -165,8 +93,6 @@ function cargarOptions(id, array) { //carga los opcion pasandole una array e id
     }
 }
 
-// let especialidades= localStorage.getItem('arrayespecialidades')
-//Codigo a Ejecutar al Cargar la Pagina
 function myOnLoad() {
     const esp_sinRepetidos = esp_sinrepetir ()
     const arrayesp = esp_sinRepetidos.map((esp, i) => {
@@ -179,7 +105,6 @@ function myOnLoad() {
 }
 
 function cargar_select(array, id) {
-    // Ordena el Array Alfabeticamente, es muy facil ;)):
     array.sort();
     addOptions(id, array);
 }
@@ -209,8 +134,7 @@ function cargar_doctores() {
 function dias_disponibles() {
     const doctorhtml = document.querySelector("#doctores")
     const filnombre_y_apellido = (convertir_cuil_en_doc(doctorhtml.value))
-    const diasArray = filnombre_y_apellido[0].dias[0] //preguntar ########################################################3
-    
+    const diasArray = filnombre_y_apellido[0].dias[0]
     const diasdisponibles = []
     for (const i in diasArray) {
         if (diasArray.hasOwnProperty(i)) {
@@ -220,7 +144,6 @@ function dias_disponibles() {
             }
         }
     }
-    console.log(diasdisponibles);
     return diasdisponibles
     
 }
@@ -246,8 +169,6 @@ function filtrar_horarios() {
 
 function cargar_horario() {
     const array = filtrar_horarios()
-    console.log(array);
-    
     cargarOptions("#horario", array)
 }
 
@@ -262,23 +183,15 @@ function guardar_turno() {
     inputs.forEach((dato) => {
         registro[dato.id] = dato.value
     });
-
-    console.log(registro);
     const nTurnos = JSON.parse(localStorage.getItem('rTurnos')) || [];
-    console.log(nTurnos);
     nTurnos.push(registro);
     localStorage.setItem('rTurnos', JSON.stringify(nTurnos))
     return registro
 }
 
 function borrar_turno(obj) {
-    console.log(obj.doctores) //cuil de doctor
-    console.log(obj.dias);
-    console.log(obj.horario);
     const doctor_obj = (convertir_cuil_en_doc(obj.doctores))
-    console.log(doctor_obj);
     const horas_filtradas = doctor_obj[0].dias[0][obj.dias]
-    console.log(horas_filtradas);
     horas_borradas = horas_filtradas.filter(doctor => doctor != obj.horario)
     doctor_obj[0].dias[0][obj.dias]= horas_borradas
     localStorage.setItem("rDoctores", JSON.stringify(doctores))
