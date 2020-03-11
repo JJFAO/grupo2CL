@@ -20,7 +20,17 @@ function recoverPass() {
     timer: 3000   
     })}
   
+    function inicioExitoso() {
+      Swal.fire({
+      position: 'top-center',
+      icon: 'success',
+      title: 'Inicio exitoso',
+      showConfirmButton: false,
+      timer: 3000   
+      })} 
+
   function validation4Patient() {
+    event.preventDefault()
     const usuarios = JSON.parse(localStorage.getItem("Pacientes"))    
   let dniHtml = document.querySelector("#DNI")
   let passHtml = document.querySelector("#passPatient")
@@ -31,11 +41,10 @@ function recoverPass() {
       nombre : usuario.nombre,
       apellido : usuario.apellido
     }
-
     if (dniHtml.value == usuario.documento) {
       if (passHtml.value == usuario.password) {
-        window.location.href = 'index.html';
-        alert("Inicio exitoso")
+        $('#indexModal').modal("hide");
+        inicioExitoso()       
         localStorage.setItem("usuariologueado", JSON.stringify(usuariologueado));
         return
       }
@@ -50,17 +59,16 @@ function recoverPass() {
 
 function validation4Profesional() {
   const profesionales = JSON.parse(localStorage.getItem("rDoctores"))
-  let cuitHtml = document.querySelector("#cuit")
+  let cuilHtml = document.querySelector("#cuil")
   let passprofHtml = document.querySelector("#passProf")   
   for(let index = 0; index < profesionales.length; index++) {
     const profesional = profesionales[index];  
-    if (cuitHtml.value == profesional.cuil ) {            
+    if (cuilHtml.value == profesional.cuil) {            
       if (passprofHtml.value == profesional.passProf) {  
          if (profesional.cuil == 20287212187 && profesional.passProf == 1234) {           
-          window.location.href="./admin-section.html"          
-
+          window.location.href="./admin-section.html"       
               } 
-          alert("Inicio exitoso")
+              inicioExitoso()
           localStorage.setItem("proflogueado", JSON.stringify(proflogueado));
           // window.location.href = 'index.html';
             return
@@ -69,7 +77,7 @@ function validation4Profesional() {
           return
         }    
       }
-      alert("El CUIT no esta registrado")
+      alert("El CUIL no esta registrado")
       
     }
     
@@ -77,6 +85,7 @@ function validation4Profesional() {
       const usuarioClinica = JSON.parse(localStorage.getItem("Pacientes"))
       $('#modalPacienteSesion').modal("show");
     }
+
     function pacienteProfesional (){
       $('#modalProfesionalSesion').modal("show");
     }
