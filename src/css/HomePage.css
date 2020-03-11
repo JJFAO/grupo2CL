@@ -296,3 +296,6 @@ label{
     font-size: 20pt;
     color: #691353;
 }
+.imageHome{
+    object-fit: center;
+}
