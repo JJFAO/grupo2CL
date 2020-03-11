@@ -1,32 +1,31 @@
-const doctores = JSON.parse(localStorage.getItem("rDoctores"));
-let nomb = document.querySelector("#nombre");
-let apell = document.querySelector("#apellido");
-let especia = document.querySelector("#Especialidad");
-let matricula = document.querySelector("#matriculaP");
-
 function cargarDoctores() {
-//   const doctores = getLocal("rDoctores");
+  const doctores = JSON.parse(localStorage.getItem("rDoctores"));
   const tablaDoctor = document.getElementById("doctores");
   let selectDoctors = document.querySelector("#cargaDoc");
-  tablaDoctor.innerHTML = '';
+  tablaDoctor.innerHTML = "";
   for (let i = 0; i < doctores.length; i++) {
     const doctor = doctores[i];
-    tablaDoctor.innerHTML += 
-    `<tr id="" class="thead-light">
+    tablaDoctor.innerHTML += `<tr id="" class="thead-light">
       <td>${doctor.nombre + " " + doctor.apellido}</td>
       <td>${doctor.especialidad}</td>
       <td>${doctor.matriculaP}</td>
-      <td class="aprobado"> - </td>
-      <td><button id="checkAprobD" class="check2 text-success border-0 bg-light" onclick="confirmarDoc(this)">
+      <td class="aprobado"> ${doctor.autorizado} </td>
+      <td class="row mx-0 flex-nowrap"><button id="${
+        doctor.matriculaP
+      }" class="check2 text-success border-0 bg-light" onclick="confirmarDoc(this)">
         ✔
       </button>
-      <button id="checkRechaD" class="check2 text-danger border-0 bg-light" onclick="rechazarDoc(this)">
+      <button id= "${
+        doctor.matriculaP
+      }" class="check2 text-danger border-0 bg-light" onclick="rechazarDoc(this)">
         ❌
       </button>
       </td>
     </tr>`;
 
-    selectDoctors.innerHTML += `<option>${doctor.nombre + " " + doctor.apellido}<option>`; 
+    selectDoctors.innerHTML += `<option>${doctor.nombre +
+      " " +
+      doctor.apellido}<option>`;
   }
 }
-document.addEventListener('load', cargarDoctores())
+document.addEventListener("load", cargarDoctores());

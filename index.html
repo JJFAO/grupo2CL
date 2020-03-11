@@ -18,7 +18,6 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="src/css/login.css">
     <link rel="stylesheet" href="src/css/HomePage.css">
-    <link rel="stylesheet" href="src/css/HomePagex.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:700&display=swap">
     <link rel="stylesheet" href="src/css/medicalshift.css">
     <title>Clínica RollingCode</title>
@@ -67,7 +66,7 @@
 
   </nav>
   <div class="fixed-bottom botonTurnero float-right">
-    <button class="shadow-lg rounded-circle" type="button" data-toggle="modal" data-target="#MedicalShift" onclick="inicioshift()">
+    <button class="shadow-lg rounded-circle" type="button" data-toggle="modal" data-target='' onclick="inicioshift()">
       <img class="tamañoBotonTurnero" src="Assets/calendar.png" alt="Turnero">
     </button>
   </div>
@@ -76,23 +75,86 @@
     <div class="d-flex justify-content-center">
       <a class="d-flex justify-content-center w-100" data-toggle="collapse" href="#collapseExample"
         aria-expanded="false" aria-controls="collapseExample">
-        <div class="card text-white border-white w-100">
-          <img src="./src/imagenes/xs.jpg" class="card-img" alt="...">
-          <div class="card-img-overlay fondotitulo">
-            <h5 class="titulo">¡Conoce Nuestra Institución!</h5>
+        <div class="border-white w-100 d-flex flex-column justify-content-center">
+          <img src="src/imagenes/newmaxresdefault.jpg" class="firstimg" alt="">
+          <div class="pos-abs ml-4 ml-md-4 mt-2 mt-md-3">
+            <h5 class="text-dark titulo-header font-weight-bold ml-md-5 pl-md-5 mb-0">Bienvenido a</h5>
+            <p class="clinica titulo-header mb-0 ml-md-5 pl-md-5">Clinica Rolling</p>
+            <p class="text-dark p-header ml-md-5 pl-md-5">Estamos a tu cuidado</p>
           </div>
         </div>
       </a>
     </div>
     <div class="collapse ml-4 mr-4 p-0 mt-2" id="collapseExample">
       <div class="card-body">
-        La Clínica Rolling Code School es una entidad sin ánimo de lucro dedicada a la práctica clínica, la educación y
+        La Clínica Rolling Code School es una entidad a la práctica clínica, la educación y
         la investigación. Sus dependencias para la investigación están situadas en Tucumán, Salta y Buenos Aires.
         Además, posee hospitales y clínicas en San Miguel de Tucumán (Tucumán). Está asociada con varias pequeñas
         clínicas y hospitales de Córdoba, Santiago del Estero y Santa Cruz.
       </div>
     </div>
-    <div class="container-fluid mt-4">
+    <div class="d-flex justify-content-center">
+      <a class="d-flex justify-content-center w-100" data-toggle="collapse" href="#collapseExample"
+        aria-expanded="false" aria-controls="collapseExample">
+        <div class="border-white w-100 mt-5 d-flex flex-column justify-content-center">
+          <img src="src/imagenes/hearthome.jpg" class="firstimg" alt="">
+          <div class="pos-abs mr-4 mr-md-5 mt-2 mt-md-3 align-self-end">
+            <h5 class="text-dark text-nowrap titulo-header font-weight-bold mr-md-5 pr-md-5 mb-0">Los mejores</h5>
+            <p class="clinica titulo-header mb-0 mr-md-5 p3-md-5">Especialistas</p>
+            <p class="text-dark text-nowrap p-header mr-md-5 p3-md-5">Para una atención de calidad</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+
+<div class="container d-flex align-items-center mt-5">
+      <img src="./src/imagenes/buildingclinic.jpg" class="col-8 img-fluid" alt="Responsive image">
+    <div class="col-4">
+           <h1 class="tituloHome">Conocé <br>Nuestra Institución</h1>
+            <p class="card-text text-justify textHome" >La Clínica Rolling Code School es una entidad sin ánimo de lucro dedicada a la práctica clínica, la educación y la investigación. Sus dependencias para la investigación están situadas en Tucumán, Salta y Buenos Aires. Además, posee hospitales y clínicas en San Miguel de Tucumán (Tucumán). Está asociada con varias pequeñas clínicas y hospitales de Córdoba, Santiago del Estero y Santa Cruz.
+            </p>
+    </div>
+</div>
+
+  
+  
+  
+  
+   <h1 class="text-center titulosHome mt-5 mb-5">Nuestros Compromisos</h1>
+    
+    <div class="container-fluid">
+    <div class="card-deck d-flex justify-content-between row row-cols-1 row-cols-sm-2 mt-3 mb-3">
+  <div class="col card border-0 shadow p-3 mb-5 bg-white rounded">
+    <img src="./src/imagenes/metodoleon.PNG" class="card-img-top" alt="Metodo Leon">
+    <div class="card-body">
+      <h5 class="card-title">Método León</h5>
+      <p class="card-text">El acompañamiento cambia vidas y permite soñar Clínica Mayo se sumó como Padrino al programa "Aprendiendo en Casa - HIPPY", para que nuevas familias reciban acompañamiento a través de un proyecto 100% educativo, que estimula el aprendizaje, el [...] </p>
+    </div>
+  </div>
+  <div class="col card border-0 shadow p-3 mb-5 bg-white rounded">
+    <img src="./src/imagenes/clinicayfundacion.PNG" class="card-img-top" alt="Fundacion Leon">
+    <div class="card-body">
+      <h5 class="card-title">Clínica Rolling y Fundación León</h5>
+      <p class="card-text">Programa de acompañamiento familiar desde octubre de 2018 trabajamos juntos Clínica Rolling Code y Fundación León acompañando familias en situaciones de vulnerabilidad de la provincia. Todos los programas de Fundación León se basan en....</p>
+    </div>
+  </div>
+  <div class="col card border-0 shadow p-3 mb-5 bg-white rounded">
+    <img src="./src/imagenes/semanaprematu.PNG" class="card-img-top" alt="Semana del Niño Prematuro">
+    <div class="card-body">
+      <h5 class="card-title">Semana de Prematuro</h5>
+      <p class="card-text">Programa de acompañamiento familiar desde octubre de 2018 trabajamos juntos Clínica
+              Rolling Code y Fundación León acompañando familias en situaciones de vulnerabilidad de la provincia. Todos
+              losprogramas de Fundación León se basan en...</p>
+    </div>
+  </div>
+</div>
+    </div>
+    
+    
+    
+    
+  <!--  <div class="container-fluid mt-4">
       <div class="row">
         <div class="col-12 my-3 col-lg-4">
           <div class="card h-100">
@@ -124,7 +186,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
   </main>
   <!-- Modal Medical Shift-->
   <div class="modal fade" id="MedicalShift" tabindex="-1" role="dialog" aria-labelledby="MedicalShiftLabel"
@@ -141,7 +203,7 @@
           <div class="container py-3 d-flex justify-content-center"><img src="img/logoblack.png"
               alt="logo clinica rolling">
           </div>
-          <div class="container-fluid bg-Copia-de-Health-Care-1-rgba text-center py-2 h2">
+          <div class="container-fluid bg-Copia-de-Health-Care-1-rgba text-center py-2 h1 titulo_sol">
             Solicitar turno
           </div>
           <div class="container pt-3 text-center">
@@ -153,7 +215,7 @@
           </div>
           <div class="container py-3 bg-Copia-de-Health-Care-3-hex">
             <div class="row">
-              <div class="col-12 text-center h1 "><label for="especialidad">Especialidad</label></div>
+              <div class="col-12 text-center titulo_turno ">Especialidad</div>
               <div class="col-12 py-2">
                 <div class="form-group">
 
@@ -166,7 +228,7 @@
           </div>
           <div class="container py-2">
             <div class="row">
-              <div class="col-12 text-center h1"><label for="doctores">Profesional</label></div>
+              <div class="col-12 text-center titulo_turno">Profesional</div>
               <div class="col-12 py-2">
                 <div class="form-group">
                   <select class="form-control datos" id="doctores" onchange="cargar_dias()">
@@ -178,7 +240,7 @@
           </div>
           <div class="container bg-Copia-de-Health-Care-3-hex py-3">
             <div class="row">
-              <div class="col-12 text-center h1 ">Turnos disponibles</div>
+              <div class="col-12 text-center titulo_turno ">Turnos disponibles</div>
               <div class="col-12">
                 <form>
                   <div class="form-group">
@@ -197,14 +259,14 @@
               </div>
             </div>
           </div>
-          <div class="container py-3">
+          <div class="container-fluid py-3">
             <div class="row">
-              <div class=" text-center h1">Describa el motivo de su consulta</div>
+              <div class=" text-center titulo_turno ml-5">Describa el motivo de su consulta</div>
             </div>
             <div class="row pt-3">
               <div class="col-2"></div>
               <div class="col-8">
-                <textarea class="form-control" id="textarea" rows="5"
+                <textarea class="form-control datos" id="textmedicalshit"  rows="5"
                   placeholder="Describa brevemente el motivo de su consulta..." required></textarea>
                 <div class="col-2"></div>
               </div>
