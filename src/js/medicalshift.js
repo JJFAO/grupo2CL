@@ -76,9 +76,9 @@ var usuario = {
 
 const doctores = JSON.parse(localStorage.getItem("rDoctores"))
 console.log(doctores);
+const pacientesForTesting = JSON.parse(localStorage.getItem("usuariologueado"));
 
-function inicioshift() {
-   
+function inicioshift() {   
         let select = document.querySelector("#especialidad");
         for (let i = select.options.length; i >= 1; i--) {
             select.remove(i);
@@ -93,13 +93,17 @@ function inicioshift() {
         for (let i = select3.options.length; i >= 1; i--) {
             select3.remove(i);
         }
-        // const log= 'no logueado'
-        // if (log== 'logueado') {
+        const log = JSON.parse(localStorage.getItem("usuariologueado"));
+        console.log(log);
+        
+        if (log==null) {
+            alert('debe loguearse para solicitar turno') 
 
-            myOnLoad() 
-        // } else {
-        //    alert('debe loguearse para solicitar turno') 
-        // }
+        } else {
+            $('#MedicalShift').modal('show')
+           myOnLoad() 
+            
+        }
       
 }
 
@@ -249,6 +253,11 @@ function cargar_horario() {
 function guardar_turno() {
     const inputs = document.querySelectorAll('.datos');
     const registro = {};
+    const pacientesForTesting = JSON.parse(localStorage.getItem("usuariologueado"));
+    registro.nombrePac = pacientesForTesting.nombre
+    registro.apelliPopac = pacientesForTesting.apellido
+    registro.dniPac = pacientesForTesting.documento
+    
     inputs.forEach((dato) => {
         registro[dato.id] = dato.value
     });
@@ -279,6 +288,7 @@ function MENSAJE_CONFIR() {
         title: 'TURNO CONFIRMADO',
         showConfirmButton: false,
     })
+    $('#MedicalShift').modal('hide')
 }
 
 function MENSAJE_error() {
