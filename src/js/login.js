@@ -57,7 +57,8 @@ function validation4Profesional() {
     if (cuitHtml.value == profesional.cuil ) {            
       if (passprofHtml.value == profesional.passProf) {  
          if (profesional.cuil == 20287212187 && profesional.passProf == 1234) {           
-          window.location.assign("admin-section.html")
+          window.location.href="./admin-section.html"          
+
               } 
           alert("Inicio exitoso")
           localStorage.setItem("proflogueado", JSON.stringify(proflogueado));
