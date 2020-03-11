@@ -28,6 +28,31 @@ function recoverPass() {
       showConfirmButton: false,
       timer: 3000   
       })} 
+      function errorCuilPass() {
+        Swal.fire({
+        position: 'top-center',
+        icon: 'error',
+        title: 'Las credenciales no son correctas',
+        showConfirmButton: false,
+        timer: 3000   
+        })}
+        function cuilNoregis() {
+          Swal.fire({
+          position: 'top-center',
+          icon: 'warning',
+          title: 'El CUIL no esta registrado',
+          showConfirmButton: false,
+          timer: 3000   
+          })}
+          function dniNoregis() {
+            Swal.fire({
+            position: 'top-center',
+            icon: 'warning',
+            title: 'El DNI no esta registrado',
+            showConfirmButton: false,
+            timer: 3000   
+            })}
+
 
   function validation4Patient() {
     event.preventDefault()
@@ -48,12 +73,13 @@ function recoverPass() {
         localStorage.setItem("usuariologueado", JSON.stringify(usuariologueado));
         return
       }
-      alert("Las credenciales no son correctas")
+      errorCuilPass()
+      
       return
     }
     
   }
-  alert("El DNI no esta registrado")
+  dniNoregis()
 }
 // localStorage.setItem("proflogueado", JSON.stringify(proflogueado));
 
@@ -73,11 +99,11 @@ function validation4Profesional() {
           // window.location.href = 'index.html';
             return
           }
-          alert("La credenciales no son correctas")
+          errorCuilPass()
           return
         }    
       }
-      alert("El CUIL no esta registrado")
+      cuilNoregis()
       
     }
     
