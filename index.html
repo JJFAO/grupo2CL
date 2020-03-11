@@ -35,8 +35,10 @@
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <button id="botonLogueo" class="m-1 p-0" data-toggle="modal" data-target="#indexModal">
-          <img src="Assets/user.png" alt="">
+        <div class="d-flex" id="cartelBienvenida">
+        </div>
+        <button type="button" id="botonLogueo" class="m-1 p-0 botonLogueo btn-link" data-toggle="modal" data-target="#indexModal">
+          <img class="botonLogueoIMG text-light" src="Assets/user.png" alt="">
         </button>
       </div>
     </div>
@@ -66,7 +68,7 @@
 
   </nav>
   <div class="fixed-bottom botonTurnero float-right">
-    <button class="shadow-lg rounded-circle" type="button" data-toggle="modal" data-target='' onclick="inicioshift()">
+    <button class="shadow-lg rounded-circle" type="button" data-toggle="modal" data-target="#MedicalShift" onclick="inicioshift()"> Turnos
       <img class="tamañoBotonTurnero" src="Assets/calendar.png" alt="Turnero">
     </button>
   </div>
@@ -266,7 +268,7 @@
             <div class="row pt-3">
               <div class="col-2"></div>
               <div class="col-8">
-                <textarea class="form-control" id="textarea" rows="5"
+                <textarea class="form-control datos" id="textmedicalshit"  rows="5"
                   placeholder="Describa brevemente el motivo de su consulta..." required></textarea>
                 <div class="col-2"></div>
               </div>
