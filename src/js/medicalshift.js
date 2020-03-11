@@ -93,11 +93,12 @@ function inicioshift() {
         for (let i = select3.options.length; i >= 1; i--) {
             select3.remove(i);
         }
+        document.querySelector('#textmedicalshit').value=''
         const log = JSON.parse(localStorage.getItem("usuariologueado"));
         console.log(log);
         
         if (log==null) {
-            alert('debe loguearse para solicitar turno') 
+            MENSAJE_usuario_nolog()
 
         } else {
             $('#MedicalShift').modal('show')
@@ -261,6 +262,7 @@ function guardar_turno() {
     inputs.forEach((dato) => {
         registro[dato.id] = dato.value
     });
+
     console.log(registro);
     const nTurnos = JSON.parse(localStorage.getItem('rTurnos')) || [];
     console.log(nTurnos);
@@ -315,4 +317,12 @@ function confirmar() {
         borrar_turno(turno_paciente)    
         MENSAJE_CONFIR()}
         inicioshift()
+}
+
+function MENSAJE_usuario_nolog() {
+    Swal.fire({
+        icon: 'error',
+        title: 'DEBE ESTAR LOGUEADO PARA SOLICITAR EL TURNO',
+        showConfirmButton: false,
+    })
 }
