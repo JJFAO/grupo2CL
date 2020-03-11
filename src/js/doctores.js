@@ -11,6 +11,6 @@ class Doctor {
             this.localidad = localiad,
             this.codigopostal = codigopostal,
             this.dias = dias;
-            this.autorizado = 'Pendiente';
+            this.autorizado = "Pendiente";
     }
 }
