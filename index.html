@@ -67,7 +67,7 @@
 
   </nav>
   <div class="fixed-bottom botonTurnero float-right">
-    <button class="shadow-lg rounded-circle" type="button" data-toggle="modal" data-target="#MedicalShift" onclick="inicioshift()">
+    <button class="shadow-lg rounded-circle" type="button" data-toggle="modal" data-target='' onclick="inicioshift()">
       <img class="tamañoBotonTurnero" src="Assets/calendar.png" alt="Turnero">
     </button>
   </div>
@@ -141,7 +141,7 @@
           <div class="container py-3 d-flex justify-content-center"><img src="img/logoblack.png"
               alt="logo clinica rolling">
           </div>
-          <div class="container-fluid bg-Copia-de-Health-Care-1-rgba text-center py-2 h2">
+          <div class="container-fluid bg-Copia-de-Health-Care-1-rgba text-center py-2 h1 titulo_sol">
             Solicitar turno
           </div>
           <div class="container pt-3 text-center">
@@ -153,7 +153,7 @@
           </div>
           <div class="container py-3 bg-Copia-de-Health-Care-3-hex">
             <div class="row">
-              <div class="col-12 text-center h1 "><label for="especialidad">Especialidad</label></div>
+              <div class="col-12 text-center titulo_turno ">Especialidad</div>
               <div class="col-12 py-2">
                 <div class="form-group">
 
@@ -166,7 +166,7 @@
           </div>
           <div class="container py-2">
             <div class="row">
-              <div class="col-12 text-center h1"><label for="doctores">Profesional</label></div>
+              <div class="col-12 text-center titulo_turno">Profesional</div>
               <div class="col-12 py-2">
                 <div class="form-group">
                   <select class="form-control datos" id="doctores" onchange="cargar_dias()">
@@ -178,7 +178,7 @@
           </div>
           <div class="container bg-Copia-de-Health-Care-3-hex py-3">
             <div class="row">
-              <div class="col-12 text-center h1 ">Turnos disponibles</div>
+              <div class="col-12 text-center titulo_turno ">Turnos disponibles</div>
               <div class="col-12">
                 <form>
                   <div class="form-group">
@@ -197,9 +197,9 @@
               </div>
             </div>
           </div>
-          <div class="container py-3">
+          <div class="container-fluid py-3">
             <div class="row">
-              <div class=" text-center h1">Describa el motivo de su consulta</div>
+              <div class=" text-center titulo_turno ml-5">Describa el motivo de su consulta</div>
             </div>
             <div class="row pt-3">
               <div class="col-2"></div>
