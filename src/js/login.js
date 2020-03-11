@@ -80,5 +80,13 @@ function validation4Profesional() {
     function pacienteProfesional (){
       $('#modalProfesionalSesion').modal("show");
     }
-    
-
+let modalEntereado = document.querySelector("#indexModal")
+function enterFuncionando(){
+  if(modalEntereado.hasClass("show"))
+  $(document).keypress(function(e){
+    if (e.which == 13){
+        $("#ingresarASesion").click();
+    }
+});
+}
+enterFuncionando();

@@ -138,11 +138,11 @@ function seDaLaBienvenida() {
         turnoTesting: "",
         doctor: ""
       };
+      botonLogueo.classList.add("d-none")
     let PLB = `<h1>¡Bienvenido, ${bienvenidoPaciente.nombre}!</h1>
     <button class="btn btn-primary" type="button" onclick="reinicioCierre" id="botonCierreSesion">Cerrar Sesión
     </button>`;
     cartelBienvenida.innerHTML = PLB;
-
 }
 }
 seDaLaBienvenida();
