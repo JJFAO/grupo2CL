@@ -15,6 +15,8 @@ function getRegisterD() {
 
     console.log(registro);
 
+    registro.autorizado = "Pendiente"
+
     const nDoctores = JSON.parse(localStorage.getItem('rDoctores')) || [];
     nDoctores.push(registro);
     localStorage.setItem('rDoctores',JSON.stringify(nDoctores))
