@@ -29,7 +29,7 @@ function inicioshift() {
     const log = JSON.parse(localStorage.getItem("usuariologueado"));
     if (log == null) {
         MENSAJE_usuario_nolog()
-
+        $('#MedicalShift').modal('hide')
     } else {
         $('#MedicalShift').modal('show')
         myOnLoad()
