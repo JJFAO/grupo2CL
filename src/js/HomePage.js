@@ -34,7 +34,6 @@ let contacto = document.querySelector("#contacto");
 let botonInicio = false;
 let botonPacientes = false;
 let botonInstitucional = false;
-let botonServicios = false;
 let botonProfesionales = false;
 let botonContacto = false;
 
