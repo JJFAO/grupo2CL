@@ -32,6 +32,8 @@ function inicioshift() {
         $('#MedicalShift').modal('hide')
         // console.log(log);
     } else {
+        console.log(log.autorizado);
+        
         if (log.autorizado == 'pendiente' || log.autorizado=='no' ) {
             MENSAJE_pendiente()
             $('#MedicalShift').modal('hide')
