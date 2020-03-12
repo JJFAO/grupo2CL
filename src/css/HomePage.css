@@ -130,6 +130,11 @@ label {
     display: none;
   }
 }
+.tituloHome{
+    font-size: 1.8rem;
+    color: #691353;
+}
+
 .textoCopyDesktop {
   background-color: #1595a3 !important;
   text-align: center;
