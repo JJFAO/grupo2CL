@@ -108,10 +108,10 @@ function validation4Profesional() {
       
     }
     
-    function consultaTurnoPaciente (){
-      const usuarioClinica = JSON.parse(localStorage.getItem("Pacientes"))
-      $('#modalPacienteSesion').modal("show");
-    }
+    // function consultaTurnoPaciente (){
+    //   const usuarioClinica = JSON.parse(localStorage.getItem("Pacientes"))
+    //   $('#modalPacienteSesion').modal("show");
+    // }
 
     function pacienteProfesional (){
       $('#modalProfesionalSesion').modal("show");

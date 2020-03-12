@@ -11,9 +11,6 @@ class Doctor {
             this.localidad = localiad,
             this.codigopostal = codigopostal,
             this.dias = dias;
-<<<<<<< HEAD
-=======
             this.autorizado = "Pendiente";
->>>>>>> release-candidate-07022020
     }
 }
