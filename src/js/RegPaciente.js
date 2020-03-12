@@ -12,6 +12,7 @@ function getRegisterPac (){
     entrada.forEach((datoPac) => { 
     registroPac[datoPac.id] = datoPac.value
   });
+  registroPac.autorizado = 'Pendiente'
   const nPacientes = JSON.parse(localStorage.getItem('Pacientes')) || [];
     nPacientes.push(registroPac);
   localStorage.setItem('Pacientes',JSON.stringify(nPacientes)); 
