@@ -30,6 +30,7 @@ function inicioshift() {
     if (log == null) {
         MENSAJE_usuario_nolog()
         $('#MedicalShift').modal('hide')
+        console.log(log);
     } else {
        console.log(log);
        
