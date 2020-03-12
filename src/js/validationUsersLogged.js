@@ -1,6 +1,50 @@
         
 function consultaTurnoPaciente (){
-  if (localStorage.getItem('usuariologueado') === null){
+  if (localStorage.getItem('profelogueado') !== null){
+    $('#modalPacienteSesion').modal("show");
+    let elimTurno = document.getElementById('elimiTurno').style.visibility = "collapse";
+    let solicTurno = document.getElementById('soliciTurno').style.visibility = "collapse";          
+   
+
+    function getLocal(key) {
+      return JSON.parse(localStorage.getItem(key))};
+      getLocal()
+
+
+    const paciente = JSON.parse(localStorage.getItem("Pacientes"));
+    let apellPac = document.querySelector("#apellido");
+    let nombPac = document.querySelector("#nombre");
+    let edadPac = document.querySelector("#edad");
+    let dni = document.querySelector("#documento")
+    
+    for (let i = 0; i < paciente.length; i++) {
+    const aPacientes = paciente[i];
+       
+   
+      var testingModalSinLog = `
+   <h1 class="textoProfesional" id="profesionales">Buen día, Profesional</h1>
+   <p> Sus pacientes del día son: </p>
+    <div id="tablaPacientes">
+     <table class="table w-100 pl-0 mt-0">
+       <thead class="thead-light">
+         <tr class="text-center" id="TablaPacientes">
+           <th scope="col" style="width: 13vw;">Horario</th>
+           <th scope="col" style="width: 13vw;">Paciente</th>
+           <th scope="col" style="width: 13vw;">Edad</th>
+           <th scope="col" style="width: 13vw;">Documento</th>
+         </tr>
+       </thead>
+       `
+         modalPacienteLogueado.innerHTML = testingModalSinLog
+         tablaPacientes.innerHTML += `
+         <tr id="TablaPacientes" class="thead-light">
+             <td>${aPacientes.apellido + " " + aPacientes.nombre}</td>
+             <td>${aPacientes.edad}</td>
+             <td>${aPacientes.documento}</td>
+         </tr>
+         `;
+        
+     };}else if (localStorage.getItem('usuariologueado') === null){
        $('#modalPacienteSesion').modal("show");
        let elimTurno = document.getElementById('elimiTurno').style.visibility = "collapse";
        let solicTurno = document.getElementById('soliciTurno').style.visibility = "collapse";          
@@ -77,75 +121,65 @@ document.getElementById('soliciTurno').style.visibility = "collapse";
        
 }
 }
+
+let botonDeleteTurno = document.querySelector("#elimiTurno");
+let eliminarTurno = false;
+
+botonCierreSesion.addEventListener("click",deleteTurno);
+
 function deleteTurno(){
-localStorage.removeItem(rTurnos);
-if(localStorage.getItem('rTurnos') === null){
-  $('#modalPacienteSesion').modal("show");
-  let elimTurno = document.getElementById('elimiTurno').style.visibility = "collapse";
-  let solicTurno = document.getElementById('soliciTurno').style.visibility = "collapse";
-  const logueoForTesting = JSON.parse(localStorage.getItem('usuariologueado'));
-  const pacienteEntrado = logueoForTesting;
-  const pacLog = {
-  id : pacienteEntrado.id,
-  nombre : pacienteEntrado.nombre,}
-  
-  var testingModalSinTurnos = `
-          <h1>Hola, ${pacLog.nombre}</h1>
-          <br>
-          <p>Usted no tiene turnos asignados.</p>
-          <p>Puede solicitar un turno haciendo click en el botón Turno</p>
-          </div>
-          `
-          modalPacienteLogueado.innerHTML = testingModalSinTurnos;
-}
-}
+      if(eliminarTurno==false);
+      localStorage.removeItem("rTurnos");
+      window.location.assign("index.html");
+  }
+
 
 function consultaProfesional(){
 
-  if (localStorage.getItem('profelogueado') === null){
+  // if (localStorage.getItem('profelogueado') !== null){
 
-    $('#modalPacienteSesion').modal("show");
-    let elimTurno = document.getElementById('elimiTurno').style.visibility = "collapse";
-    let solicTurno = document.getElementById('soliciTurno').style.visibility = "collapse";          
+  //   $('#modalPacienteSesion').modal("show");
+  //   let elimTurno = document.getElementById('elimiTurno').style.visibility = "collapse";
+  //   let solicTurno = document.getElementById('soliciTurno').style.visibility = "collapse";          
    
 
-    function getLocal(key) {
-      return JSON.parse(localStorage.getItem(key))};
-      getLocal()
+  //   function getLocal(key) {
+  //     return JSON.parse(localStorage.getItem(key))};
+  //     getLocal()
 
 
-    const paciente = JSON.parse(localStorage.getItem("Pacientes"));
-    let apellPac = document.querySelector("#apellido");
-    let nombPac = document.querySelector("#nombre");
-    let edadPac = document.querySelector("#edad");
-    let dni = document.querySelector("#documento")
+  //   const paciente = JSON.parse(localStorage.getItem("Pacientes"));
+  //   let apellPac = document.querySelector("#apellido");
+  //   let nombPac = document.querySelector("#nombre");
+  //   let edadPac = document.querySelector("#edad");
+  //   let dni = document.querySelector("#documento")
     
-    for (let i = 0; i < paciente.length; i++) {
-    const aPacientes = paciente[i];
+  //   for (let i = 0; i < paciente.length; i++) {
+  //   const aPacientes = paciente[i];
        
    
-      var testingModalSinLog = `
-   <h1 class="textoProfesional" id="profesionales">Buen día, Profesional</h1>
-   <p> Sus pacientes del día son: </p>
-    <div id="tablaPacientes">
-     <table class="table w-100 pl-0 mt-0">
-       <thead class="thead-light">
-         <tr class="text-center" id="TablaPacientes">
-           <th scope="col" style="width: 13vw;">Horario</th>
-           <th scope="col" style="width: 13vw;">Paciente</th>
-           <th scope="col" style="width: 13vw;">Edad</th>
-           <th scope="col" style="width: 13vw;">Documento</th>
-         </tr>
-       </thead>
-       `
-         modalPacienteLogueado.innerHTML = testingModalSinLog
-         tablaPacientes.innerHTML += `
-         <tr id="TablaPacientes" class="thead-light">
-             <td>${aPacientes.apellido + " " + aPacientes.nombre}</td>
-             <td>${aPacientes.edad}</td>
-             <td>${aPacientes.documento}</td>
-         </tr>
-         `;
+  //     var testingModalSinLog = `
+  //  <h1 class="textoProfesional" id="profesionales">Buen día, Profesional</h1>
+  //  <p> Sus pacientes del día son: </p>
+  //   <div id="tablaPacientes">
+  //    <table class="table w-100 pl-0 mt-0">
+  //      <thead class="thead-light">
+  //        <tr class="text-center" id="TablaPacientes">
+  //          <th scope="col" style="width: 13vw;">Horario</th>
+  //          <th scope="col" style="width: 13vw;">Paciente</th>
+  //          <th scope="col" style="width: 13vw;">Edad</th>
+  //          <th scope="col" style="width: 13vw;">Documento</th>
+  //        </tr>
+  //      </thead>
+  //      `
+  //        modalPacienteLogueado.innerHTML = testingModalSinLog
+  //        tablaPacientes.innerHTML += `
+  //        <tr id="TablaPacientes" class="thead-light">
+  //            <td>${aPacientes.apellido + " " + aPacientes.nombre}</td>
+  //            <td>${aPacientes.edad}</td>
+  //            <td>${aPacientes.documento}</td>
+  //        </tr>
+  //        `;
         
-     };}  
+  //    };}  
 }
