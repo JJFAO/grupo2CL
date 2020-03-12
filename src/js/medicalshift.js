@@ -257,7 +257,7 @@ function guardar_turno() {
     const pacientesForTesting = JSON.parse(localStorage.getItem("usuariologueado"));
     registro.nombrePac = pacientesForTesting.nombre
     registro.apelliPopac = pacientesForTesting.apellido
-    registro.dniPac = pacientesForTesting.documento
+    registro.dniPac = pacientesForTesting.id
     
     inputs.forEach((dato) => {
         registro[dato.id] = dato.value

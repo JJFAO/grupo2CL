@@ -2,19 +2,40 @@
 
 const pacientesForTestings = JSON.parse(localStorage.getItem("rTurnos"));
 const logueoForTesting = JSON.parse(localStorage.getItem('usuariologueado'));
+const doctoresForTestings = JSON.parse(localStorage.getItem("rDoctores"))
 const usuarioForTesting = pacientesForTestings;
+const elLogueoTesting = logueoForTesting;
 
-const modalACargar = pacientesForTesting.find(apellido =>logueoForTesting.apellido);
+const modalACargar = pacientesForTestings.find(function (pacienteForTest){
+  return pacienteForTest.dniPac == logueoForTesting.id;
+})
 
-  let userLogued = {
+const profeACargar = doctoresForTestings.find(function (docTest){
+  return docTest.cuil == modalACargar.doctores;
+}
+
+)
+const cuilDoctor = profeACargar
+    const datoDoctor = {
+      nombre: cuilDoctor.nombre,
+      apellido: cuilDoctor.apellido,
+    }
+// console.log(modalACargar);
+
+  const userLogued = {
     id : modalACargar.id,
-    nombre : modalACargar.nombre,
-    apellido : modalACargar.apellido,
+    nombre : modalACargar.nombrePac,
+    apellido : modalACargar.apelliPopac,
     diasTesting: modalACargar.dias,
     turnoTesting: modalACargar.horario,
-    doctor: modalACargar.doctores,
+    doctor:datoDoctor.nombre + ' ' + datoDoctor.apellido,
+  }
   
-}
+    
+
+     
+
+
 function consultaTurnoPaciente (){
   $('#modalPacienteSesion').modal("show");
   if (pacientesForTestings !== []){
@@ -44,6 +65,10 @@ function consultaTurnoPaciente (){
                 }
           }
         }
+
+
+
+
 
 
 
