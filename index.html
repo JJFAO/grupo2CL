@@ -24,7 +24,7 @@
   </head>
   <a name="top"></a>
 
-<body>
+<body class="p-0">
   <nav class="navbar p-0 navbar-expand-lg navbar-light bg-light borde-separacion d-flex flex-column">
     <div class="d-flex justify-content-between w-100">
       <img class="logoRolling d-flex justify-content-start MargenLogo mt-3" src="Assets/LogoRolling.svg"
@@ -35,8 +35,10 @@
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <button id="botonLogueo" class="m-1 p-0" data-toggle="modal" data-target="#indexModal">
-          <img src="Assets/user.png" alt="">
+        <div class="d-flex" id="cartelBienvenida">
+        </div>
+        <button type="button" id="botonLogueo" class="m-1 p-0 botonLogueo btn-link" data-toggle="modal" data-target="#indexModal">
+          <img class="botonLogueoIMG text-light" src="Assets/user.png" alt="">
         </button>
       </div>
     </div>
@@ -61,12 +63,10 @@
           <a class="nav-link" id="contacto" href="#hicisteClickEnContacto">Contacto</a>
         </li>
       </ul>
-
     </div>
-
   </nav>
   <div class="fixed-bottom botonTurnero float-right">
-    <button class="shadow-lg rounded-circle" type="button" data-toggle="modal" data-target='' onclick="inicioshift()">
+    <button class="shadow-lg rounded-circle" type="button" data-toggle="modal" data-target="#MedicalShift" onclick="inicioshift()"> Turnos
       <img class="tamañoBotonTurnero" src="Assets/calendar.png" alt="Turnero">
     </button>
   </div>
@@ -106,8 +106,33 @@
         </div>
       </a>
     </div>
-    
+    <div class="prestaciones mt-5 d-flex">
+    <div>
+        <img class="imgprestaciones" src="Assets/001-stethoscope.svg" alt="estetoscopio">
+          <h2>Cuidado</h2>
+          <h2>Permanente</h2>
+          <p>Para una efectiva recuperación</p>
 
+      </div>
+      <div>
+        <img class="imgprestaciones" src="Assets/002-medicine.svg" alt="medicina">
+        <h2>Medicación</h2>
+        <h2>Segura</h2>
+        <p>Bajo controles de calidad ISO9001</p>
+      </div>
+      <div>
+        <img class="imgprestaciones" src="Assets/ambulance.svg" alt="ambulancia">
+        <h2>servicio de</h2>
+        <h2>Emergencias</h2>
+        <p>A tu cuidado en situaciones complejas</p>
+      </div>
+      <div>
+        <img class="imgprestaciones" src="Assets/003-care.svg" alt="cuidados">
+        <h2>Protección</h2>
+        <h2>Constante</h2>
+        <p>Nos preocupamos por tu salud</p>
+      </div>
+    </div>
 <div class="container d-flex align-items-center mt-5">
       <img src="./src/imagenes/buildingclinic.jpg" class="col-8 img-fluid" alt="Responsive image">
     <div class="col-4">
@@ -116,13 +141,7 @@
             </p>
     </div>
 </div>
-
-  
-  
-  
-  
    <h1 class="text-center titulosHome mt-5 mb-5">Nuestros Compromisos</h1>
-    
     <div class="container-fluid">
     <div class="card-deck d-flex justify-content-between row row-cols-1 row-cols-sm-2 mt-3 mb-3">
   <div class="col card border-0 shadow p-3 mb-5 bg-white rounded">
@@ -149,44 +168,7 @@
     </div>
   </div>
 </div>
-    </div>
-    
-    
-    
-    
-  <!--  <div class="container-fluid mt-4">
-      <div class="row">
-        <div class="col-12 my-3 col-lg-4">
-          <div class="card h-100">
-            <img class="card-img-top" src="./src/imagenes/metodoleon.PNG" alt="Card image cap">
-            <h4 class="titulocards mt-3">Método León</h4>
-            <div class="card-body"> El acompañamiento cambia vidas y permite soñar Clínica Mayo se sumó como Padrino al
-              Programa "Aprendiendo en Casa - HIPPY", para que nuevas familias reciban acompañamiento a través de un
-              proyecto 100% educativo, que estimula el aprendizaje, el [...] </div>
-          </div>
-        </div>
-        <div class="col-12  my-3 col-lg-4">
-          <div class="card h-100">
-            <img class="card-img-top" src="./src/imagenes/clinicayfundacion.PNG" alt="Card image cap">
-            <h4 class="titulocards mx-3 mt-3">Clínica Rolling y Fundación León</h4>
-            <div class="card-body"> Programa de acompañamiento familiar desde octubre de 2018 trabajamos juntos Clínica
-              Rolling Code y Fundación León acompañando familias en situaciones de vulnerabilidad de la provincia. Todos
-              los
-              programas de Fundación León se basan en... </div>
-          </div>
-        </div>
-        <div class="col-12 my-3 col-lg-4">
-          <div class="card h-100">
-            <img class="card-img-top" src="./src/imagenes/semanaprematu.PNG" alt="Card image cap">
-            <h4 class="titulocards mt-3">Semana de Prematuro</h4>
-            <div class="card-body"> Campaña de concientaziación 2019: Este festejo y campaña de concientización comenzó
-              a
-              realizarse en Argentina hace 10 años, es una inicitiva conjunta entre UNICEF y la Secretaría de Gobierno
-              de Salud de la ... </div>
-          </div>
-        </div>
-      </div>
-    </div>-->
+    </div> 
   </main>
   <!-- Modal Medical Shift-->
   <div class="modal fade" id="MedicalShift" tabindex="-1" role="dialog" aria-labelledby="MedicalShiftLabel"
@@ -328,7 +310,7 @@
                   <label for="formGroupExampleInput2">Contraseña</label>
                   <input type="password" class="form-control" id="passPatient" placeholder="Ingrese Contraseña">
                   <div class="d-flex justify-content-between mt-3">
-                    <button type="submit" class="btn text-white mb-3 d-flex justify-content-center"
+                    <button type="submit" id="ingresarASesion" class="btn text-white mb-3 d-flex justify-content-center"
                       onclick="validation4Patient()">Ingresar</button>
                     <a href="registropaciente.html"
                       class="btn btn-default mb-3 d-flex justify-content-center btnregister text-white">Registrarme
@@ -340,7 +322,7 @@
                 <form>
                   <div class="form-group">
                     <div class="dropdown open d-flex">
-                      <input type="number" class="form-control" id="cuit" placeholder="CUIL/CUIT">
+                      <input type="number" class="form-control" id="cuil" placeholder="CUIL/CUIT">
                     </div>
                   </div>
                   <div class="form-group mt-3">
@@ -450,7 +432,6 @@
       </div>
     </div>
   </div>
-
   <div class="modal fade" id="modalPacienteSesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -470,7 +451,6 @@
       </div>
     </div>
   </div>
-
   <div class="modal fade" id="modalProfesionalSesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
   aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
