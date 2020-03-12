@@ -43,11 +43,7 @@ label {
 .logoRolling {
   height: 50px;
 }
-@media (min-width: 768px) {
-  .logoRolling {
-    height: 90px;
-  }
-}
+
 @media (max-width: 768px) {
   .letrasFooter {
     font-size: 15px;
@@ -75,13 +71,14 @@ label {
   margin-left: 7px;
 }
 @media (min-width: 768px) {
+  .logoRolling {
+    height: 90px;
+  }
   .logoRollingFooter {
     width: 25vw;
     margin-top: 15px;
     margin-left: 15px;
   }
-}
-@media (min-width: 768px) {
   .ubiTelDesktop {
     font-size: 20px;
   }
@@ -109,18 +106,18 @@ label {
     margin-left: 4px;
     margin-right: 4px;
   }
-}
-@media (max-width: 768px) {
   .otrosEnlacesMobile {
     width: 75vw !important;
+  }
+  .imgprestaciones {
+    height: 100px;
+    width: 100px;
   }
 }
 @media (min-width: 768px) {
   .otrosEnlacesDesktop {
     width: 25vw !important;
   }
-}
-@media (min-width: 768px) {
   .copyMobile {
     display: none;
   }
@@ -227,8 +224,6 @@ label {
     margin-bottom: 50px;
     margin-right: 20px;
   }
-}
-@media (min-width: 768px) {
   .MargenLogo {
     margin-left: 20px;
   }
@@ -354,4 +349,14 @@ label {
 .imgprestaciones {
   height: 70px;
   width: 70px;
+}
+@media (max-width: 320px) {
+  .tamañoImgPrestaciones {
+    height: 70px;
+    width: 70px;
+  }
+  .imgprestaciones {
+    height: 50px;
+    width: 50px;
+  }
 }
