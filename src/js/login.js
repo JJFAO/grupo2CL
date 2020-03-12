@@ -13,7 +13,7 @@ function hideModalpp() {
 }
 function recoverPass() {
     Swal.fire({
-    position: 'top-center',
+    // position: 'top-center',
     icon: 'success',
     title: 'Mensaje enviado',
     showConfirmButton: false,
@@ -22,7 +22,7 @@ function recoverPass() {
   
     function inicioExitoso() {
       Swal.fire({
-      position: 'top-center',
+      // position: 'top-center',
       icon: 'success',
       title: 'Inicio exitoso',
       showConfirmButton: false,
@@ -30,7 +30,7 @@ function recoverPass() {
       })} 
       function errorCuilPass() {
         Swal.fire({
-        position: 'top-center',
+        // position: 'top-center',
         icon: 'error',
         title: 'Las credenciales no son correctas',
         showConfirmButton: false,
@@ -38,7 +38,7 @@ function recoverPass() {
         })}
         function cuilNoregis() {
           Swal.fire({
-          position: 'top-center',
+          // position: 'top-center',
           icon: 'warning',
           title: 'El CUIL no esta registrado',
           showConfirmButton: false,
@@ -46,7 +46,7 @@ function recoverPass() {
           })}
           function dniNoregis() {
             Swal.fire({
-            position: 'top-center',
+            // position: 'top-center',
             icon: 'warning',
             title: 'El DNI no esta registrado',
             showConfirmButton: false,
@@ -116,13 +116,27 @@ function validation4Profesional() {
     function pacienteProfesional (){
       $('#modalProfesionalSesion').modal("show");
     }
-let modalEntereado = document.querySelector("#indexModal")
-function enterFuncionando(){
-  if(modalEntereado.hasClass("show"))
-  $(document).keypress(function(e){
-    if (e.which == 13){
-        $("#ingresarASesion").click();
-    }
+
+// function enterFuncionando(){
+//   if($("#indexModal").hasClass("show"));
+//   console.log("hola")
+//   $(document).keypress(function(e){
+//      (e.which == 13)
+//         $("#ingresarASesion").click();
+    
+// });
+// }
+// enterFuncionando();
+// Get the input field
+let input = document.querySelector("#indexModal");
+
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("ingresarASesion").click();
+  }
 });
-}
-enterFuncionando();
