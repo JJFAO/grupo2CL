@@ -187,7 +187,9 @@ function guardar_turno() {
     const nTurnos = JSON.parse(localStorage.getItem('rTurnos')) || [];
     nTurnos.push(registro);
     localStorage.setItem('rTurnos', JSON.stringify(nTurnos))
+    window.location.assign("index.html");
     return registro
+
 }
 
 function borrar_turno(obj) {

@@ -108,27 +108,48 @@ function botonContactoHandler() {
     contacto.classList.remove("activeSeba");
   }
 }
-function seDaLaBienvenida() {
-  const pacienteLogeadoBienvenido = JSON.parse(localStorage.getItem("usuariologueado"));
-  if (pacienteLogeadoBienvenido == null) {
-    const iniciaSesionPorfa = `<p class="PLB align-self-end" id="loginPlis">Inicie Sesión</p>`;
-    const cartelBienvenida = document.getElementById("cartelBienvenida");
+
+
+
+
+
+function seDaLaBienvenida() {   
+    const pacienteLogeadoBienvenido = JSON.parse(localStorage.getItem("usuariologueado"));
+    const proLogBienvenido = JSON.parse(localStorage.getItem("profelogueado"));
+    if (pacienteLogeadoBienvenido == null) {
+    const iniciaSesionPorfa = `<p class="PLB align-self-end">Inicie Sesión</p>`;
+    const cartelBienvenida = document.getElementById("cartelBienvenida")
     cartelBienvenida.innerHTML = iniciaSesionPorfa;
   } else {
     let bienvenidoPaciente = {
-      id: pacienteLogeadoBienvenido.id,
-      nombre: pacienteLogeadoBienvenido.nombre,
-      apellido: pacienteLogeadoBienvenido.apellido,
-      diasTesting: "",
-      turnoTesting: "",
-      doctor: ""
-    };
-    botonLogueo.classList.add("d-none");
-    let PLB = `<h1>¡Bienvenido, ${bienvenidoPaciente.nombre}!</h1>
-    <button class="btn btn-primary dontShowYourselfLoginButton" type="button" onclick="reinicioCierre" id="botonCierreSesion">Cerrar Sesión
-    </button>`;
+        id: pacienteLogeadoBienvenido.id,
+        nombre: pacienteLogeadoBienvenido.nombre,
+        apellido: pacienteLogeadoBienvenido.apellido,
+        diasTesting: "",
+        turnoTesting: "",
+        doctor: ""
+      };
+      botonLogueo.classList.add("d-none")
+    let PLB = `
+    <div>
+    <h1 class="tituloID">¡Bienvenido, ${bienvenidoPaciente.nombre}!</h1>
+    <h1 class ="cerrarSesionID text-right"><a id="botonCierreSesion" href="#" onclick="reinicioCierre();">Cerrar Sesión</h1>
+    </div>`;
     cartelBienvenida.innerHTML = PLB;
-  }
+} if(proLogBienvenido !== null){
+  let bienvenidoProf = {
+    id: proLogBienvenido.id,
+    nombre: proLogBienvenido.nombre,
+    apellido: proLogBienvenido.apellido,
+  };
+  botonLogueo.classList.add("d-none")
+let PLB = `
+<div>
+<h1 class="tituloID">¡Bienvenido, ${bienvenidoProf.nombre}!</h1>
+<h1 class ="cerrarSesionID text-right"><a id="botonCierreSesion" href="#" onclick="reinicioCierre();">Cerrar Sesión</h1>
+</div>`;
+cartelBienvenida.innerHTML = PLB;
+}   
 }
 seDaLaBienvenida();
 let botonCierreSesion = document.querySelector("#botonCierreSesion");
@@ -155,6 +176,7 @@ botonCierreSesion.addEventListener("click", cierreSesionHandler);
 function cierreSesionHandler() {
   if (cierreSesion == false) {
     localStorage.removeItem("usuariologueado");
+    localStorage.removeItem("profelogueado");
     window.location.assign("index.html");
   }
 }
