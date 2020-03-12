@@ -415,8 +415,8 @@ label {
   object-fit: center;
 }
 .imgprestaciones {
-  height: 20%;
-  width: 20%;
+  height: 25%;
+  width: 25%;
 }
 
 .tituloID{
@@ -424,4 +424,7 @@ label {
 }
 .cerrarSesionID{
     font-size: 1em;
+}
+.img-build {
+    object-fit: cover;
 }

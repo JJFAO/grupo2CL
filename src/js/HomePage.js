@@ -172,11 +172,13 @@ function menuStatusHandler3() {
     iniciaSesionPorfa.classList.remove("d-none");
   }
 }
-botonCierreSesion.addEventListener("click", cierreSesionHandler);
-function cierreSesionHandler() {
-  if (cierreSesion == false) {
-    localStorage.removeItem("usuariologueado");
-    localStorage.removeItem("profelogueado");
-    window.location.assign("index.html");
+if (botonCierreSesion) {
+  botonCierreSesion.addEventListener("click", cierreSesionHandler);
+  function cierreSesionHandler() {
+    if (cierreSesion == false) {
+      localStorage.removeItem("usuariologueado");
+      localStorage.removeItem("profelogueado");
+      window.location.assign("index.html");
+    }
   }
 }

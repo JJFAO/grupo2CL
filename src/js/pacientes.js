@@ -14,6 +14,5 @@ class Pacientes
         this.localidad = seleccionLocalidad;
         this.codigopostal = postalCliente;
         this.autorizado = 'Pendiente'
-
     }
 }

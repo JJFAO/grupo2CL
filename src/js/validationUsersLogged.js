@@ -131,8 +131,8 @@ function consultaTurnoPaciente() {
 let botonDeleteTurno = document.querySelector("#elimiTurno");
 let eliminarTurno = false;
 
-if (botonCierreSesion) {
-  botonCierreSesion.addEventListener("click", deleteTurno);
+if (botonDeleteTurno) {
+  botonDeleteTurno.addEventListener("click", deleteTurno);
   function deleteTurno() {
     if (eliminarTurno == false);
     localStorage.removeItem("rTurnos");

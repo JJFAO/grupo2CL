@@ -59,12 +59,17 @@ function recoverPass() {
     const usuarios = JSON.parse(localStorage.getItem("Pacientes"))    
   let dniHtml = document.querySelector("#DNI")
   let passHtml = document.querySelector("#passPatient")
+ 
+  
   for(let index = 0; index < usuarios.length; index++) {
     const usuario = usuarios[index];
     let usuariologueado = {
       id : usuario.documento,
       nombre : usuario.nombre,
-      apellido : usuario.apellido
+      apellido : usuario.apellido,
+      autorizado : usuario.autorizado
+
+      
     }
     if (dniHtml.value == usuario.documento) {
       if (passHtml.value == usuario.password) {
@@ -85,7 +90,7 @@ function recoverPass() {
 // localStorage.setItem("proflogueado", JSON.stringify(proflogueado));
 
 function validation4Profesional() {
-  const profesionales = JSON.parse(localStorage.getItem("rDoctores"))
+  const profesionales = JSON.parse(localStorage.getItem("rDoctores")) || [];
   let cuilHtml = document.querySelector("#cuil")
   let passprofHtml = document.querySelector("#passProf")   
   
