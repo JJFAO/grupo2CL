@@ -67,7 +67,7 @@ function recoverPass() {
       id : usuario.documento,
       nombre : usuario.nombre,
       apellido : usuario.apellido,
-      autorizado : usuario.autorizado;
+      autorizado : usuario.autorizado
 
       
     }
@@ -90,7 +90,7 @@ function recoverPass() {
 // localStorage.setItem("proflogueado", JSON.stringify(proflogueado));
 
 function validation4Profesional() {
-  const profesionales = JSON.parse(localStorage.getItem("rDoctores"))
+  const profesionales = JSON.parse(localStorage.getItem("rDoctores")) || [];
   let cuilHtml = document.querySelector("#cuil")
   let passprofHtml = document.querySelector("#passProf")   
   
