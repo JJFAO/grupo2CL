@@ -151,6 +151,10 @@ label {
   z-index: 20;
   font-size: 2.8rem;
 }
+.subtituloCabecera{
+    font-family:"Montserrat", serif;
+    font-size: 2rem;
+}
 .p-header {
   font-family: "Roboto Slab", serif;
   font-size: 1.8rem;
@@ -162,6 +166,9 @@ label {
   .titulo-header {
     font-size: 2rem;
   }
+  .subtituloCabecera{
+    font-size: 1.5rem;
+}
   .p-header {
     font-size: 1.3rem;
   }
@@ -173,6 +180,9 @@ label {
   .titulo-header {
     font-size: 1.7rem;
   }
+  .subtituloCabecera{
+    font-size: 1rem;
+}
   .p-header {
     font-size: 1rem;
   }
@@ -184,6 +194,9 @@ label {
   .titulo-header {
     font-size: 1.3rem;
   }
+  .subtituloCabecera{
+    font-size: 0.8rem;
+}
   .p-header {
     font-size: 0.85rem;
   }
@@ -195,6 +208,9 @@ label {
   .titulo-header {
     font-size: 1.1rem;
   }
+  .subtituloCabecera{
+    font-size: 0.5rem;
+}
   .p-header {
     font-size: 0.7rem;
   }
