@@ -130,11 +130,6 @@ label {
     display: none;
   }
 }
-.tituloHome{
-    font-size: 1.8rem;
-    color: #691353;
-}
-
 .textoCopyDesktop {
   background-color: #1595a3 !important;
   text-align: center;
@@ -209,7 +204,6 @@ label {
 }
 .clinica {
   color: #691353;
-  font-weight: bold;
 }
 .titulocards {
   display: flex;
@@ -405,8 +399,8 @@ label {
   object-fit: center;
 }
 .imgprestaciones {
-  height: 70px;
-  width: 70px;
+  height: 20%;
+  width: 20%;
 }
 
 .tituloID{

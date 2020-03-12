@@ -163,11 +163,9 @@ let desplegado2 = false;
 menuDesplegado.addEventListener("click", menuStatusHandler3);
 function menuStatusHandler3() {
   if (desplegado2 == false && $("#botonCierreSesion").hasClass("dontShowYourselfLoginButton") == false) {
-    console.log(desplegado2);
     desplegado2 = !desplegado2;
     botonLogueo.classList.add("d-none");
     iniciaSesionPorfa.classList.add("d-none");
-    console.log(desplegado2);
   } else if (desplegado2 == true && $("#botonCierreSesion").hasClass("dontShowYourselfLoginButton") == false) {
     desplegado2 = !desplegado2;
     botonLogueo.classList.remove("d-none");
