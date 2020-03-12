@@ -40,23 +40,6 @@ function inicioshift() {
 
 function esp_sinrepetir() {
 
-<<<<<<< HEAD
- 
-let doctores_filtrados = []
-const doctores = JSON.parse(localStorage.getItem("rDoctores"))
-doctores.forEach(doctor => {
-    doctores_filtrados.push(doctor.especialidad)
-});
-let esp_sinRepetidos = doctores_filtrados.filter(function (valor, indiceActual, arreglo) {
-    let indiceAlBuscar = arreglo.indexOf(valor);
-    if (indiceActual === indiceAlBuscar) {
-        return true;
-    } else {
-        return false;
-    }
-});
-return esp_sinRepetidos
-=======
     let doctores_filtrados = []
     const doctores = JSON.parse(localStorage.getItem("rDoctores"))
     doctores.forEach(doctor => {
@@ -71,7 +54,6 @@ return esp_sinRepetidos
         }
     });
     return esp_sinRepetidos
->>>>>>> release-candidate-07022020
 }
 
 function cargador(array) {
