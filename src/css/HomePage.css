@@ -260,9 +260,22 @@ label{
 .tamañoMapa{
     height: 250px;
 }
+
 .tamañoBotonTurnero{
-    width: 55px;
-    height: 55px;
+    width: 65px;
+    height: 65px;
+    background-color: #691353;
+    transition: all 0.5s;
+}
+
+.tamañoBotonTurnero:hover{
+    background-color: #225378;
+}
+
+
+.tamanoImagenTurnero{
+    width: 45px;
+    height: 45px;
 }
 @media (max-width: 1024px){
     .tamañoMapa {
@@ -331,10 +344,13 @@ label{
     width: 45px;
     height: 45px;
     background-color: #225378;
+    border-radius: 45px;
+    border-color:  #225378;
 }
 .botonLogueoIMG{
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
+    
 }
 .PLB{
     margin: 0px;
@@ -359,3 +375,9 @@ label{
     width: 20%;
 }
 
+.tituloID{
+    font-size: 1.5em;
+}
+.cerrarSesionID{
+    font-size: 1em;
+}

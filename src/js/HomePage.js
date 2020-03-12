@@ -139,9 +139,11 @@ function seDaLaBienvenida() {
         doctor: ""
       };
       botonLogueo.classList.add("d-none")
-    let PLB = `<h1>¡Bienvenido, ${bienvenidoPaciente.nombre}!</h1>
-    <button class="btn btn-primary" type="button" onclick="reinicioCierre" id="botonCierreSesion">Cerrar Sesión
-    </button>`;
+    let PLB = `
+    <div>
+    <h1 class="tituloID">¡Bienvenido, ${bienvenidoPaciente.nombre}!</h1>
+    <h1 class ="cerrarSesionID text-right"><a id="botonCierreSesion" href="#" onclick="reinicioCierre();">Cerrar Sesión</h1>
+    </div>`;
     cartelBienvenida.innerHTML = PLB;
 }
 }

@@ -20,6 +20,13 @@
     <link rel="stylesheet" href="src/css/HomePage.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:700&display=swap">
     <link rel="stylesheet" href="src/css/medicalshift.css">
+    <link rel='icon' href='./assets/images001.ico' type='image/x-icon' sizes="16x16" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" sizes="192x192" href="./src/ico/favicon-192x192.png">
+    <link rel="apple-touch-icon" href="./src/ico/apple-touch-icon.png">
+    <meta name="msapplication-square150x150logo" content="./src/ico/ms-icon-150x150.png">
+    <meta name="msapplication-config" content="./src/ico/browserconfig.xml">
+    <meta name="theme-color" content="#0056B3">
     <title>Clínica RollingCode</title>
   </head>
   <a name="top"></a>
@@ -29,7 +36,7 @@
     <div class="d-flex justify-content-between w-100">
       <img class="logoRolling d-flex justify-content-start MargenLogo mt-3" src="Assets/LogoRolling.svg"
         alt="Logo Rolling Code">
-      <div class="d-flex justify-content-end align-self-center">
+      <div class="d-flex justify-content-end align-items-center">
         <button id="menuDesplegado" class="navbar-toggler p-0" type="button" data-toggle="collapse"
           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
           aria-label="Toggle navigation">
@@ -38,7 +45,7 @@
         <div class="d-flex" id="cartelBienvenida">
         </div>
         <button type="button" id="botonLogueo" class="m-1 p-0 botonLogueo btn-link" data-toggle="modal" data-target="#indexModal">
-          <img class="botonLogueoIMG text-light" src="Assets/user.png" alt="">
+          <img class="botonLogueoIMG text-light" src="./assets/userwhite.svg" alt="">
         </button>
       </div>
     </div>
@@ -49,6 +56,9 @@
         </li>
         <li class="nav-item mr-1 pl-1">
           <a class="nav-link" id="pacientes" onclick="consultaTurnoPaciente()" href="#modalPacienteSesion" data-target="#modalPacienteSesion">Agenda</a>
+        </li>
+        <li class="nav-item mr-1 ml-1">
+          <a class="nav-link" id="profesionales" href="#">Profesional</a>
         </li>
         <li class="nav-item mr-1 ml-1">
           <a class="nav-link" id="institucional" href="#">Institucional</a>
@@ -63,8 +73,8 @@
     </div>
   </nav>
   <div class="fixed-bottom botonTurnero float-right">
-    <button class="shadow-lg rounded-circle" type="button" data-toggle="modal" data-target="#MedicalShift" onclick="inicioshift()"> Turnos
-      <img class="tamañoBotonTurnero" src="Assets/calendar.png" alt="Turnero">
+    <button class="tamañoBotonTurnero shadow-lg rounded-circle" type="button" data-toggle="modal" data-target="#MedicalShift" onclick="inicioshift()"> 
+      <img class="tamanoImagenTurnero" src="Assets/calendar.svg" alt="Turnero">
     </button>
   </div>
 
@@ -448,6 +458,26 @@
       </div>
     </div>
   </div>
+
+  <!-- <div class="modal fade" id="modalProfesionalSesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content d-flex justify-content-around">
+      <div class="">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center" id="modalProfeLogueado">
+      </div>
+      <div id = "footerModalBoton" class="footerModalBoton modal-footer d-flex justify-content-around"> -->
+        <!-- <button id ="soliciTurno" type="button" class="btn btn-primary"  data-dismiss="modal" onclick="buttonTestProfTurno()">Solicitar Turno</button>
+        <button id ="elimiTurno" type="button" class="btn btn-primary" onclick="buttonEliminarTestProfTurno()"data-dismiss="modal">Eliminar Turno</button> -->
+        <!-- <button id ="acepTurno "type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div> -->
   <footer class="bg-dark">
     <div class="d-lg-flex">
       <a id="hicisteClickEnContacto" href="#top"><img class="mt-5 logoRollingFooter" src="Assets/LogoRolling white.svg" alt="Logo Rolling Code"></a>
