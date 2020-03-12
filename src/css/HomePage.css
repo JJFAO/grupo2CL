@@ -1,264 +1,269 @@
-h1{
-    font-family: 'Roboto Slab', serif;
+h1 {
+  font-family: "Roboto Slab", serif;
 }
-h2{
-    font-family:'Montserrat', sans-serif;
+h2 {
+  font-family: "Montserrat", sans-serif;
 }
-p{
-    font-family:'Montserrat', sans-serif;
+p {
+  font-family: "Montserrat", sans-serif;
 }
-label{
-    font-family:'Montserrat', sans-serif;
+label {
+  font-family: "Montserrat", sans-serif;
 }
-.btn{
-    font-family:'Montserrat', sans-serif;
+.btn {
+  font-family: "Montserrat", sans-serif;
 }
-.form-control{
-    background-color: #d3d3d3 !important;
-    font-family:'Montserrat', sans-serif;
-    color: black;       
-    }
-    .form-control::-webkit-input-placeholder {
-        background-color: #d3d3d3;
-        border-radius: 11px;
-        color: black !important;
-    }
-    .form-control::-moz-placeholder {
-        background-color: #d3d3d3;
-        border-radius: 11px;
-        color: black !important;
-    }
-    ::-webkit-input-placeholder {
-        font-family:'Montserrat', sans-serif;
-    }
-    ::-moz-placeholder {
-        background-color: #d3d3d3;
-        font-family:'Montserrat', sans-serif;
-    }
+.form-control {
+  background-color: #d3d3d3 !important;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+.form-control::-webkit-input-placeholder {
+  background-color: #d3d3d3;
+  border-radius: 11px;
+  color: black !important;
+}
+.form-control::-moz-placeholder {
+  background-color: #d3d3d3;
+  border-radius: 11px;
+  color: black !important;
+}
+::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+::-moz-placeholder {
+  background-color: #d3d3d3;
+  font-family: "Montserrat", sans-serif;
+}
 .borde-separacion {
-    border-color: #1595a3!important;
-    border-bottom: 5px solid;
+  border-color: #1595a3 !important;
+  border-bottom: 5px solid;
 }
 
 .logoRolling {
-    height: 50px;
+  height: 50px;
 }
 @media (min-width: 768px) {
-    .logoRolling {
-        height: 90px;
-    }
+  .logoRolling {
+    height: 90px;
+  }
 }
 @media (max-width: 768px) {
-    .letrasFooter {
-        font-size: 15px;
-    }
+  .letrasFooter {
+    font-size: 15px;
+  }
 }
 .bordeFooter {
-    border-color: white;
-    border-bottom: 2px solid;
+  border-color: white;
+  border-bottom: 2px solid;
 }
 .textoCopy {
-    font-size: small;
+  font-size: small;
 }
 .loguitosFooter {
-    width: 25px;
-    height: 25px;
+  width: 25px;
+  height: 25px;
 }
 .logoTelephone {
-    margin-top: 15px; 
-    margin-right: 5px;
+  margin-top: 15px;
+  margin-right: 5px;
 }
 .LogosRedes {
-    width: 30px;
-    height: 30px;
-    margin-right: 7px;
-    margin-left: 7px;
+  width: 30px;
+  height: 30px;
+  margin-right: 7px;
+  margin-left: 7px;
 }
 @media (min-width: 768px) {
-    .logoRollingFooter {
-        width: 25vw;
-        margin-top: 15px;
-        margin-left: 15px;
-    }
+  .logoRollingFooter {
+    width: 25vw;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
 }
 @media (min-width: 768px) {
-    .ubiTelDesktop {
-        font-size: 20px;
-    }
+  .ubiTelDesktop {
+    font-size: 20px;
+  }
 }
 @media (max-width: 1440px) {
-    .LogosRedes {
-        width: 60px;
-        height: 60px;
-        margin-right: 10px;
-        margin-left: 10px;
-    }
+  .LogosRedes {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }
 @media (min-width: 1024px) {
-    .LogosRedes {
-        width: 50px;
-        height: 50px;
-        margin-right: 10px;
-        margin-left: 10px;
-    }
+  .LogosRedes {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }
 @media (max-width: 768px) {
-    .LogosRedes {
-        width: 35px;
-        height: 35px;
-        margin-left: 4px;
-        margin-right: 4px;
-    }
+  .LogosRedes {
+    width: 35px;
+    height: 35px;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
 }
 @media (max-width: 768px) {
-    .otrosEnlacesMobile {
-        width: 75vw!important;
-    }
+  .otrosEnlacesMobile {
+    width: 75vw !important;
+  }
 }
 @media (min-width: 768px) {
-    .otrosEnlacesDesktop {
-        width: 25vw!important;
-  
-    }
+  .otrosEnlacesDesktop {
+    width: 25vw !important;
+  }
 }
 @media (min-width: 768px) {
-    .copyMobile {
-        display: none;
-    }
+  .copyMobile {
+    display: none;
+  }
 }
 @media (max-width: 425px) {
-    .copyDesktop {
-        display: none;
-    }
+  .copyDesktop {
+    display: none;
+  }
 }
+.tituloHome{
+    font-size: 1.8rem;
+    color: #691353;
+}
+
 .textoCopyDesktop {
-    background-color: #1595a3!important;
-    text-align: center;
+  background-color: #1595a3 !important;
+  text-align: center;
 }
 .textoCopyMobile {
-    text-align: center;
+  text-align: center;
 }
-.activeSeba{
-    background-color: #1595A3!important;
-    color: white!important;
+.activeSeba {
+  background-color: #1595a3 !important;
+  color: white !important;
 }
 
 /* SECCIONES HOME */
-.pos-abs{
-    position: absolute;
+.pos-abs {
+  position: absolute;
 }
-.titulo-header{
-    font-family: 'Roboto Slab', serif;
-    z-index: 20;
-    font-size: 2.8rem;
-}  
+.titulo-header {
+  font-family: "Roboto Slab", serif;
+  z-index: 20;
+  font-size: 2.8rem;
+}
 .p-header {
-    font-family: 'Roboto Slab', serif;
-    font-size: 1.8rem;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.8rem;
 }
 .firstimg {
-    height: 520px;
+  height: 520px;
 }
 @media (max-width: 866px) {
-    .titulo-header{
-        font-size: 2rem;
-    }  
-    .p-header {
-        font-size: 1.3rem;
-    }
-    .firstimg {
-        height: 260px;
-    }
+  .titulo-header {
+    font-size: 2rem;
+  }
+  .p-header {
+    font-size: 1.3rem;
+  }
+  .firstimg {
+    height: 260px;
+  }
 }
 @media (max-width: 425px) {
-    .titulo-header{
-        font-size: 1.7rem;
-    }  
-    .p-header {
-        font-size: 1rem;
-    }
-    .firstimg {
-        height: 210px;
-    }
+  .titulo-header {
+    font-size: 1.7rem;
+  }
+  .p-header {
+    font-size: 1rem;
+  }
+  .firstimg {
+    height: 210px;
+  }
 }
 @media (max-width: 375px) {
-    .titulo-header{
-        font-size: 1.3rem;
-    }  
-    .p-header {
-        font-size: .85rem;
-    }
-    .firstimg {
-        height: 150px;
-    }
+  .titulo-header {
+    font-size: 1.3rem;
+  }
+  .p-header {
+    font-size: 0.85rem;
+  }
+  .firstimg {
+    height: 150px;
+  }
 }
 @media (max-width: 320px) {
-    .titulo-header{
-        font-size: 1.1rem;
-    }  
-    .p-header {
-        font-size: .7rem;
-    }
-    .firstimg {
-        height: 150px;
-    }
+  .titulo-header {
+    font-size: 1.1rem;
+  }
+  .p-header {
+    font-size: 0.7rem;
+  }
+  .firstimg {
+    height: 150px;
+  }
 }
 .clinica {
-    color: #691353;
+  color: #691353;
+  font-weight: bold;
 }
-.titulocards{
-    display: flex;
-    justify-content: center;
-    font-family:'Roboto Slab', serif; 
-    font-size: 19px;
+.titulocards {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto Slab", serif;
+  font-size: 19px;
 }
 
-.card-body{
-    font-family: 'Montserrat', sans-serif;
+.card-body {
+  font-family: "Montserrat", sans-serif;
 }
-.botonTurnero{
-    margin-left: 70vw;
+.botonTurnero {
+  margin-left: 70vw;
+  margin-bottom: 50px;
+  margin-right: 20px;
+}
+@media (min-width: 768px) {
+  .botonTurnero {
+    margin-left: 90vw;
     margin-bottom: 50px;
     margin-right: 20px;
+  }
 }
 @media (min-width: 768px) {
-    .botonTurnero {
-        margin-left: 90vw;
-        margin-bottom: 50px;
-        margin-right: 20px; 
-    }
-}
-@media (min-width: 768px) {
-    .MargenLogo {
-        margin-left: 20px;
-    }
+  .MargenLogo {
+    margin-left: 20px;
+  }
 }
 @media (max-width: 768px) {
-    .MargenMapa {
-        margin-left: 38px;
-    }
+  .MargenMapa {
+    margin-left: 38px;
+  }
 }
 .Copia-de-Health-Care-1-hex {
-    color: #225378;
+  color: #225378;
 }
 
 .Copia-de-Health-Care-2-hex {
-    color: #1595A3;
+  color: #1595a3;
 }
 
 .Copia-de-Health-Care-3-hex {
-    color: #ACF0F2;
+  color: #acf0f2;
 }
 
 .Copia-de-Health-Care-4-hex {
-    color: #F2FFE3;
+  color: #f2ffe3;
 }
 
 .Copia-de-Health-Care-5-hex {
-    color: #691353;
+  color: #691353;
 }
-.tamañoMapa{
-    height: 250px;
+.tamañoMapa {
+  height: 250px;
 }
 
 .tamañoBotonTurnero{
@@ -277,41 +282,59 @@ label{
     width: 45px;
     height: 45px;
 }
-@media (max-width: 1024px){
-    .tamañoMapa {
-        width: 240px;
-        height: 240px;
-    }
+@media (max-width: 1024px) {
+  .tamañoMapa {
+    width: 240px;
+    height: 240px;
+  }
 }
 
-@media (max-width: 768px){
-    .bordesFooter {
-    margin-bottom: 60px!important;
+@media (max-width: 768px) {
+  .bordesFooter {
+    margin-bottom: 60px !important;
+  }
 }
+@media (min-width: 768px) {
+  .tamañoMapa {
+    width: 200px;
+    height: 200px;
+  }
 }
-@media (min-width: 768px){
-    .tamañoMapa {
-        width: 200px;
-        height: 200px;
-    }
+@media (max-width: 425px) {
+  .tamañoMapa {
+    margin-left: 95px;
+  }
 }
-@media (max-width: 425px){
-    .tamañoMapa {
-        margin-left: 95px;
-    }
-
+@media (max-width: 375px) {
+  .tamañoMapa {
+    margin-left: 70px;
+  }
 }
-@media (max-width: 375px){
-    .tamañoMapa {
-        margin-left: 70px;
-    }
-
+@media (max-width: 320px) {
+  .tamañoMapa {
+    margin-left: 42px;
+  }
 }
-@media (max-width: 320px){
-    .tamañoMapa {
-        margin-left: 42px;
-    }
-
+@media (min-width: 1024px) {
+  .tamañoMapa {
+    width: 250px;
+    height: 250px;
+    margin-left: 100px;
+  }
+}
+@media (min-width: 1440px) {
+  .tamañoMapa {
+    width: 320px;
+    height: 320px;
+    margin-left: 150px;
+  }
+}
+@media (min-width: 2560px) {
+  .tamañoMapa {
+    width: 450px;
+    height: 450px;
+    margin-left: 350px;
+  }
 }
 @media (min-width: 1024px){
     .tamañoMapa {
@@ -350,29 +373,40 @@ label{
 .botonLogueoIMG{
     width: 30px;
     height: 30px;
+}
     
+@media (min-width: 768px) {
+  .tamañoLinkTablet {
+    width: 500px;
+    display: inline-grid;
+  }
 }
-.PLB{
-    margin: 0px;
+
+.botonLogueoIMG {
+  width: 35px;
+  height: 35px;
 }
-@media (max-width: 320px){
-    .PLB{
-        display: none;
-    }
+.PLB {
+  margin: 0px;
 }
-.textHome{
-    font-size: 9pt;
+@media (max-width: 320px) {
+  .PLB {
+    display: none;
+  }
 }
-.tituloHome{
-    font-size: 20pt;
-    color: #691353;
+.textHome {
+  font-size: 9pt;
 }
-.imageHome{
-    object-fit: center;
+.tituloHome {
+  font-size: 20pt;
+  color: #691353;
+}
+.imageHome {
+  object-fit: center;
 }
 .imgprestaciones {
-    height: 20%;
-    width: 20%;
+  height: 70px;
+  width: 70px;
 }
 
 .tituloID{

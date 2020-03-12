@@ -1,93 +1,92 @@
-    /* font-family: 'Roboto Slab', serif;
+/* font-family: 'Roboto Slab', serif;
     font-family: 'Montserrat', sans-serif; */
-    
 
-.formularioRegistroCliente{
-margin-top: 1em;
-margin-left: 4em;
-margin-right: 4em;
-
+.formularioRegistroCliente {
+  margin-top: 1em;
+  margin-left: 4em;
+  margin-right: 4em;
 }
 
-h1{
-    font-family: 'Roboto Slab', serif;
-
+h1 {
+  font-family: "Roboto Slab", serif;
 }
-h2, li, p, label{
-    font-family:'Montserrat', sans-serif;
-    text-align: center;
+h2,
+li,
+p,
+label {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
 }
-.btn{
-    font-family:'Montserrat', sans-serif;
+.btn {
+  font-family: "Montserrat", sans-serif;
 }
-.tituloSeccion{
-    background-color: #225378;
-    color: white;
+.tituloSeccion {
+  background-color: #225378;
+  color: white;
 }
-.terminosCondiciones{
-    font-family: 'Montserrat', sans serif;
-    font-size: 10pt;
+.terminosCondiciones {
+  font-family: "Montserrat", sans serif;
+  font-size: 10pt;
 }
 .header-img {
-    height: 50vh;
-    width: 100%;
-    background-image: url('../../assets/img/clinic.jpeg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 50vh;
+  width: 100%;
+  background-image: url("../../assets/img/clinic.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .parrafoTitulo {
-    position: absolute;
-    font-size: 25px;
-    margin: 4em;
-    background-color: #691353;
-    font-family: 'Roboto Slab', serif;
-    font-size: 24pt;
+  position: absolute;
+  font-size: 25px;
+  margin: 4em;
+  background-color: #691353;
+  font-family: "Roboto Slab", serif;
+  font-size: 24pt;
 }
-.btn-outline-dark:hover{
-    background-color:#691353 !important;
+.btn-outline-dark:hover {
+  background-color: #691353 !important;
 }
-.btn-primary{
-    background-color:#691353 !important;
-    border-color: #691353 !important;   
+.btn-primary {
+  background-color: #691353 !important;
+  border-color: #691353 !important;
 }
 
-.card, .home {
-    background: rgba(128, 128, 128, 0.055) !important;
+.card,
+.home {
+  background: rgba(128, 128, 128, 0.055) !important;
 }
 
 .btnTurnos {
-    font-family: 'Roboto Slab', serif;
-    }
+  font-family: "Roboto Slab", serif;
+}
 
-.form-control{
-background-color: #d3d3d3 !important;
-font-family:'Montserrat', sans-serif;
-color: black;       
+.form-control {
+  background-color: #d3d3d3 !important;
+  font-family: "Montserrat", sans-serif;
+  color: black;
 }
 
 .form-control::-webkit-input-placeholder {
-    background-color: #d3d3d3;
-    border-radius: 11px;
-    color: black !important;
+  background-color: #d3d3d3;
+  border-radius: 11px;
+  color: black !important;
 }
 .form-control::-moz-placeholder {
-    background-color: #d3d3d3;
-    border-radius: 11px;
-    color: black !important;
+  background-color: #d3d3d3;
+  border-radius: 11px;
+  color: black !important;
 }
 
 ::-webkit-input-placeholder {
-    font-family:'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 ::-moz-placeholder {
-    background-color: #d3d3d3;
-    font-family:'Montserrat', sans-serif;
+  background-color: #d3d3d3;
+  font-family: "Montserrat", sans-serif;
 }
 .imgprestaciones {
-    height: 100px;
-    width: 100px;
+  height: 100px;
+  width: 100px;
 }
-
-

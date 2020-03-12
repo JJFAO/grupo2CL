@@ -3,22 +3,32 @@ let menuBusqueda = document.querySelector("#menuBusqueda");
 let botonLogueo = document.querySelector("#botonLogueo");
 let desplegado = false;
 
+
 menuDesplegado.addEventListener("click", menuStatusHandler);
 function menuStatusHandler() {
   if (desplegado == false) {
     desplegado = !desplegado;
-
     botonLogueo.classList.add("d-none");
-  } else if (desplegado == true) {
+  } else if (desplegado == true && $("#botonCierreSesion").hasClass("dontShowYourselfLoginButton") == false) {
+    console.log("perritomalvado")
     desplegado = !desplegado;
     botonLogueo.classList.remove("d-none");
   }
 }
-
+let desplegado3 = false
+menuDesplegado.addEventListener("click", menuStatusHandler2)
+function menuStatusHandler2() {
+  if (desplegado3 == true && $("#botonCierreSesion").hasClass("dontShowYourselfLoginButton") == true) {
+    desplegado3 = !desplegado3;
+    botonLogueo.classList.add("d-none");
+  } else if (desplegado3 == false && $("#botonCierreSesion").hasClass("dontShowYourselfLoginButton") == true) {
+    desplegado3 = !desplegado3;
+    botonLogueo.classList.add("d-none");
+  }
+}
 let inicio = document.querySelector("#inicio");
 let pacientes = document.querySelector("#pacientes");
 let institucional = document.querySelector("#institucional");
-let servicios = document.querySelector("#servicios");
 let profesionales = document.querySelector("#profesionales");
 let contacto = document.querySelector("#contacto");
 let botonInicio = false;
@@ -35,7 +45,6 @@ function botonInicioHandler() {
     inicio.classList.add("activeSeba");
     pacientes.classList.remove("activeSeba");
     institucional.classList.remove("activeSeba");
-    servicios.classList.remove("activeSeba");
     profesionales.classList.remove("activeSeba");
     contacto.classList.remove("activeSeba");
   } else if (botonInicio == true) {
@@ -50,7 +59,6 @@ function botonPacientesHandler() {
     pacientes.classList.add("activeSeba");
     inicio.classList.remove("activeSeba");
     institucional.classList.remove("activeSeba");
-    servicios.classList.remove("activeSeba");
     profesionales.classList.remove("activeSeba");
     contacto.classList.remove("activeSeba");
   } else if (botonPacientes == true) {
@@ -65,27 +73,11 @@ function botonInstitucionalHandler() {
     institucional.classList.add("activeSeba");
     inicio.classList.remove("activeSeba");
     pacientes.classList.remove("activeSeba");
-    servicios.classList.remove("activeSeba");
     profesionales.classList.remove("activeSeba");
     contacto.classList.remove("activeSeba");
   } else if (botonInstitucional == true) {
     botonInstitucional = !botonInstitucional;
     institucional.classList.remove("activeSeba");
-  }
-}
-servicios.addEventListener("click", botonServiciosHandler);
-function botonServiciosHandler() {
-  if (botonServicios == false) {
-    botonServicios = !botonServicios;
-    servicios.classList.add("activeSeba");
-    inicio.classList.remove("activeSeba");
-    pacientes.classList.remove("activeSeba");
-    institucional.classList.remove("activeSeba");
-    profesionales.classList.remove("activeSeba");
-    contacto.classList.remove("activeSeba");
-  } else if (botonServicios == true) {
-    botonServicios = !botonServicios;
-    servicios.classList.remove("activeSeba");
   }
 }
 profesionales.addEventListener("click", botonProfesionalesHandler);
@@ -96,7 +88,6 @@ function botonProfesionalesHandler() {
     inicio.classList.remove("activeSeba");
     pacientes.classList.remove("activeSeba");
     institucional.classList.remove("activeSeba");
-    servicios.classList.remove("activeSeba");
     contacto.classList.remove("activeSeba");
   } else if (botonProfesionales == true) {
     botonProfesionales = !botonProfesionales;
@@ -111,7 +102,6 @@ function botonContactoHandler() {
     inicio.classList.remove("activeSeba");
     pacientes.classList.remove("activeSeba");
     institucional.classList.remove("activeSeba");
-    servicios.classList.remove("activeSeba");
     profesionales.classList.remove("activeSeba");
   } else if (botonContacto == true) {
     botonContacto = !botonContacto;
@@ -165,16 +155,30 @@ seDaLaBienvenida();
 let botonCierreSesion = document.querySelector("#botonCierreSesion");
 let cierreSesion = false;
 
-function reinicioPag(){
+function reinicioPag() {
   window.location.assign("index.html");
+}
+let iniciaSesionPorfa = document.querySelector("#loginPlis");
+let desplegado2 = false;
+menuDesplegado.addEventListener("click", menuStatusHandler3);
+function menuStatusHandler3() {
+  if (desplegado2 == false && $("#botonCierreSesion").hasClass("dontShowYourselfLoginButton") == false) {
+    console.log(desplegado2);
+    desplegado2 = !desplegado2;
+    botonLogueo.classList.add("d-none");
+    iniciaSesionPorfa.classList.add("d-none");
+    console.log(desplegado2);
+  } else if (desplegado2 == true && $("#botonCierreSesion").hasClass("dontShowYourselfLoginButton") == false) {
+    desplegado2 = !desplegado2;
+    botonLogueo.classList.remove("d-none");
+    iniciaSesionPorfa.classList.remove("d-none");
   }
-
-botonCierreSesion.addEventListener("click",cierreSesionHandler);
-function cierreSesionHandler(){
-    if(cierreSesion==false);
+}
+botonCierreSesion.addEventListener("click", cierreSesionHandler);
+function cierreSesionHandler() {
+  if (cierreSesion == false) {
     localStorage.removeItem("usuariologueado");
     localStorage.removeItem("profelogueado");
     window.location.assign("index.html");
-}
-function reinicioCierre() {
+  }
 }
