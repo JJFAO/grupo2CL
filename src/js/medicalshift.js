@@ -30,9 +30,18 @@ function inicioshift() {
     if (log == null) {
         MENSAJE_usuario_nolog()
         $('#MedicalShift').modal('hide')
+        // console.log(log);
     } else {
-        $('#MedicalShift').modal('show')
-        myOnLoad()
+        if (log.autorizado == 'pendiente' || log.autorizado=='no' ) {
+            MENSAJE_pendiente()
+            $('#MedicalShift').modal('hide')
+
+        } else {
+            console.log(log);
+
+            $('#MedicalShift').modal('show')
+            myOnLoad()
+        }
 
     }
 
@@ -239,7 +248,15 @@ function confirmar() {
 function MENSAJE_usuario_nolog() {
     Swal.fire({
         icon: 'error',
-        title: 'DEBE ESTAR LOGUEADO PARA SOLICITAR EL TURNO',
+        title: 'Por favor inicie sección para solicitar un turno',
+        showConfirmButton: false,
+    })
+}
+
+function MENSAJE_pendiente() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Pendiente de autorizacion',
         showConfirmButton: false,
     })
 }
