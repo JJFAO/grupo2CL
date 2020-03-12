@@ -58,7 +58,7 @@
           <a class="nav-link" id="pacientes" onclick="consultaTurnoPaciente()" href="#modalPacienteSesion" data-target="#modalPacienteSesion">Agenda</a>
         </li>
         <li class="nav-item mr-1 ml-1">
-          <a class="nav-link" id="profesionales" href="#" onclick="quienEstaLog()">Profesional</a>
+          <a class="nav-link" id="profesionales" href="#" onclick="consultaProfesional()">Profesional</a>
         </li>
         <li class="nav-item mr-1 ml-1">
           <a class="nav-link" id="institucional" href="#">Institucional</a>
@@ -452,7 +452,7 @@
         </div>
         <div id = "footerModalBoton" class="footerModalBoton modal-footer d-flex justify-content-around">
           <button id ="soliciTurno" type="button" class="btn btn-primary"  data-dismiss="modal" onclick="buttonTestTurno()">Solicitar Turno</button>
-          <button id ="elimiTurno" type="button" class="btn btn-primary" onclick="buttonEliminarTestTurno()"data-dismiss="modal">Eliminar Turno</button>
+          <button id ="elimiTurno" type="button" class="btn btn-primary" onclick="deleteTurno()"data-dismiss="modal">Eliminar Turno</button>
           <button id ="acepTurno "type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
         </div>
       </div>
@@ -540,6 +540,7 @@
   <script src="src/js/login.js"></script>
   <script src="src/js/formPaciente.js"></script>
   <script src="./src/js/validationUsersLogged.js"></script>
+  <script src=.src/js/tablaPacientes.js></script>
   <script>
     myOnLoad();
   </script>

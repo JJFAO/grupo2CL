@@ -125,7 +125,8 @@ function botonContactoHandler() {
 
 function seDaLaBienvenida() {   
     const pacienteLogeadoBienvenido = JSON.parse(localStorage.getItem("usuariologueado"));
-  if (pacienteLogeadoBienvenido == null) {
+    const proLogBienvenido = JSON.parse(localStorage.getItem("profelogueado"));
+    if (pacienteLogeadoBienvenido == null) {
     const iniciaSesionPorfa = `<p class="PLB align-self-end">Inicie Sesión</p>`;
     const cartelBienvenida = document.getElementById("cartelBienvenida")
     cartelBienvenida.innerHTML = iniciaSesionPorfa;
@@ -145,7 +146,20 @@ function seDaLaBienvenida() {
     <h1 class ="cerrarSesionID text-right"><a id="botonCierreSesion" href="#" onclick="reinicioCierre();">Cerrar Sesión</h1>
     </div>`;
     cartelBienvenida.innerHTML = PLB;
-}
+} if(proLogBienvenido !== null){
+  let bienvenidoProf = {
+    id: proLogBienvenido.id,
+    nombre: proLogBienvenido.nombre,
+    apellido: proLogBienvenido.apellido,
+  };
+  botonLogueo.classList.add("d-none")
+let PLB = `
+<div>
+<h1 class="tituloID">¡Bienvenido, ${bienvenidoProf.nombre}!</h1>
+<h1 class ="cerrarSesionID text-right"><a id="botonCierreSesion" href="#" onclick="reinicioCierre();">Cerrar Sesión</h1>
+</div>`;
+cartelBienvenida.innerHTML = PLB;
+}   
 }
 seDaLaBienvenida();
 let botonCierreSesion = document.querySelector("#botonCierreSesion");
@@ -159,6 +173,7 @@ botonCierreSesion.addEventListener("click",cierreSesionHandler);
 function cierreSesionHandler(){
     if(cierreSesion==false);
     localStorage.removeItem("usuariologueado");
+    localStorage.removeItem("profelogueado");
     window.location.assign("index.html");
 }
 function reinicioCierre() {
