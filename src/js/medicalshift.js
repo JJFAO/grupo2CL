@@ -260,3 +260,15 @@ function MENSAJE_pendiente() {
         showConfirmButton: false,
     })
 }
+
+function borrar_turno1() {
+    const pacientelogueado = JSON.parse(localStorage.getItem("usuariologueado"));
+    const rTurnos = JSON.parse(localStorage.getItem("rTurnos"));
+    console.log(rturnos);
+    console.log(pacientelogueado);
+    
+    
+
+
+        
+}
