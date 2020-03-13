@@ -32,7 +32,7 @@ function inicioshift() {
         $('#MedicalShift').modal('hide')
         // console.log(log);
     } else {
-        if (log.autorizado == 'pendiente' || log.autorizado=='no' ) {
+        if (log.autorizado == 'pendiente' || log.autorizado == 'no') {
             MENSAJE_pendiente()
             $('#MedicalShift').modal('hide')
 
@@ -50,7 +50,7 @@ function inicioshift() {
 function esp_sinrepetir() {
 
     let doctores_filtrados = []
-    const doctores = JSON.parse(localStorage.getItem("rDoctores"))
+    const doctores = JSON.parse(localStorage.getItem("rDoctores")) || [];
     doctores.forEach(doctor => {
         doctores_filtrados.push(doctor.especialidad)
     });
