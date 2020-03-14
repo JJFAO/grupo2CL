@@ -1,5 +1,5 @@
 function cargarDoctores() {
-  const doctores = JSON.parse(localStorage.getItem("rDoctores"));
+  const doctores = JSON.parse(localStorage.getItem("rDoctores")) || [];
   const tablaDoctor = document.getElementById("doctores");
   let selectDoctors = document.querySelector("#cargaDoc");
   tablaDoctor.innerHTML = "";

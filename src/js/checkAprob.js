@@ -6,7 +6,7 @@ function confirmarDoc(element) {
   const posicionDoc = doctores.findIndex(
     doctor => element.id == doctor.matriculaP
   );
-  doctores[posicionDoc].autorizado = "Si";
+  doctores[posicionDoc].autorizado = `Si`;
   localStorage.setItem("rDoctores", JSON.stringify(doctores));
 }
 
@@ -17,6 +17,6 @@ function confirmadoPac(element) {
   resultadoPacSi.innerHTML = ` Si `;
   const pacientes = JSON.parse(localStorage.getItem("Pacientes"));
   const posicionPac = pacientes.findIndex(aPacientes => element.id == aPacientes.documento);
-  pacientes[posicionPac].autorizado = 'Si'
+  pacientes[posicionPac].autorizado = ` Si `
   localStorage.setItem('Pacientes', JSON.stringify(pacientes));
 }
