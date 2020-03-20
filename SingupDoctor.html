@@ -15,7 +15,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
-<body>
+<body onload="selects()">
     <!-- Modal -->
     <div class="modal fade" id="indexModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -104,7 +104,11 @@
                             <!-- buttom politica de privacidad -->
                             <a data-toggle="modal" href="#ppmodal" onclick="show">Política de Privacidad</a>
                         </div>
-                        <!-- Modal politica de privacidad -->
+                        <!-- Swal.fire({
+        icon: 'error',
+        title: 'Cuil o Matricula ya registrado',
+        showConfirmButton: false,
+    }) politica de privacidad -->
                         <div class="modal fade" id="ppmodal" tabindex="-1" role="dialog"
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -143,7 +147,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <div class="modal fade" id="modalrecover" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -210,6 +213,7 @@
             </div>
         </div>
     </div>
+
     <div class="text-center text-white titulo-1">
         <h1 class="mt-1">¡Bienvenido!</h1>
     </div>
@@ -246,19 +250,20 @@
                     <input type="text" class="form-control datos" id="domicilio" placeholder="Domicilio" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
+                    <select id="provincia" class="custom-select datos" required>
+                        <option selected disabled value="">Provincias</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-6 my-2">
                     <input type="text" class="form-control datos" id="localidad" placeholder="Localidad" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="number" class="form-control datos" id="codigopostal" placeholder="Código Postal" required>
-                </div>
-                <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control datos" id="provincia" placeholder="Provincia" required>
+                    <input type="number" class="form-control datos" id="codigopostal" placeholder="Código Postal"
+                        required>
                 </div>
             </div>
-
             <h2 class="mt-3">Horarios de atención</h2>
             <p>En ésta sección deberás elegir los días y horarios de consultas.</p>
-
             <div class="d-flex flex-wrap justify-content-around">
                 <div class="row my-3">
                     <div class="form-group mr-4 pr-3">
@@ -333,32 +338,33 @@
                     </select>
                 </div>
             </div>
-
             <h2 class="mt-3">Matricula y Especialidad</h2>
             <div class="my-3 row flex-wrap">
-
                 <div class="col-12 col-md-6 my-2">
-                    <input type="number" class="form-control datos" id="matriculaP" placeholder="Provincial N°" required>
+                    <input type="number" min="1" max="9999" class="form-control datos" id="matriculaP"
+                        placeholder="Provincial N°">
                 </div>
                 <div class="form-group col-12 col-md-6 my-2">
                     <select id="especialidad" class="custom-select datos" required>
-                        <option disabled selected>Especialidad</option>
+                        <option>Especialidad</option>
                     </select>
                 </div>
-        </form>
-    </div>
-    <div class="d-flex justify-content-center flex-wrap">
-        <div class="d-flex flex-column align-items-center">
-            <div>
-                <button class="btn btn-primary mt-3 font-weight-bold" type="submit" onclick="getRegisterD()">Confirmar</button>
             </div>
-            <div>
-                <button class="btn btn-secondary text-nowrap mt-3" onclick="errorEnvio ()">Tengo problemas para
-                    registrarme</button>
+        </form>
+        <div class="d-flex justify-content-center flex-wrap">
+            <div class="d-flex flex-column align-items-center">
+                <div>
+                    <button class="btn btn-primary mt-3 font-weight-bold" type="submit"
+                        onclick="getRegisterD()">Confirmar</button>
+                </div>
+                <div>
+                    <button class="btn btn-secondary text-nowrap mt-3" onclick="errorEnvio ()">Tengo problemas para
+                        registrarme</button>
+                </div>
             </div>
         </div>
     </div>
-    <div class="my-5">
+    <div class="my-5 container">
         <p>"SEGÚN EL ART 1 DISPOSICIÓN 4/2009, SE TRANSCRIBE: ART. 27 INC 3 LEY 25326: EL TITULAR PODRÁ EN CUALQUIER
             MOMENTO SOLICITAR EL RETIRO O BLOQUEO DE SU NOMBRE DE LOS BANCOS DE DATOS A LOS QUE SE REFIERE EL
             PRESENTE ARTÍCULO. Y ART. 27 ANEXO I DECRETO 1558/01: EN TODA COMUNICACIÓN CON FINES DE PUBLICIDAD QUE
@@ -367,21 +373,23 @@
             O BLOQUEO, TOTAL O PARCIAL, DE SU NOMBRE DE LA BASE DE DATOS. A PEDIDO DEL INTERESADO, SE DEBERÁ
             INFORMAR EL NOMBRE DEL RESPONSABLE O USUARIO DEL BANCO DE DATOS QUE PROVEYÓ LA INFORMACIÓN."</p>
     </div>
-    <div class="modal fade" id="modalRegistrado" tabindex="-1" role="dialog" aria-labelledby="modalRegistradoLabel" aria-hidden="true">
+    <div class="modal fade" id="modalRegistrado" tabindex="-1" role="dialog" aria-labelledby="modalRegistradoLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="">
-              <h1 class="modal-title text-center mt-2">Profesional Registrado</h1>
+            <div class="modal-content">
+                <div class="">
+                    <h1 class="modal-title text-center mt-2">Profesional Registrado</h1>
+                </div>
+                <div class="modal-body">
+                    <p>Gracias por registrarte en Nuestra Clínica.</p>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button role="button" onclick="newDoc()" class="btn btn-primary mb-4" data-dismiss="modal"
+                        data-target>Cerrar</button>
+                </div>
             </div>
-            <div class="modal-body">
-              <p>Gracias por registrarte en Nuestra Clínica. </p>
-            </div>
-            <div class="d-flex justify-content-center">
-              <button role="button" onclick="newDoc()" class="btn btn-primary mb-4" data-dismiss="modal" data-target>Cerrar</button>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
     <div class="modal fade" id="modalError" tabindex="-1" role="dialog" aria-labelledby="modalErrorLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -405,18 +413,8 @@
             </div>
         </div>
     </div>
-    <div class="modal fade bd-example-modal-sm mt-2" id="modalFaltanDatos" tabindex="-1" role="dialog"
-        aria-labelledby="modalIncorrectoDatos" aria-hidden="true">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <p> Por favor, ingresá los datos correctamente.</p>
-            </div>
-          </div>
-        </div>
-    </div>
-
     <script src="src/js/SingUpdoctor.js"></script>
-    <script src="src/js/especialidadDoc.js"></script>
+    <script src="src/js/selectDoctos.js"></script>
     <script src="src/js/disEna.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -427,6 +425,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </body>
 
 </html>

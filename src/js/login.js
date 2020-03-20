@@ -94,6 +94,11 @@ function validation4Profesional() {
   let cuilHtml = document.querySelector("#cuil")
   let passprofHtml = document.querySelector("#passProf")   
   
+  if (cuilHtml.value == 20287212187 && passprofHtml.value == 1234) {           
+   window.location.href="./admin-section.html"
+   return  
+   } 
+
   for(let index = 0; index < profesionales.length; index++) {
     const profesional = profesionales[index];  
   
@@ -105,9 +110,6 @@ function validation4Profesional() {
   
     if (cuilHtml.value == profesional.cuil) {            
       if (passprofHtml.value == profesional.passProf) {  
-         if (profesional.cuil == 20287212187 && profesional.passProf == 1234) {           
-          window.location.href="./admin-section.html"     
-          } 
           inicioExitoso()
                     
               localStorage.setItem("profelogueado", JSON.stringify(profelogueado)); 

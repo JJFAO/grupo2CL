@@ -1,4 +1,4 @@
-const paciente = JSON.parse(localStorage.getItem("Pacientes"));
+const paciente = JSON.parse(localStorage.getItem("Pacientes")) || [];
 let apellPac = document.querySelector("#apellido");
 let nombPac = document.querySelector("#nombre");
 let edadPac = document.querySelector("#edad");
