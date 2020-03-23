@@ -14,8 +14,13 @@ function getRegisterD() {
 
     const nDoctores = JSON.parse(localStorage.getItem('rDoctores')) || [];
 
-    if (registro.matriculaP == "0" || registro.matriculaP == "") {
+    if (registro.matriculaP == 0 || registro.matriculaP == "") {
         matriculaEn0()
+        $('#MedicalShift').modal('hide');
+        return
+    }
+    if (registro.especialidad == "0") {
+        especialidad0()
         $('#MedicalShift').modal('hide');
         return
     }
