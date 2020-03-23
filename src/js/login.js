@@ -60,7 +60,7 @@ function validation4Profesional() {
           window.location.assign("./../../admin-section.html")
               } 
           alert("Inicio exitoso")
-          localStorage.setItem("proflogueado", JSON.stringify(proflogueado));
+          // localStorage.setItem("proflogueado", JSON.stringify(proflogueado));
           // window.location.href = 'index.html';
             return
           }
