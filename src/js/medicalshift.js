@@ -223,6 +223,7 @@ function MENSAJE_error() {
         icon: 'error',
         title: 'DEBE LLENAR TODO LOS CAMPOS PARA CONFIRMAR EL TURNO',
         showConfirmButton: false,
+        timer: 3000
     })
 }
 
@@ -231,6 +232,7 @@ function MENSAJE_error_medico() {
         icon: 'error',
         title: 'este doctor ya no tiene turnos disponibles, elija otro medico',
         showConfirmButton: false,
+        timer: 3000
     })
 }
 
@@ -250,6 +252,7 @@ function MENSAJE_usuario_nolog() {
         icon: 'error',
         title: 'Por favor inicie sección para solicitar un turno',
         showConfirmButton: false,
+        timer: 3000
     })
 }
 
@@ -258,6 +261,7 @@ function MENSAJE_pendiente() {
         icon: 'error',
         title: 'Pendiente de autorizacion',
         showConfirmButton: false,
+        timer: 3000
     })
 }
 
