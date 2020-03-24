@@ -154,6 +154,9 @@ seDaLaBienvenida();
 let botonCierreSesion = document.querySelector("#botonCierreSesion");
 let cierreSesion = false;
 
+  
+
+
 function reinicioPag() {
   window.location.assign("index.html");
 }
@@ -164,11 +167,12 @@ function menuStatusHandler3() {
   if (desplegado2 == false && $("#botonCierreSesion").hasClass("dontShowYourselfLoginButton") == false) {
     desplegado2 = !desplegado2;
     botonLogueo.classList.add("d-none");
-    iniciaSesionPorfa.classList.add("d-none");
-  } else if (desplegado2 == true && $("#botonCierreSesion").hasClass("dontShowYourselfLoginButton") == false) {
+    // iniciaSesionPorfa.classList.add("d-none");
+  } else if (desplegado2 == true && $("#botonCierreSesion").hasClass("dontShowYourselfLoginButton") == false) {    
     desplegado2 = !desplegado2;
     botonLogueo.classList.remove("d-none");
     iniciaSesionPorfa.classList.remove("d-none");
+  
   }
 }
 if (botonCierreSesion) {

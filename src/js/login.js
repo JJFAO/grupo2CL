@@ -1,137 +1,139 @@
 function hideModalRecover() {
-    $('#indexModal').modal("hide");
-    console.log("hola");
-    
-    $('#modalrecover').modal("show");
-    console.log("chau");
-    
+  $("#indexModal").modal("hide");
+  $("#modalrecover").modal("show");
 }
 function hideModalpp() {
-    $('#ppmodal').modal("hide");
-    
-    
+  $("#ppmodal").modal("hide");
 }
 function recoverPass() {
-    Swal.fire({
+  Swal.fire({
     // position: 'top-center',
-    icon: 'success',
-    title: 'Mensaje enviado',
+    icon: "success",
+    title: "Mensaje enviado",
     showConfirmButton: false,
-    timer: 3000   
-    })}
-  
-    function inicioExitoso() {
-      Swal.fire({
-      // position: 'top-center',
-      icon: 'success',
-      title: 'Inicio exitoso',
-      showConfirmButton: false,
-      timer: 3000   
-      })} 
-      function errorCuilPass() {
-        Swal.fire({
-        // position: 'top-center',
-        icon: 'error',
-        title: 'Las credenciales no son correctas',
-        showConfirmButton: false,
-        timer: 3000   
-        })}
-        function cuilNoregis() {
-          Swal.fire({
-          // position: 'top-center',
-          icon: 'warning',
-          title: 'El CUIL no esta registrado',
-          showConfirmButton: false,
-          timer: 3000   
-          })}
-          function dniNoregis() {
-            Swal.fire({
-            // position: 'top-center',
-            icon: 'warning',
-            title: 'El DNI no esta registrado',
-            showConfirmButton: false,
-            timer: 3000   
-            })}
+    timer: 3000
+  });
+}
 
+function inicioExitoso() {
+  Swal.fire({
+    // position: 'top-center',
+    icon: "success",
+    title: "Inicio exitoso",
+    showConfirmButton: false,
+    timer: 3000
+  });
+}
+function errorCuilPass() {
+  Swal.fire({
+    // position: 'top-center',
+    icon: "error",
+    title: "Las credenciales no son correctas",
+    showConfirmButton: false,
+    timer: 3000
+  });
+}
+function cuilNoregis() {
+  Swal.fire({
+    // position: 'top-center',
+    icon: "warning",
+    title: "Las Credenciales no son correctas",
+    showConfirmButton: false,
+    timer: 3000
+  });
+}
+function dniNoregis() {
+  Swal.fire({
+    // position: 'top-center',
+    icon: "warning",
+    title: "Las Credenciales no son correctas",
+    showConfirmButton: false,
+    timer: 3000
+  });
+}
 
-  function validation4Patient() {
-    event.preventDefault()
-    const usuarios = JSON.parse(localStorage.getItem("Pacientes"))    
-  let dniHtml = document.querySelector("#DNI")
-  let passHtml = document.querySelector("#passPatient")
- 
-  
-  for(let index = 0; index < usuarios.length; index++) {
+function ocultarBtnLogueo() {
+  $("#botonLogueo").modal("hide");
+}
+
+function validation4Patient() {
+  event.preventDefault();
+  const usuarios = JSON.parse(localStorage.getItem("Pacientes"));
+  let dniHtml = document.querySelector("#DNI");
+  let passHtml = document.querySelector("#passPatient");
+
+  for (let index = 0; index < usuarios.length; index++) {
     const usuario = usuarios[index];
     let usuariologueado = {
-      id : usuario.documento,
-      nombre : usuario.nombre,
-      apellido : usuario.apellido,
-      autorizado : usuario.autorizado
-
-      
-    }
+      id: usuario.documento,
+      nombre: usuario.nombre,
+      apellido: usuario.apellido,
+      autorizado: usuario.autorizado
+    };
     if (dniHtml.value == usuario.documento) {
       if (passHtml.value == usuario.password) {
-        $('#indexModal').modal("hide");
-        inicioExitoso()     
-        window.location.href = "index.html"  
-        localStorage.setItem("usuariologueado", JSON.stringify(usuariologueado));
-        return
+        ocultarBtnLogueo();
+        $("#indexModal").modal("hide");
+        inicioExitoso();
+        window.location.href = "index.html";
+        localStorage.setItem(
+          "usuariologueado",
+          JSON.stringify(usuariologueado)
+        );
+        return;
       }
-      errorCuilPass()
-      
-      return
+      errorCuilPass();
+
+      return;
     }
-    
   }
-  dniNoregis()
+  dniNoregis();
 }
 // localStorage.setItem("proflogueado", JSON.stringify(proflogueado));
 
 function validation4Profesional() {
   const profesionales = JSON.parse(localStorage.getItem("rDoctores")) || [];
-  let cuilHtml = document.querySelector("#cuil")
-  let passprofHtml = document.querySelector("#passProf")   
-  
-  if (cuilHtml.value == 20287212187 && passprofHtml.value == 1234) {           
-   window.location.href="./admin-section.html"
-   return  
-   } 
+  let cuilHtml = document.querySelector("#cuil");
+  let passprofHtml = document.querySelector("#passProf");
 
-  for(let index = 0; index < profesionales.length; index++) {
-    const profesional = profesionales[index];  
-  
+  if (cuilHtml.value == 20287212187 && passprofHtml.value == 1234) {
+    window.location.href = "./admin-section.html";
+    return;
+  }
+
+  for (let index = 0; index < profesionales.length; index++) {
+    const profesional = profesionales[index];
+
     let profelogueado = {
-      id : profesional.cuil,
-      nombre : profesional.nombre,
-      apellido : profesional.apellido,
-    }  
-  
-    if (cuilHtml.value == profesional.cuil) {            
-      if (passprofHtml.value == profesional.passProf) {  
-          inicioExitoso()
-                    
-              localStorage.setItem("profelogueado", JSON.stringify(profelogueado)); 
-          // window.location.href = 'index.html';
-          return
-          }
-          errorCuilPass()
-          return
-        }    
-      }
-      cuilNoregis()
-      
-    }
-    
-    function consultaTurnoPaciente (){
-      const usuarioClinica = JSON.parse(localStorage.getItem("Pacientes"))
-      $('#modalPacienteSesion').modal("show");
-    }
+      id: profesional.cuil,
+      nombre: profesional.nombre,
+      apellido: profesional.apellido
+    };
 
-    function pacienteProfesional (){
-      $('#modalProfesionalSesion').modal("show");
+    if (cuilHtml.value == profesional.cuil) {
+      if (passprofHtml.value == profesional.passProf) {
+        ocultarBtnLogueo();
+        inicioExitoso();
+
+        localStorage.setItem("profelogueado", JSON.stringify(profelogueado));
+        // window.location.href = 'index.html';
+        return;
+      }
+      errorCuilPass();
+      return;
     }
+  }
+  cuilNoregis();
+}
+
+function consultaTurnoPaciente() {
+  const usuarioClinica = JSON.parse(localStorage.getItem("Pacientes"));
+  $("#modalPacienteSesion").modal("show");
+}
+
+function pacienteProfesional() {
+  $("#modalProfesionalSesion").modal("show");
+}
 
 // function enterFuncionando(){
 //   if($("#indexModal").hasClass("show"));
