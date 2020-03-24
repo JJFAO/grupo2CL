@@ -13,7 +13,7 @@ label {
 .btn {
   font-family: "Montserrat", sans-serif;
 }
-.form-control, .custom-select, ::-webkit-input-placeholder {
+.form-control, .datos, ::-webkit-input-placeholder {
   background-color: #d3d3d3 !important;
   font-family: "Montserrat", sans-serif;
   color: black;
@@ -382,7 +382,7 @@ label {
 .PLB {
   margin: 0px;
 }
-@media (max-width: 320px) {
+@media (max-width: 414px) {
   .PLB {
     display: none;
   }
@@ -405,8 +405,24 @@ label {
 .tituloID{
     font-size: 1.5em;
 }
-.cerrarSesionID{
-    font-size: 1em;
+@media (max-width: 785px) {
+  .tituloID {
+    
+        font-size: 2vw;    
+  }
+}
+@media (max-width: 785px) {
+  .cerrarSesionID {
+    
+        font-size: 0.6em;    
+  }
+
+}
+@media (min-width: 785px){
+.cerrarSesionID {
+  font-size: 1.5em;
+
+}
 }
 .img-build {
     object-fit: cover;
