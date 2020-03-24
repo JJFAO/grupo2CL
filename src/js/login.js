@@ -37,7 +37,7 @@ function cuilNoregis() {
   Swal.fire({
     // position: 'top-center',
     icon: "warning",
-    title: "El CUIL no esta registrado",
+    title: "Las Credenciales no son correctas",
     showConfirmButton: false,
     timer: 3000
   });
@@ -46,7 +46,7 @@ function dniNoregis() {
   Swal.fire({
     // position: 'top-center',
     icon: "warning",
-    title: "El DNI no esta registrado",
+    title: "Las Credenciales no son correctas",
     showConfirmButton: false,
     timer: 3000
   });
