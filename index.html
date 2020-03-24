@@ -341,7 +341,7 @@
                   <label for="formGroupExampleInput2">Contraseña</label>
                   <input type="password" class="form-control" id="passPatient" placeholder="Ingrese Contraseña">
                   <div class="d-flex justify-content-between mt-3">
-                    <button type="submit" id="ingresarASesion" class="btn text-white mb-3 d-flex justify-content-center"
+                    <button type="submit" id="ingresarPac" class="btn text-white mb-3 d-flex justify-content-center"
                       onclick="validation4Patient()">Ingresar</button>
                     <a href="registropaciente.html"
                       class="btn btn-default mb-3 d-flex justify-content-center btnregister text-white">Registrarme
@@ -353,14 +353,14 @@
                 <form>
                   <div class="form-group">
                     <div class="dropdown open d-flex">
-                      <input type="number" class="form-control" id="cuil" placeholder="CUIL/CUIT">
+                      <input type="number" class="form-control" minlength="11" maxlength="11" id="cuil" placeholder="CUIL/CUIT">
                     </div>
                   </div>
                   <div class="form-group mt-3">
                     <label for="formGroupExampleInput2">Contraseña</label>
                     <input type="password" class="form-control" id="passProf" placeholder="Ingrese Contraseña">
                     <div class="d-flex justify-content-between mt-3">
-                      <button type="button" class="btn text-white mb-3 d-flex justify-content-center"
+                      <button type="button" id="ingresarProf" class="btn text-white mb-3 d-flex justify-content-center"
                         onclick="validation4Profesional()">Ingresar</button>
                       <a href="SingupDoctor.html"
                         class="btn btn-default mb-3 d-flex justify-content-center btnregister text-white">Registrarme
