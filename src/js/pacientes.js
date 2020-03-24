@@ -13,6 +13,6 @@ class Pacientes
         this.provincia = seleccionProvincia;
         this.localidad = seleccionLocalidad;
         this.codigopostal = postalCliente;
-
+        this.autorizado = 'Pendiente'
     }
 }

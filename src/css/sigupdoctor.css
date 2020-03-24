@@ -25,32 +25,6 @@ label{
     background-color: #225378;
 
 }
-
-.form-control{
-background-color: #d3d3d3 !important;
-font-family:'Montserrat', sans-serif;
-color: black;       
-}
-
-.form-control::-webkit-input-placeholder {
-    background-color: #d3d3d3;
-    border-radius: 11px;
-    color: black !important;
-}
-.form-control::-moz-placeholder {
-    background-color: #d3d3d3;
-    border-radius: 11px;
-    color: black !important;
-}
-
-::-webkit-input-placeholder {
-    font-family:'Montserrat', sans-serif;
-}
-::-moz-placeholder {
-    background-color: #d3d3d3;
-    font-family:'Montserrat', sans-serif;
-}
-
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none; 
@@ -67,4 +41,31 @@ input[type=number] {
 }
 .container::-webkit-scrollbar{
     width: 0.1px;
+}
+input:out-of-range:invalid{
+    border: solid 2px rgba(255, 0, 0, 0.383);
+}
+input:valid{
+    border: solid 2px lightgreen;
+}
+.styloSelect {
+    background: lightskyblue !important;
+    color: white !important;
+}
+/* select:-internal-list-box option:checked {
+    background: lightskyblue !important;
+    color: white !important;
+} */
+select:-internal-list-box:focus  option:selected  {
+    color: #333 !important;
+    background-color: #FFC894 !important;
+}
+
+select:-internal-list-box:focus option::selection  {
+    color: #333 !important;
+    background-color: #FFC894 !important;
+}
+
+.bootstrap-duallistbox-container:focus select option::selection {
+    background: #ffb7b7 !important;
 }

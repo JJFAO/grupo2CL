@@ -12,6 +12,7 @@ function getRegisterPac (){
     entrada.forEach((datoPac) => { 
     registroPac[datoPac.id] = datoPac.value
   });
+  registroPac.autorizado = 'Pendiente'
   const nPacientes = JSON.parse(localStorage.getItem('Pacientes')) || [];
     nPacientes.push(registroPac);
   localStorage.setItem('Pacientes',JSON.stringify(nPacientes)); 
@@ -29,7 +30,7 @@ document.getElementById("formPaciente").addEventListener("submit", (e) => {
       $('#modalError').modal('show');
   }
   function newDoc() {
-    window.location.assign("./../../index.html")
+    window.location.assign("index.html")
   }
   function sendTXT() {
     let messajeError = document.getElementById("errorEnvioTXT").value;
