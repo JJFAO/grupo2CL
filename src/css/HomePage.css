@@ -13,7 +13,7 @@ label {
 .btn {
   font-family: "Montserrat", sans-serif;
 }
-.form-control, .custom-select, ::-webkit-input-placeholder {
+.form-control, .datos, ::-webkit-input-placeholder {
   background-color: #d3d3d3 !important;
   font-family: "Montserrat", sans-serif;
   color: black;
@@ -411,3 +411,4 @@ label {
 .img-build {
     object-fit: cover;
 }
+

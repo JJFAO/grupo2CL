@@ -35,10 +35,6 @@ input[type=number] {
     -moz-appearance:textfield; 
 }
 
-.horarios option:hover{
-    background: #007bff;
-    color: white;
-}
 .container::-webkit-scrollbar{
     width: 0.1px;
 }
@@ -48,24 +44,12 @@ input:out-of-range:invalid{
 input:valid{
     border: solid 2px lightgreen;
 }
-.styloSelect {
-    background: lightskyblue !important;
-    color: white !important;
-}
-/* select:-internal-list-box option:checked {
-    background: lightskyblue !important;
-    color: white !important;
-} */
-select:-internal-list-box:focus  option:selected  {
-    color: #333 !important;
-    background-color: #FFC894 !important;
-}
-
-select:-internal-list-box:focus option::selection  {
-    color: #333 !important;
-    background-color: #FFC894 !important;
-}
-
-.bootstrap-duallistbox-container:focus select option::selection {
-    background: #ffb7b7 !important;
+select option:hover, 
+select option:focus, 
+select option:active, 
+select option:checked {
+    background: linear-gradient(lightblue,lightblue);
+    text-emphasis-color: solid white !important;
+    color-adjust: white;
+    color: white;
 }

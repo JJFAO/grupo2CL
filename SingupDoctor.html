@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    </head>
+</head>
 
 <body onload="selects()">
     <!-- Modal -->
@@ -227,32 +227,42 @@
         <form id="formDoctor">
             <div class="row flex-wrap">
                 <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control datos" id="nombre" placeholder="Nombre/s" required>
+                    <input type="text" class="form-control datos" id="nombre" placeholder="Nombre/s"
+                        title="Ingrese su Nombre" required autofocus>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control datos" id="apellido" placeholder="Apellido/s" required>
+                    <input type="text" class="form-control datos" id="apellido" placeholder="Apellido/s"
+                        title="Ingrese su Apellido" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="number" class="form-control datos" minlength="11" maxlength="11" min="20000000000" max="29999999999" id="cuil"
-                        placeholder="CUIL/CUIT" required>
+                    <input type="number" class="form-control datos" minlength="11" maxlength="11" min="20000000000"
+                        max="29999999999" id="cuil" placeholder="CUIL/CUIT" title="Ingrese su número de Cuil o Cuit"
+                        required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="tel" class="form-control datos" id="telefono" placeholder="N° Tel/ Cel" required>
+                    <input type="tel" class="form-control datos" id="telefono" placeholder="N° Tel/ Cel"
+                        title="Ingrese su número de Telefono anteponiendo el codigo de área" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="password" class="form-control datos" id="passProf"
-                        placeholder="Contraseña" required>
+                    <input type="password" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        class="form-control datos" id="passProf" placeholder="Contraseña"
+                        title="Su clave debe contener al menos 8 carácteres: Una mayuscula, una minuscula y un número"
+                        required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="email" class="form-control datos" id="mail" placeholder="Correo Electronico" required>
+                    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control datos"
+                        id="mail" placeholder="Correo Electronico" title="Ingrese su mail ejemplo@ejemplo.com" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="date" class="form-control datos" id="fNacimiento" required>
+                    <input type="date" min="1920-12-31" max="2000-01-01" class="form-control datos" id="fNacimiento"
+                        title="Ingrese su fecha de nacimiento" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <select id="sexo" class="custom-select datos" required>
+                    <select id="sexo" class="custom-select datos" title="Seleccione su genero" required>
+                        <option value="" selected disabled>Sexo</option>
                         <option value="Masculino">Masculino</option>
                         <option value="Femenino">Femenino</option>
+                        <option value="Otro">Otro</option>
                         <option value="-">Prefiero no contestar</option>
                     </select>
                 </div>
@@ -260,22 +270,25 @@
                     <input type="text" class="form-control datos" id="domicilio" placeholder="Domicilio" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <select id="provincia" class="custom-select datos" required>
+                    <select id="provincia" class="custom-select datos" title="Seleccione su Provincia" required>
                         <option selected disabled value="">Provincias</option>
+                        
                     </select>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="text" class="form-control datos" id="localidad" placeholder="Localidad" required>
+                    <select id="localidad" class="custom-select datos" title="Seleccione su Localidad" required>
+                    <option selected disabled value="">Selecciona un Localidad</option>
+                    </select>
                 </div>
                 <div class="col-12 col-md-6 my-2">
                     <input type="number" class="form-control datos" id="codigopostal" placeholder="Código Postal"
-                        required>
+                        title="Ingrese su Codigo Postal" required>
                 </div>
             </div>
             <h2 class="mt-3">Horarios de atención</h2>
             <p>En ésta sección deberás elegir los días y horarios de consultas.</p>
             <div class="d-flex flex-wrap justify-content-around">
-                <div class="row my-3">
+                <div class="row my-3 mx-lg-1">
                     <div class="form-group mr-4 pr-3">
                         <label for="text">Horarios dia Lunes</label>
                     </div>
@@ -287,7 +300,7 @@
                         <option value="13:00 - 14:00">13:00 - 14:00</option>
                     </select>
                 </div>
-                <div class="row my-3">
+                <div class="row my-3 mx-lg-1">
                     <div class="form-group mr-4 pr-2">
                         <label for="text">Horarios dia Martes</label>
                     </div>
@@ -299,7 +312,7 @@
                         <option value="13:00 - 14:00">13:00 - 14:00</option>
                     </select>
                 </div>
-                <div class="row my-3">
+                <div class="row my-3 mx-lg-1">
                     <div class="form-group">
                         <label for="text" class="mr-2 pl-1">Horarios dia Miercoles</label>
                     </div>
@@ -311,7 +324,7 @@
                         <option value="13:00 - 14:00">13:00 - 14:00</option>
                     </select>
                 </div>
-                <div class="row my-3">
+                <div class="row my-3 mx-lg-1">
                     <div class="form-group">
                         <label for="text" class="mr-4 pr-2">Horarios dia Jueves</label>
                     </div>
@@ -323,7 +336,7 @@
                         <option value="13:00 - 14:00">13:00 - 14:00</option>
                     </select>
                 </div>
-                <div class="row my-3">
+                <div class="row my-3 mx-lg-1">
                     <div class="form-group mr-3 pr-2">
                         <label for="text">Horarios dia Viernes</label>
                     </div>
@@ -335,7 +348,7 @@
                         <option value="13:00 - 14:00">13:00 - 14:00</option>
                     </select>
                 </div>
-                <div class="row my-3">
+                <div class="row my-3 mx-lg-1">
                     <div class="form-group mr-3 pr-2">
                         <label for="text">Horarios dia Sabado</label>
                     </div>
@@ -351,11 +364,11 @@
             <h2 class="mt-3">Matricula y Especialidad</h2>
             <div class="my-3 row flex-wrap">
                 <div class="col-12 col-md-6 my-2">
-                    <input type="number" min="1000" max="9999" class="form-control datos" id="matriculaP"
-                        placeholder="Provincial N°">
+                    <input type="number" pattern="[-+]?[0-9]" min="1000" max="9999" class="form-control datos"
+                        id="matriculaP" placeholder="Provincial N°" title="Ingrese su Matricula" required>
                 </div>
                 <div class="form-group col-12 col-md-6 my-2">
-                    <select id="especialidad" class="custom-select datos" required>
+                    <select id="especialidad" class="custom-select datos" title="Seleccione su Especialidad" required>
                         <option value="0">Especialidad</option>
                     </select>
                 </div>
