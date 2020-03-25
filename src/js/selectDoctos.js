@@ -57,4 +57,9 @@ function selects() {
         });
     });
 
+    /* Validation for Inputs*/
+
+    let cuil = document.querySelector("#cuil").maxLength;
+    let contraseña = document.querySelector("#passProf").maxLength = 8;
+
 }

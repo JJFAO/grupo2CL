@@ -135,7 +135,18 @@ function pacienteProfesional() {
   $("#modalProfesionalSesion").modal("show");
 }
 
-let input = document.querySelector("#indexModal");
+// function enterFuncionando(){
+//   if($("#indexModal").hasClass("show"));
+//   console.log("hola")
+//   $(document).keypress(function(e){
+//      (e.which == 13)
+//         $("#ingresarASesion").click();
+    
+// });
+// }
+// enterFuncionando();
+// Get the input field
+let input = document.querySelector("#pills-home");
 
 // Execute a function when the user releases a key on the keyboard
 input.addEventListener("keyup", function(event) {
@@ -144,6 +155,19 @@ input.addEventListener("keyup", function(event) {
     // Cancel the default action, if needed
     event.preventDefault();
     // Trigger the button element with a click
-    document.getElementById("ingresarASesion").click();
+    document.getElementById("ingresarPac").click();
+    location.reload();
+  }
+});
+
+let input1 = document.querySelector("#pills-profile");
+input1.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("ingresarProf").click();
+    location.reload();
   }
 });
