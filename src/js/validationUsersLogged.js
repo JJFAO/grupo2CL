@@ -153,7 +153,7 @@ function consultaTurnoPaciente() {
         <td>${turnos.horario}</td>
         <td>${turnos.especialidad}</td>
         <td>${cuilDoctor.nombre} ${cuilDoctor.apellido}</td>
-        <td> <button id= "deleteEsteTurno" class="check2 text-danger border-0 bg-light">❌</button></td>       
+        <td> <button id= "deleteEsteTurno" onclick="borra_este('${turnos.doctores}', '${turnos.dniPac}','${turnos.dias}','${turnos.horario}' )" class="check2 text-danger border-0 bg-light">❌</button></td>       
       </tr>
       </tbody>
       `
@@ -161,6 +161,30 @@ function consultaTurnoPaciente() {
     }
   
   }
+}
+
+function borra_este(doctores, dniPac, dias, horario) {
+  console.log(localStorage.getItem("rTurnos"));
+  const rTurnos = JSON.parse(localStorage.getItem("rTurnos")) || [];
+  console.log(rTurnos[0]);
+  const rTurnos_modif= []
+
+  for (let i = 0; i < rTurnos.length; i++) {
+    const turno = rTurnos[i];
+    if (
+      turno.horario === horario &&
+      turno.dias === dias &&
+      turno.doctores === doctores &&
+      turno.dniPac === dniPac
+    ) {
+    } else {
+      rTurnos_modif.push(turno);
+      console.log("no");      
+    }
+  }
+  console.log(rTurnos_modif);
+  localStorage.setItem('rTurnos', JSON.stringify(rTurnos_modif))
+  $("#modalPacienteSesion").modal("hide");
 }
 
 let botonDeleteTurno = document.querySelector("#elimiTurno");
