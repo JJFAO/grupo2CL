@@ -19,7 +19,7 @@ function consultaTurnoPaciente() {
     var testingModalSinLog = `
   <h1 class="textoProfesional" id="profesionales">Buen día, ${docLogueado.nombre}</h1>
   <p> Sus pacientes del día son: </p>
-   <div id="tablaPacientes">
+   <div id="tablaPacientes" class="table-responsive-sm">
     <table class="table w-100 pl-0 mt-0">
       <thead class="thead-light" id="tableroDePacientes">
         <tr class="text-center" id="TablaPacientes">
@@ -127,7 +127,7 @@ function consultaTurnoPaciente() {
           <h1>Hola, ${userLogued.nombre} ${userLogued.apellido}</h1>
           <br>
           <p>Usted tiene turno el día </p>
-           <div id="tablaDeTurnos">
+           <div id="tablaDeTurnos" class="table-responsive-sm">
             <table class="table w-100 pl-0 mt-0">
               <thead class="thead-light " id="listTurnos">
                 <tr class="text-center" id="TablaTurnos">

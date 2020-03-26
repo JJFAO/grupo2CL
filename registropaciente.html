@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Registro de Pacientes</title>
     <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="src/css/sigupdoctor.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:700&display=swap" rel="stylesheet">
 </head>
@@ -47,10 +48,12 @@
           </div>                 
           <div class="d-flex col-md-4 form-group">
               <select class="form-control datoPac" id="genero" title="Ingrese su Sexo">
+                <option value="" selected disabled>Sexo</option>
                 <option value="Masculino">Masculino</option>
                 <option value="Femenino">Femenino</option>
-                <option value= "Prefiero no Decirlo">Prefiero no Decirlo</option>
-              </select>
+                <option value="Otro">Otro</option>
+                <option value="-">Prefiero no contestar</option>
+      </select>
           </div>          
         </div>
         <!-- fin division 2 -->
@@ -60,7 +63,7 @@
           <input placeholder="Correo Electrónico" type="email" class="form-control datoPac" id="correo" title="Introduzca una dirección de correo electrónico válida" required>
         </div>
         <div class="form-group col-md-6">
-          <input placeholder="Contraseña" type="password" class="form-control datoPac" id="password" minlength="5" maxlength="10" pattern="[A-Za-z0-9]+" title="Ingrese su Edad" required>
+          <input placeholder="Contraseña" type="password" class="form-control datoPac" id="password" minlength="5" maxlength="10" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Su clave debe contener al menos 8 carácteres: Una mayuscula, una minuscula y un número" required>
         </div>
       </div>
         <div class="form-row d-flex justify-content-around fill">
