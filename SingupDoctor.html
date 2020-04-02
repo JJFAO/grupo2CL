@@ -235,7 +235,7 @@
                         title="Ingrese su Apellido" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="number" class="form-control datos" min="20000000000"
+                    <input type="text" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" maxLength="11" class="form-control datos" min="20000000000"
                         max="30999999999" id="cuil" placeholder="CUIL/CUIT" title="Ingrese su número de Cuil o Cuit"
                         required>
                 </div>
@@ -244,14 +244,14 @@
                         title="Ingrese su número de Telefono anteponiendo el codigo de área" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    <input type="password" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                         class="form-control datos" id="passProf" placeholder="Contraseña"
                         title="Su clave debe contener al menos 8 carácteres: Una mayuscula, una minuscula y un número"
                         required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
                     <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control datos"
-                        id="mail" placeholder="Correo Electronico" title="Ingrese su mail ejemplo@ejemplo.com" required>
+                        id="mail" placeholder="Correo Electronico" title="Ingrese su mail ejemplo@ejemplo.com" autocomplete="on" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
                     <input type="date" min="1920-12-31" max="2000-01-01" class="form-control datos" id="fNacimiento"
@@ -270,14 +270,12 @@
                     <input type="text" class="form-control datos" id="domicilio" placeholder="Domicilio" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <select id="provincia" class="custom-select datos" title="Seleccione su Provincia" required>
-                        <option selected disabled value="">Provincias</option>
-                        
+                    <select id="provincia" class="custom-select datos" title="Seleccione su Provincia" required>                        
                     </select>
                 </div>
                 <div class="col-12 col-md-6 my-2">
                     <select id="localidad" class="custom-select datos" title="Seleccione su Localidad" required>
-                    <option selected disabled value="">Selecciona un Localidad</option>
+                    <option selected value="0">Localidad</option>
                     </select>
                 </div>
                 <div class="col-12 col-md-6 my-2">
@@ -292,7 +290,7 @@
                     <div class="form-group mr-4 pr-3">
                         <label for="text">Horarios dia Lunes</label>
                     </div>
-                    <select id="Lunes" class="custom-select horarios mx-1 mx-lg-3" multiple="multiple">
+                    <select id="Lunes" class="custom-select horarios mx-1 mx-lg-2" multiple="multiple">
                         <option value="08:00 - 09:00">08:00 - 09:00</option>
                         <option value="09:00 - 10:00">09:00 - 10:00</option>
                         <option value="11:00 - 12:00">11:00 - 12:00</option>
@@ -304,7 +302,7 @@
                     <div class="form-group mr-4 pr-2">
                         <label for="text">Horarios dia Martes</label>
                     </div>
-                    <select id="Martes" class="custom-select horarios mx-1 mx-lg-3" multiple="multiple">
+                    <select id="Martes" class="custom-select horarios mx-1 mx-lg-2" multiple="multiple">
                         <option value="08:00 - 09:00">08:00 - 09:00</option>
                         <option value="09:00 - 10:00">09:00 - 10:00</option>
                         <option value="11:00 - 12:00">11:00 - 12:00</option>
@@ -316,7 +314,7 @@
                     <div class="form-group">
                         <label for="text" class="mr-2 pl-1">Horarios dia Miercoles</label>
                     </div>
-                    <select id="Miercoles" class="custom-select horarios mx-1 mx-lg-3" multiple="multiple">
+                    <select id="Miercoles" class="custom-select horarios mx-1 mx-lg-2" multiple="multiple">
                         <option value="08:00 - 09:00">08:00 - 09:00</option>
                         <option value="09:00 - 10:00">09:00 - 10:00</option>
                         <option value="11:00 - 12:00">11:00 - 12:00</option>
@@ -328,7 +326,7 @@
                     <div class="form-group">
                         <label for="text" class="mr-4 pr-2">Horarios dia Jueves</label>
                     </div>
-                    <select id="Jueves" class="custom-select horarios mx-1 mx-lg-3" multiple="multiple">
+                    <select id="Jueves" class="custom-select horarios mx-1 mx-lg-2" multiple="multiple">
                         <option value="08:00 - 09:00">08:00 - 09:00</option>
                         <option value="09:00 - 10:00">09:00 - 10:00</option>
                         <option value="11:00 - 12:00">11:00 - 12:00</option>
@@ -340,8 +338,8 @@
                     <div class="form-group mr-3 pr-2">
                         <label for="text">Horarios dia Viernes</label>
                     </div>
-                    <select id="Viernes" class="custom-select horarios mx-1 mx-lg-3" multiple="multiple">
-                        <option value="08:00 - 09:00" onmousedown="callSelect()">08:00 - 09:00</option>
+                    <select id="Viernes" class="custom-select horarios mx-1 mx-lg-2" multiple="multiple">
+                        <option value="08:00 - 09:00">08:00 - 09:00</option>
                         <option value="09:00 - 10:00">09:00 - 10:00</option>
                         <option value="11:00 - 12:00">11:00 - 12:00</option>
                         <option value="12:00 - 13:00">12:00 - 13:00</option>
@@ -352,7 +350,7 @@
                     <div class="form-group mr-3 pr-2">
                         <label for="text">Horarios dia Sabado</label>
                     </div>
-                    <select id="Sabado" class="custom-select horarios mx-1 mx-lg-3" multiple="multiple">
+                    <select id="Sabado" class="custom-select horarios mx-1 mx-lg-2" multiple="multiple">
                         <option value="08:00 - 09:00">08:00 - 09:00</option>
                         <option value="09:00 - 10:00">09:00 - 10:00</option>
                         <option value="11:00 - 12:00">11:00 - 12:00</option>
