@@ -16,6 +16,45 @@
 </head>
 
 <body onload="selects()">
+    <nav class="navbar p-0 navbar-expand-lg navbar-light bg-light borde-separacion d-flex flex-column">
+        <div class="d-flex justify-content-between w-100">
+          <img class="logoRolling d-flex justify-content-start MargenLogo mt-3" src="Assets/LogoRolling.svg"
+            alt="Logo Rolling Code">
+            <div class="d-flex justify-content-end align-items-center">
+              <button id="menuDesplegado" class="navbar-toggler p-0" type="button" data-toggle="collapse"
+              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                        <div class="d-flex" id="cartelBienvenida">
+                        </div>
+            <button type="button" id="botonLogueo" class="m-1 p-0 botonLogueo btn-link" data-toggle="modal"
+            data-target="#indexModal">
+            <img class="botonLogueoIMG text-light" src="./assets/userwhite.svg" alt="">
+          </button>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse align-self-start align-self-lg-end" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item mr-1 ml-1">
+              <a class="nav-link activeSeba" id="inicio" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-1 pl-1">
+              <a class="nav-link" id="pacientes" onclick="consultaTurnoPaciente()" href="#modalPacienteSesion"
+                data-target="#modalPacienteSesion">Agenda</a>
+            </li>
+            <li class="nav-item mr-1 ml-1">
+              <a class="nav-link" id="profesionales" href="#sectorProfesionales">Profesionales</a>
+            </li>
+            <li class="nav-item mr-1 ml-1">
+              <a class="nav-link" id="institucional" href="#">Institucional</a>
+            </li>
+            <li class="nav-item mr-1 ml-1">
+              <a class="nav-link" id="contacto" href="#hicisteClickEnContacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     <!-- Modal -->
     <div class="modal fade" id="indexModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -56,7 +95,7 @@
                                     <option value="5">LC</option>
                                     <option value="6">Pass</option>
                                 </select>
-                                <input type="number" class="form-control col-8" id="DNI" placeholder="Nro de Documento">
+                                <input type="text" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" maxlength="8" class="form-control col-8" id="DNI" placeholder="Nro de Documento">
                             </form>
                             <div class="mt-3">
                                 <label for="formGroupExampleInput2">Contraseña</label>
@@ -76,7 +115,7 @@
                             <form>
                                 <div class="form-group">
                                     <div class="dropdown open d-flex">
-                                        <input type="number" class="form-control" id="cuit" placeholder="CUIL/CUIT">
+                                        <input type="text" class="form-control" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" maxlength="8" id="cuit" placeholder="CUIL/CUIT">
                                     </div>
                                 </div>
                                 <div class="form-group mt-3">
@@ -240,7 +279,7 @@
                         required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="tel" class="form-control datos" id="telefono" placeholder="N° Tel/ Cel"
+                    <input type="tel" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" class="form-control datos" id="telefono" placeholder="N° Tel/ Cel"
                         title="Ingrese su número de Telefono anteponiendo el codigo de área" required>
                 </div>
                 <div class="col-12 col-md-6 my-2">
@@ -279,7 +318,7 @@
                     </select>
                 </div>
                 <div class="col-12 col-md-6 my-2">
-                    <input type="number" class="form-control datos" id="codigopostal" placeholder="Código Postal"
+                    <input type="text" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" class="form-control datos" id="codigopostal" placeholder="Código Postal"
                         title="Ingrese su Codigo Postal" required>
                 </div>
             </div>
@@ -362,7 +401,7 @@
             <h2 class="mt-3">Matricula y Especialidad</h2>
             <div class="my-3 row flex-wrap">
                 <div class="col-12 col-md-6 my-2">
-                    <input type="number" pattern="[-+]?[0-9]" min="1000" max="9999" class="form-control datos"
+                    <input type="text" pattern="[-+]?[0-9]" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1000" max="9999" class="form-control datos"
                         id="matriculaP" placeholder="Provincial N°" title="Ingrese su Matricula" required>
                 </div>
                 <div class="form-group col-12 col-md-6 my-2">
@@ -375,7 +414,7 @@
         <div class="d-flex justify-content-center flex-wrap">
             <div class="d-flex flex-column align-items-center">
                 <div>
-                    <button class="btn btn-primary mt-3 font-weight-bold" type="submit"
+                    <button class="btn btn-primary btn-lg mt-3 font-weight-bold" type="submit"
                         onclick="getRegisterD()">Confirmar</button>
                 </div>
                 <div>

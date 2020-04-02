@@ -35,13 +35,13 @@
             <input placeholder="Nombre" type="text" class="form-control datoPac" id="nombre" title="Ingrese su Nombre" required>
           </div>
           <div class="form-group col-md-4">
-            <input placeholder="Edad" type="number" maxlength="3" size="3" min="0" max="150" class="form-control datoPac" id="edad" title="Ingrese su Edad" required>
+            <input placeholder="Edad" type="text" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" maxlength="3" size="3" min="0" max="150" class="form-control datoPac" id="edad" title="Ingrese su Edad" required>
           </div>
         </div>
         <!-- division 2 -->
         <div class="form-row d-flex mb-">
           <div class="form-group col-md-4">
-            <input placeholder="Documento" type="number" maxlength="8" size="8" min="0" max="99999999" class="form-control datoPac" id="documento" title="Ingrese su Documento" required>
+            <input placeholder="Documento" type="text" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" maxlength="8" size="8" min="0" max="99999999" class="form-control datoPac" id="documento" title="Ingrese su Documento" required>
           </div>          
           <div class="input-group d-flex flex-column col-md-4 mb-3">
             <input placeholder="Fecha de Nacimiento" type="date" min="1950-01-01" step="1" class="form-control datoPac" id="nacimiento" aria-describedby="inputGroup-sizing-default" title="Ingrese su Fecha de Nacimiento" required>
@@ -113,7 +113,7 @@
             </select>
           </div>
          <div class="form-group col-md-4">
-            <input placeholder="Código Postal" type="text" class="form-control" id="codigopostal" title="Ingrese el Código Postal" required>
+            <input placeholder="Código Postal" type="text" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" class="form-control" id="codigopostal" title="Ingrese el Código Postal" required>
           </div>
         </div>
 <!-- Fin división 3 -->

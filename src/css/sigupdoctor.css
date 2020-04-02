@@ -38,10 +38,10 @@ input[type=number] {
 .container::-webkit-scrollbar{
     width: 0.1px;
 }
-input:out-of-range:invalid{
+#formDoctor input:out-of-range:invalid{
     border: solid 2px rgba(255, 0, 0, 0.383);
 }
-input:valid{
+#formDoctor input:valid{
     border: solid 2px lightgreen;
 }
 select option:hover, 
