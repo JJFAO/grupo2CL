@@ -1,0 +1,47 @@
+.user {
+    height: 50px;
+    width: 50px;
+}
+.iconcheck {
+    height: 30px;
+    width: 30px;
+}
+.flecha {
+    height: 15px;
+    width: 15px;
+}
+.tituloSesion{
+    font-size: 24pt;
+}
+h1{
+    font-family: 'Roboto Slab', serif;
+}
+h2{
+    font-family:'Montserrat', sans-serif;
+}
+p{
+    font-family:'Montserrat', sans-serif;
+}
+label{
+    font-family:'Montserrat', sans-serif;
+}
+#indexModal .btn{
+    font-family:'Montserrat', sans-serif;
+    background-color: #225378 !important;
+}
+a{
+    font-family:'Montserrat', sans-serif;
+    color: #225378;
+}
+.loginheader {
+    background-color: #225378;
+}
+.puntocolor {
+    color: #225378;
+}
+a.active{ 
+ background-color: #225378!Important;
+}
+#indexModal .btnregister {
+   background-color: #691353 !important;
+}

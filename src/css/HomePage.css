@@ -1,0 +1,429 @@
+h1 {
+  font-family: "Roboto Slab", serif;
+}
+h2 {
+  font-family: "Montserrat", sans-serif;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+}
+label {
+  font-family: "Montserrat", sans-serif;
+}
+.btn {
+  font-family: "Montserrat", sans-serif;
+}
+.form-control, .datos, ::-webkit-input-placeholder {
+  background-color: #d3d3d3 !important;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+.borde-separacion {
+  border-color: #1595a3 !important;
+  border-bottom: 5px solid;
+}
+
+.logoRolling {
+  height: 50px;
+}
+@media (min-width: 768px) {
+  .logoRolling {
+    height: 90px;
+  }
+}
+@media (max-width: 768px) {
+  .letrasFooter {
+    font-size: 15px;
+  }
+}
+.bordeFooter {
+  border-color: white;
+  border-bottom: 2px solid;
+}
+.textoCopy {
+  font-size: small;
+}
+.loguitosFooter {
+  width: 25px;
+  height: 25px;
+}
+.logoTelephone {
+  margin-top: 15px;
+  margin-right: 5px;
+}
+.LogosRedes {
+  width: 30px;
+  height: 30px;
+  margin-right: 7px;
+  margin-left: 7px;
+}
+@media (min-width: 768px) {
+  .logoRollingFooter {
+    width: 25vw;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .ubiTelDesktop {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1440px) {
+  .LogosRedes {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .LogosRedes {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .LogosRedes {
+    width: 35px;
+    height: 35px;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}
+@media (max-width: 768px) {
+  .otrosEnlacesMobile {
+    width: 75vw !important;
+  }
+}
+@media (min-width: 768px) {
+  .otrosEnlacesDesktop {
+    width: 25vw !important;
+  }
+}
+@media (min-width: 768px) {
+  .copyMobile {
+    display: none;
+  }
+}
+@media (max-width: 425px) {
+  .copyDesktop {
+    display: none;
+  }
+}
+.textoCopyDesktop {
+  background-color: #1595a3 !important;
+  text-align: center;
+}
+.textoCopyMobile {
+  text-align: center;
+}
+.activeSeba {
+  background-color: #1595a3 !important;
+  color: white !important;
+}
+
+/* SECCIONES HOME */
+.pos-abs {
+  position: absolute;
+}
+.titulo-header {
+  font-family: "Roboto Slab", serif;
+  z-index: 20;
+  font-size: 2.8rem;
+}
+.subtituloCabecera{
+    font-family:"Montserrat", serif;
+    font-size: 2rem;
+}
+.p-header {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.8rem;
+}
+.firstimg {
+  height: 520px;
+}
+@media (max-width: 866px) {
+  .titulo-header {
+    font-size: 2rem;
+  }
+  .subtituloCabecera{
+    font-size: 1.5rem;
+}
+  .p-header {
+    font-size: 1.3rem;
+  }
+  .firstimg {
+    height: 260px;
+  }
+}
+@media (max-width: 425px) {
+  .titulo-header {
+    font-size: 1.7rem;
+  }
+  .subtituloCabecera{
+    font-size: 1rem;
+}
+  .p-header {
+    font-size: 1rem;
+  }
+  .firstimg {
+    height: 210px;
+  }
+}
+@media (max-width: 375px) {
+  .titulo-header {
+    font-size: 1.3rem;
+  }
+  .subtituloCabecera{
+    font-size: 0.8rem;
+}
+  .p-header {
+    font-size: 0.85rem;
+  }
+  .firstimg {
+    height: 150px;
+  }
+}
+@media (max-width: 320px) {
+  .titulo-header {
+    font-size: 1.1rem;
+  }
+  .subtituloCabecera{
+    font-size: 0.5rem;
+}
+  .p-header {
+    font-size: 0.7rem;
+  }
+  .firstimg {
+    height: 150px;
+  }
+}
+.clinica {
+  color: #691353;
+}
+.titulocards {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto Slab", serif;
+  font-size: 19px;
+}
+
+.card-body {
+  font-family: "Montserrat", sans-serif;
+}
+.botonTurnero {
+  margin-left: 70vw;
+  margin-bottom: 50px;
+  margin-right: 20px;
+}
+@media (min-width: 768px) {
+  .botonTurnero {
+    margin-left: 90vw;
+    margin-bottom: 50px;
+    margin-right: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .MargenLogo {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .MargenMapa {
+    margin-left: 38px;
+  }
+}
+.Copia-de-Health-Care-1-hex {
+  color: #225378;
+}
+
+.Copia-de-Health-Care-2-hex {
+  color: #1595a3;
+}
+
+.Copia-de-Health-Care-3-hex {
+  color: #acf0f2;
+}
+
+.Copia-de-Health-Care-4-hex {
+  color: #f2ffe3;
+}
+
+.Copia-de-Health-Care-5-hex {
+  color: #691353;
+}
+.tamañoMapa {
+  height: 250px;
+}
+
+.tamañoBotonTurnero{
+    width: 65px;
+    height: 65px;
+    background-color: #691353;
+    transition: all 0.5s;
+}
+
+.tamañoBotonTurnero:hover{
+    background-color: #225378;
+}
+
+
+.tamanoImagenTurnero{
+    width: 45px;
+    height: 45px;
+}
+@media (max-width: 1024px) {
+  .tamañoMapa {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bordesFooter {
+    margin-bottom: 60px !important;
+  }
+}
+@media (min-width: 768px) {
+  .tamañoMapa {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (max-width: 425px) {
+  .tamañoMapa {
+    margin-left: 95px;
+  }
+}
+@media (max-width: 375px) {
+  .tamañoMapa {
+    margin-left: 70px;
+  }
+}
+@media (max-width: 320px) {
+  .tamañoMapa {
+    margin-left: 42px;
+  }
+}
+@media (min-width: 1024px) {
+  .tamañoMapa {
+    width: 250px;
+    height: 250px;
+    margin-left: 100px;
+  }
+}
+@media (min-width: 1440px) {
+  .tamañoMapa {
+    width: 320px;
+    height: 320px;
+    margin-left: 150px;
+  }
+}
+@media (min-width: 2560px) {
+  .tamañoMapa {
+    width: 450px;
+    height: 450px;
+    margin-left: 350px;
+  }
+}
+@media (min-width: 1024px){
+    .tamañoMapa {
+        width: 250px;
+        height: 250px;
+        margin-left: 100px; 
+    }
+}
+@media (min-width: 1440px){
+    .tamañoMapa {
+        width: 320px;
+        height: 320px;
+        margin-left: 150px;
+    }
+}
+@media (min-width: 2560px){
+    .tamañoMapa {
+        width: 450px;
+        height: 450px;
+        margin-left: 350px;
+    }
+}
+@media (min-width: 768px){
+    .tamañoLinkTablet {
+        width: 500px;
+        display: inline-grid;
+    }
+}
+.botonLogueo{
+    width: 45px;
+    height: 45px;
+    background-color: #225378;
+    border-radius: 45px;
+    border-color:  #225378;
+}
+.botonLogueoIMG{
+    width: 30px;
+    height: 30px;
+}
+    
+@media (min-width: 768px) {
+  .tamañoLinkTablet {
+    width: 500px;
+    display: inline-grid;
+  }
+}
+
+.botonLogueoIMG {
+  width: 35px;
+  height: 35px;
+}
+.PLB {
+  margin: 0px;
+}
+@media (max-width: 414px) {
+  .PLB {
+    display: none;
+  }
+}
+.textHome {
+  font-size: 9pt;
+}
+.tituloHome {
+  font-size: 20pt;
+  color: #691353;
+}
+.imageHome {
+  object-fit: center;
+}
+.imgprestaciones {
+  height: 25%;
+  width: 25%;
+}
+
+.tituloID{
+    font-size: 1.5em;
+}
+@media (max-width: 785px) {
+  .tituloID {
+    
+        font-size: 2vw;    
+  }
+}
+@media (max-width: 785px) {
+  .cerrarSesionID {
+    
+        font-size: 0.6em;    
+  }
+
+}
+@media (min-width: 785px){
+.cerrarSesionID {
+  font-size: 1.5em;
+
+}
+}
+.img-build {
+    object-fit: cover;
+}

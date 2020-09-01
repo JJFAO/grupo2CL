@@ -1,0 +1,55 @@
+* {
+    margin: 0px;
+
+}
+h1{
+    font-family: 'Roboto Slab', serif;
+}
+h2{
+    font-family:'Montserrat', sans-serif;
+}
+p{
+    font-family:'Montserrat', sans-serif;
+}
+label{
+    font-family:'Montserrat', sans-serif;
+}
+.btn{
+    font-family:'Montserrat', sans-serif;
+}
+.btn-primary {
+    background: #691353 !important;
+    border-color: #691353 !important;
+}
+.titulo-1 {
+    background-color: #225378;
+
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+input[type=number] { 
+    -moz-appearance:textfield; 
+}
+
+.container::-webkit-scrollbar{
+    width: 0.1px;
+}
+#formDoctor input:out-of-range:invalid{
+    border: solid 2px rgba(255, 0, 0, 0.383);
+}
+#formDoctor input:valid{
+    border: solid 2px lightgreen;
+}
+select option:hover, 
+select option:focus, 
+select option:active, 
+select option:checked {
+    background: linear-gradient(lightblue,lightblue);
+    text-emphasis-color: solid white !important;
+    color-adjust: white;
+    color: white;
+}
